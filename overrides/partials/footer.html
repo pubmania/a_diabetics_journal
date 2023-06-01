@@ -1,0 +1,65 @@
+{% import "partials/language.html" as lang with context %}
+<footer class="md-footer">
+  {% if page.previous_page or page.next_page %}
+  <nav class="md-footer__inner md-grid" aria-label="{{ lang.t('footer.title') }}">
+    {% if page.previous_page %}
+      <a href="{{ page.previous_page.url | url }}" title="{{ page.previous_page.title | striptags }}" class="md-footer__link md-footer__link--prev" rel="prev">
+        <div class="md-footer__button md-icon">
+          {% include ".icons/material/arrow-left.svg" %}
+        </div>
+        <div class="md-footer__title">
+          <div class="md-ellipsis">
+            <span class="md-footer__direction">
+              {{ lang.t("footer.previous") }}
+            </span>
+            {{ page.previous_page.title }}
+            </div>
+          </div>
+        </a>
+      {% endif %}
+      {% if page.next_page %}
+        <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | striptags }}" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                {{ lang.t("footer.next") }}
+              </span>
+              {{ page.next_page.title }}
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            {% include ".icons/material/arrow-right.svg" %}
+          </div>
+        </a>
+      {% endif %}
+    </nav>
+  {% endif %}
+
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright  hp-footer-copyright">
+        <p style="text-align:center"><strong>NWE KB</strong> | <a href="https://hp.sharepoint.com/sites/NorthernEurope2/" target="_blank">Sharepoint</a> | <a href="https://github.azc.ext.hp.com/NWE-Market/NWE-KB" target="_blank">GitHub Process Documentation</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright  hp-footer-copyright">
+        <svg class="hp-footer-icon" fill="currentColor" focusable="false" version="1.1" viewBox="0 0 32 32" style="display: inline-block;">
+          <path d="M16,32c-0.2,0-0.3,0-0.5,0l3.3-9h4.5c0.8,0,1.7-0.6,1.9-1.3l3.6-9.7c0.6-1.6-0.3-2.9-2-2.9h-6.2l-5.2,14.4
+            l0,0l-3,8.2C5.2,29.9,0,23.6,0,16C0,8.7,4.9,2.5,11.7,0.6L8.6,9l0,0L3.5,23h3.4l4.3-11.9h2.5L9.5,23h3.4l4-11.1
+            c0.6-1.6-0.3-2.9-2-2.9H12l3.3-9c0.2,0,0.5,0,0.7,0c8.8,0,16,7.2,16,16S24.8,32,16,32z M25.7,11.1h-2.5l-3.6,9.8h2.5L25.7,11.1z"></path>
+        </svg>
+        
+        {% if config.copyright %}    
+          {{ config.copyright }}
+        {% endif %}
+        
+        <a href="#" id="legal-link">Legal Notices</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% include "partials/legal-modal.html" %}
