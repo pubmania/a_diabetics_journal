@@ -4,7 +4,7 @@ mkdocs==1.4.2
 
 # WARNING:If you change this, make sure
 # the menu and footer are built and rendered correctly
-mkdocs-material==9.1.15
+mkdocs-material>=9.1.15
 mkdocs-material-extensions>=1.0.3
 mkdocs-git-revision-date-localized-plugin==0.10.3
 mkdocs-awesome-pages-plugin==2.7.0
@@ -19,4 +19,6 @@ mkdocs-table-reader-plugin
 mkdocs-enumerate-headings-plugin
 mkdocs-encryptcontent-plugin
 mkdocs-include-markdown-plugin
+mkdocs-mermaid2-plugin
+mkdocs-macros-plugin
 jinja2>=3.0.2

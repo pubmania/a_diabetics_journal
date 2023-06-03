@@ -1,4 +1,4 @@
-site_name: My Docs
+site_name: The Diary Of A Diabetic 
 site_url: ""
 use_directory_urls: False
 theme:
@@ -6,6 +6,7 @@ theme:
   custom_dir: overrides/partials
   features:
     - content.code.annotate
+    - content.code.copy
     - content.tabs.link
     - content.tooltips
     - navigation.indexes
@@ -19,7 +20,7 @@ theme:
 
 extra_css:
   - assets/stylesheets/main.css
-  - assets/stylesheets/footer.css
+  #- assets/stylesheets/footer.css
  
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
@@ -37,7 +38,10 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-  - pymdownx.highlight
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.details
   #- pymdownx.smartsymbols
@@ -68,6 +72,7 @@ plugins:
   - search
   - awesome-pages
   - include-markdown
+  - mermaid2
   - table-reader:
       data_path: "docs/assets/tables"
   - encryptcontent:
@@ -87,5 +92,7 @@ plugins:
       increment_across_pages: true
       exclude:
         - index.md
+        - about/index.md
+  - macros
 
 ##################################################  
