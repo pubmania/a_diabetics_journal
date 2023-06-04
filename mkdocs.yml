@@ -3,7 +3,7 @@ site_url: ""
 use_directory_urls: False
 theme:
   name: material
-  custom_dir: overrides/partials
+  #custom_dir: overrides/partials
   features:
     - content.code.annotate
     - content.code.copy
