@@ -4,9 +4,8 @@ on:
     branches: 
       - main
     paths:
-      - docs/**
       - mkdocs.yml
-      - requirements-docs.txt
+      - requirements.txt
   workflow_dispatch:
 jobs:
   deploy:
@@ -16,5 +15,5 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
-      - run: pip install -r requirements-docs.txt
+      - run: pip install -r requirements.txt
       - run: mkdocs gh-deploy --force
