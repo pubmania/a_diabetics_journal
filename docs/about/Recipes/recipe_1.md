@@ -3,7 +3,7 @@
 Well we can have a fairly simple recipe here. Lets see how it goes.
 
 !!! tip
-    Preheating water will actually make mixing stuff easier. Lets go.
+    Preheating water will actually make mixing stuff easier. Lets go....
 
 {{ """
 >> Serving Size: 6
