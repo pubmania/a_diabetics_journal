@@ -38,79 +38,223 @@ def define_env(env):
     # create a jinja2 filter
     @env.filter
     def parse_recipe(input_string):
-        ingredient_pattern = r'@([\w\s]+)\(([\d.]+)%(\w+)\)'
-        matches = re.findall(ingredient_pattern, input_string)
-        cookware_pattern = r'{#([\w\s]+)}'
-        cookware_matches = re.findall(cookware_pattern, input_string)
+        def parse_cookware(item: str) -> dict[str, str]:
+            """Parse cookware item
+            e.g. #pot or #potato masher{}
+            """
+            if item[0] != "#":
+                raise ValueError("Cookware should start with #")
+            item = item.replace("{}", "")
+            return item[1:]
+
+
+        def parse_quantity(item: str) -> list[str, str]:
+            """Parse the quantity portion of an ingredient
+            e.g. 2%kg
+            """
+            if "%" not in item:
+                return [item, ""]
+            return item.split("%", maxsplit=1)
+
+
+        def parse_ingredient(item: str) -> dict[str, str]:
+            """Parse an ingredient string
+            eg. @salt or @milk{4%cup}
+            """
+            if item[0] != "@":
+                raise ValueError("Ingredients should start with @")
+            if item[-1] != "}":
+                return {
+                    "type": "ingredient",
+                    "name": item[1:],
+                    "quantity": "some",
+                    "units": "",
+                }
+            name, quantity = item.split("{", maxsplit=1)
+            val, units = parse_quantity(quantity[0:-1])
+            return {
+                "type": "ingredient",
+                "name": name[1:],
+                "quantity": val or "some",
+                "units": units,
+            }
+
+
+        def parse_timer(item: str) -> dict[str, str]:
+            """Parse timer string
+            e.g. ~eggs{3%minutes} or ~{25%minutes}
+            """
+            if item[0] != "~":
+                raise ValueError("Timer should start with ~")
+            name, quantity = item.split("{", maxsplit=1)
+            val, units = parse_quantity(quantity[0:-1])
+            return {
+                "type": "timer",
+                "name": name[1:],
+                "quantity": val,
+                "units": units,
+            }
+
+        def find_specials(step: str, start_char="#") -> list[str]:
+            matches = []
+            item = ""
+            matching: bool = False
+            specials = ["~", "@", "#"]
+            for i, x in enumerate(step):
+                if x == start_char:
+                    if start_char == "~" and step[i - 1] == "{":
+                        continue  # Skip - approx value in ingredient
+                    matching = True
+                    item += x
+                    continue
+                if matching and x in specials:
+                    if " " in item:
+                        item = item.split(" ")[0]
+                    elif "." in item:
+                        item = item.split(".")[0]
+                    matches.append(item)
+                    matching = False
+                    item = ""
+                if matching and x == "}":
+                    item += x
+                    matches.append(item)
+                    matching = False
+                    item = ""
+                if matching:
+                    item += x
+
+            if matching:
+                if " " in item:
+                    item = item.split(" ")[0]
+                elif "." in item:
+                    item = item.split(".")[0]
+                matches.append(item)
+            return matches
+
+        def find_cookware(step: str) -> list[str]:
+            """Find cookware items in a recipe step"""
+            return find_specials(step, "#")
+
+
+        def find_ingredients(step: str) -> list[str]:
+            """Find ingredients in a recipe step"""
+            return find_specials(step, "@")
+
+
+        def find_timers(step: str) -> list[str]:
+            """Find timers in a recipe step"""
+            return find_specials(step, "~")
+        
+        def insert_newlines(input_string, chars_per_line):
+            mod = ""    
+            for i,x in enumerate(input_string):
+                if x ==' ' and i >= chars_per_line:
+                    x = "\n"
+                    chars_per_line += chars_per_line
+                mod += x    
+            return mod
+        
+        matches = []
+        for item in find_ingredients(input_string):
+            matches.append(parse_ingredient(item))
+        cookware_matches = find_cookware(input_string)
         ingredients = {}
         cookwares = set()
         steps = []
         cooking_data = {}
-        
+
         for match in matches:
-            ingredient_name = match[0].capitalize()
-            amount = float(match[1])
-            unit = match[2]
-            
+            ingredient_name = match['name'].capitalize()
+            amount = match['quantity']
+            unit = match['units']
+
             ingredient_key = ingredient_name
             if ingredient_key in ingredients:
                 ingredients[ingredient_key].append((amount, unit))
             else:
                 ingredients[ingredient_key] = [(amount, unit)]
-            
+
         for cookware_match in cookware_matches:
-            cookware_name = cookware_match.capitalize()
+            cookware_name = parse_cookware(cookware_match).capitalize()
             cookwares.add(cookware_name)
+
+        #Remove individual timer notation ~{25%minutes}
+        input_string = re.sub(r'~{(\d+)%([^}]+)}', lambda match: f"{match.group(1)} {match.group(2)}",input_string)
         
-        lines = input_string.replace("@", "").replace("%", " ").replace("{#", '').replace("}", '').splitlines()
+        lines = input_string.replace("{}", '').\
+        replace("@", "").\
+        replace("%", " ").\
+        replace("#", '').\
+        replace("~", '').\
+        replace("{", ' (').replace("}", ')').splitlines()
 
         ingredient_string = ""
         for line in lines:
-            if line.strip() != "" and line.startswith("-"):
-                key, value = line.lstrip("- ").strip().split(":")
+            if line.strip() != "" and line.startswith(">>"):
+                key, value = line.lstrip(">> ").strip().split(":")
                 cooking_data[key.strip()] = value.strip()
             elif line.strip() != "":
                 steps.append(line.strip())
-        
-        ingredient_string += "\n-   ## Ingredients\n\n\t---\n"
+
+        ingredient_string += "<div class=\"grid cards\" markdown>\n\n\n-   ## Ingredients\n\n\t---\n"
+        #ingredient_string += "\n## Ingredients\n\n\t---\n"
         ingredient_count = 1
-        for ingredient_name, amounts in ingredients.items():
-            ingredient_line = f"\t\t{ingredient_count}. {ingredient_name}:"
-            ingredient_string += ingredient_line + "\n"
-            for amount, unit in amounts:
-                ingredient_line = f"\t\t\t- {amount} {unit}"
+        for ingredient_name in ingredients.keys():
+            if len(ingredients[ingredient_name]) > 1:
+                ingredient_line = f"\t\t{ingredient_count}. {ingredient_name}:"
                 ingredient_string += ingredient_line + "\n"
-            ingredient_string += "\n\n"
+                for amount, unit in ingredients[ingredient_name]:
+                    ingredient_line = f"\t\t\t- {amount} {unit}"
+                    ingredient_string += ingredient_line + "\n"
+            else:
+                ingredient_line = ""
+                for amount, unit in ingredients[ingredient_name]:
+                    ingredient_line += f"\t\t{ingredient_count}. {ingredient_name}: {amount} {unit}"
+                ingredient_string += ingredient_line + "\n"
             ingredient_count += 1
         if cookwares:
             cookware_string = "\n-   ## Cookwares\n\n\t---\n"
             cookware_count = 1
             for cookware in cookwares:
-                cookware_line = f"\t{cookware_count}. {cookware}"
+                cookware_line = f"\t{cookware_count}. *{cookware}*"
                 cookware_count += 1
                 cookware_string += cookware_line + "\n"
         else:
             cookware_string = ''
-        
-        steps_string = "\n-   ## Steps\n\n\t---"
+        cookware_string += '</div>'
+        steps_string = "<div class=\"grid cards\" markdown>\n\n\n-   ## Steps\n\n\t---"
         dia_string = "\n-   ## Process\n\n\t---\n\t```plantuml\n\t@startuml\n\t!theme cerulean\n\tstart\n"
         for step in steps:
-            dia_string += "\t:" + step + ";\n"
+            dia_string += "\t:" + insert_newlines(step,30) + ";\n"
             step_line = f"\n\t* {step}"
             steps_string += step_line
-                
+        #steps_string += "</div>"
         dia_string += "\tend\n\t@enduml\n\t```\n</div>"
-        
+
         if "Title" in cooking_data:
             title = cooking_data["Title"]
             del cooking_data["Title"]
             cooking_data_string = f"# {title}\n\n"
         else:
             cooking_data_string = ""
-        
-        cooking_data_string += "<div class=\"grid cards\" markdown>\n\n"
+
+        #cooking_data_string += "<div class=\"grid cards\" markdown>\n\n"
+        temp_cooking_data_string = ""
         for key, value in cooking_data.items():
-            cooking_data_string += f"- **{key}**:*{value}*\n"
-        
+            if key in ('Cooking Time','Serving Size','Type'):
+                if key == 'Cooking Time':
+                    one_cooking_data_string = f":material-timer: *{value}*, "
+                elif key == 'Serving Size':
+                    two_cooking_data_string = f":fontawesome-solid-chart-pie: *{value}*, "
+                elif key == 'Type':
+                    if value == 'Vegetarian':
+                        three_cooking_data_string = f"**{key}**: :leafy_green: "
+                    else:
+                        three_cooking_data_string = f"**{key}**: :cut_of_meat: "
+            else:
+                cooking_data_string += f", **{key}**: *{value}* "
+        temp_cooking_data_string = one_cooking_data_string + two_cooking_data_string + three_cooking_data_string
+        cooking_data_string = f'<div class=\"grid cards\" markdown>\n\n-   ' + temp_cooking_data_string + cooking_data_string + '</div>'
+
         final_output_string = cooking_data_string + "\n" + ingredient_string + "\n" + cookware_string + "\n" + steps_string + "\n" + dia_string
         return final_output_string
