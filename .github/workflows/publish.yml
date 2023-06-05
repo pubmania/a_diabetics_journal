@@ -1,4 +1,4 @@
-name: publish 
+name: Build and Deploy 
 on:
   push:
     branches: 
@@ -17,4 +17,7 @@ jobs:
           python-version: 3.x
       - run: pip install -r requirements.txt
       - run: mkdocs gh-deploy --force
-      - uses: actions/deploy-pages@v2.0.1
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.0
+        with:
+          branch: gh-pages  # The branch the action should deploy to. Has to be specified in the repo's settings.
