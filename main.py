@@ -254,13 +254,13 @@ def define_env(env):
                     two_cooking_data_string = f":fontawesome-solid-chart-pie: *{value}*, "
                 elif key == 'Type':
                     if value == 'Vegetarian':
-                        three_cooking_data_string = f"**{key}**: :leafy_green:, "
+                        three_cooking_data_string = f"**{key}**: :leafy_green: "
                     elif value == 'Vegetarian with Egg':
-                        three_cooking_data_string = f"**{key}**: :leafy_green::egg:, "
+                        three_cooking_data_string = f",**{key}**: :leafy_green::egg: "
                     else:
-                        three_cooking_data_string = f"**{key}**: :cut_of_meat:, "
+                        three_cooking_data_string = f",**{key}**: :cut_of_meat: "
                 elif key == 'Source':
-                    four_cooking_data_string = f"**{key}**: [:material-origin:]({value})"                
+                    four_cooking_data_string = f",**{key}**: [:material-origin:]({value})"                
             else:
                 cooking_data_string += f", **{key}**: *{value}* "
         if one_cooking_data_string != "":
@@ -270,7 +270,7 @@ def define_env(env):
         if three_cooking_data_string != "":
             temp_cooking_data_string += three_cooking_data_string
         if four_cooking_data_string != "":
-            temp_cooking_data_string += four_cooking_data_string + "{target=_blank} "
+            temp_cooking_data_string += four_cooking_data_string + "{target=_blank} ,"
         cooking_data_string = f'<div class=\"grid cards\" align = \"center\" markdown>\n\n-   ' + temp_cooking_data_string + cooking_data_string + '</div>'
 
         final_output_string = cooking_data_string + "\n" + ingredient_string + "\n" + cookware_string + "\n" + steps_string + "\n" + dia_string + cooklang_block
