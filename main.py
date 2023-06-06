@@ -148,7 +148,9 @@ def define_env(env):
         def insert_newlines(input_string, chars_per_line):
             mod = ""    
             for i,x in enumerate(input_string):
-                if x ==' ' and i >= chars_per_line:
+                if x in ('`','*'):
+                    x = ''
+                elif x ==' ' and i >= chars_per_line:
                     x = "\n"
                     chars_per_line += chars_per_line
                 mod += x    
@@ -240,6 +242,9 @@ def define_env(env):
 
         #cooking_data_string += "<div class=\"grid cards\" markdown>\n\n"
         temp_cooking_data_string = ""
+        one_cooking_data_string = ""
+        two_cooking_data_string = ""
+        three_cooking_data_string = ""
         for key, value in cooking_data.items():
             if key in ('Cooking Time','Serving Size','Type'):
                 if key == 'Cooking Time':
@@ -253,8 +258,13 @@ def define_env(env):
                         three_cooking_data_string = f"**{key}**: :cut_of_meat: "
             else:
                 cooking_data_string += f", **{key}**: *{value}* "
-        temp_cooking_data_string = one_cooking_data_string + two_cooking_data_string + three_cooking_data_string
-        cooking_data_string = f'<div class=\"grid cards\" align = \"right\" markdown>\n\n-   ' + temp_cooking_data_string + cooking_data_string + '</div>'
+        if one_cooking_data_string != "":
+            temp_cooking_data_string = one_cooking_data_string 
+        if two_cooking_data_string != "":
+            temp_cooking_data_string += two_cooking_data_string
+        if three_cooking_data_string != "":
+            temp_cooking_data_string += three_cooking_data_string
+        cooking_data_string = f'<div class=\"grid cards\" align = \"center\" markdown>\n\n-   ' + temp_cooking_data_string + cooking_data_string + '</div>'
 
         final_output_string = cooking_data_string + "\n" + ingredient_string + "\n" + cookware_string + "\n" + steps_string + "\n" + dia_string + cooklang_block
         return final_output_string

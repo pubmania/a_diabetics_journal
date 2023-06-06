@@ -1,12 +1,20 @@
+---
+tags:
+    - Bread
+    - Breakfast
+---
+
 # No Egg Wheat Gluten Bread
 
-What a lovely recipe. Nothing comes closer to the real bread than this recipe in my experience.
+What a lovely recipe. Nothing comes closer to the real bread than this recipe in my experience. It tastes great toasted, with eggs and can basically replace the traditional bread for a diabetic.
+
+I came across the original recipe on a diabetes forum which can be found on this [link](http://www.lowcarbluxury.com/recipes/recipe-bread21.html){target=_blank}. I have, however, made minor modifications and adjustments.
 
 !!! tip
     You can add various seeds, olives, onions, garlic etc to make different artisan breads. I have tried a number of variations and they all come out good.
 
 {{ """
->> Serving Size: 4 (16 slices)
+>> Serving Size: 4 portions (16 slices)
 >> Cooking Time: 90 minutes
 >> Category: Continental
 >> Type: Vegetarian
@@ -21,4 +29,5 @@ Place the rolls on oiled #baking sheet{}.
 Leave them to rise for 40 minutes to an hour.
 Bake in #oven{} for 20 minutes at 180-190 C.
 Take out of oven and leave it out for 15 mimutes.
-""" | parse_recipe() }}
+""" 
+| parse_recipe() }}

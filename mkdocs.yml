@@ -14,7 +14,7 @@ theme:
     - content.action.edit
     - content.action.view
     - navigation.indexes
-    - navigation.sections
+    #- navigation.sections
     - navigation.tabs
     - navigation.top
     - navigation.tracking
@@ -98,5 +98,7 @@ plugins:
         - index.md
         - about/index.md
   - macros
+  - tags:
+      tags_file: Recipes/tags.md
 
 ##################################################  
