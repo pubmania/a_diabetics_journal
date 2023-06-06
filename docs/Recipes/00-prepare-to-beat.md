@@ -9,50 +9,82 @@ Prepare by having key ingredients to help with keto / low carb diet. Following i
 !!! warning "Caution"
     It's easy to get lured into the overuse of the ultra processed foods while trying low carb alternatives, so please do keep an eye on ingredients and avoid additives, flavourings etc from overuse. These if had regularly can cause havoc on your gut microbiome. Any item that can be classed as ultra processed is marked with :red_circle: and possibly processed is marked with :small_orange_diamond: in the list below.
 <div class="grid cards" markdown>
-1. [Almond Flour](https://kutt.it/almondflour_uk) 
-2. :red_circle: [Unflavoured Protein Powder](https://kutt.it/unflavoured_whey_protien)
-3. [Coconut Flour](https://kutt.it/coconut_flour)
-4. :small_orange_diamond: [Erythritol](https://kutt.it/erythritol)
-5. [Confectioners Swerve](https://kutt.it/swerve)
-6. [Yeast](https://kutt.it/yeast)
-7. [Sunflower Seeds Flour](https://kutt.it/sunflower_seed_flour)
-8. :red_circle: [Xanthum Gum](https://kutt.it/xanthum)
-9. [Avocado Oil](https://kutt.it/avacado_oil)
-10. [Virgin Olive Oil](https://kutt.it/extra_virgin_olive_oil)
-11. Eggs
-12. [Garam Masala](https://kutt.it/garam_masala)
-13. Raddish 
-14. Black Pepper
-15. Extra mature cheddar cheese slices
-16. Extra mature cheddar cheese - :warning: *Make sure to read ingredienst on the back. Carb content should be less than 0.6g usually about 0.1g for extra mature cheddar cheese.*
-17. :small_orange_diamond: Unsweetened Peanut Butter both versions
-	a) [Smooth](https://kutt.it/smooth_peanut_butter) 
-	b) [Crunchy](https://kutt.it/crunchy_peanut_butter)
-18. Clarified Butter (Ghee) - :bulb: *Can be prepared at home by simply heating the unsalted butter in a pan until it starts bubbling and becomes clear.*
-19. Aubergine
-20. Pink Himalayan Salt
-21. Blueberries
-22. Raspberries
-23. Strawberries
-24. [Golden Flaxseed organic](https://kutt.it/golden_flaxseed)
-25. Almonds
-26. Walnuts
-27. Cashews 
-28. Pistachios
-29. [Macademia nuts](https://kutt.it/macademia_nuts)
-30. [Pea Protein](https://kutt.it/pea-protein)
-31. [Seasme Powder](https://kutt.it/seasme_powder)
-32. [Vital Wheat Gluten](https://kutt.it/wheat-gluten)
-33. [MCT Powder](https://kutt.it/mct_powder)
-34. [Electrolyte Tablets](https://kutt.it/electrolyte_tablets)
-35. [Soya Flour](https://kutt.it/soya_flour)
-36. :red_circle: [Sugar Free Tomato Ketchup](https://kutt.it/sugar_free_tomato_ketchup)
-37. :red_circle: [Keto Chocolate Bar](https://kutt.it/keto_choc_bar)
-38. [Low Carb Pasta](https://kutt.it/low_carb_pasta)
-39. :small_orange_diamond: [Soya Chunks](https://kutt.it/soya_chunks):warning: *23g carb per 100g - no adverse impact on my BG. Your mileage may vary.*
-40. [Celeriac](https://kutt.it/chopped_celeriac) - :bulb:*We are only able to get it at Waitrose*
-41. Full Fat Greek Yogurt - :warning: *Sainsburys brand is what I use. It must be used only sparingly as it does have about 4.5g carbs per 100gms*
-42. [Psyllium Husk](https://kutt.it/psyllium_husk) - :warning: *Although a large number of dishes on net use this, I wouldn't be quick on ordering this as I dont find its taste great and none of the ideas below need this ingredient*
+
+-   [Almond Flour](https://kutt.it/almondflour_uk) 
+-   [Avocado Oil](https://kutt.it/avacado_oil)
+-   [Coconut Flour](https://kutt.it/coconut_flour)
+-   [Golden Flaxseed organic](https://kutt.it/golden_flaxseed)
+-   [Confectioners Swerve](https://kutt.it/swerve)
+-   [Yeast](https://kutt.it/yeast)
+-   [Sunflower Seeds Flour](https://kutt.it/sunflower_seed_flour)
+-   [Virgin Olive Oil](https://kutt.it/extra_)
+-   [Garam Masala](https://kutt.it/garam_masala)
+-   [Low Carb Pasta](https://kutt.it/low_carb_pasta)
+-   [Macademia nuts](https://kutt.it/macademia_nuts)
+-   [Pea Protein](https://kutt.it/pea-protein)
+-   [Seasme Powder](https://kutt.it/seasme_powder)
+-   [Vital Wheat Gluten](https://kutt.it/wheat-gluten)
+-   [MCT Powder](https://kutt.it/mct_powder)
+-   [Electrolyte Tablets](https://kutt.it/electrolyte_tablets)
+-   [Soya Flour](https://kutt.it/soya_flour)
+-   Eggs
+-   Raddish 
+-   Black Pepper
+-   Aubergine
+-   Pink Himalayan Salt
+-   Blueberries
+-   Raspberries
+-   Strawberries
+-   Almonds
+-   Walnuts
+-   Cashews 
+-   Pistachios
+-   Extra mature cheddar cheese slices
+-   Extra mature cheddar cheese
+
+	--- 
+
+	:warning: *Make sure to read ingredienst on the back. Carb content should be less than 0.6g usually about 0.1g for extra mature cheddar cheese*
+
+-   :small_orange_diamond: Unsweetened Peanut Butter both versions
+
+	---
+
+	1. [Smooth](https://kutt.it/smooth_peanut_butter) 
+	2. [Crunchy](https://kutt.it/crunchy_peanut_butter)
+
+-   Clarified Butter (Ghee) 
+
+	--- 
+	
+	:bulb: *Can be prepared at home by simply heating the unsalted butter in a pan until it starts bubbling and becomes clear.*
+
+-   Full Fat Greek Yogurt 
+	--- 
+	
+	:warning: *Sainsburys brand is what I use. It must be used only sparingly as it does have about 4.5g carbs per 100gms*
+
+-   :red_circle: [Sugar Free Tomato Ketchup](https://kutt.it/sugar_free_tomato_ketchup)
+-   :red_circle: [Keto Chocolate Bar](https://kutt.it/keto_choc_bar)
+-   :small_orange_diamond: [Erythritol](https://kutt.it/erythritol)
+-   :small_orange_diamond: [Soya Chunks](https://kutt.it/soya_chunks)
+
+	---
+	
+	:warning: *23g carb per 100g - no adverse impact on my BG. Your mileage may vary.*
+
+-   [Celeriac](https://kutt.it/chopped_celeriac) 
+	
+	--- 
+	
+	:bulb:*We are only able to get it at Waitrose*
+
+-   [Psyllium Husk](https://kutt.it/psyllium_husk) 
+	
+	--- 
+	
+	:warning: *Although a large number of dishes on net use this, I wouldn't be quick on ordering this as I dont find its taste great and none of the ideas below need this ingredient*
+
 </div>
 
 ## Must have Cookwares

@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 ## Background
 
 !!! abstract "My understanding of Diabetes"

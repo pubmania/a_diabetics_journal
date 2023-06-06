@@ -6,7 +6,7 @@ tags:
 
 # Almond Flour Bread, Eggs and Green Chilli Avocado
 
-Use the [recipe from Joe Duff](https://kutt.it/almond_flour_bread_recipe) for making a quick 5 minutes bread in microwave using Almond Flour. [YouTube Link](https://youtu.be/-lh-0KxFjEM)
+This is a modification of the [recipe from Joe Duff](https://kutt.it/almond_flour_bread_recipe){target=_blank} which avoids use of Xanthum Gum for making a quick 5 minutes bread in microwave using Almond Flour. [YouTube Link](https://youtu.be/-lh-0KxFjEM){target=_blank}
 
 Eat it with poached eggs - easiest way is to use the microwave poaching dish or can even use normal hard boiled eggs. Make sure you eat atleast two eggs and the whole thing, no discarding the yellow part. It's important for keeping you feeling full. 
 
@@ -20,11 +20,10 @@ Eat it with poached eggs - easiest way is to use the microwave poaching dish or 
 >> Cooking Time: 5 minutes
 >> Category: Continental
 >> Type: Vegetarian
+>> Source: https://kutt.it/almond_flour_bread_recipe
 In a #medium-sized bowl{} add @Blanched Almond flour{3/4%Cup(86g)}
-Add @Unflavored Whey Protein Powder{2/3%Scoop(22g)}
-Add @Confectioners Swerve{2%teaspoon(6g)} and @Rapid Rise Yeast{1%teaspoon(3g)}
-Add @Baking Powder{1/2%teaspoon} and @Xanthum Gum{1%teaspoon}
-Now add @Salt{1/4%teaspoon} and @Hot Water{1/3%Cup(100g)}
+Add @Baking Powder{1/2%teaspoon} and @Full Fat Greek Yogurt{1%tablespoon}
+Now add @Salt{1/4%teaspoon}, @Olive Oil{1%tablespoon} and @Lukewarm Water{2%tablespoon}
 Mix until a thick `paste` consistency forms in the bowl.
 Coat a #square glass sandwich container{} with @baking spray{2-3%Sprays}. 
 Add the batter to it and using a #spatula{} evenly spread it out in the dish. 

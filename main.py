@@ -155,7 +155,7 @@ def define_env(env):
                     chars_per_line += chars_per_line
                 mod += x    
             return mod
-        cooklang_block = f'\n??? abstract "Recipe in [Cooklang](https://cooklang.org/)"\n\t```\n\t' + input_string.replace("\n","\n\t") + '```'
+        cooklang_block = f'\n??? abstract "Recipe in [Cooklang](https://cooklang.org/)' + '{target=_blank' + '}"\n\t```\n\t' + input_string.replace("\n","\n\t") + '```'
         matches = []
         for item in find_ingredients(input_string):
             matches.append(parse_ingredient(item))
@@ -193,7 +193,7 @@ def define_env(env):
         ingredient_string = ""
         for line in lines:
             if line.strip() != "" and line.startswith(">>"):
-                key, value = line.lstrip(">> ").strip().split(":")
+                key, value = line.lstrip(">> ").strip().split(": ")
                 cooking_data[key.strip()] = value.strip()
             elif line.strip() != "":
                 steps.append(line.strip())
@@ -236,7 +236,7 @@ def define_env(env):
         if "Title" in cooking_data:
             title = cooking_data["Title"]
             del cooking_data["Title"]
-            cooking_data_string = f"# {title}\n\n"
+            cooking_data_string = f"## {title}\n\n"
         else:
             cooking_data_string = ""
 
@@ -245,17 +245,22 @@ def define_env(env):
         one_cooking_data_string = ""
         two_cooking_data_string = ""
         three_cooking_data_string = ""
+        four_cooking_data_string = ""
         for key, value in cooking_data.items():
-            if key in ('Cooking Time','Serving Size','Type'):
+            if key in ('Cooking Time','Serving Size','Type', 'Source'):
                 if key == 'Cooking Time':
                     one_cooking_data_string = f":material-timer: *{value}*, "
                 elif key == 'Serving Size':
                     two_cooking_data_string = f":fontawesome-solid-chart-pie: *{value}*, "
                 elif key == 'Type':
                     if value == 'Vegetarian':
-                        three_cooking_data_string = f"**{key}**: :leafy_green: "
+                        three_cooking_data_string = f"**{key}**: :leafy_green:, "
+                    elif value == 'Vegetarian with Egg':
+                        three_cooking_data_string = f"**{key}**: :leafy_green::egg:, "
                     else:
-                        three_cooking_data_string = f"**{key}**: :cut_of_meat: "
+                        three_cooking_data_string = f"**{key}**: :cut_of_meat:, "
+                elif key == 'Source':
+                    four_cooking_data_string = f"**{key}**: [:material-origin:]({value})"                
             else:
                 cooking_data_string += f", **{key}**: *{value}* "
         if one_cooking_data_string != "":
@@ -264,6 +269,8 @@ def define_env(env):
             temp_cooking_data_string += two_cooking_data_string
         if three_cooking_data_string != "":
             temp_cooking_data_string += three_cooking_data_string
+        if four_cooking_data_string != "":
+            temp_cooking_data_string += four_cooking_data_string + "{target=_blank} "
         cooking_data_string = f'<div class=\"grid cards\" align = \"center\" markdown>\n\n-   ' + temp_cooking_data_string + cooking_data_string + '</div>'
 
         final_output_string = cooking_data_string + "\n" + ingredient_string + "\n" + cookware_string + "\n" + steps_string + "\n" + dia_string + cooklang_block

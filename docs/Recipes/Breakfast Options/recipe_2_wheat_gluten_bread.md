@@ -8,7 +8,7 @@ tags:
 
 What a lovely recipe. Nothing comes closer to the real bread than this recipe in my experience. It tastes great toasted, with eggs and can basically replace the traditional bread for a diabetic.
 
-I came across the original recipe on a diabetes forum which can be found on this [link](http://www.lowcarbluxury.com/recipes/recipe-bread21.html){target=_blank}. I have, however, made minor modifications and adjustments.
+I came across the original recipe on a diabetes forum. I have, however, made minor modifications and adjustments.
 
 !!! tip
     You can add various seeds, olives, onions, garlic etc to make different artisan breads. I have tried a number of variations and they all come out good.
@@ -18,6 +18,7 @@ I came across the original recipe on a diabetes forum which can be found on this
 >> Cooking Time: 90 minutes
 >> Category: Continental
 >> Type: Vegetarian
+>> Source: http://www.lowcarbluxury.com/recipes/recipe-bread21.html
 Add @Olive Oil{1%tbsp} and @sugar{1%tsp} in @water{300%ml} and mix well.
 Take a #bowl{} and add @vital wheat gluten{1%cup}.
 Add @wheat bran{1/4%cup}, @oat flour{1/4%cup}.
