@@ -1,3 +1,4 @@
 #Python virtual environment
 mkdocs_venv
 site
+__pycache__
