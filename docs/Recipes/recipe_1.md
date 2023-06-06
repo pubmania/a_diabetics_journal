@@ -7,9 +7,9 @@
     You may want to check if the BG rises with use of blueberries and raspberries - I noticed it did so for me on some days so I stopped adding these.
 
 {{ """
->> Serving Size: 6
->> Cooking Time: 30 minutes
->> Category: Universal
+>> Serving Size: 1
+>> Cooking Time: 10 minutes
+>> Category: Breakfast
 >> Type: Vegetarian
 Coarsely grind @Almonds{2%tablespoons}, @Walnuts{2%tablespoons}, @Cashews{2%tablespoons}, @Pistachios{2%tablespoons}, @Macademia nuts{2%tablespoons} in a #mixer{}.
 Lightly roast the mixture.
