@@ -1,6 +1,7 @@
 # Flaxseed Porridge
 
-!!! info A very good source of fibre. Helps the stomach ease into digestion phase and allows for better gut health.
+!!! info 
+    A very good source of fibre. Helps the stomach ease into digestion phase and allows for better gut health.
 
 !!! warning
     You may want to check if the BG rises with use of blueberries and raspberries - I noticed it did so for me on some days so I stopped adding these.
