@@ -1,4 +1,6 @@
 site_name: The Diary Of A Diabetic 
+repo_url: https://github.com/pubmania/a_diabetics_journal
+edit_uri: edit/main/docs/
 site_url: ""
 use_directory_urls: False
 theme:
@@ -9,6 +11,8 @@ theme:
     - content.code.copy
     - content.tabs.link
     - content.tooltips
+    - content.action.edit
+    - content.action.view
     - navigation.indexes
     - navigation.sections
     - navigation.tabs

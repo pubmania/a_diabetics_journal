@@ -153,7 +153,7 @@ def define_env(env):
                     chars_per_line += chars_per_line
                 mod += x    
             return mod
-        
+        cooklang_block = f'\n??? abstract "Recipe in [Cooklang](https://cooklang.org/)"\n\t```\n\t' + input_string.replace("\n","\n\t") + '```'
         matches = []
         for item in find_ingredients(input_string):
             matches.append(parse_ingredient(item))
@@ -254,7 +254,7 @@ def define_env(env):
             else:
                 cooking_data_string += f", **{key}**: *{value}* "
         temp_cooking_data_string = one_cooking_data_string + two_cooking_data_string + three_cooking_data_string
-        cooking_data_string = f'<div class=\"grid cards\" markdown>\n\n-   ' + temp_cooking_data_string + cooking_data_string + '</div>'
+        cooking_data_string = f'<div class=\"grid cards\" align = \"right\" markdown>\n\n-   ' + temp_cooking_data_string + cooking_data_string + '</div>'
 
-        final_output_string = cooking_data_string + "\n" + ingredient_string + "\n" + cookware_string + "\n" + steps_string + "\n" + dia_string
+        final_output_string = cooking_data_string + "\n" + ingredient_string + "\n" + cookware_string + "\n" + steps_string + "\n" + dia_string + cooklang_block
         return final_output_string
