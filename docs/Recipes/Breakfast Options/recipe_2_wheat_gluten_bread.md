@@ -17,7 +17,7 @@ I came across the original recipe on a diabetes forum. I have, however, made min
     2. Instead of making rolls, you can bake it in bread pan to get 16 slices.
 
 !!! danger
-    As this recipe is based mainly on wheat gluten anyone it is not suitable for those with Gluten Intolerance. I am sure it's obvious but still.
+    As this recipe is based mainly on wheat gluten, it is not suitable for those with Gluten Intolerance. I am sure it's obvious but still.
 
 {{ """
 >> Serving Size: 4 portions (8 rolls)
