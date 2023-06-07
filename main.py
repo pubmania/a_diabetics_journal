@@ -227,7 +227,7 @@ def define_env(env):
         steps_string = "<div class=\"grid cards\" markdown>\n\n\n-   ## Steps\n\n\t---"
         dia_string = "\n-   ## Process\n\n\t---\n\t```plantuml\n\t@startuml\n\t!theme cerulean\n\tstart\n"
         for step in steps:
-            dia_string += "\t:" + insert_newlines(step,30) + ";\n"
+            dia_string += "\t:" + insert_newlines(step,50) + ";\n"
             #step_line = f"\n\t* {step}"
             if step.startswith('**') and step.endswith('**'):
                 step_line = f"\n\t### {step.replace('**','')}"
