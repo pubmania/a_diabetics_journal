@@ -13,7 +13,7 @@ tags:
 >> Type: Vegetarian
 >> Image: paneer-crackers.jpg
 >> Image-Caption: Image of finished product
-Chop @Paneer{250%gms} into small piences using #knife{}.
+Chop @Paneer{250%gms} into small pieces using #knife{}.
 Add it to a #mixer grinder{} jar 
 Then add following ingredients
 @Ground Black Pepper{to taste}

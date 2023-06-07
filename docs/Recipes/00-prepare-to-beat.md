@@ -7,7 +7,13 @@ Prepare by having key ingredients to help with keto / low carb diet. Following i
 ## Pantry
 
 !!! warning "Caution"
-    It's easy to get lured into the overuse of the ultra processed foods while trying low carb alternatives, so please do keep an eye on ingredients and avoid additives, flavourings etc from overuse. These if had regularly can cause havoc on your gut microbiome. Any item that can be classed as ultra processed is marked with :red_circle: and possibly processed is marked with :orange_circle: in the list below. My favourites are marked with :green_heart: .
+    It's easy to get lured into the overuse of the ultra processed foods while trying low carb alternatives, so please do keep an eye on ingredients and avoid additives, flavourings etc from overuse. 
+	
+	One can read more about this in the book [Ultra-Processed People: The Science Behind the Food That Isn't Food by Dr. Chris van Tulleken](https://www.goodreads.com/en/book/show/62586003). These, if had regularly, can cause havoc on your gut microbiome.
+	
+	Any item that can be classed as `ultra processed` is marked with :red_circle: and `possibly processed` is marked with :orange_circle: in the list below. 
+	
+	My `favourites` are marked with :green_heart:.
 
 <div class="grid cards" markdown>
 
