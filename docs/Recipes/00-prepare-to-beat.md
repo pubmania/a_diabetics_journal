@@ -116,7 +116,7 @@ Prepare by having key ingredients to help with keto / low carb diet. Following i
 ## Must have Cookwares
 
 1. Measuring Scale like [this one](https://kutt.it/measuring_scale){target=_blank}.
-2. Air Fryer (Nice to have{target=_blank}The one we have and I can highly recommend is [this one](https://www.argos.co.uk/product/1166039){target=_blank}.
+2. Air Fryer (Nice to have). The one we have and I can highly recommend is [this one](https://www.argos.co.uk/product/1166039){target=_blank}.
 3. A jar with measurement markings. Something like [this](https://kutt.it/measure_beaker){target=_blank}.
 4. Standardized measurement spoons for 1 cup, 1/2 cup etc. Something like [this](https://kutt.it/measurement_cup_spoon){target=_blank}.
 5. Microwave Egg Poach Cooker like [this one](https://kutt.it/sistema_egg){target=_blank}.
