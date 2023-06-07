@@ -223,15 +223,15 @@ def define_env(env):
                 cookware_string += cookware_line + "\n"
         else:
             cookware_string = ''
-        cookware_string += '</div>'
+        cookware_string += '\n\n</div>\n\n'
         steps_string = "<div class=\"grid cards\" markdown>\n\n\n-   ## Steps\n\n\t---"
         dia_string = "\n-   ## Process\n\n\t---\n\t```plantuml\n\t@startuml\n\t!theme cerulean\n\tstart\n"
         for step in steps:
             dia_string += "\t:" + insert_newlines(step,30) + ";\n"
             step_line = f"\n\t* {step}"
             steps_string += step_line
-        #steps_string += "</div>"
-        dia_string += "\tend\n\t@enduml\n\t```\n</div>"
+        #steps_string += "\n</div>\n\n"
+        dia_string += "\tend\n\t@enduml\n\t```\n\n</div>\n\n"
 
         if "Title" in cooking_data:
             title = cooking_data["Title"]
@@ -280,7 +280,7 @@ def define_env(env):
             temp_cooking_data_string += three_cooking_data_string
         if four_cooking_data_string != "":
             temp_cooking_data_string += four_cooking_data_string + "{target=_blank}"
-        cooking_data_string = f'<div class=\"grid cards\" align = \"center\" markdown>\n\n-   ' + temp_cooking_data_string + cooking_data_string + '</div>'
+        cooking_data_string = f'<div class=\"grid cards\" align = \"center\" markdown>\n\n-   ' + temp_cooking_data_string + cooking_data_string + '\n\n</div>\n\n'
 
         final_output_string = image_data_string + cooking_data_string + "\n" + ingredient_string + "\n" + cookware_string + "\n" + steps_string + "\n" + dia_string + cooklang_block
         return final_output_string
