@@ -6,18 +6,23 @@ tags:
 
 # No Egg Wheat Gluten Bread
 
-What a lovely recipe. Nothing comes closer to the real bread than this recipe in my experience. It tastes great toasted, with eggs and can basically replace the traditional bread for a diabetic.
+What a lovely recipe and my absolute favourite :green_heart:. Nothing comes closer to the real bread than this recipe in my experience. It tastes great toasted, with eggs and can basically replace the traditional bread for a diabetic.
 
 I came across the original recipe on a diabetes forum. I have, however, made minor modifications and adjustments.
 
 !!! tip
     You can add various seeds, olives, onions, garlic etc to make different artisan breads. I have tried a number of variations and they all come out good.
 
+!!! danger
+    As this recipe is based mainly on wheat gluten anyone it is not suitable for those with Gluten Intolerance. I am sure it's obvious but still.
+
 {{ """
 >> Serving Size: 4 portions (16 slices)
 >> Cooking Time: 90 minutes
 >> Category: Continental
 >> Type: Vegetarian
+>> Image: wheat-gluten-no-egg-bread.jpg
+>> Image-Caption: Finished product after adding onion, olives in the mix.
 >> Source: http://www.lowcarbluxury.com/recipes/recipe-bread21.html
 Add @Olive Oil{1%tbsp} and @sugar{1%tsp} in @water{300%ml} and mix well.
 Take a #bowl{} and add @vital wheat gluten{1%cup}.

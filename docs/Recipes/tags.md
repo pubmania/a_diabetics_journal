@@ -1,3 +1,3 @@
-# Tags
+# Browse by Tags
 
 [TAGS]

@@ -7,93 +7,119 @@ Prepare by having key ingredients to help with keto / low carb diet. Following i
 ## Pantry
 
 !!! warning "Caution"
-    It's easy to get lured into the overuse of the ultra processed foods while trying low carb alternatives, so please do keep an eye on ingredients and avoid additives, flavourings etc from overuse. These if had regularly can cause havoc on your gut microbiome. Any item that can be classed as ultra processed is marked with :red_circle: and possibly processed is marked with :small_orange_diamond: in the list below.
+    It's easy to get lured into the overuse of the ultra processed foods while trying low carb alternatives, so please do keep an eye on ingredients and avoid additives, flavourings etc from overuse. These if had regularly can cause havoc on your gut microbiome. Any item that can be classed as ultra processed is marked with :red_circle: and possibly processed is marked with :orange_circle: in the list below. My favourites are marked with :green_heart: .
+
 <div class="grid cards" markdown>
 
--   [Almond Flour](https://kutt.it/almondflour_uk) 
--   [Avocado Oil](https://kutt.it/avacado_oil)
--   [Coconut Flour](https://kutt.it/coconut_flour)
--   [Golden Flaxseed organic](https://kutt.it/golden_flaxseed)
--   [Confectioners Swerve](https://kutt.it/swerve)
--   [Yeast](https://kutt.it/yeast)
--   [Sunflower Seeds Flour](https://kutt.it/sunflower_seed_flour)
--   [Virgin Olive Oil](https://kutt.it/extra_)
--   [Garam Masala](https://kutt.it/garam_masala)
--   [Low Carb Pasta](https://kutt.it/low_carb_pasta)
--   [Macademia nuts](https://kutt.it/macademia_nuts)
--   [Pea Protein](https://kutt.it/pea-protein)
--   [Seasme Powder](https://kutt.it/seasme_powder)
--   [Vital Wheat Gluten](https://kutt.it/wheat-gluten)
--   [MCT Powder](https://kutt.it/mct_powder)
--   [Electrolyte Tablets](https://kutt.it/electrolyte_tablets)
--   [Soya Flour](https://kutt.it/soya_flour)
--   Eggs
+-   :green_heart: [Almond Flour](https://kutt.it/almondflour_uk){target=_blank}
+-   :green_heart: [Avocado Oil](https://kutt.it/avacado_oil){target=_blank}
+-   [Coconut Flour](https://kutt.it/coconut_flour){target=_blank}
+-   :green_heart: [Golden Flaxseed organic](https://kutt.it/golden_flaxseed){target=_blank}
+-   [Yeast](https://kutt.it/yeast){target=_blank}
+-   [Sunflower Seeds Flour](https://kutt.it/sunflower_seed_flour){target=_blank}
+-   :green_heart: [Virgin Olive Oil](https://kutt.it/extra_){target=_blank}
+-   [Garam Masala](https://kutt.it/garam_masala){target=_blank}
+-   :green_heart: [Low Carb Pasta](https://kutt.it/low_carb_pasta){target=_blank}
+-   [Macademia nuts](https://kutt.it/macademia_nuts){target=_blank}
+-   [Pea Protein](https://kutt.it/pea-protein){target=_blank}
+-   [Seasme Powder](https://kutt.it/seasme_powder){target=_blank}
+-   :green_heart: [Vital Wheat Gluten](https://kutt.it/wheat-gluten){target=_blank}
+-   [Electrolyte Tablets](https://kutt.it/electrolyte_tablets){target=_blank}
+-   :green_heart: [Soya Flour](https://kutt.it/soya_flour){target=_blank}
+-   :green_heart: Eggs
 -   Raddish 
 -   Black Pepper
 -   Aubergine
 -   Pink Himalayan Salt
 -   Blueberries
--   Raspberries
+-   :green_heart: Raspberries
 -   Strawberries
--   Almonds
+-   :green_heart: Almonds
 -   Walnuts
 -   Cashews 
 -   Pistachios
 -   Extra mature cheddar cheese slices
--   Extra mature cheddar cheese
+-   :green_heart: Extra mature cheddar cheese
 
 	--- 
 
-	:warning: *Make sure to read ingredienst on the back. Carb content should be less than 0.6g usually about 0.1g for extra mature cheddar cheese*
+	??? warning "Caution"
+		Make sure to read ingredienst on the back. Carb content should be less than 0.6g usually about 0.1g for extra mature cheddar cheese
 
--   :small_orange_diamond: Unsweetened Peanut Butter both versions
+-   :green_heart: [Frozen Chopped Celeriac](https://kutt.it/chopped_celeriac){target=_blank}
+	
+	--- 
+	
+	??? Tip
+		We are only able to get it at Waitrose
 
-	---
-
-	1. [Smooth](https://kutt.it/smooth_peanut_butter) 
-	2. [Crunchy](https://kutt.it/crunchy_peanut_butter)
-
--   Clarified Butter (Ghee) 
+-   :green_heart: Clarified Butter (Ghee)
 
 	--- 
 	
-	:bulb: *Can be prepared at home by simply heating the unsalted butter in a pan until it starts bubbling and becomes clear.*
+	??? Tip
+		Can be prepared at home by simply heating the unsalted butter in a pan until it starts bubbling and becomes clear.
 
 -   Full Fat Greek Yogurt 
+
 	--- 
 	
-	:warning: *Sainsburys brand is what I use. It must be used only sparingly as it does have about 4.5g carbs per 100gms*
+	??? warning "Caution"
+		Sainsburys brand is what I use. It must be used only sparingly as it does have about 4.5g carbs per 100gms
 
--   :red_circle: [Sugar Free Tomato Ketchup](https://kutt.it/sugar_free_tomato_ketchup)
--   :red_circle: [Keto Chocolate Bar](https://kutt.it/keto_choc_bar)
--   :small_orange_diamond: [Erythritol](https://kutt.it/erythritol)
--   :small_orange_diamond: [Soya Chunks](https://kutt.it/soya_chunks)
+	
+-   :orange_circle: Unsweetened Peanut Butter
+
+	---
+
+	??? Tip "Get Both Versions"
+		1. [Smooth](https://kutt.it/smooth_peanut_butter){target=_blank}
+		2. [Crunchy](https://kutt.it/crunchy_peanut_butter){target=_blank}
+
+-   :orange_circle: [Confectioners Swerve](https://kutt.it/swerve){target=_blank}
+-   :orange_circle: [Erythritol](https://kutt.it/erythritol){target=_blank}
+
+	---
+
+	??? warning "Caution"
+		It is unclear if this can be categorised as ultra-processed or not and there are recent studies casting a doubt on it being safe. I have, therefore, reduced it's usage significantly.
+
+-   :orange_circle: [Soya Chunks](https://kutt.it/soya_chunks){target=_blank}
 
 	---
 	
-	:warning: *23g carb per 100g - no adverse impact on my BG. Your mileage may vary.*
+	??? warning "Caution"
+		*23g carb per 100g - no adverse impact on my BG. Your mileage may vary.*
 
--   [Celeriac](https://kutt.it/chopped_celeriac) 
+-   [Psyllium Husk](https://kutt.it/psyllium_husk){target=_blank}
 	
 	--- 
 	
-	:bulb:*We are only able to get it at Waitrose*
+	??? warning "Caution"
+		*Although a large number of dishes on net use this, I wouldn't be quick on ordering this as I dont find its taste great and none of the ideas below need this ingredient*
 
--   [Psyllium Husk](https://kutt.it/psyllium_husk) 
-	
-	--- 
-	
-	:warning: *Although a large number of dishes on net use this, I wouldn't be quick on ordering this as I dont find its taste great and none of the ideas below need this ingredient*
+-   :red_circle: [Sugar Free Tomato Ketchup](https://kutt.it/sugar_free_tomato_ketchup){target=_blank}
+
+	---
+	??? danger "Ingredients"
+		Tomatoes (200g Per 100g Tomato Ketchup), Spirit Vinegar, Lemon Juice From Concentrate, Potassium Chloride, Acid (Malic Acid), Citrus Fibre, :small_red_triangle: Spice And Herb Extracts (Contain Celery), :small_red_triangle: Sweetener (Sucralose)
+
+-   :red_circle: [Keto Chocolate Bar](https://kutt.it/keto_choc_bar){target=_blank}
+
+	---
+
+	??? danger "Ingredients"
+		Milk chocolate with fibres and sweeteners 25,7% (cocoa butter, inulin, :small_red_triangle: oligofructose, cocoa mass, whole milk powder, skimmed milk powder, sweetener (erythritol, steviol glycosides), :small_red_triangle: emulsifier (soy lecithin), flavours), :small_red_triangle: caramel flavoured layer 21,4% (bulking agent (polydextrose), soy oil, milk protein, :small_red_triangle: stabiliser (xylitol), salt, flavours, :small_red_triangle: emulsifier (soy lecithin)), milk protein, :small_red_triangle: isomalto-oligosaccharide, peanuts 8,0%, :small_red_triangle: stabiliser (sorbitol syrup), humectant (glycerol), :small_red_triangle: hydrolysed wheat gluten, soy crisps (soy protein, tapioca starch, salt), flavours (contains milk), sea salt, :small_red_triangle: emulsifier (soy lecithin), :small_red_triangle: sweetener (steviol glycosides)
 
 </div>
 
 ## Must have Cookwares
 
-1. Measuring Scale like [this one](https://kutt.it/measuring_scale).
-2. Air Fryer (Nice to have) The one we have and I can highly recommend is [this one](https://www.argos.co.uk/product/1166039).
-3. A jar with measurement markings. Something like [this](https://kutt.it/measure_beaker).
-4. Standardized measurement spoons for 1 cup, 1/2 cup etc. Something like [this](https://kutt.it/measurement_cup_spoon).
-5. Microwave Egg Poach Cooker like [this one](https://kutt.it/sistema_egg)
-6. Mixer / Grinder. The one we have and I can highly recommend is [this one](https://www.argos.co.uk/product/8394402)
+1. Measuring Scale like [this one](https://kutt.it/measuring_scale){target=_blank}.
+2. Air Fryer (Nice to have{target=_blank}The one we have and I can highly recommend is [this one](https://www.argos.co.uk/product/1166039){target=_blank}.
+3. A jar with measurement markings. Something like [this](https://kutt.it/measure_beaker){target=_blank}.
+4. Standardized measurement spoons for 1 cup, 1/2 cup etc. Something like [this](https://kutt.it/measurement_cup_spoon){target=_blank}.
+5. Microwave Egg Poach Cooker like [this one](https://kutt.it/sistema_egg){target=_blank}.
+6. Mixer / Grinder. The one we have and I can highly recommend is [this one](https://www.argos.co.uk/product/8394402){target=_blank}.
 7. Microwave Oven(ideally 800 W and above)
 8. Cooking Oven

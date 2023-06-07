@@ -239,7 +239,16 @@ def define_env(env):
             cooking_data_string = f"## {title}\n\n"
         else:
             cooking_data_string = ""
-
+        if "Image" in cooking_data:
+            if "Image-Caption" in cooking_data:
+                image_data_string = f"## Image\n\n<figure markdown>\n![image](../../assets/images/"+cooking_data["Image"]+")\n<figcaption>" + cooking_data["Image-Caption"] + "</figcaption>\n</figure>\n\n"
+                del cooking_data["Image-Caption"]
+                del cooking_data["Image"]
+            else:
+                image_data_string = f"## Image\n\n<figure markdown>\n![image](../../assets/images/"+cooking_data["Image"]+")\n</figure>\n\n"
+                del cooking_data["Image"]
+        else:
+            image_data_string = ""
         #cooking_data_string += "<div class=\"grid cards\" markdown>\n\n"
         temp_cooking_data_string = ""
         one_cooking_data_string = ""
@@ -273,5 +282,5 @@ def define_env(env):
             temp_cooking_data_string += four_cooking_data_string + "{target=_blank}"
         cooking_data_string = f'<div class=\"grid cards\" align = \"center\" markdown>\n\n-   ' + temp_cooking_data_string + cooking_data_string + '</div>'
 
-        final_output_string = cooking_data_string + "\n" + ingredient_string + "\n" + cookware_string + "\n" + steps_string + "\n" + dia_string + cooklang_block
+        final_output_string = image_data_string + cooking_data_string + "\n" + ingredient_string + "\n" + cookware_string + "\n" + steps_string + "\n" + dia_string + cooklang_block
         return final_output_string
