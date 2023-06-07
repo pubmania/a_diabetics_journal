@@ -2,6 +2,8 @@
 tags:
     - Bread
     - Breakfast
+    - Lunch
+    - Dinner
 ---
 
 # No Egg Wheat Gluten Bread

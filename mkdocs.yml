@@ -113,6 +113,8 @@ plugins:
       exclude:
         - index.md
         - about/index.md
+        - Recipes/tags.md
+        - Recipes/00-prepare-to-beat.md
   - macros
   - tags:
       tags_file: Recipes/tags.md

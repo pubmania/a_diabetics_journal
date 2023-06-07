@@ -75,7 +75,7 @@ def define_env(env):
             return {
                 "type": "ingredient",
                 "name": name[1:],
-                "quantity": val or "some",
+                "quantity": val or "as needed",
                 "units": units,
             }
 
@@ -166,7 +166,7 @@ def define_env(env):
         cooking_data = {}
 
         for match in matches:
-            ingredient_name = match['name'].capitalize()
+            ingredient_name = match['name'].title()
             amount = match['quantity']
             unit = match['units']
 
@@ -177,7 +177,7 @@ def define_env(env):
                 ingredients[ingredient_key] = [(amount, unit)]
 
         for cookware_match in cookware_matches:
-            cookware_name = parse_cookware(cookware_match).capitalize()
+            cookware_name = parse_cookware(cookware_match).title()
             cookwares.add(cookware_name)
 
         #Remove individual timer notation ~{25%minutes}
@@ -228,7 +228,11 @@ def define_env(env):
         dia_string = "\n-   ## Process\n\n\t---\n\t```plantuml\n\t@startuml\n\t!theme cerulean\n\tstart\n"
         for step in steps:
             dia_string += "\t:" + insert_newlines(step,30) + ";\n"
-            step_line = f"\n\t* {step}"
+            #step_line = f"\n\t* {step}"
+            if step.startswith('**') and step.endswith('**'):
+                step_line = f"\n\t### {step.replace('**','')}"
+            else:    
+                step_line = f"\n\t* {step}"
             steps_string += step_line
         #steps_string += "\n</div>\n\n"
         dia_string += "\tend\n\t@enduml\n\t```\n\n</div>\n\n"
