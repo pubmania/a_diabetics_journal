@@ -13,13 +13,14 @@ What a lovely recipe and my absolute favourite :green_heart:. Nothing comes clos
 I came across the original recipe on a diabetes forum. I have, however, made minor modifications and adjustments.
 
 !!! tip
-    You can add various seeds, olives, onions, garlic etc to make different artisan breads. I have tried a number of variations and they all come out good.
+    1. You can add various seeds, olives, onions, garlic etc to make different artisan breads. I have tried a number of variations and they all come out good.
+    2. Instead of making rolls, you can bake it in bread pan to get 16 slices.
 
 !!! danger
     As this recipe is based mainly on wheat gluten anyone it is not suitable for those with Gluten Intolerance. I am sure it's obvious but still.
 
 {{ """
->> Serving Size: 4 portions (16 slices)
+>> Serving Size: 4 portions (8 rolls)
 >> Cooking Time: 90 minutes
 >> Category: Continental
 >> Type: Vegetarian

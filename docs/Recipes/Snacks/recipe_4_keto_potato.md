@@ -1,8 +1,9 @@
 ---
 tags:
     - Snacks
-    - Dinner Sides
+    - Dinner
     - Salads
+    - Italian
 --- 
 
 # Keto Potatoes
