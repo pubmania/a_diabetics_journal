@@ -10,10 +10,12 @@ tags:
 
 The blog where I found this recipe is a treasure for people who love Indian dishes and has recipes reimagined the keto way but this is the one I have tried and it was delicious. The only change I made was replacing Xanthum Gum with What Gluten.
 
-The original recipe and video is on [this link](https://kutt.it/keto_gatte).
+The original recipe and video is on [this link](https://kutt.it/keto_gatte){target=_blank}.
+
+Tastes great with [Tava Roti](recipe_1_tava_roti.md), [Tandoori Roti](recipe_2_tandoori_roti.md) and [Naan Bread](recipe_3_naan_bread.md) and also goes well with [No Egg Wheat Gluten Bread](../Breakfast%20Options/recipe_2_wheat_gluten_bread.md).
 
 !!! danger
-    As this recipe is uses wheat gluten, it is not suitable for those with Gluten Intolerance. I am sure it's obvious but still.
+    As this recipe uses wheat gluten, it is not suitable for those with Gluten Intolerance. I am sure it's obvious but still.
 
 {{"""
 >> Serving Size: 3 portions

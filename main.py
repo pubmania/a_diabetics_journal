@@ -180,8 +180,11 @@ def define_env(env):
             cookware_name = parse_cookware(cookware_match).title()
             cookwares.add(cookware_name)
 
-        #Remove individual timer notation ~{25%minutes}
-        input_string = re.sub(r'~{(\d+)%([^}]+)}', lambda match: f"{match.group(1)} {match.group(2)}",input_string)
+        
+        #Remove individual timer notation ~{25%minutes} or ~{25-30%minutes}
+        pattern = r'~{(\d+)(?:-(\d+))?%([^}]+)}'
+        replacement = lambda match: f"{match.group(1)}-{match.group(2)} {match.group(3)}" if match.group(2) else f"{match.group(1)} {match.group(3)}"
+        input_string = re.sub(pattern, replacement,input_string)
         
         lines = input_string.replace("{}", '').\
         replace("@", "").\
@@ -229,7 +232,7 @@ def define_env(env):
         for step in steps:
             if step.startswith('**') and step.endswith('**'):
                 dia_step = step[:-2].replace('**','#Black:')
-                dia_string += "\t" + insert_newlines(dia_step,50) + ";\n"
+                dia_string += "\t" + insert_newlines(dia_step,50) + "|\n"
             else:
                 dia_string += "\t:" + insert_newlines(step,50) + ";\n"
             if step.startswith('**') and step.endswith('**'):

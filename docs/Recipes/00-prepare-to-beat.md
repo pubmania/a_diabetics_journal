@@ -2,14 +2,16 @@
 
 ## Prepare
 
-Prepare by having key ingredients to help with keto / low carb diet. Following items must be in your pantry at all times. While these are easily available, I have provided links for the ones I use and from where I order - mostly Amazon.
+Prepare by having key ingredients to help with mostly vegetarian keto / low carb diet. I try and make sure that I have following items in my pantry at all times - especially the ones with :green_heart:. 
+
+While these are easily available, I have provided links for the ones I use and from where I order - mostly Amazon.
 
 ## Pantry
 
 !!! warning "Caution"
     It's easy to get lured into the overuse of the ultra processed foods while trying low carb alternatives, so please do keep an eye on ingredients and avoid additives, flavourings etc from overuse. 
 	
-	One can read more about this in the book [Ultra-Processed People: The Science Behind the Food That Isn't Food by Dr. Chris van Tulleken](https://www.goodreads.com/en/book/show/62586003). These, if had regularly, can cause havoc on your gut microbiome.
+	UPF, if had regularly, can cause havoc on your gut microbiome. One can read more about this in the book ["Ultra-Processed People: The Science Behind the Food That Isn't Food" by Dr. Chris van Tulleken](https://www.goodreads.com/en/book/show/62586003).
 	
 	Any item that can be classed as `ultra processed` is marked with :red_circle: and `possibly processed` is marked with :orange_circle: in the list below. 
 	
@@ -36,7 +38,7 @@ Prepare by having key ingredients to help with keto / low carb diet. Following i
 -   Raddish 
 -   Black Pepper
 -   Aubergine
--   Pink Himalayan Salt
+-   :green_heart: Pink Himalayan Salt
 -   Blueberries
 -   :green_heart: Raspberries
 -   Strawberries
@@ -45,18 +47,24 @@ Prepare by having key ingredients to help with keto / low carb diet. Following i
 -   Cashews 
 -   Pistachios
 -   Extra mature cheddar cheese slices
+
+	--- 
+
+	??? warning "Beware"
+		Make sure to read nutrition info on the back. Carb content should be less than 0.6g. Usually it's about 0.1g for extra mature cheddar cheese.
+
 -   :green_heart: Extra mature cheddar cheese
 
 	--- 
 
-	??? warning "Caution"
-		Make sure to read ingredienst on the back. Carb content should be less than 0.6g usually about 0.1g for extra mature cheddar cheese
+	??? warning "Beware"
+		Make sure to read nutrition info on the back. Carb content should be less than 0.6g. Usually it's about 0.1g for extra mature cheddar cheese.
 
 -   :green_heart: [Frozen Chopped Celeriac](https://kutt.it/chopped_celeriac){target=_blank}
 	
 	--- 
 	
-	??? Tip
+	??? Info
 		We are only able to get it at Waitrose
 
 -   :green_heart: Clarified Butter (Ghee)
@@ -70,11 +78,11 @@ Prepare by having key ingredients to help with keto / low carb diet. Following i
 
 	--- 
 	
-	??? warning "Caution"
+	??? warning "Beware"
 		Sainsburys brand is what I use. It must be used only sparingly as it does have about 4.5g carbs per 100gms
 
 	
--   :orange_circle: Unsweetened Peanut Butter
+-   Unsweetened Peanut Butter
 
 	---
 
@@ -82,19 +90,39 @@ Prepare by having key ingredients to help with keto / low carb diet. Following i
 		1. [Smooth](https://kutt.it/smooth_peanut_butter){target=_blank}
 		2. [Crunchy](https://kutt.it/crunchy_peanut_butter){target=_blank}
 
+-	:green_heart: [Low Sugar Mint Chocolate Bar](https://kutt.it/mint-chocolate-bar)
+
+	---
+
+	??? info "Ingredients"
+		Cocoa Butter, Raw Cacao Powder, Creamed Coconut, Erythritol, Tiger Nut, Inulin, Coconut Sugar, Orange Oil. Chocolate contains ; cocoa solids 96%
+
+-	:green_heart: [Low Sugar Mint Chocolate Bar](https://kutt.it/orange-chocolate-bar)
+
+	---
+
+	??? info "Ingredients"
+		Cocoa Butter, Raw Cacao Powder, Creamed Coconut, Erythritol, Tiger Nut, Inulin, Coconut Sugar, Orange Oil. Chocolate contains ; cocoa solids 96%
+	
 -   :orange_circle: [Confectioners Swerve](https://kutt.it/swerve){target=_blank}
+
+	---
+
+	??? warning "Caution"
+		It is unclear to me if this can be categorised as ultra-processed or not and there are [recent studies casting a doubt on it being safe](https://www.science.org/content/blog-post/trouble-erythritol){target=_blank}. I have, therefore, reduced it's usage significantly.
+
 -   :orange_circle: [Erythritol](https://kutt.it/erythritol){target=_blank}
 
 	---
 
 	??? warning "Caution"
-		It is unclear if this can be categorised as ultra-processed or not and there are recent studies casting a doubt on it being safe. I have, therefore, reduced it's usage significantly.
+		It is unclear to me if this can be categorised as ultra-processed or not and there are [recent studies casting a doubt on it being safe](https://www.science.org/content/blog-post/trouble-erythritol){target=_blank}. I have, therefore, reduced it's usage significantly.
 
 -   :orange_circle: [Soya Chunks](https://kutt.it/soya_chunks){target=_blank}
 
 	---
 	
-	??? warning "Caution"
+	??? warning "Beware"
 		*23g carb per 100g - no adverse impact on my BG. Your mileage may vary.*
 
 -   [Psyllium Husk](https://kutt.it/psyllium_husk){target=_blank}
@@ -102,7 +130,7 @@ Prepare by having key ingredients to help with keto / low carb diet. Following i
 	--- 
 	
 	??? warning "Caution"
-		*Although a large number of dishes on net use this, I wouldn't be quick on ordering this as I dont find its taste great and none of the ideas below need this ingredient*
+		Although a large number of dishes on net use this, I wouldn't be quick on ordering this because I dont find its taste great and none of the recipes on my list need this ingredient.
 
 -   :red_circle: [Sugar Free Tomato Ketchup](https://kutt.it/sugar_free_tomato_ketchup){target=_blank}
 
@@ -119,7 +147,9 @@ Prepare by having key ingredients to help with keto / low carb diet. Following i
 
 </div>
 
-## Must have Cookwares
+## Cookwares
+
+While I am sure, all kitchens will be equipped with most, if not all, of the following; I have found having each of the items below helps with a quicker and pleasant cooking experience.
 
 1. Measuring Scale like [this one](https://kutt.it/measuring_scale){target=_blank}.
 2. Air Fryer (Nice to have). The one we have and I can highly recommend is [this one](https://www.argos.co.uk/product/1166039){target=_blank}.
@@ -127,5 +157,5 @@ Prepare by having key ingredients to help with keto / low carb diet. Following i
 4. Standardized measurement spoons for 1 cup, 1/2 cup etc. Something like [this](https://kutt.it/measurement_cup_spoon){target=_blank}.
 5. Microwave Egg Poach Cooker like [this one](https://kutt.it/sistema_egg){target=_blank}.
 6. Mixer / Grinder. The one we have and I can highly recommend is [this one](https://www.argos.co.uk/product/8394402){target=_blank}.
-7. Microwave Oven(ideally 800 W and above)
+7. Microwave Oven(ideally 800 W or above - mine is 900W)
 8. Cooking Oven

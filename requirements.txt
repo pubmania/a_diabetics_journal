@@ -6,10 +6,9 @@ mkdocs==1.4.2
 # the menu and footer are built and rendered correctly
 mkdocs-material>=9.1.15
 mkdocs-material-extensions>=1.0.3
-mkdocs-git-revision-date-localized-plugin==0.10.3
-mkdocs-awesome-pages-plugin==2.7.0
-mkdocs-exclude==1.0.2
-mkdocs-macros-plugin==0.6.3
+mkdocs-awesome-pages-plugin>=2.7.0
+mkdocs-exclude>=1.0.2
+mkdocs-macros-plugin>=0.6.3
 markupsafe==2.0.1
 pymdown-extensions>=9.4
 pygments>=2.12
@@ -21,4 +20,5 @@ mkdocs-encryptcontent-plugin
 mkdocs-include-markdown-plugin
 mkdocs-mermaid2-plugin
 mkdocs-macros-plugin
+mkdocs-git-revision-date-localized-plugin >= 1.0
 jinja2>=3.0.2

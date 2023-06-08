@@ -5,3 +5,4 @@
 *[IF]: Intermittent Fasting
 *[CGM]: Continuous Glucose Monitor
 *[BG]: Blood Glucose
+*[UPF]: Ultra Processed Food - UPF has a long, formal scientific definition, but it can be boiled down to this: if it’s wrapped in plastic and has at least one ingredient that you wouldn’t usually find in a standard home kitchen, it’s UPF. Much of it will be familiar to you as ‘junk food’, but there’s plenty of organic, free-range, ‘ethical’ UPF too, which might be sold as healthy, nutritious, environmentally friendly or useful for weight loss (it’s another rule of thumb that almost every food that comes with a health claim on the packet is a UPF). When we think about food processing, most of us think about the physical things done to food – like frying, extruding, macerating, mechanically recovering and so on. But ultra-processing also includes other, more indirect processes – deceptive marketing, bogus court cases, secret lobbying, fraudulent research.

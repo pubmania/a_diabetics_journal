@@ -17,7 +17,7 @@ tags:
 >> Category: Indian
 >> Type: Vegetarian
 >> Image: tandoori-naan.jpg
->> Image-Caption: Naan with Soya curry,Chickpeas Curry and Cucumber Raita 
+>> Image-Caption: Naan with Soya Curry, Chickpeas Curry and Cucumber Raita
 Take a #medium container{}. 
 Add @water{50%ml}, @Olive Oil{1%tbsp}, @sugar{1%tsp} and mix well.
 Add @Greek Yogurt (Sour is better){250%ml} and mix well.
@@ -31,7 +31,7 @@ Flatten the rolls using #roller pin{}.
 Sprinkle @Onion Seeds{1/4%tsp} on top before the final go with the rolling pin.
 Leave them to rise for ~{2-4%hours}.
 Roast each flattened dough in #Air Fryer{} at 180C for about 2 to 2.5 minutes each side.
-Apply @unsalted butter{5%gms} while hot
+Apply @unsalted butter{5%gms} while hot.
 Serve with curry.
 """ 
 | parse_recipe() }}

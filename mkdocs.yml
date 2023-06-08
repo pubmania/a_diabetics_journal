@@ -28,9 +28,10 @@ theme:
     - content.tooltips
     - content.action.edit
     - content.action.view
-    - navigation.expand
+    #- navigation.expand
     - navigation.footer
     - navigation.indexes
+    #- navigation.sections
     - navigation.tabs
     - navigation.top
     - navigation.tracking
@@ -118,5 +119,7 @@ plugins:
   - macros
   - tags:
       tags_file: Recipes/tags.md
+  #- git-revision-date-localized:
+  #    enable_creation_date: true
 
 ##################################################  
