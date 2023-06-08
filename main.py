@@ -251,11 +251,11 @@ def define_env(env):
             cooking_data_string = ""
         if "Image" in cooking_data:
             if "Image-Caption" in cooking_data:
-                image_data_string = f"## Image\n\n<figure markdown>\n![image](../../assets/images/"+cooking_data["Image"]+")\n<figcaption>" + cooking_data["Image-Caption"] + "</figcaption>\n</figure>\n\n"
+                image_data_string = f"## Image\n\n<figure markdown>\n![image](../../assets/images/"+cooking_data["Image"]+"){: style=\"width: 920px;height: 430px;object-fit: contain;\"}\n<figcaption>" + cooking_data["Image-Caption"] + "</figcaption>\n</figure>\n\n"
                 del cooking_data["Image-Caption"]
                 del cooking_data["Image"]
             else:
-                image_data_string = f"## Image\n\n<figure markdown>\n![image](../../assets/images/"+cooking_data["Image"]+")\n</figure>\n\n"
+                image_data_string = f"## Image\n\n<figure markdown>\n![image](../../assets/images/"+cooking_data["Image"]+"){: style=\"width: 920px;height: 430px;object-fit: contain;\"}\n</figure>\n\n"
                 del cooking_data["Image"]
         else:
             image_data_string = ""
