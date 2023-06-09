@@ -151,7 +151,7 @@ def define_env(env):
                 if x in ('`','*'):
                     x = ''
                 elif x ==' ' and i >= chars_per_line:
-                    x = "\n"
+                    x = "\n\t"
                     chars_per_line += chars_per_line
                 mod += x    
             return mod
@@ -234,7 +234,21 @@ def define_env(env):
                 dia_step = step[:-2].replace('**','#Black:')
                 dia_string += "\t" + insert_newlines(dia_step,50) + "|\n"
             else:
-                dia_string += "\t:" + insert_newlines(step,50) + ";\n"
+                if step.upper().startswith("IF") and "THEN" in step.upper():
+                    dia_if_s = ""
+                    condition = step.upper().split("THEN")[0].strip().replace("IF ", "").replace(" ELSE", "")
+                    true_action = step.upper().split("THEN")[1].split("ELSE")[0].strip()
+                    dia_if_s += f"\tif ({condition.capitalize()}?) then (yes)\n"
+                    dia_if_s += f"\t\t:{true_action.capitalize()};\n"
+                    if "ELSE" in step.upper():
+                        false_action = step.upper().split("ELSE")[1].strip()
+                        dia_if_s += f"\telse (no)\n"
+                        dia_if_s += f"\t\t:{false_action.capitalize()};\n\tendif\n" 
+                    else:
+                        dia_if_s += f"\telse (no)\n\tendif\n"
+                    dia_string += dia_if_s
+                else:    
+                    dia_string += "\t:" + insert_newlines(step,50) + ";\n"
             if step.startswith('**') and step.endswith('**'):
                 step_line = f"\n\t### {step.replace('**','')}"
             else:    

@@ -19,4 +19,6 @@ Add @Baby Spinach{7-10%leaves} and @Apple cider vinegar{1%tbsp}, @ginger{1%inch}
 Add @vine tomatoes{4%medium}, @virgin olive oil{1.5%tbsp}, @red Capsicum{1/6%chopped}.
 Finally add @Pink Himalayan Salt{to taste}.
 Grind on #mixer grinder{}.
+If it's too spicy then add a little bit of @erythritol{as needed}.
+Serve it with snack dishes.
 """ | parse_recipe()}}
