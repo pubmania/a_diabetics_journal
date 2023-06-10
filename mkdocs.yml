@@ -118,7 +118,6 @@ plugins:
         - Recipes/tags.md
         - Recipes/00-prepare-to-beat.md
   - macros
-  - mike
   - tags:
       tags_file: Recipes/tags.md
   #- git-revision-date-localized:
