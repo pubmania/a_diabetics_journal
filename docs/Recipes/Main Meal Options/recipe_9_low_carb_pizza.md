@@ -49,9 +49,9 @@ Take the smaller base and Using a #fork{} pierce the base equidistantly.
 
 In a #microwaveable bowl{} take @salted butter{30%gms}.
 
-Using a #grater{} grate @Garlic{3-4%large cloves} into the #microwaveable bowl{}.
+Using a #grater{}, grate @Garlic{3-4%large cloves} into the #microwaveable bowl{}.
 
-Place the #microwaveable bowl{} jnto #microwave{} for ~{20-30%seconds}.
+Place the #microwaveable bowl{} into #microwave{} for ~{20-30%seconds}.
 
 Using an #oil brush or spatula{} spread the melted butter and Garlic onto the smaller pierced base.
 

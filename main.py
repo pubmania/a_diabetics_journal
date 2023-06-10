@@ -238,8 +238,8 @@ def define_env(env):
                     dia_if_s = ""
                     condition = step.upper().split("THEN")[0].strip().replace("IF ", "").replace(" ELSE", "")
                     true_action = step.upper().split("THEN")[1].split("ELSE")[0].strip()
-                    dia_if_s += f"\tif ({insert_newlines(condition.capitalize(),30)}?) then (yes)\n"
-                    dia_if_s += f"\t\t:{insert_newlines(true_action.capitalize(),30)};\n"
+                    dia_if_s += f"\tif ({insert_newlines(condition.capitalize(),20)}?) then (yes)\n"
+                    dia_if_s += f"\t\t:{insert_newlines(true_action.capitalize(),20)};\n"
                     if "ELSE" in step.upper():
                         false_action = step.upper().split("ELSE")[1].strip()
                         dia_if_s += f"\telse (no)\n"
