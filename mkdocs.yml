@@ -5,6 +5,7 @@ site_url: ""
 use_directory_urls: False
 theme:
   name: material
+  custom_dir: overrides
   palette:
      
     # Palette toggle for light mode
