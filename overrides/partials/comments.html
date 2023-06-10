@@ -1,4 +1,7 @@
-{% if page.meta.comments %}
+<!--{% if page.meta.comments %}-->
+{% if page.file.abs_dest_path.parent.name == 'Recipes' %}
+
+  <!-- Custom code for the 'my_folder' folder -->
 
   <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
 
