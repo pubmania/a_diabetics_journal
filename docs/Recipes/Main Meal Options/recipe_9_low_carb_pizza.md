@@ -31,7 +31,8 @@ Add @wheat bran{1/4%cup}, @oat flour{1/4%cup}.
 
 Add @flax meal{1/4%cup}, @Almond Flour{1/2%cup}.
 
-Add @baking soda{1%tsp}, @salt{1%tsp}, @dried yeast{1%sachet}
+Add @baking soda{1%tsp}, @salt{1%tsp}, @dried yeast{1%sachet}.
+
 Add liquid mix to dry mix and knead for 5 minutes.
 
 Once consolidated, place the dough on oiled #baking sheet{}.
@@ -66,7 +67,7 @@ Take it out after that and cut it into rectangular pieces using #pizza cutter{}.
 
 While any topping can be used, I started by cutting @Yellow Capsicum{1/3} with #knife{}.
 
-Then cut @Brown chestnut myshrooms{4}, onion{1/2} and @canned pineapple{1%ring} using #knife{} and keep them separately for later use.
+Then cut @Brown chestnut mushrooms{4}, onion{1/2} and @canned pineapple{1%ring} using #knife{} and keep them separately for later use.
 
 Cut @Paneer{125%gms} and put in a #small bowl{}.
 
@@ -87,6 +88,7 @@ Now spread evenly @grated extra mature cheddar cheese{50%gms}.
 Then add @jalapenos{8-10%rings}.
 
 Finally sprinkle some more @grated mozzarella cheese{20%gms}.
+
 Put this into the #oven{} at 180°C for ~{20%minutes}.
 
 Take it out after that and cut it using #pizza cutter{}.
