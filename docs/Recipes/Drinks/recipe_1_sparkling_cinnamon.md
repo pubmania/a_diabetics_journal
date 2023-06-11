@@ -20,9 +20,9 @@ tags:
 >> Image: recipe_1_sparkling_cinnamon.jpg 
 >> Image-Caption: Sparkling Cinnamon
 
-Take @Whole Cinnamon Sticks(infuser full) and put it in the #tea pot{} infuser.
+Take @Whole Cinnamon Sticks{infuser full} and put it in the #teapot{} infuser.
 
-Boil @water{0.5%L}.
+Boil @water{0.5%L} using a #kettle or microwaveable jar{} on #hob or microwave{}
 
 Once boiled, pour it into the teapot and let it steep overnight.
 
