@@ -1,5 +1,4 @@
-{% if page.meta.comments %}
-
+{% if page.file.abs_dest_path.parent.name == 'Recipes' %}
   <h2 id="__comments">{{ lang.t("meta.comments") }}</h2>
 
   <!-- Insert generated snippet here -->
