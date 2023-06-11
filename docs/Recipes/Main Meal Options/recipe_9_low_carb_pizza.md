@@ -8,7 +8,7 @@ tags:
 
 # Low Carb Pizza and Garlic Bread
 
-Goes well with Sparkling Cinnamon Drink.
+Goes well with [Sparkling Cinnamon Drink](../Drinks/recipe_1_sparkling_cinnamon.md).
 
 !!! danger
     As this recipe is based mainly on wheat gluten, it is not suitable for those with Gluten Intolerance. I am sure it's obvious but still.
