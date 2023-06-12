@@ -14,10 +14,6 @@ Goes well with [Sparkling Cinnamon Drink](../Drinks/recipe_1_sparkling_cinnamon.
 !!! danger
     As this recipe is based mainly on wheat gluten, it is not suitable for those with Gluten Intolerance. I am sure it's obvious but still.
 
-!!! danger
-
-    As this recipe is based mainly on wheat gluten, it is not suitable for those with Gluten Intolerance. I am sure it's obvious but still.
-
 {{"""
 >> Serving Size:  6
 >> Cooking Time: 30 minutes (Prep Time - 90 minutes)
