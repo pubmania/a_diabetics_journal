@@ -13,6 +13,7 @@ tags:
 >> Cooking Time: 30 minutes
 >> Category: Indian
 >> Type: Vegetarian
+
 **Coriander and Green Mint Dip (chutney)**
 Wash @Fresh Corriander leaves{1%bunch}, @Fresh Mint{1%bunch}, @Green Chilli{3%medium}.
 Put these in a #mixer grinder{}.
@@ -20,6 +21,7 @@ Add @Garlic{1%Clove} and squeeze full @Lemon{1%big}.
 Grind it to a smooth `paste` consistency.
 Add @Salt{to taste}.
 Serve as dip with Dhokla Base.
+
 **Dhokla Base**
 In a #medium-sized bowl{} add @Blanched Almond flour{3/4%Cup(86g)}.
 Add @Baking Powder{1/2%teaspoon} and @Full Fat Greek Yogurt{1%tablespoon}.
@@ -32,6 +34,7 @@ Now microwave for around ~{4-5%minutes}.
 Add ~{15%seconds} of cook-time as needed until the top is firm.
 Let it cool for ~{10%minutes}.
 Slice it into dhokla pieces.
+
 **Garnish**
 Heat @olive oil{2%Tablespoons} in a #pan{}.
 Add @Black Mustard{1%Teaspoon} and @Green Chilli{2%Chopped}

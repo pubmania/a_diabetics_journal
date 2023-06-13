@@ -24,10 +24,13 @@ Tastes great with [Tava Roti](recipe_1_tava_roti.md), [Tandoori Roti](recipe_2_t
 >> Category: Indian Curry
 >> Type: Vegetarian
 >> Source: https://kutt.it/keto_gatte
+
 **Prepare Curry Base**
+
 In the small #Mixer grinder jar{} put @Water-soaked dry red chillies{4%medium},
 Add @Greek yoghurt{1/4%cup}, @Turmeric powder{1/4%tsp}, @Cloves{2} and @Red chilli powder{1/2%tsp}
 Grind it to a `paste` consistency using the #Mixer grinder{}
+
 **Prepare Gatte**
 Take @Sunflower seed flour{1/2%cup} in a #medium sized bowl
 Add @Almond flour{1/4%cup}, @Baking soda{1/4%tsp}, @Vital wheat gluten{1%tbsp}
@@ -40,6 +43,7 @@ Make about 3 sausage roll shapes by rolling between palms.
 Using a #knife{} cut each roll into 6-7 equal parts.
 Transfer the small chunks to a #microwaveable plate{}.
 Cook for ~{2%minutes} in the #Microwave{}.
+
 **Prepare Curry and finish**
 Pour @Clarified Butter (Ghee){2%tbsp} in a hot #pan{}.
 Once heated, add @Carom seeds{1/4%tsp}, @Cumin seeds{1/4%tsp}, @Asafoetida{1/4%tsp}.

@@ -22,6 +22,8 @@ Eat it with poached eggs - easiest way is to use the microwave poaching dish or 
 >> Category: Continental
 >> Type: Vegetarian
 >> Source: https://kutt.it/almond_flour_bread_recipe
+
+**Almond Flour Bread**
 In a #medium-sized bowl{} add @Blanched Almond flour{3/4%Cup(86g)}
 Add @Baking Powder{1/2%teaspoon} and @Full Fat Greek Yogurt{1%tablespoon}
 Now add @Salt{1/4%teaspoon}, @Olive Oil{1%tablespoon} and @Lukewarm Water{2%tablespoon}
@@ -30,7 +32,9 @@ Coat a #square glass sandwich container{} with @baking spray{2-3%Sprays}.
 Add the batter to it and using a #spatula{} evenly spread it out in the dish. 
 Now microwave for around ~{2.5%minutes}.
 Add ~{15%seconds} of cook-time as needed until the top is firm.
-Now for **Green Chilli Avocado**, peel and mash @Avocado{1%medium sized}.
+
+**Green Chilli Avocado**
+Peel and mash @Avocado{1%medium sized}.
 Add @onion{1%chopped}, some @garlic{grated}, @tomato{1%chopped} and @Green chillies{2%chopped}. 
 Add a dash of @lemon{1%squeezed}, @salt{to taste} and @black pepper{to taste}
 """ 

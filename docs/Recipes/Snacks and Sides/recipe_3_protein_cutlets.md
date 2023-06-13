@@ -18,12 +18,14 @@ tags:
 >> Cooking Time: 45 minutes
 >> Category: Indian
 >> Type: Vegetarian
+
 **Coriander and Green Mint Dip (chutney)**
 Wash @Fresh Corriander leaves{1%bunch}, @Fresh Mint{1%bunch}, @Green Chilli{3%medium}.
 Put these in a #mixer grinder{}.
 Add @Garlic{1%Clove} and squeeze full @Lemon{1%big}.
 Grind it to a smooth `paste` consistency.
 Add @Salt{to taste}.
+
 **Cutlets**
 In a #large bowl{}, soak @soya chunks{1%cup} in @boiling hot water{3%cups} for ~{10%minutes}.
 Once soft and spongy, rinse and squeeze as much water from the soya chunks as is possible.

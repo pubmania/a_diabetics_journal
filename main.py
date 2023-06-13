@@ -38,6 +38,83 @@ def define_env(env):
     # create a jinja2 filter
     @env.filter
     def parse_recipe(input_string):
+        def puml(input_string):
+            inp_str = ''
+            style_str = """
+                <style>
+                activityDiagram {
+                  diamond {
+                    BackgroundColor #darkgreen
+                    LineColor #white
+                    FontColor white
+                  }
+                }
+                </style>
+            """
+            #Remove individual timer notation ~{25%minutes} or ~{25-30%minutes}
+            pattern = r'~{(\d+)(?:-(\d+))?%([^}]+)}'
+            replacement = lambda match: f"{match.group(1)}-{match.group(2)} {match.group(3)}" if match.group(2) else f"{match.group(1)} {match.group(3)}"
+            input_string = re.sub(pattern, replacement,input_string)
+            lines = input_string.replace("{}", '').\
+                replace("@", "").\
+                replace("%", " ").\
+                replace("#", '').\
+                replace("~", '').\
+                replace("{", ' (').\
+                replace("}", ')').\
+                splitlines()
+            for line in lines:
+                if line.strip() != "" and not line.startswith(">>"):
+                    inp_str += f'{line.strip()}\n'
+            #steps = inp_str.split('\n')
+            steps = inp_str.splitlines()
+            steps_string = "<div class=\"grid cards\" markdown>\n\n\n-   ## Steps\n\n\t---"
+            out = "\n-   ## Process\n\n\t---\n\n\t```plantuml\n\t@startuml\n\t!theme cerulean\n\t"+style_str+"\n\tstart\n"
+            for step in steps:
+                p_step = step.upper()
+                #print(f'{step}\n****************\n')
+                if p_step.startswith('IF') and 'THEN' in p_step:
+                    if 'ELSE IF' in p_step:
+                        p_step = p_step.replace('ELSE IF','ELSEIF')
+
+                    if_removed = ''.join(re.split(r"\bIF\b", p_step)).strip()
+                    else_removed_l = re.split(r"\bELSE\b", if_removed)
+                    elif_removed_l = re.split(r"\bELSEIF\b", else_removed_l[0])
+                    then_removed_l = []
+                    for elif_removed in elif_removed_l:
+                        then_removed_l += re.split(r"\bTHEN\b", elif_removed)
+                    i = 0
+                    while i < len(then_removed_l):
+                        #print(i)
+                        if i==0:
+                            #print(f'if({then_removed_l[i]}) then(yes)\n\t:{then_removed_l[i+1]};\nelif')
+                            out += f'\tif ({insert_newlines(then_removed_l[i].strip(),20)}?) then (Yes)\n\t\t:{insert_newlines(then_removed_l[i+1].strip().capitalize(),30)};\n'
+                            i = i+2
+                        elif i % 2 == 0:
+                            #Add elseif condition
+                            out+= f'\t(No) elseif ({insert_newlines(then_removed_l[i].strip(),20)}?) then (Yes)\n'
+                            i = i+1
+                        else:
+                            #print(f'elif-then-statement = :{then_removed_l[i]};\n')
+                            out+=f'\t\t:{insert_newlines(then_removed_l[i].strip().capitalize(),30)};\n'
+                            i = i + 1
+                    if len(else_removed_l)>1:
+                        out += f'\telse (No)\n\t\t:{insert_newlines(else_removed_l[1].strip().capitalize(),30)};\n'
+                    out += f'\tendif\n'
+                elif step != '':
+                    if step.startswith('**') and step.endswith('**'):
+                        step = step.replace("**","")
+                        out += f'\t#Black:**{insert_newlines(step.strip(),50)}**/\n'
+                        step_line = f"\n\n\t### {step}\n\n"
+                    else:
+                        out += f'\t:{insert_newlines(step.strip(),50)};\n'
+                        step_line = f"\n\t* {step.strip()}"
+                    steps_string += step_line
+            out += f'\tend\n\t@enduml\n\t```\n\n</div>\n\n'
+            out = f'{steps_string}\n\n{out}'
+            #print(out)
+            return out
+        
         def parse_cookware(item: str) -> dict[str, str]:
             """Parse cookware item
             e.g. #pot or #potato masher{}
@@ -144,7 +221,7 @@ def define_env(env):
         def find_timers(step: str) -> list[str]:
             """Find timers in a recipe step"""
             return find_specials(step, "~")
-        
+
         def insert_newlines(input_string, chars_per_line):
             mod = ""    
             for i,x in enumerate(input_string):
@@ -180,12 +257,12 @@ def define_env(env):
             cookware_name = parse_cookware(cookware_match).title()
             cookwares.add(cookware_name)
 
-        
+
         #Remove individual timer notation ~{25%minutes} or ~{25-30%minutes}
         pattern = r'~{(\d+)(?:-(\d+))?%([^}]+)}'
         replacement = lambda match: f"{match.group(1)}-{match.group(2)} {match.group(3)}" if match.group(2) else f"{match.group(1)} {match.group(3)}"
         input_string = re.sub(pattern, replacement,input_string)
-        
+
         lines = input_string.replace("{}", '').\
         replace("@", "").\
         replace("%", " ").\
@@ -227,36 +304,6 @@ def define_env(env):
         else:
             cookware_string = ''
         cookware_string += '\n\n</div>\n\n'
-        steps_string = "<div class=\"grid cards\" markdown>\n\n\n-   ## Steps\n\n\t---"
-        dia_string = "\n-   ## Process\n\n\t---\n\t```plantuml\n\t@startuml\n\t!theme cerulean\n\tstart\n"
-        for step in steps:
-            if step.startswith('**') and step.endswith('**'):
-                dia_step = step[:-2].replace('**','#Black:')
-                dia_string += "\t" + insert_newlines(dia_step,50) + "|\n"
-            else:
-                if step.upper().startswith("IF") and "THEN" in step.upper():
-                    dia_if_s = ""
-                    condition = step.upper().split("THEN")[0].strip().replace("IF ", "").replace(" ELSE", "")
-                    true_action = step.upper().split("THEN")[1].split("ELSE")[0].strip()
-                    dia_if_s += f"\tif ({insert_newlines(condition.capitalize(),20)}?) then (yes)\n"
-                    dia_if_s += f"\t\t:{insert_newlines(true_action.capitalize(),20)};\n"
-                    if "ELSE" in step.upper():
-                        false_action = step.upper().split("ELSE")[1].strip()
-                        dia_if_s += f"\telse (no)\n"
-                        dia_if_s += f"\t\t:{insert_newlines(false_action.capitalize(),30)};\n\tendif\n" 
-                    else:
-                        dia_if_s += f"\telse (no)\n\tendif\n"
-                    dia_string += dia_if_s
-                else:    
-                    dia_string += "\t:" + insert_newlines(step,50) + ";\n"
-            if step.startswith('**') and step.endswith('**'):
-                step_line = f"\n\t### {step.replace('**','')}"
-            else:    
-                step_line = f"\n\t* {step}"
-            steps_string += step_line
-        #steps_string += "\n</div>\n\n"
-        dia_string += "\tend\n\t@enduml\n\t```\n\n</div>\n\n"
-
         if "Title" in cooking_data:
             title = cooking_data["Title"]
             del cooking_data["Title"]
@@ -305,6 +352,8 @@ def define_env(env):
         if four_cooking_data_string != "":
             temp_cooking_data_string += four_cooking_data_string + "{target=_blank}"
         cooking_data_string = f'<div class=\"grid cards\" align = \"center\" markdown>\n\n-   ' + temp_cooking_data_string + cooking_data_string + '\n\n</div>\n\n'
-
-        final_output_string = image_data_string + cooking_data_string + "\n" + ingredient_string + "\n" + cookware_string + "\n" + steps_string + "\n" + dia_string + cooklang_block
+        steps_dia_string = puml(input_string)
+        final_output_string = image_data_string + cooking_data_string + "\n" + \
+        ingredient_string + "\n" + cookware_string + "\n" +\
+        steps_dia_string + cooklang_block 
         return final_output_string
