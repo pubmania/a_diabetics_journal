@@ -8,6 +8,8 @@ tags:
 
 # Scrambled Tofu (Tofu Bhurji)
 
+This goes well with [Tava Roti](../Main%20Meal%20Options/recipe_1_tava_roti.md) as well as [Wheat Gluten Bread](./recipe_2_wheat_gluten_bread.md).
+
 {{ """
 >> Serving Size: 2 portions
 >> Cooking Time: 20 minutes
