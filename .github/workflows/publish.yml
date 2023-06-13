@@ -6,8 +6,8 @@ on:
     paths:
       - mkdocs.yml
       - requirements.txt
-      - docs/
-      - includes/abbreviations.md
+      - 'docs/'
+      - 'includes/abbreviations.md'
   workflow_dispatch:
 permissions:
   contents: write
