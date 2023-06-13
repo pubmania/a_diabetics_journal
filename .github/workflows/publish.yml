@@ -2,7 +2,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - main_techb0lt
+      - main
     paths:
       - mkdocs.yml
       - requirements.txt
