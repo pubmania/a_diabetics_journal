@@ -2,12 +2,13 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - main_techb0lt
+      - main
+      #-main_techb0lt
     paths:
       - mkdocs.yml
       - requirements.txt
-      - docs/
-      - includes/abbreviations.md
+      - 'docs/'
+      - 'includes/abbreviations.md'
   workflow_dispatch:
 permissions:
   contents: write
