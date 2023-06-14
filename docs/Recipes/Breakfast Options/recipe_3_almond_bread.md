@@ -34,8 +34,8 @@ Now microwave for around ~{2.5%minutes}.
 Add ~{15%seconds} of cook-time as needed until the top is firm.
 
 **Green Chilli Avocado**
-Peel and mash @Avocado{1%medium sized}.
-Add @onion{1%chopped}, some @garlic{grated}, @tomato{1%chopped} and @Green chillies{2%chopped}. 
+Peel and mash @Avocado{150%gms(medium sized)}.
+Add @onion{150%gms(medium sized chopped)}, some @garlic{grated}, @tomato{1%chopped} and @Green chillies{2%chopped}. 
 Add a dash of @lemon{1%squeezed}, @salt{to taste} and @black pepper{to taste}
 """ 
 | parse_recipe() }}

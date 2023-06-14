@@ -50,7 +50,7 @@ Take it out after that and cut it into rectangular pieces using #pizza cutter{}.
 **Pizza  Toppings**
 
 While any topping can be used, I started by cutting @Yellow Capsicum{1/3} with #knife{}.
-Then cut @Brown chestnut mushrooms{4}, @onion{1/2} and @canned pineapple{1%ring} using #knife{} and keep them separately for later use.
+Then cut @Brown chestnut mushrooms{30%gms(3-4)}, @onion{50%gms(1/2)} and @canned pineapple{50%gms(1 ring)} using #knife{} and keep them separately for later use.
 Cut @Paneer{125%gms} and put in a #small bowl{}.
 Add @virgin olive oil{2%tsp}, @tandoori masala{2%tsp}, @dried fenugreek leaves{2%tsp} and @Pink Himalayan Salt{to taste} and mix well.
 
