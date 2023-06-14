@@ -86,7 +86,7 @@ Details about each function and how it works are as explained below:
 10. `puml(input_string)`:
     - This function takes the input recipe string and converts it into PlantUML code and Steps.
     - It is also able to do basic parsing for `if then else`, `if then elseif then else` type statements so long as the step starts with the word If and has the word then in it.
-    - Look at the function code on [Jupyter File](Cooklang Parser.ipynb) as it is documented to explain the flow.
+    - Look at the function code on [Jupyter File](Cooklang%20Parser.ipynb) as it is documented to explain the flow.
 
 11. `parse_recipe(input_string)`:
     - This is the main function that processes the input recipe string, extracts the ingredients, cookware, timers, and steps, and returns a formatted string representing the processed recipe.
@@ -98,4 +98,4 @@ These functions work together to parse the input recipe string, extract relevant
 
 ## Example
 
-It's easier to look at the example from the Jupyter Notbook so I have included one in the repo named [`Cooklang Parser.ipynb`](Cooklang Parser.ipynb) rather than make this a longer ReadMe than it already is.
+It's easier to look at the example from the Jupyter Notbook so I have included one in the repo named [`Cooklang Parser.ipynb`](Cooklang%20Parser.ipynb) rather than make this a longer ReadMe than it already is.
