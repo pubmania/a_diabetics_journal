@@ -4,6 +4,8 @@ Basic example of a Mkdocs-macros module
 
 import math
 import re
+import pandas as pd
+from fractions import Fraction
 
 def define_env(env):
     """
@@ -55,6 +57,7 @@ def define_env(env):
             pattern = r'~{(\d+)(?:-(\d+))?%([^}]+)}'
             replacement = lambda match: f"{match.group(1)}-{match.group(2)} {match.group(3)}" if match.group(2) else f"{match.group(1)} {match.group(3)}"
             input_string = re.sub(pattern, replacement,input_string)
+            #split resulting steps with time formatting removed further remove ingredient and cookware formatting
             lines = input_string.replace("{}", '').\
                 replace("@", "").\
                 replace("%", " ").\
@@ -63,6 +66,7 @@ def define_env(env):
                 replace("{", ' (').\
                 replace("}", ')').\
                 splitlines()
+            #Remove metadata of cooklang that starts with >> and store it in variable inp_str
             for line in lines:
                 if line.strip() != "" and not line.startswith(">>"):
                     inp_str += f'{line.strip()}\n'
@@ -71,48 +75,63 @@ def define_env(env):
             steps_string = "<div class=\"grid cards\" markdown>\n\n\n-   ## Steps\n\n\t---"
             out = "\n-   ## Process\n\n\t---\n\n\t```plantuml\n\t@startuml\n\t!theme cerulean\n\t"+style_str+"\n\tstart\n"
             for step in steps:
+                # Convert step into uppercase for uniform comparison
                 p_step = step.upper()
-                #print(f'{step}\n****************\n')
+                # Check if step starts with IF and contains a THEN 
+                # If so, it is a candidate for If Then Else syntax of plantuml
+                # If not treat it as normal step
                 if p_step.startswith('IF') and 'THEN' in p_step:
+                    # Replace 'ELSE IF' with 'ELSEIF' so there is no clash with final ELSE statement
                     if 'ELSE IF' in p_step:
                         p_step = p_step.replace('ELSE IF','ELSEIF')
-
+                    # Create a variable to first remove just IF from the step
                     if_removed = ''.join(re.split(r"\bIF\b", p_step)).strip()
+                    # Using above, remove 'ELSE'. This will be a list with two items
                     else_removed_l = re.split(r"\bELSE\b", if_removed)
+                    # Now will If and Else removed, break the sentencefirst item from above list
+                    # at ELSEIF and store in another list below
                     elif_removed_l = re.split(r"\bELSEIF\b", else_removed_l[0])
+                    # For every item in above list, break it down at THEN and store in a new list
                     then_removed_l = []
                     for elif_removed in elif_removed_l:
                         then_removed_l += re.split(r"\bTHEN\b", elif_removed)
+                    # Initiate if loop parsing
                     i = 0
-                    while i < len(then_removed_l):
-                        #print(i)
+                    while i < len(then_removed_l): 
                         if i==0:
-                            #print(f'if({then_removed_l[i]}) then(yes)\n\t:{then_removed_l[i+1]};\nelif')
-                            out += f'\tif ({insert_newlines(then_removed_l[i].strip(),20)}?) then (Yes)\n\t\t:{insert_newlines(then_removed_l[i+1].strip().capitalize(),30)};\n'
+                            # The very first entry in then_removed_l is condition for if statement 
+                            # and second entry is then statement
+                            out += f'\tif ({insert_newlines(then_removed_l[i].strip(),20)}?) then (yes)\n\t\t:{insert_newlines(then_removed_l[i+1].strip().capitalize(),30)};\n'
                             i = i+2
                         elif i % 2 == 0:
-                            #Add elseif condition
-                            out+= f'\t(No) elseif ({insert_newlines(then_removed_l[i].strip(),20)}?) then (Yes)\n'
+                            # Add elseif condition 
+                            #Logic is that variable then_removed_l has every even item as an elseif condition 
+                            # and every odd item as then statement
+                            out+= f'\t(no) elseif ({insert_newlines(then_removed_l[i].strip(),20)}?) then (yes)\n'
                             i = i+1
                         else:
-                            #print(f'elif-then-statement = :{then_removed_l[i]};\n')
+                            #Every odd entry is a then statement so use it to create the then statement
                             out+=f'\t\t:{insert_newlines(then_removed_l[i].strip().capitalize(),30)};\n'
                             i = i + 1
+                    # Check if ELSE exists in the step and if it does include the final else statement
                     if len(else_removed_l)>1:
-                        out += f'\telse (No)\n\t\t:{insert_newlines(else_removed_l[1].strip().capitalize(),30)};\n'
+                        out += f'\telse (no)\n\t\t:{insert_newlines(else_removed_l[1].strip().capitalize(),30)};\n'
                     out += f'\tendif\n'
+                # Ignore empty line in steps
                 elif step != '':
                     if step.startswith('**') and step.endswith('**'):
+                        # If the step starts with ** and ends with **, apply different formatting and remove **
                         step = step.replace("**","")
                         out += f'\t#Black:**{insert_newlines(step.strip(),50)}**/\n'
                         step_line = f"\n\n\t### {step}\n\n"
                     else:
+                        # If the step does not start with ** and ends with **, apply standard formatting
                         out += f'\t:{insert_newlines(step.strip(),50)};\n'
                         step_line = f"\n\t* {step.strip()}"
                     steps_string += step_line
             out += f'\tend\n\t@enduml\n\t```\n\n</div>\n\n'
             out = f'{steps_string}\n\n{out}'
-            #print(out)
+            # Return final markdown for steps and plantuml
             return out
         
         def parse_cookware(item: str) -> dict[str, str]:
@@ -353,7 +372,97 @@ def define_env(env):
             temp_cooking_data_string += four_cooking_data_string + "{target=_blank}"
         cooking_data_string = f'<div class=\"grid cards\" align = \"center\" markdown>\n\n-   ' + temp_cooking_data_string + cooking_data_string + '\n\n</div>\n\n'
         steps_dia_string = puml(input_string)
-        final_output_string = image_data_string + cooking_data_string + "\n" + \
-        ingredient_string + "\n" + cookware_string + "\n" +\
+        
+        ######################### NET CARB TABLE #################
+        df_ingredient_db = pd.read_csv('ingredient_db.csv')
+        df_unit_db = pd.read_csv('unit_db.csv')
+        # Create an empty list to store data frames
+        dfs = []
+        # Iterate over the dictionary items and create a data frame for each ingredient
+        for ingredient, amounts in ingredients.items():
+            temp_df = pd.DataFrame(amounts, columns=['Amount', 'Unit'])
+            temp_df['Ingredient'] = ingredient
+            dfs.append(temp_df)
+        # Concatenate the data frames into a single data frame
+        df = pd.concat(dfs, ignore_index=True)
+        # Now merge df and df_ingredient_db with inner join to get net carb values for recipe ingredients using code below:
+        df_merge = df.merge(df_ingredient_db, how='inner', left_on=df['Ingredient'].str.upper(), right_on=df_ingredient_db['Name'].str.upper())
+        # Define functions to calculate net carbs, conversion factor etc
+        def replace_amount(value):
+            # Replace fractions with decimals
+            if '/' in value:
+                numerator, denominator = value.split('/')
+                try:
+                    value = str(float(numerator) / float(denominator))
+                except ZeroDivisionError:
+                    value = '0'
+
+            # Replace ranges with the highest value
+            if '-' in value:
+                value = value.split('-')[-1]
+
+            # Replace worded items with 0
+            if value.isalpha() or re.match(r'^[a-zA-Z\s]+$', value):
+                value = '0'
+
+            # Additional replacements
+            value = value.lower().strip()
+            if value == 'as needed' or value == 'to taste' or value == 'to taste (optional)':
+                value = '0'
+            elif value.endswith('l') or value.endswith('ml'):
+                value = value[:-1]
+
+            return value
+        def replace_unit(unit):
+            # Remove information in brackets
+            unit = re.sub(r'\(.*?\)', '', unit)
+
+            # Remove trailing whitespace
+            unit = unit.upper().strip()
+
+            return unit
+
+        def conv_factor(row):
+            filtered_units = df_unit_db[df_unit_db['Unit'].str.upper() == replace_unit(row['Unit_x'])]['eq_gms']
+            if not filtered_units.empty:
+                conv_factor = float(filtered_units.values[0])
+                return conv_factor
+            return 0
+        def calculate_cal_net_carb(row):
+            filtered_units = df_unit_db[df_unit_db['Unit'].str.upper() == replace_unit(row['Unit_x'])]['eq_gms']
+            if not filtered_units.empty:
+                gms_used_in_recipe = float(filtered_units.values[0]) * float(Fraction(replace_amount(row['Amount'])))
+                if row['Net_carb/100gms'] != '0' and row['Net_carb/100gms'] != 0:
+                    return (gms_used_in_recipe * float(row['Net_carb/100gms']))/100
+            return 0
+        def calculate_amt_in_gms(row):
+            filtered_units = df_unit_db[df_unit_db['Unit'].str.upper() == replace_unit(row['Unit_x'])]['eq_gms']
+            if not filtered_units.empty:
+                gms_used_in_recipe = float(filtered_units.values[0]) * float(Fraction(replace_amount(row['Amount'])))
+                return gms_used_in_recipe
+            return 0
+        # Add calculated columns to the dataframe:
+        df_merge['Conversion Factor'] = df_merge.apply(conv_factor, axis=1)
+        df_merge['Amount used in Recipe(gms)'] = df_merge.apply(calculate_amt_in_gms, axis=1)
+        df_merge['Calculated Net Carb in recipe'] = df_merge.apply(calculate_cal_net_carb, axis=1).round(2)
+        df_merge.rename(columns = {'Unit_x' : 'Recipe Unit', 'Unit_y' : 'Converted Unit'}, inplace=True)
+        
+        # Create final markdown table:
+        grand_total = f"**{df_merge['Calculated Net Carb in recipe'].sum().round(2)}**"
+        result = df_merge[['Ingredient', 'Amount','Recipe Unit','Conversion Factor', 'Amount used in Recipe(gms)', 'Net_carb/100gms','Calculated Net Carb in recipe']]
+
+        # Create a DataFrame for the grand total
+        grand_total_df = pd.DataFrame({'Net_carb/100gms': '-','Amount':'-','Recipe Unit': '-','Ingredient': ['**Grand Total**'], 'Calculated Net Carb in recipe': [grand_total], 'Conversion Factor': '-','Amount used in Recipe(gms)': '-' })
+
+        # Concatenate the result DataFrame with the grand total DataFrame
+        result = pd.concat([result, grand_total_df], ignore_index=True)
+
+        # Add the result DataFrame as markdown 
+        netcarb_string = f'??? Info "Calculated Net Carb Info"\n\t' + result.to_markdown(index=False).replace("\n","\n\t")
+        netcarb_string += '\n\n\t!!! warning "Caution"\n\t\t*The calculation is indicative and if there is an ingredient that is not on my lookup list for net carbs, it has not been included in the calculations above.*'
+        ######################### NET CARB TABLE #################
+        
+        final_output_string = '\n\n' + image_data_string + cooking_data_string + "\n" + \
+        ingredient_string + "\n" + cookware_string + "\n" + netcarb_string + "\n" +\
         steps_dia_string + cooklang_block 
         return final_output_string
