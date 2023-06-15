@@ -19,12 +19,12 @@ Tastes great with [Tava Roti](recipe_1_tava_roti.md), [Tandoori Roti](recipe_2_t
 >> Category: Indian Curry
 >> Type: Vegetarian
 If using fresh @okra{500%gms}, chop it using #knife{}
-Put the #frying pan{} on flame and add @Avacado Oil{4%tablespoons}
+Put the #frying pan{} on flame and add @Avocado Oil{4%tablespoons}
 Once heated, add @corriander powder{1%teaspoon}, @garam masala{1%teaspoon} and @cumin seeds{1%teaspoon}
 Mix well with #Spatula{}
 Then add @Pink Himalayan Salt{1%teaspoon}, @red chilli powder{1%teaspoon}, @turmeric powder{1%teaspoon}
-To make it spicy you can add @green chillies{1-2%finely chopped(optional)}
-Now add @onion{1%small chopped} and saute it till it turns slightly brown.
+To make it spicy you can add @green chillies{20%gms(1-2 finely chopped, optional)}
+Now add @onion{75%gms(1 small chopped)} and saute it till it turns slightly brown.
 Finally, add the chopped Okra into the #frying pan{}
 Cook until okra looses water and becomes crispy.
 Serve hot.

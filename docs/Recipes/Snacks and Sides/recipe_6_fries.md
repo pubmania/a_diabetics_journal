@@ -16,7 +16,7 @@ tags:
 >> Cooking Time: 35 minutes (Prep Time - 10 minutes)
 >> Category: Continental
 >> Type: Vegetarian
-Cut @Swede or Celeriac{1%Large} into long fries sized pieces using #knife{}.
+Cut @Swede or Celeriac{500%gms(1 Large)} into long fries sized pieces using #knife{}.
 Wash and dry the cut pieces and place them in #Air Fryer{} basket.
 Add @Extra Virgin Olive Oil{6%tablespoons}, @Pink Himalayan Salt{1%teaspoon}.
 Mix it well so the surface of Celeriac / Swede is all coated with the oil.

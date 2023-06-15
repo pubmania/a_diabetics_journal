@@ -457,9 +457,19 @@ def define_env(env):
         # Concatenate the result DataFrame with the grand total DataFrame
         result = pd.concat([result, grand_total_df], ignore_index=True)
 
+        # Find ingredients that are not on ingredient_db
+        df_ingredients_not_found =  df[~df['Ingredient'].str.upper().isin(df_ingredient_db['Name'].str.upper())]
+        not_found = ''
+        if df_ingredients_not_found.empty:
+            not_found = ''
+        else:
+            not_found = ', '.join(df_ingredients_not_found['Ingredient'])
+
         # Add the result DataFrame as markdown 
-        netcarb_string = f'??? Info "Calculated Net Carb Info"\n\t' + result.to_markdown(index=False).replace("\n","\n\t")
-        netcarb_string += '\n\n\t!!! warning "Caution"\n\t\t*The calculation is indicative and if there is an ingredient that is not on my lookup list for net carbs, it has not been included in the calculations above.*'
+        #netcarb_string = f'??? Info "Calculated Net Carb Info"\n\t' + result.to_markdown(index=False).replace("\n","\n\t")
+        netcarb_string = f'??? Info "Calculated Net Carb Info (Total Net Carbs for entire dish: {grand_total})"\n\t' + result.to_markdown(index=False).replace("\n","\n\t")
+        if not_found != '':
+            netcarb_string += '\n\n\t!!! warning "Caution"\n\t\t*The calculation is indicative and these ingredients:**' +  not_found + '** were not on my lookup list for net carbs and have not been included in the calculations above.*\n\n'
         ######################### NET CARB TABLE #################
         
         final_output_string = '\n\n' + image_data_string + cooking_data_string + "\n" + \

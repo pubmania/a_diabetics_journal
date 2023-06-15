@@ -20,7 +20,7 @@ A very quick one minute recipe from Joe Duff - [YouTube Link](https://youtu.be/K
 Add @Baking Powder{1/2%Tablespoon} and @Erythritol{1%Tablespoon} in a #small bowl{}
 Add @Egg{1} and @Smooth Peanut Butter{3%Tablespoons} into the bowl.
 Mix until well combined and smooth
-Now coat a #small mug{} with @baking spray{2%presses}
+Now coat a #small mug{} with @baking spray{}
 Move the batter to the #small mug{}
 #Microwave{} for 30 seconds to 1 minute
 """

@@ -20,9 +20,9 @@ tags:
 >> Type: Vegetarian
 
 **Coriander and Green Mint Dip (chutney)**
-Wash @Fresh Corriander leaves{1%bunch}, @Fresh Mint{1%bunch}, @Green Chilli{3%medium}.
+Wash @Fresh Corriander leaves{1%bunch}, @Fresh Mint{1%bunch}, @Green Chilli{25%gms(3 medium)}.
 Put these in a #mixer grinder{}.
-Add @Garlic{1%Clove} and squeeze full @Lemon{1%big}.
+Add @Garlic{1%Clove} and squeeze full @Lemon{1.5%tbsp(1 Large)}.
 Grind it to a smooth `paste` consistency.
 Add @Salt{to taste}.
 
@@ -34,7 +34,7 @@ Place the ground soya chunk into a #pan{}.
 Heat it till some of the water content is further reduced.
 Add @Extra mature cheddar cheese{1%cup}. 
 Keep mixing at low heat setting for ~{2-3%minutes} on low heat.
-Add @onion{1%chopped} and chopped @Fresh Mint{1%bunch}.
+Add @onion{150%gms(Large, chopped)} and chopped @Fresh Mint{1%bunch}.
 Add @salt{1%teaspoon}, @red chilli powder{1%teaspoon}, @garam masala{2%teaspoon}.
 Mix well and make cutlet shaped balls from this mixture.
 Coat both sides of cutlets with @avocado oil{2%Tablespoons}.

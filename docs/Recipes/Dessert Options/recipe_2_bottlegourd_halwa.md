@@ -20,7 +20,7 @@ Add @double cream{2%tablespoons} and cook it for another ~{5-7%minutes}.
 Now add @Erythritol{2%tablespoons} and mix it well.
 Cook for another ~{2-3%minutes}.
 Sprinkle @cardamom powder{1%teaspoon} and mix it well.
-Roast @Cashew nuts{5%pieces}, @Almond nuts{5%pieces} and @Pistachio nuts{10%pieces}
+Roast @Cashew nuts{8%gms(5 pieces)}, @Almond nuts{6%gms(5 pieces)} and @Pistachio nuts{6%gms(10 pieces)}
 Make a coarse powder of the roasted nuts.
 Turn off the #hob{} and garnish with coarsely powdered mixture of roasted nuts.
 Serve hot.

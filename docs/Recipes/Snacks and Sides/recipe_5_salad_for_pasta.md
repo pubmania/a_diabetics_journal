@@ -20,7 +20,7 @@ Add about @chopped basil{2-3%tablespoons}.
 Add @oregano{1%teaspoon}, @rosemary{1%teaspoon}, @red chilli flakes{1%teaspoon}, and @Pink Himalayan Salt{1%teaspoon}.
 Add @Balsamic Vinegar{2%tablespoons}.
 Mix these well and keep it aside for 20 minutes.
-Meanwhile, chop @Green Capsicum{1},@Red Capsicum{1}, @Orange Capsicum{1}, @Yellow Capsicum{1}, @Red Onion{1/4%large} into big pieces.
+Meanwhile, chop @Green Capsicum{100%gms(1 regular size)},@Red Capsicum{100%gms(1 regular size)}, @Orange Capsicum{100%gms(1 regular size)}, @Yellow Capsicum{100%gms(1 regular size)}, @Red Onion{50%gms(1/4 large)} into big pieces.
 Put the chopped vegies into the oil mixture
 Add @cherry tomatoes{250%gms}
 mix well first with #Spatula{} and then with hand while giving gentle squeeze to vegies.
