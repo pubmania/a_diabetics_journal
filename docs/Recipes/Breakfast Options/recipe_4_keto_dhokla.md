@@ -15,9 +15,9 @@ tags:
 >> Type: Vegetarian
 
 **Coriander and Green Mint Dip (chutney)**
-Wash @Fresh Corriander leaves{1%bunch}, @Fresh Mint{1%bunch}, @Green Chilli{3%medium}.
+Wash @Fresh Corriander leaves{30%gms(1 bunch)}, @Fresh Mint{30%gms(1 bunch)}, @Green Chilli{15%gms(3 medium)}.
 Put these in a #mixer grinder{}.
-Add @Garlic{1%Clove} and squeeze full @Lemon{1%big}.
+Add @Garlic{1%Clove} and squeeze full @Lemon{2.5%tbsp(1 freshly squeezed)}.
 Grind it to a smooth `paste` consistency.
 Add @Salt{to taste}.
 Serve as dip with Dhokla Base.
@@ -37,7 +37,7 @@ Slice it into dhokla pieces.
 
 **Garnish**
 Heat @olive oil{2%Tablespoons} in a #pan{}.
-Add @Black Mustard{1%Teaspoon} and @Green Chilli{2%Chopped}
+Add @Black Mustard{1%Teaspoon} and @Green Chilli{10%gms(2 chopped)}
 Mix and pour it on dhokla base.
 Fill the above pan with @hot water{1/2%cup}.
 Add @Erythritol{2%Teaspoons} and mix it to dissolve.

@@ -27,7 +27,7 @@ Boil @water{0.5%L} using a #kettle or microwaveable jar{} on #hob or microwave{}
 
 Once boiled, pour it into the teapot and let it steep overnight.
 
-Mix the steeped Cinnamon Tea with @Sparkling water{1.5L}.
+Mix the steeped Cinnamon Tea with @Sparkling water{1.5%Litre}.
 
 Serve cold with @ice{as needed}
 """
