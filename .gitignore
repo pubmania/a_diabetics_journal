@@ -3,3 +3,4 @@ mkdocs_venv
 site
 __pycache__
 test.md
+requirements copy.txt

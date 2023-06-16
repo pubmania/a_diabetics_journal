@@ -61,7 +61,7 @@ Then spread a thin layer of @grated mozzarella cheese{40%gms}.
 Add all veggie pizza toppings as much as possible without piling up and arranged side to side.
 Then add paneer cubes, these can be piled on top of veggies, if there isn't enough space.
 Now spread evenly @grated extra mature cheddar cheese{50%gms}.
-Then add @jalapenos{10%gms(8-10%rings)}.
+Then add @jalapenos{10%gms(8-10 rings)}.
 Finally sprinkle some more @grated mozzarella cheese{20%gms}.
 Put this into the #oven{} at 180°C for ~{20%minutes}.
 Take it out after that and cut it using #pizza cutter{}.
