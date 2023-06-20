@@ -1,5 +1,6 @@
 site_name: The Diary Of A Diabetic 
 repo_url: https://github.com/pubmania/a_diabetics_journal
+#repo_url: https://github.com/techb0lt/a_diabetics_journal
 edit_uri: edit/main/docs/
 site_url: ""
 use_directory_urls: False
@@ -103,6 +104,7 @@ plugins:
       search_index: 'encrypted'
       password_button: True
       password_button_text: 'Unlock'
+      hljs: False
   - exclude:
       glob:
         - "*.gz"
@@ -117,6 +119,12 @@ plugins:
         - about/index.md
         - Recipes/tags.md
         - Recipes/00-prepare-to-beat.md
+        - Recipes/index.md
+        - Recipes/Breakfast Options/index.md
+        - Recipes/Dessert Options/index.md
+        - Recipes/Drinks/index.md
+        - Recipes/Main Meal Options/index.md
+        - Recipes/Snack and Sides/index.md
   - macros
   - tags:
       tags_file: Recipes/tags.md
