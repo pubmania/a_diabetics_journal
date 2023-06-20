@@ -121,11 +121,12 @@ plugins:
         - Recipes/tags.md
         - Recipes/00-prepare-to-beat.md
         - Recipes/index.md
+        - Recipes/Breads/index.md
         - Recipes/Breakfast Options/index.md
         - Recipes/Dessert Options/index.md
         - Recipes/Drinks/index.md
         - Recipes/Main Meal Options/index.md
-        - Recipes/Snack and Sides/index.md
+        - Recipes/Snacks and Sides/index.md
   - macros
   - tags:
       tags_file: Recipes/tags.md

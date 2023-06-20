@@ -9,7 +9,7 @@ tags:
 
 # Soya Malai
 
-Tastes great with [Tava Roti](recipe_1_tava_roti.md), [Tandoori Roti](recipe_2_tandoori_roti.md) and [Naan Bread](recipe_3_naan_bread.md) and also goes well with [No Egg Wheat Gluten Bread](../Breakfast%20Options/recipe_2_wheat_gluten_bread.md).
+Tastes great with [Tava Roti](../Breads/recipe_1_tava_roti.md), [Tandoori Roti](../Breads/recipe_3_tandoori_roti.md) and [Naan Bread](../Breads/recipe_4_naan_bread.md) and also goes well with [No Egg Wheat Gluten Bread](../Breads/recipe_2_wheat_gluten_bread.md).
 
 {{"""
 >> Serving Size: 4 portions

@@ -13,7 +13,7 @@ The blog where I found this recipe is a treasure for people who love Indian dish
 
 The original recipe and video is on [this link](https://kutt.it/keto_gatte){target=_blank}.
 
-Tastes great with [Tava Roti](recipe_1_tava_roti.md), [Tandoori Roti](recipe_2_tandoori_roti.md) and [Naan Bread](recipe_3_naan_bread.md) and also goes well with [No Egg Wheat Gluten Bread](../Breakfast%20Options/recipe_2_wheat_gluten_bread.md).
+Tastes great with [Tava Roti](../Breads/recipe_1_tava_roti.md), [Tandoori Roti](../Breads/recipe_3_tandoori_roti.md) and [Naan Bread](../Breads/recipe_4_naan_bread.md) and also goes well with [No Egg Wheat Gluten Bread](../Breads/recipe_2_wheat_gluten_bread.md).
 
 !!! danger
     As this recipe uses wheat gluten, it is not suitable for those with Gluten Intolerance. I am sure it's obvious but still.
@@ -59,4 +59,3 @@ Let it cook for another ~{5-8%minutes} on low heat.
 Serve hot.
 """
 | parse_recipe()}}
-
