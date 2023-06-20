@@ -20,5 +20,10 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
+      - name: Set up environment
+        env:
+          NCCDB_API_KEY: ${{ secrets.NCCDB_API_KEY }}
+        run: |
+          echo "NCCDB_API_KEY=$NCCDB_API_KEY" >> $GITHUB_ENV
       - run: pip install -r requirements.txt
       - run: mkdocs gh-deploy --force
