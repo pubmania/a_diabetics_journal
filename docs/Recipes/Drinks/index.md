@@ -1,4 +1,4 @@
-# Content
+# Drinks
 
 <div class="grid cards" markdown>
 

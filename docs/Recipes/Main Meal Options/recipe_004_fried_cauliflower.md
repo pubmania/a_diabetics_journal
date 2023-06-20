@@ -11,7 +11,7 @@ tags:
 
 For this recipe one can use fresh cauliflower or pre-cut cauliflower that is available in frozen section of nearly all supermarkets. I use the latter version as I am lazy.If like me you are using frozen cauliflower, its important that you ==**don't**== thaw it or else it will become watery.
 
-Tastes great with [Tava Roti](recipe_1_tava_roti.md), [Tandoori Roti](recipe_2_tandoori_roti.md) and goes well with [Naan Bread](recipe_3_naan_bread.md).
+Tastes great with [Tava Roti](../Breads/recipe_1_tava_roti.md), [Tandoori Roti](../Breads/recipe_3_tandoori_roti.md) and [Naan Bread](../Breads/recipe_4_naan_bread.md) and also goes well with [No Egg Wheat Gluten Bread](../Breads/recipe_2_wheat_gluten_bread.md).
 
 {{"""
 >> Serving Size: 3 portions

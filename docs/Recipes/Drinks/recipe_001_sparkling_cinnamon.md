@@ -11,7 +11,7 @@ tags:
     drink and great healthy replacement for all popular 
     cold drinks and colas on market which are not good 
     for anyone but especially disastrous for diabetics.
-    Anyway, the drink goes really well with [low carb pizza](../Main%20Meal%20Options/recipe_9_low_carb_pizza.md) and
+    Anyway, the drink goes really well with [low carb pizza](../Main%20Meal%20Options/recipe_006_low_carb_pizza.md) and
     works well at all other social occasions.
 
 {{"""
