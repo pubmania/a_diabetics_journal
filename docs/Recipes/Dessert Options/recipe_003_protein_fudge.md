@@ -21,7 +21,7 @@ When butter has melted and is bubbling a bit, add @erythritol{80%gms}, @saffron 
 Then add @cardamom{1%tsp(5 peeled crushed)} and keep stirring.
 Keep stirring till the mixture starts to caremalise a bit (starts turning slightly brown)
 Once caremalised, add roasted pea protein, @dry dessicated coconut{1%tbsp}, @almond flour{2%tbsp} and @crushed cashew nuts{30%gms}.
-Add @unsalted butter{125%gms} and @vanilla extract{1%teaspoon} together.
+Add @unsalted butter{5%gms} and @vanilla extract{1%teaspoon} together.
 Keep stirring until it is all mixed and turns golden brown.
 Transfer to a #baking tray{} to set and sprinkle @cardamom{1%tsp(5 peeled crushed)} on top.
 Takes about 30 to 40 minutes to set though it turns out good if left overnight.
