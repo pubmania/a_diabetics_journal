@@ -640,6 +640,7 @@ def define_env(env):
         df_merge['Conversion Factor'] = df_merge.apply(conv_factor, axis=1)
         df_merge['Amount used in Recipe(gms)'] = df_merge.apply(calculate_amt_in_gms, axis=1)
         df_merge['Calculated Net Carb in recipe'] = df_merge.apply(calculate_cal_net_carb, axis=1).round(2)
+        df_merge['Unit_x'] = df_merge['Unit_x'].astype(str).apply(replace_unit)
         df_merge.rename(columns = {'Unit_x' : 'Recipe Unit', 'Unit_y' : 'Converted Unit'}, inplace=True)
         
         # Create final markdown table:
