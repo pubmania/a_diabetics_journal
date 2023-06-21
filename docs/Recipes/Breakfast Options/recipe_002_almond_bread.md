@@ -26,7 +26,7 @@ Eat it with poached eggs - easiest way is to use the microwave poaching dish or 
 **Almond Flour Bread**
 In a #medium-sized bowl{} add @Blanched Almond flour{3/4%Cup(86g)}
 Add @Baking Powder{1/2%teaspoon} and @Full Fat Greek Yogurt{1%tablespoon}
-Now add @Salt{1/4%teaspoon}, @Olive Oil{1%tablespoon} and @Lukewarm Water{2%tablespoon}
+Now add @Salt{1/4%teaspoon}, @Olive Oil{1%tablespoon} and @Water{2%tablespoon (Lukewarm)}
 Mix until a thick `paste` consistency forms in the bowl.
 Coat a #square glass sandwich container{} with @baking spray{2-3%Sprays}. 
 Add the batter to it and using a #spatula{} evenly spread it out in the dish. 

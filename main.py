@@ -36,6 +36,41 @@ def define_env(env):
         finally:
             return dataframe
 
+    def get_indian_db_nutrient_information(ingredients):
+        """ runs a fuzzy search on provided ingredient dataframe against indian_db"""
+        #get data from csv file into a dataframe
+        obj_file = 'indian_db.csv'
+        str_sheetname = 'indian_db'
+        col_list = ['Food Name; name', 'Energy; enerc',	'Total Fat; fatce',	'Dietary Fiber; fibtg',	'Carbohydrate; choavldf', 'Protein; protcnt']
+        df_in_food_db = read_upload(obj_file,str_sheetname,col_list, date_col_list=False, file_type='csv', file_name='indian_db.csv')
+        #rename columns
+        df_in_food_db.rename(columns = { 'Food Name; name' : 'Food Name', \
+                                        'Carbohydrate; choavldf' : 'Carbohydrate (g)', \
+                                        'Protein; protcnt' : 'Protein (g)', \
+                                        'Total Fat; fatce' : 'Fat (g)', \
+                                        'Dietary Fiber; fibtg' : 'Fibre',
+                                        'Energy; enerc' : 'Energy'}, inplace=True)
+        #print(df_in_food_db.head(5))
+        df_in_options_inner = pd.DataFrame()
+        choices = df_in_food_db['Food Name'].unique()
+        for item in ingredients:
+            ingredient = item.upper()
+            comp_var = process.extract(ingredient, choices, limit=6)
+            #print(comp_var)
+            #print(item)
+            if comp_var:
+                for i in range(len(comp_var)):
+                    if comp_var[i][1] >=90:
+                        df_filtered = df_in_food_db[df_in_food_db['Food Name'] == comp_var[i][0]][['Food Name','Carbohydrate (g)', 'Protein (g)','Fat (g)','Energy','Fibre']]
+                        df_filtered['Searched Ingredient'] = ingredient
+                        df_in_options_inner = pd.concat([df_in_options_inner, df_filtered])
+                        # if match was 100% then break from this for loop to get next item from outer for loop.
+                        if comp_var[i][1] == 100:
+                            break
+        
+        return df_in_options_inner
+
+
     def get_nccdb_nutrient_information(api_key, ingredients, nutrient_ids=[1008, 1005, 1079, 1003, 1004]):
         #print(f'get_nccdb_nutrient_information --- {ingredients}')
         url = "https://api.nal.usda.gov/fdc/v1/foods/search"
@@ -129,6 +164,7 @@ def define_env(env):
         df_uk_food_db = df_uk_food_db[~((df_uk_food_db['Description'].str.contains(pattern, flags=re.IGNORECASE))\
                                         | (df_uk_food_db['Food Name'].str.contains(pattern, flags=re.IGNORECASE)))]
         df_options = pd.DataFrame()
+        df_options_indian_db = pd.DataFrame()
         df_options_nccdb = pd.DataFrame()
         filtered_list = []
         choices = df_uk_food_db['Food Name']
@@ -160,18 +196,38 @@ def define_env(env):
             possible_matches = f'\t\t*Possible matches in [McCance and Widdowson\'s composition of foods integrated dataset](https://www.gov.uk/government'+\
                 f'/publications/composition-of-foods-integrated-dataset-cofid#full-publication-update-history)'+\
                 "{target=_blank}"+ f' are shown below:*\n{possible_matches_res}'
-            ### Pass the ingredients not found on ukdb to nccdb
+            ### Pass the ingredients not found on ukdb to indian_db
             filtered_list = df['Ingredient'][~(df['Ingredient'].isin(df_options['Searched Ingredient']))].to_list()
+
+        ### Call indian_db for ingredient not available on ukdb
+        if filtered_list:              
+            df_options_indian_db = get_indian_db_nutrient_information(filtered_list).fillna(0)
+            #print(f'filtered_list before calling indian db: {filtered_list}')
         
-        ### Call nccdb for ingredients not available on ukdb    
+        if df_options_indian_db.empty:
+            possible_matches += ''
+        else:            
+            df_options_indian_db = df_options_indian_db.drop_duplicates(subset='Food Name')
+            df_options_indian_db = df_options_indian_db[['Searched Ingredient', 'Food Name', 'Carbohydrate (g)', 'Protein (g)', 'Fat (g)', 'Energy', 'Fibre']]
+            possible_matches_indian_db = '\n\n\t\t' + df_options_indian_db.to_markdown(index=False).replace('\n','\n\t\t')
+            possible_matches += f'\n\n\t\t*Possible matches in [Indian Food Composition Database](https://ifct2017.com/frame.php?page=food'+\
+            f')'+\
+            "{target=_blank}"+ f' are shown below:*\n{possible_matches_indian_db}'
+            
+            ## Reduce filtered list to items not found in indian_db
+            filtered_list = [item for item in filtered_list if item.upper() not in df_options_indian_db['Searched Ingredient'].values]
+            #print(f'filtered_list before calling nccdb: {filtered_list}')
+            #print(df_options_indian_db['Searched Ingredient'])
+            
+        ### Call nccdb for ingredients not available on indian_db
         if filtered_list:              
             df_options_nccdb = get_nccdb_nutrient_information(api_key, filtered_list).fillna(0)
             
         if df_options_nccdb.empty:
-                possible_matches += ''
+            possible_matches += ''
         else:
             df_options_nccdb.rename(columns = { 'Carbohydrate, by difference' : 'Carbohydrate (g)','Protein' : 'Protein (g)', 'Total lipid (fat)' : 'Fat (g)', 'Energy' : 'Energy (kcal) (kcal)'}, inplace=True)
-            df_options_nccdb = df_options_nccdb[['Searched Ingredient','Food Name', 'Carbohydrate (g)', 'Fiber, total dietary', 'Net Carbs', 'Protein (g)', 'Fat (g)', 'Energy (kcal) (kcal)']].drop_duplicates(subset='Food Name')            
+            df_options_nccdb = df_options_nccdb[['Searched Ingredient','Food Name', 'Carbohydrate (g)', 'Fiber, total dietary', 'Net Carbs', 'Protein (g)', 'Fat (g)', 'Energy (kcal) (kcal)']].drop_duplicates(subset='Food Name')
             possible_matches_nccdb = '\n\n\t\t' + df_options_nccdb.to_markdown(index=False).replace('\n','\n\t\t')
             possible_matches += f'\n\n\t\t*Possible matches in [U.S. Department of Food Central database](https://fdc.nal.usda.gov/fdc-app.html#/'+\
             f')'+\
@@ -611,7 +667,7 @@ def define_env(env):
             netcarb_string += '\n\n\t!!! warning "Caution"\n\t\t*The calculation is indicative and my lookup list'+\
             ' did not have net carb values for* **' +\
             not_found +\
-            '** *and thus had to be excluded in the calculations above.*\n\n'
+            '** *and thus not included in the calculations above.*\n\n'
             if possible_match != '': 
                 netcarb_string += possible_match
         ######################### NET CARB TABLE ####################################
@@ -638,7 +694,13 @@ def define_env(env):
                 if key == 'Cooking Time':
                     one_cooking_data_string = f":material-timer: *{value}*"
                 elif key == 'Serving Size':
-                    two_cooking_data_string = f", :fontawesome-solid-chart-pie: *{value}*" 
+                    two_cooking_data_string = f", :fontawesome-solid-chart-pie: *{value}*"
+                    if value.split(' ')[0].isdigit():
+                        net_carb_per_serving = round((float(grand_total.replace('*', '')) / int(value.split(' ')[0])), 2)
+                        net_carb_per_serving_string = f', **Net Carbs per serving:** *[{net_carb_per_serving}](#nutritional-info)* '
+                        #print(value.split(' '))
+                    else:
+                        net_carb_per_serving_string = ''
                 elif key == 'Type':
                     if value == 'Vegetarian':
                         three_cooking_data_string = f", **{key}**: :leafy_green:"
@@ -658,9 +720,11 @@ def define_env(env):
             temp_cooking_data_string += three_cooking_data_string
         if four_cooking_data_string != "":
             temp_cooking_data_string += four_cooking_data_string + "{target=_blank}"
-        cooking_data_string = f'<div class=\"grid cards\" align = \"center\" markdown>\n\n-   ' +\
+        cooking_data_string = f'<div class=\"grid cards\" align = \"center\" markdown>\n\n-   ## Key Stats\n\n\t---\n\n\t   ' +\
         temp_cooking_data_string + cooking_data_string +\
-        f' **Total Net Carbs:** [{grand_total}](#nutritional-info)\n\n</div>\n\n'
+        net_carb_per_serving_string + \
+        f', **Total Net Carbs:** [{grand_total}](#nutritional-info) '+\
+        '\n\n</div>\n\n'
         ############################## Cooking Data ################################
         steps_dia_string = puml(input_string)
         
