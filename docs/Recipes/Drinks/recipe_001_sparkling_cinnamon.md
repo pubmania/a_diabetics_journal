@@ -15,7 +15,7 @@ tags:
     works well at all other social occasions.
 
 {{"""
->> Serving Size: 2L
+>> Serving Size: 2 Litres
 >> Cooking Time: 10 minutes
 >> Category: Drinks
 >> Image: recipe_1_sparkling_cinnamon.jpg 

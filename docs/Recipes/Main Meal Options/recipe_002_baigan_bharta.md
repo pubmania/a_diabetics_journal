@@ -31,7 +31,7 @@ Add @Pink Himalayan Salt{to taste} and cook till the tomato melts.
 Keep stirring with a #spatula{} to prevent burning at the bottom.
 Once the mixture is turning brownish, add the mashed aubergine and mix well.
 Start cooking over high flame while stirring till the mashed aubergine starts turning a bit brownish
-Adjust @seasoning{} and Garnish with @Green coriander{30%gms(1 small bunch, chopped)}.
+Adjust @seasoning{} and Garnish with @Fresh coriander{30%gms(1 small bunch, chopped)}.
 Serve hot.
 """
 | parse_recipe()}}
