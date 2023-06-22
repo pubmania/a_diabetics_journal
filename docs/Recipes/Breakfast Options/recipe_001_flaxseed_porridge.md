@@ -16,7 +16,7 @@ tags:
 >> Cooking Time: 10 minutes
 >> Category: Continental
 >> Type: Vegetarian
-Coarsely grind @Almonds{1%tablespoon}, @Walnuts{1%tablespoon}, @Cashews{1%tablespoon}, @Pistachios{1%tablespoon}, @Macademia nuts{1%tablespoon} in a #mixer grinder{}.
+Coarsely grind @Almonds{1.5%tablespoon}, @Walnuts{1.5%tablespoon}, @Cashews{1.5%tablespoon}, @Pistachios{1.5%tablespoon}, @Macademia nuts{1.5%tablespoon} in a #mixer grinder{}.
 Lightly roast the mixture.
 Add mixture of coarsely powdered and above roasted nuts mixture with @golden flaxseed powder{5%tablespoons} in a #bowl{}.
 Mix @full fat greek yogurt{2.5%tablespoons} and @water{5%tablespoons}. 

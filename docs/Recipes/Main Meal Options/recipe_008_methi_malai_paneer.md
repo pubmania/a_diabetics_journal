@@ -1,6 +1,7 @@
 ---
 comments: true
 tags:
+    - Paneer
     - Indian
     - Curry
     - Dinner
