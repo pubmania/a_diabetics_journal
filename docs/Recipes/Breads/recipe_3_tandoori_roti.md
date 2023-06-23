@@ -13,7 +13,7 @@ tags:
     As this recipe is based mainly on wheat gluten, it is not suitable for those with Gluten Intolerance. I am sure it's obvious but still.
 
 {{ """
->> Serving Size: 4 portions (10 pieces)
+>> Serving Size: 10 pieces
 >> Cooking Time: 90 minutes
 >> Category: Indian
 >> Type: Vegetarian
