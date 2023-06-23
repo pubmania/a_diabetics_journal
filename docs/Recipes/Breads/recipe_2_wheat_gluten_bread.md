@@ -21,7 +21,7 @@ I came across the original recipe on a diabetes forum. I have, however, made min
     As this recipe is based mainly on wheat gluten, it is not suitable for those with Gluten Intolerance. I am sure it's obvious but still.
 
 {{ """
->> Serving Size: 4 portions (8 rolls)
+>> Serving Size: 8 rolls
 >> Cooking Time: 90 minutes
 >> Category: Continental
 >> Type: Vegetarian
