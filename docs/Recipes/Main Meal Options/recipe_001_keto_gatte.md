@@ -9,7 +9,7 @@ tags:
 
 # Keto Gatte ki Sabji
 
-The blog where I found this recipe is a treasure for people who love Indian dishes and has recipes reimagined the keto way but this is the one I have tried and it was delicious. The only change I made was replacing Xanthum Gum with What Gluten.
+The blog where I found this recipe is a treasure for people who love Indian dishes and has recipes reimagined the keto way but this is the one I have tried and it was delicious. The only change I made was replacing Xanthum Gum with Wheat Gluten.
 
 The original recipe and video is on [this link](https://kutt.it/keto_gatte){target=_blank}.
 
