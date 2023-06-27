@@ -9,7 +9,7 @@ tags:
 While the original recipe calls for use of Coconut sugar, I make mine without it and I think the sweetness is just right for my taste pallets.
 
 !!! Tip
-    While overall net carbs are comparable to say Low Carb Pizza, it is not as filling and so can result in overeating especially because it is very delicious. Try and keep it to a max of 1 or 2 slices and only after main course so the risk of overeating is minimised.
+    While overall net carbs are comparable to say Low Carb Pizza, it is not as filling and can result in overeating, especially because it is very delicious. Try and keep it to a max of 1 or 2 slices and only after main course so the risk of overeating is minimised.
 
 {{"""
 >> Source: https://detoxinista.com/vegan-almond-flour-banana-bread/
