@@ -25,6 +25,6 @@ Mix using a #spatula{} until a relatively smooth batter is formed.
 Add in @apple cider vinegar{1%tbsp} last and mix well.
 Now pour the batter into the lined #pan{}. 
 Smooth the top with a #spatula{} then bake at 175C for about ~{45%minutes}
-Once done, the top of the loaf will rise and crack and will feel firm to the. 
+Once done, the top of the loaf will rise and crack and will feel firm to touch. 
 Allow the loaf to cool completely before slicing.
 """ |parse_recipe()}}
