@@ -20,7 +20,7 @@ Tastes great with [Tava Roti](../Breads/recipe_1_tava_roti.md), [Tandoori Roti](
 >> Source: https://ranveerbrar.com/recipes/lehsuni-paneer/
 
 **Prepare Base**
-In a #saucepan{}, add @Ghee{2%tbs}, @extra virgin olive oil{1%tbsp} and put it on high heat on the #hob{}.
+In a #saucepan{}, add @Ghee{2%tbsp}, @extra virgin olive oil{1%tbsp} and put it on high heat on the #hob{}.
 Once hot, add @cinnamon stick{1/2%inch}, @Bay leaf{2}, @cumin seeds{1/2%tsp}.
 Mix well using #spatula and let it splutter.
 Add @ginger{1/2%inch}, @garlic{8%cloves} and saute it well. 
