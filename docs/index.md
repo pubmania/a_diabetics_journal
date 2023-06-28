@@ -10,7 +10,7 @@ hide:
 
 I was diagnosed with Type 2 Diabetes in October'2010. Since then I followed all the advice on diet from doctors and health nutritionalists which can mostly be summarised thus:
 
-!!! info inline "Popular yet incorrect advice"
+!!! danger inline "Popular yet incorrect advice"
     * :x: Minimise fat intake
     * :x: Eat healthy unprocessed carbs, 
     * :x: Eat small portions but eat frequently. 
