@@ -34,6 +34,7 @@ While these are easily available, I have provided links for the ones I use and f
 -   :green_heart: [Vital Wheat Gluten](https://kutt.it/wheat-gluten){target=_blank}
 -   [Electrolyte Tablets](https://kutt.it/electrolyte_tablets){target=_blank}
 -   :green_heart: [Soya Flour](https://kutt.it/soya_flour){target=_blank}
+-   :green_heart: [Paysan Breton Cream Cheese](https://kutt.it/cream_cheese){target=_blank}
 -   :green_heart: Eggs
 -   Raddish 
 -   Black Pepper
