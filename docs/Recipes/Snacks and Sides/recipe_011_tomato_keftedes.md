@@ -7,7 +7,7 @@ tags:
 
 # Tomato Keftedes (Fried Santorini Tomato Balls / Tomato Fritters)
 
-While the original recipe uses flour, I replaced it combination of wheat gluten and almond flour and it turned out great.
+While the original recipe uses flour, I replaced it with the combination of wheat gluten and almond flour and it turned out great.
 
 Tastes great with [Tomato Mint Pepper Spinach Dip](./recipe_007_mint_spinach_dip.md) and [Tzatziki Dip](./recipe_009_tzatziki_dip.md).
 
