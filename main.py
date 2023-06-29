@@ -445,18 +445,26 @@ def define_env(env):
 
     def insert_newlines(input_string: str, chars_per_line: int):
         """Inserts newline in the input_string after specified number of characters from char_per_line"""
+        words = input_string.split()
         mod = ""
-        count = 0    
-        for i,x in enumerate(input_string):
-            if x in ('`','*'):
-                x = ''
-            elif x ==' ' and i >= chars_per_line:
-                x = "\n\t"
+        count = 0
+        for word in words:
+            if count + len(word) > chars_per_line:
+                mod += "\n\t"
                 count = 0
-                #chars_per_line += chars_per_line
-            mod += x
-            count += 1    
-        return mod
+            mod += word + " "
+            count += len(word) + 1
+        return mod.strip()    
+        #for i,x in enumerate(input_string):
+        #    if x in ('`','*'):
+        #        x = ''
+        #    elif x ==' ' and i >= chars_per_line:
+        #        x = "\n\t"
+        #        count = 0
+        #        #chars_per_line += chars_per_line
+        #    mod += x
+        #    count += 1    
+        #return mod
 
 
     # create a jinja2 filter
