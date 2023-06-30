@@ -33,6 +33,9 @@ Plugin can be installed by `pip install mkdocs-macros-plugin`. Then it should be
 
 Now, with that out of the way, one can start creating filters to use by first creating a `main.py` file in the root directory which is what I did. In that file is located the function `parse_recipe`.
 
+> __Note__
+> I have added more functions after this readme was created and it's best to look at the [net_carb_calc_worksheet.ipynb](../net_carb_calc_worksheet.ipynb) to get an understanding of the functions not listed above.
+
 Let's break down various functions within this function and what they do and how they do it.
 
 Details about each function and how it works are as explained below:
@@ -94,7 +97,7 @@ Details about each function and how it works are as explained below:
     - The function iterates over each line and checks if it contains cookware, ingredients, or timers by calling the corresponding find functions.
     - It then constructs a formatted string by combining the extracted information and returns the final processed recipe string.
 
-These functions work together to parse the input recipe string, extract relevant information, and format it into a more structured representation. ==I have added more functions after this readme was created and it's best to look at the [net_carb_calc_worksheet.ipynb](../net_carb_calc_worksheet.ipynb) to get an understanding of the functions not listed above.==
+These functions work together to parse the input recipe string, extract relevant information, and format it into a more structured representation. 
 
 ## Example
 
