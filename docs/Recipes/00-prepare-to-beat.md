@@ -9,11 +9,11 @@ While these are easily available, I have provided links for the ones I use and f
 ## Pantry
 
 !!! warning "Caution"
-    It's easy to get lured into the overuse of the ultra processed foods while trying low carb alternatives, so please do keep an eye on ingredients and avoid additives, flavourings etc from overuse. 
+    It's easy to get lured into the ultra processed foods while trying low carb alternatives, so please do keep an eye on ingredients and avoid overuse of products with additives, flavourings etc. 
 	
 	UPF, if had regularly, can cause havoc on your gut microbiome. One can read more about this in the book ["Ultra-Processed People: The Science Behind the Food That Isn't Food" by Dr. Chris van Tulleken](https://www.goodreads.com/en/book/show/62586003).
 	
-	Any item that can be classed as `ultra processed` is marked with :red_circle: and `possibly processed` is marked with :orange_circle: in the list below. 
+	Any item that can be classed as `ultra processed` is marked with :red_circle: and `possibly ultra processed` is marked with :orange_circle: in the list below. 
 	
 	My `favourites` are marked with :green_heart:.
 
@@ -91,19 +91,19 @@ While these are easily available, I have provided links for the ones I use and f
 		1. [Smooth](https://kutt.it/smooth_peanut_butter){target=_blank}
 		2. [Crunchy](https://kutt.it/crunchy_peanut_butter){target=_blank}
 
--	:green_heart: [Low Sugar Mint Chocolate Bar](https://kutt.it/mint-chocolate-bar)
+-	:green_heart: :small_orange_diamond: [Low Sugar Mint Chocolate Bar](https://kutt.it/mint-chocolate-bar)
 
 	---
 
-	??? info "Ingredients"
-		Cocoa Butter, Raw Cacao Powder, Creamed Coconut, Erythritol, Tiger Nut, Inulin, Coconut Sugar, Orange Oil. Chocolate contains ; cocoa solids 96%
+	??? warning "Ingredients"
+		Cocoa Butter, Raw Cacao Powder, Creamed Coconut, :small_orange_diamond: Erythritol, Tiger Nut, Inulin, Coconut Sugar, Orange Oil. Chocolate contains ; cocoa solids 96%
 
--	:green_heart: [Low Sugar Mint Chocolate Bar](https://kutt.it/orange-chocolate-bar)
+-	:green_heart: :small_orange_diamond: [Low Sugar Mint Chocolate Bar](https://kutt.it/orange-chocolate-bar)
 
 	---
 
-	??? info "Ingredients"
-		Cocoa Butter, Raw Cacao Powder, Creamed Coconut, Erythritol, Tiger Nut, Inulin, Coconut Sugar, Orange Oil. Chocolate contains ; cocoa solids 96%
+	??? warning "Ingredients"
+		Cocoa Butter, Raw Cacao Powder, Creamed Coconut, :small_orange_diamond: Erythritol, Tiger Nut, Inulin, Coconut Sugar, Orange Oil. Chocolate contains ; cocoa solids 96%
 	
 -   :orange_circle: [Confectioners Swerve](https://kutt.it/swerve){target=_blank}
 
