@@ -61,12 +61,7 @@ While these are easily available, I have provided links for the ones I use and f
 	??? warning "Beware"
 		Make sure to read nutrition info on the back. Carb content should be less than 0.6g. Usually it's about 0.1g for extra mature cheddar cheese.
 
--   :green_heart: [Frozen Chopped Celeriac](https://kutt.it/chopped_celeriac){target=_blank}
-	
-	--- 
-	
-	??? Info
-		We are only able to get it at Waitrose
+-   :green_heart: Celeriac
 
 -   :green_heart: Clarified Butter (Ghee)
 
