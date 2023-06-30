@@ -34,7 +34,7 @@ Plugin can be installed by `pip install mkdocs-macros-plugin`. Then it should be
 Now, with that out of the way, one can start creating filters to use by first creating a `main.py` file in the root directory which is what I did. In that file is located the function `parse_recipe`.
 
 > __Note__
-> I have added more functions after this readme was created and it's best to look at the [net_carb_calc_worksheet.ipynb](../net_carb_calc_worksheet.ipynb) to get an understanding of the functions not listed above.
+> I have added more functions after this readme was created and it's best to look at the [net_carb_calc_worksheet.ipynb](../net_carb_calc_worksheet.ipynb) to get an understanding of all the functions.
 
 Let's break down various functions within this function and what they do and how they do it.
 
