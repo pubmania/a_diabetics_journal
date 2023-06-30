@@ -94,7 +94,7 @@ Details about each function and how it works are as explained below:
     - The function iterates over each line and checks if it contains cookware, ingredients, or timers by calling the corresponding find functions.
     - It then constructs a formatted string by combining the extracted information and returns the final processed recipe string.
 
-These functions work together to parse the input recipe string, extract relevant information, and format it into a more structured representation. ==I have added more functions after this readme was created and it's best to look at the [net_carb_calc_worksheet.ipynb](../net_carb_calc_worksheet.ipynb) to get an understanding of the functions not listed above.
+These functions work together to parse the input recipe string, extract relevant information, and format it into a more structured representation. ==I have added more functions after this readme was created and it's best to look at the [net_carb_calc_worksheet.ipynb](../net_carb_calc_worksheet.ipynb) to get an understanding of the functions not listed above.==
 
 ## Example
 
