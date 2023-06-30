@@ -455,17 +455,6 @@ def define_env(env):
             mod += word + " "
             count += len(word) + 1
         return mod.strip()    
-        #for i,x in enumerate(input_string):
-        #    if x in ('`','*'):
-        #        x = ''
-        #    elif x ==' ' and i >= chars_per_line:
-        #        x = "\n\t"
-        #        count = 0
-        #        #chars_per_line += chars_per_line
-        #    mod += x
-        #    count += 1    
-        #return mod
-
 
     # create a jinja2 filter
     @env.filter
