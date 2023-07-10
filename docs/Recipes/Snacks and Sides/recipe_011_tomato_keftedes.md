@@ -9,7 +9,7 @@ tags:
 
 While the original recipe uses flour, I replaced it with the combination of wheat gluten and almond flour and it turned out great.
 
-Tastes great with [Tomato Mint Pepper Spinach Dip](./recipe_007_mint_spinach_dip.md) and [Tzatziki Dip](./recipe_009_tzatziki_dip.md).
+Tastes great with [Tomato Mint Pepper Spinach Dip](../Dips/recipe_007_mint_spinach_dip.md), [Tzatziki Dip](../Dips/recipe_009_tzatziki_dip.md) and [Basil Mint Pepper Garlic Dip](../Dips/recipe_012_basil_mint_dip.md).
 
 {{""" 
 >> Serving Size: 16

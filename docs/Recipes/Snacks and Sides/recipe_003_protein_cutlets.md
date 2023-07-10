@@ -8,6 +8,8 @@ tags:
 
 # Protien Rich Cutlets
 
+Tastes great with [Tomato Mint Pepper Spinach Dip](../Dips/recipe_007_mint_spinach_dip.md), [Tzatziki Dip](../Dips/recipe_009_tzatziki_dip.md) and [Basil Mint Pepper Garlic Dip](../Dips/recipe_012_basil_mint_dip.md).
+
 !!! warning "CAUTION"
     [Soya chunks](https://kutt.it/soya_chunks) on label show about 23g carbs and 52g protien. However, for me this item has never caused any spike in the BG readings but do take readings and monitor before you include this in your diet plan.
 
