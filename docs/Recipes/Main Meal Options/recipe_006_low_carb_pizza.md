@@ -9,7 +9,11 @@ tags:
 
 # Low Carb Pizza and Garlic Bread
 
+:heart::green_heart:
+
 Goes well with [Sparkling Cinnamon Drink](../Drinks/recipe_001_sparkling_cinnamon.md).
+
+The Garlic Bread tastes great with [Minty Basil Mushroom Soup](../Snacks%20and%20Sides/recipe_007_minty_basil_mushroom_soup.md).
 
 !!! danger
     As this recipe is based mainly on wheat gluten, it is not suitable for those with Gluten Intolerance. I am sure it's obvious but still.
