@@ -6,7 +6,7 @@ tags:
     - Breakfast
 ---
 
-# Protien Rich Cutlets
+# Protein Rich Cutlets
 
 Tastes great with [Tomato Mint Pepper Spinach Dip](../Dips/recipe_007_mint_spinach_dip.md), [Tzatziki Dip](../Dips/recipe_009_tzatziki_dip.md) and [Basil Mint Pepper Garlic Dip](../Dips/recipe_012_basil_mint_dip.md).
 
@@ -20,6 +20,8 @@ Tastes great with [Tomato Mint Pepper Spinach Dip](../Dips/recipe_007_mint_spina
 >> Cooking Time: 45 minutes
 >> Category: Indian
 >> Type: Vegetarian
+>> Image: recipe_003_protein_cutlets.jpeg
+>> Image-Caption: Protein Rich Cutlets
 
 **Coriander and Green Mint Dip (chutney)**
 Wash @Fresh Corriander leaves{1%bunch}, @Fresh Mint{1%bunch}, @Green Chilli{25%gms(3 medium)}.
