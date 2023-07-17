@@ -2,8 +2,8 @@ name: Build and Deploy
 on:
   push:
     branches:
-      #- main
-      -main_techb0lt
+      - main
+      #- main_techb0lt
     paths:
       - mkdocs.yml
       - requirements.txt
@@ -27,3 +27,6 @@ jobs:
           echo "NCCDB_API_KEY=$NCCDB_API_KEY" >> $GITHUB_ENV
       - run: pip install -r requirements.txt
       - run: mkdocs gh-deploy --force
+        env:
+          REPO_URL: ${{ vars.REPO_URL }}
+          EDIT_URL: ${{ vars.EDIT_URL }}
