@@ -42,6 +42,6 @@ Add @onion{150%gms(Large, chopped)} and chopped @Fresh Mint{1%bunch}.
 Add @salt{1%teaspoon}, @red chilli powder{1%teaspoon}, @garam masala{2%teaspoon}.
 Mix well and make cutlet shaped balls from this mixture.
 Coat both sides of cutlets with @avocado oil{2%Tablespoons}.
-Put in #Air frer{} at 190C for roughly ~{15%minutes}.
+Put in #Air fryer{} at 190C for roughly ~{15%minutes}.
 Enjoy with `Coriander and Green Mint Dip (chutney)` and @sugarfree tomato ketchup{}.
 """ | parse_recipe()}}
