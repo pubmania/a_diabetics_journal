@@ -30,3 +30,4 @@ jobs:
         env:
           REPO_URL: ${{ vars.REPO_URL }}
           EDIT_URL: ${{ vars.EDIT_URL }}
+          SITE_URL: ${{ vars.SITE_URL }}
