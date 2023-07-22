@@ -8,10 +8,10 @@ tags:
 
 {{"""
 >> Serving Size: 16
->> Cooking Time: 30 minutes
+>> Cooking Time: 60 minutes
 >> Category: Greek
 >> Type: Vegetarian
->> Image: 20230720_193907.jpg
+>> Image: recipe_008_low_carb_edamame_falafels.jpg
 >> Image-Caption: Low Carb Edamame Falafel
 
 Take @frozen edamame beans{250%gms} and @frozen peas{50%gms} in a #mixer-grinder jar{}.

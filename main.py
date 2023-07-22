@@ -221,8 +221,10 @@ def define_env(env):
             
         ### Call nccdb for ingredients not available on indian_db
         if filtered_list:              
-            df_options_nccdb = get_nccdb_nutrient_information(api_key, filtered_list).fillna(0)
-            
+            try:
+                df_options_nccdb = get_nccdb_nutrient_information(api_key, filtered_list).fillna(0)
+            except:
+                pass
         if df_options_nccdb.empty:
             possible_matches += ''
         else:
