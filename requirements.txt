@@ -1,6 +1,6 @@
 # Set mkdocs version 1.3.0
 markdown>=3.2
-mkdocs==1.4.2
+mkdocs==1.4.3
 
 # WARNING:If you change this, make sure
 # the menu and footer are built and rendered correctly
@@ -26,3 +26,4 @@ thefuzz==0.19.0
 Levenshtein==0.21.1
 python-Levenshtein==0.21.1
 openpyxl
+markdown-customblocks

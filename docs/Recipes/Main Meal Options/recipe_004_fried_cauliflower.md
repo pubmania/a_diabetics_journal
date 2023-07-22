@@ -1,4 +1,5 @@
 ---
+title: Fried Gobhi (Cauliflower)
 comments: true
 tags:
     - Indian
@@ -6,8 +7,6 @@ tags:
     - Dinner
     - Lunch
 ---
-
-# Fried Gobhi (Cauliflower)
 
 For this recipe one can use fresh cauliflower or pre-cut cauliflower that is available in frozen section of nearly all supermarkets. I use the latter version as I am lazy.If like me you are using frozen cauliflower, its important that you ==**don't**== thaw it or else it will become watery.
 

@@ -1,14 +1,12 @@
 ---
+title: Keto Upma
+description: While original recipe uses semolina flour, replacing it with Almond flour works perfectly. The resulting dish is more filling than the one resulting from original recipe and thus creates twice the amount of servings.
 comments: true
 tags:
     - Indian
     - Snacks
     - Breakfast
 ---
-
-# Keto Upma
-
-While original recipe uses semolina flour, replacing it with Almond flour works perfectly. The resulting dish is more filling than the one resulting from original recipe and thus creates twice the amount of servings.
 
 {{"""
 >> Serving Size: 4

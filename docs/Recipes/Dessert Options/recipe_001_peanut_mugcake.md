@@ -1,10 +1,10 @@
 ---
+title: Peanut Butter Mugcake
 comments: true
 tags:
     - Dessert
 ---
 
-# Peanut Butter Mugcake
 
 A very quick one minute recipe from Joe Duff - [YouTube Link](https://youtu.be/K5LCmT-WfTs){target=_blank}.
 

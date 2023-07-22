@@ -6,22 +6,28 @@ use_directory_urls: False
 theme:
   name: material
   custom_dir: overrides
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/
+  icon:
+    logo: fontawesome/solid/utensils
+  favicon: favicon.png  
   palette:
      
     # Palette toggle for light mode
     - scheme: default
-      toggle:
-        icon: material/brightness-7 
-        name: Switch to dark mode
-      primary: blue
+  #    toggle:
+  #      icon: material/brightness-7 
+  #      name: Switch to dark mode
+      primary: white
+      accent: deep orange
 
     # Palette toggle for dark mode
-    - scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
-      primary: black
-  #custom_dir: overrides/partials
+  #  - scheme: slate
+   #   toggle:
+    #    icon: material/brightness-4
+    #    name: Switch to light mode
+    #  primary: black
+    #  accent: deep orange
+  
   features:
     - content.code.annotate
     - content.code.copy
@@ -30,7 +36,7 @@ theme:
     - content.action.edit
     - content.action.view
     #- navigation.expand
-    - navigation.footer
+    #- navigation.footer
     - navigation.indexes
     #- navigation.sections
     - navigation.tabs
@@ -40,14 +46,28 @@ theme:
     - search.share
     - search.suggest
 
+#extra:
+#  consent:
+#    title: Cookie consent
+#    description: >-
+#      The site uses cookies to recognise visits and preferences.
+
 extra_css:
   - assets/stylesheets/main.css
+  - assets/stylesheets/view-bigimg.css
+  - assets/stylesheets/extra.css
   #- assets/stylesheets/footer.css
  
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
   - assets/javascripts/tables.js
   #- assets/javascripts/mermaid.min.js
+  - assets/javascripts/mathjax.js # must be before mathjax
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/npm/mermaid@10.2.4/dist/mermaid.min.js
+  - assets/javascripts/view-bigimg.js
+  - assets/javascripts/extra.js
 
 # Extension information
 markdown_extensions:
@@ -88,13 +108,14 @@ markdown_extensions:
   - plantuml_markdown:
       server: http://www.plantuml.com/plantuml  # PlantUML server, for remote rendering
       format: svg_inline                               # default diagram image format
+  - customblocks # use ::: to create a new <div>
 
 # Plugin information
 plugins:
   - search
   - awesome-pages
   - include-markdown
-  - mermaid2
+  #- mermaid2
   - table-reader:
       data_path: "docs/assets/tables"
   - encryptcontent:
@@ -109,27 +130,27 @@ plugins:
         - "*.gz"
       regex:
         - '.*\.(tmp|bin|tar)$'
-  - enumerate-headings:
-      toc_depth: 0
-      strict: true
-      increment_across_pages: true
-      include:
-        - Recipes/*/*.md
-      exclude:
+  #- enumerate-headings:
+  #    toc_depth: 0
+  #    strict: true
+  #    increment_across_pages: true
+  #    include:
+  #      - Recipes/*/*.md
+  #    exclude:
   #      - index.md
   #      - about/index.md
-        - Recipes/tags.md
-        - Recipes/00-prepare-to-beat.md
-        - Recipes/index.md
-        - Recipes/Breads/index.md
-        - Recipes/Breakfast Options/index.md
-        - Recipes/Dessert Options/index.md
-        - Recipes/Drinks/index.md
-        - Recipes/Main Meal Options/index.md
-        - Recipes/Snacks and Sides/index.md
+  #      - Recipes/tags.md
+  #      - Recipes/00-prepare-to-beat.md
+  #      - Recipes/index.md
+  #      - Recipes/Breads/index.md
+  #      - Recipes/Breakfast Options/index.md
+  #      - Recipes/Dessert Options/index.md
+  #      - Recipes/Drinks/index.md
+  #      - Recipes/Main Meal Options/index.md
+  #      - Recipes/Snacks and Sides/index.md
   #      - Musings/
   - macros
-  - tags:
-      tags_file: Recipes/tags.md
+  #- tags:
+  #    tags_file: Recipes/tags.md
   #- git-revision-date-localized:
   #    enable_creation_date: true

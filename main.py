@@ -275,10 +275,10 @@ def define_env(env):
         #steps = inp_str.split('\n')
         steps = inp_str.splitlines()
         steps_string = "<div class=\"grid cards\" markdown>\n\n\n-   ## Steps\n\n\t---"
-        out = "\n-   ## Process\n\n\t---\n\n\t```plantuml\n\t@startuml\n\t!theme cerulean\n\t"+style_str+"\n\tstart\n"
+        out = "\n-   ## Process\n\n\t---\n\n\t```plantuml\n\t@startuml\n\t!theme aws-orange\n\t"+style_str+"\n\tstart\n"
         for step in steps:
             # Convert step into uppercase for uniform comparison
-            p_step = step.upper()
+            p_step = step.replace("`","").upper()
             # Check if step starts with IF and contains a THEN 
             # If so, it is a candidate for If Then Else syntax of plantuml
             # If not treat it as normal step
@@ -324,11 +324,11 @@ def define_env(env):
                 if step.startswith('**') and step.endswith('**'):
                     # If the step starts with ** and ends with **, apply different formatting and remove **
                     step = step.replace("**","")
-                    out += f'\t#Black:**{insert_newlines(step.strip(),50)}**/\n'
+                    out += f'\t#Black:**{insert_newlines(step.replace("`","").strip(),50)}**/\n'
                     step_line = f"\n\n\t### {step}\n\n"
                 else:
                     # If the step does not start with ** and ends with **, apply standard formatting
-                    out += f'\t:{insert_newlines(step.strip(),50)};\n'
+                    out += f'\t:{insert_newlines(step.replace("`","").strip(),50)};\n'
                     step_line = f"\n\t* {step.strip()}"
                 steps_string += step_line
         out += f'\tend\n\t@enduml\n\t```\n\n</div>\n\n'

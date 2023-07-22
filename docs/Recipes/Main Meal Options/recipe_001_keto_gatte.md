@@ -1,4 +1,5 @@
 ---
+title: Keto Gatte ki Sabji
 comments: true
 tags:
     - Indian
@@ -6,8 +7,6 @@ tags:
     - Dinner
     - Lunch
 ---
-
-# Keto Gatte ki Sabji
 
 The blog where I found this recipe is a treasure for people who love Indian dishes and has recipes reimagined the keto way but this is the one I have tried and it was delicious. The only change I made was replacing Xanthum Gum with Wheat Gluten.
 

@@ -3,9 +3,8 @@ comments: true
 tags:
     - Indian
     - Snacks
+title: Paneer Crackers
 ---
-
-# Paneer Crackers
 
 {{"""
 >> Serving Size: 6

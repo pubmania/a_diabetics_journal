@@ -1,9 +1,9 @@
 ---
+title: Flaxseed Porridge
 comments: true
 tags:
     - Breakfast
 ---
-# Flaxseed Porridge
 
 !!! info 
     A very good source of fibre. Helps the stomach ease into digestion phase and allows for better gut health.

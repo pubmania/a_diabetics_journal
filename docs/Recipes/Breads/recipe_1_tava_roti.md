@@ -1,11 +1,10 @@
 ---
+title: Flat Breads (Roti/Parantha)
 comments: true
 tags:
     - Bread
     - Indian
 ---
-
-# Flat Breads (Roti/Parantha)
 
 While the traditional wheat flour roti is not an option with low carb / keto diet it is possible to get closer to the taste using Soya flour. There are a number of recipes on youtube and internet using Pysllium husk and for me it ruins the taste. The following recipe works great though for my taste pallets.
 

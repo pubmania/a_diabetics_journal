@@ -1,12 +1,11 @@
 ---
+title: Keto Dhokla
 comments: true
 tags:
     - Indian
     - Snacks
     - Breakfast
 ---
-
-# Keto Dhokla
 
 {{ """
 >> Serving Size: 2 portions

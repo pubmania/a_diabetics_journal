@@ -1,4 +1,5 @@
 ---
+title: Basil Mint Pepper Garlic Dip
 comments: true
 tags:
     - Dips
@@ -7,9 +8,7 @@ tags:
     - Mexican
     - Indian
     - Greek
---- 
-
-# Basil Mint Pepper Garlic Dip 
+---  
 
 Tastes great with [Tomato Keftedes](../Snacks%20and%20Sides/recipe_011_tomato_keftedes.md), [Keto French Fries](../Snacks%20and%20Sides/recipe_006_fries.md), [Protien Rich Cutlets](../Snacks%20and%20Sides/recipe_003_protein_cutlets.md) and [Cheesy Bites](../Snacks%20and%20Sides/recipe_010_cheesy_bites.md).
 

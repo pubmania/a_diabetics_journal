@@ -4,9 +4,8 @@ tags:
     - Indian
     - Snacks
     - Breakfast
+title: Protein Rich Cutlets
 ---
-
-# Protein Rich Cutlets
 
 Tastes great with [Tomato Mint Pepper Spinach Dip](../Dips/recipe_007_mint_spinach_dip.md), [Tzatziki Dip](../Dips/recipe_009_tzatziki_dip.md) and [Basil Mint Pepper Garlic Dip](../Dips/recipe_012_basil_mint_dip.md).
 

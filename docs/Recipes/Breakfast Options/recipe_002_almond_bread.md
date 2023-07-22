@@ -1,11 +1,10 @@
 ---
+title: Almond Flour Bread, Eggs and Green Chilli Avocado
 comments: true
 tags:
     - Bread
     - Breakfast
 ---
-
-# Almond Flour Bread, Eggs and Green Chilli Avocado
 
 This is a modification of the [recipe from Joe Duff](https://kutt.it/almond_flour_bread_recipe){target=_blank} which avoids use of Xanthum Gum for making a quick 5 minutes bread in microwave using Almond Flour. [YouTube Link](https://youtu.be/-lh-0KxFjEM){target=_blank}
 

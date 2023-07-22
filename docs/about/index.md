@@ -1,10 +1,9 @@
 ---
+title: About
 hide:
   - navigation
   - toc
 ---
-
-# About
 
 !!! note inline "Flow of Life"
     ```plantuml

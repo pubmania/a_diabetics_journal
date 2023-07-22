@@ -1,4 +1,6 @@
-# Breads
+---
+title: Breads
+---
 
 <div class="grid cards" markdown>
 

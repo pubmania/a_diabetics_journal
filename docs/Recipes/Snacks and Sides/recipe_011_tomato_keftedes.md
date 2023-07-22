@@ -3,9 +3,8 @@ comments: true
 tags:
     - Greek
     - Snacks
+title: Tomato Keftedes (Fried Santorini Tomato Balls / Tomato Fritters)
 ---
-
-# Tomato Keftedes (Fried Santorini Tomato Balls / Tomato Fritters)
 
 While the original recipe uses flour, I replaced it with the combination of wheat gluten and almond flour and it turned out great.
 

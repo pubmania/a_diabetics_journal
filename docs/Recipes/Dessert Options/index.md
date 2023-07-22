@@ -1,4 +1,6 @@
-# Desserts
+---
+title: Desserts
+---
 
 <div class="grid cards" markdown>
 

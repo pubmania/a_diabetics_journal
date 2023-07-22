@@ -1,4 +1,6 @@
-# Breakfasts
+---
+title: Breakfasts
+---
 
 <div class="grid cards" markdown>
 

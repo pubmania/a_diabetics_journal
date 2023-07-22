@@ -1,4 +1,6 @@
-# Prepare for diabetic diet
+---
+title: Prepare for diabetic diet
+---
 
 ## Prepare
 

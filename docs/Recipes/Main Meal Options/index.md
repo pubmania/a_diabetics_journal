@@ -1,4 +1,6 @@
-# Main Meals
+---
+title: Main Meals
+---
 
 <div class="grid cards" markdown>
 

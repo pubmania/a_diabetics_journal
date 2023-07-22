@@ -1,4 +1,6 @@
-# Snacks and Sides
+---
+title: Snacks and Sides
+---
 
 <div class="grid cards" markdown>
 

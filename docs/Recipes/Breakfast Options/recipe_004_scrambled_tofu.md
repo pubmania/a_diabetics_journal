@@ -1,12 +1,11 @@
 ---
+title: Scrambled Tofu (Tofu Bhurji)
 comments: true
 tags:
     - Indian
     - Snacks
     - Breakfast
 ---
-
-# Scrambled Tofu (Tofu Bhurji)
 
 This goes well with [Tava Roti](../Breads/recipe_1_tava_roti.md) as well as [Wheat Gluten Bread](../Breads/recipe_2_wheat_gluten_bread.md).
 

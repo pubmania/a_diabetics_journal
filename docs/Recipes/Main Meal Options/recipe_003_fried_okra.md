@@ -1,4 +1,5 @@
 ---
+title: Fried Bhindi (Ladyfinger / Okra)
 comments: true
 tags:
     - Indian
@@ -6,8 +7,6 @@ tags:
     - Dinner
     - Lunch
 ---
-
-# Fried Bhindi (Ladyfinger / Okra)
 
 For this recipe one can use fresh okra or chopped frozen okra that is available in some Asian stores. I use the latter version (500 gms pack) as I am lazy.If like me you are using frozen okra, its important that you ==**don't**== thaw it or else it will become watery.
 

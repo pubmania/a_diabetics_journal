@@ -1,11 +1,10 @@
 ---
+title: Green Pesto
 comments: true
 tags:
     - Dips
     - Italian
 --- 
-
-# Green Pesto
 
 Tastes great with [Cheese Cracker](../Snacks%20and%20Sides/recipe_001_cheese_crackers.md) and [Paneer Crackers](../Snacks%20and%20Sides/recipe_002_paneer_crackers.md) and works really well with [Wheat Gluten Bread](../Breads/recipe_2_wheat_gluten_bread.md) as well as [Low Carb Pizza](../Main%20Meal%20Options/recipe_006_low_carb_pizza.md).
 

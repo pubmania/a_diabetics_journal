@@ -10,7 +10,7 @@ hide:
 
 I was diagnosed with Type 2 Diabetes in October'2010. Since then I followed all the advice on diet from doctors and health nutritionalists which can mostly be summarised thus:
 
-!!! danger inline "Popular yet incorrect advice"
+!!! danger "Popular yet incorrect advice"
     * :x: Minimise fat intake
     * :x: Eat healthy unprocessed carbs, 
     * :x: Eat small portions but eat frequently. 
@@ -21,7 +21,7 @@ There were few variations to above advice but it generally follows this theme an
 
 The approach that worked for me, as explained below, was complete antithesis of what I was told:
 
-!!! success inline end "What works for me"
+!!! success "What works for me"
     * :white_check_mark: Don't eat frequently and instead fast frequently. 
     * :white_check_mark: When you eat, eat foods with low carbs. 
     * :white_check_mark: Avoid fruits as they have fructose which does not help. 

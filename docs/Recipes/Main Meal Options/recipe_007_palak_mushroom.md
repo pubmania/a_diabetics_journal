@@ -1,12 +1,11 @@
 ---
+title: Paalak Mushroom
 comments: true
 tags:
         - Indian
         - Lunch
         - Dinner
 ---
-
-# Paalak Mushroom
 
 {{"""
 >> Serving Size: 4

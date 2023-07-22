@@ -4,9 +4,8 @@ tags:
     - Dinner
     - Salads
     - Italian
---- 
-
-# Italian Salad
+title: Italian Salad
+---
 
 This salad tastes great with [Low Carb Pasta](https://kutt.it/low_carb_pasta){targte=_blank} which can be used to create various pasta pesto dishes.
 

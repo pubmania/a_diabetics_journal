@@ -1,11 +1,10 @@
 ---
+title: Tzatziki Dip
 comments: true
 tags:
     - Dips
     - Greek
 --- 
-
-# Tzatziki Dip
 
 {{"""
 >> Serving Size: 16

@@ -1,4 +1,5 @@
 ---
+title: Low Carb Pizza and Garlic Bread
 comments: true
 tags:
         - Italian
@@ -6,8 +7,6 @@ tags:
         - Dinner
         - Lunch
 ---
-
-# Low Carb Pizza and Garlic Bread
 
 :heart::green_heart:
 

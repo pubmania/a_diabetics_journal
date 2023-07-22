@@ -1,12 +1,11 @@
 ---
+title: Tomato Mint Pepper Spinach Dip
 comments: true
 tags:
     - Dips
     - Salad
     - Indian
---- 
-
-# Tomato Mint Pepper Spinach Dip 
+---  
 
 {{"""
 >> Serving Size: 4 portions

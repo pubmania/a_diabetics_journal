@@ -1,10 +1,9 @@
 ---
+title: Sparkling Cinnamon
 comments: true
 tags:
     - Drinks
 ---
-
-# Sparkling Cinnamon
 
 !!! Tip
     The natural sweetness of Cinnamon makes it a terrific 

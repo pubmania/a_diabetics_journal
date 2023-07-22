@@ -3,9 +3,8 @@ comments: true
 tags:
     - Greek
     - Snacks
+title: Cheesy Bites
 ---
-
-# Cheesy Bites
 
 Tastes great with [Tomato Mint Pepper Spinach Dip](../Dips/recipe_007_mint_spinach_dip.md), [Green Pesto](../Dips/recipe_008_green_pesto.md), [Tzatziki Dip](../Dips/recipe_009_tzatziki_dip.md) and [Basil Mint Pepper Garlic Dip](../Dips/recipe_012_basil_mint_dip.md).
 

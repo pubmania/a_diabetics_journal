@@ -1,4 +1,6 @@
-# Content
+---
+title: Content
+---
 
 <div class="grid cards" markdown>
 

@@ -5,9 +5,8 @@ tags:
     - Dinner
     - Salads
     - Italian
---- 
-
-# Keto Potatoes
+title: Keto Potatoes
+---
 
 This is really radishes done in a certain way as shown by Joe Duff, but honestly they do taste like potatoes and are so delicious as a side portion in dinner / salads or just as snacks on their own. [YouTube Link](https://kutt.it/keto_potato){target=_blank}
 

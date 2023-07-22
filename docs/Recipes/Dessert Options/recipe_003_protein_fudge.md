@@ -1,11 +1,10 @@
 ---
+title: Pea Protein and Cashew Fudge
 comments: true
 tags:
     - Dessert
     - Indian
----
-
-# Pea Protein and Cashew Fudge 
+--- 
 
 {{"""
 >> Serving Size: 30 pieces

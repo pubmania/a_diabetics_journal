@@ -1,11 +1,10 @@
 ---
+title: Almond Flour Banana Bread
 comments: true
 tags:
     - Dessert
     - Bread
 ---
-
-# Almond Flour Banana Bread
 
 While the original recipe calls for use of Coconut sugar, I make mine without it and I think the sweetness is just right for my taste pallets. I do add upto 4 teaspoons of Erythritol if the bananas are not very ripe. Also the original recipe uses a lot more arrowroot starch than what I use which perhaps explains why coconut sugar is not needed and sweetness of banana does the trick. The reason to keep arrowroot starch less is ofcourse to reduce the net carb.
 

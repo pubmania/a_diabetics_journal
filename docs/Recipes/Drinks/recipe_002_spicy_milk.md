@@ -1,11 +1,10 @@
 ---
+title: Spicy Milk (Masala Doodh)
 comments: true
 tags:
     - Drinks
     - Indian
 ---
-
-# Spicy Milk (Masala Doodh)
 
 {{"""
 >> Serving Size: 2

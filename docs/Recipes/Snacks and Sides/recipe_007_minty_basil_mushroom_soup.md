@@ -3,9 +3,8 @@ comments: true
 tags:
     - Dinner
     - Italian
+title: Minty Basil Mushroom Soup
 ---
-
-# Minty Basil Mushroom Soup
 
 While this soup tastes great on its on, it also goes very well with [Wheat Gluten Bread](../Breads/recipe_2_wheat_gluten_bread.md) and [Garlic Bread](../Main%20Meal%20Options/recipe_006_low_carb_pizza.md#garlic-bread)
 

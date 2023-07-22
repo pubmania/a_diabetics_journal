@@ -1,4 +1,5 @@
 ---
+title: Baigan Bharta
 comments: true
 tags:
     - Indian
@@ -6,8 +7,6 @@ tags:
     - Dinner
     - Lunch
 ---
-
-# Baigan Bharta
 
 Tastes great with [Tava Roti](../Breads/recipe_1_tava_roti.md), [Tandoori Roti](../Breads/recipe_3_tandoori_roti.md) and [Naan Bread](../Breads/recipe_4_naan_bread.md) and also goes well with [No Egg Wheat Gluten Bread](../Breads/recipe_2_wheat_gluten_bread.md).
 

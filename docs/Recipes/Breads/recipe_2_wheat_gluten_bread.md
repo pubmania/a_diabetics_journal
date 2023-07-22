@@ -1,4 +1,5 @@
 ---
+title: No Egg Wheat Gluten Bread
 comments: true
 tags:
     - Bread
@@ -6,8 +7,6 @@ tags:
     - Lunch
     - Dinner
 ---
-
-# No Egg Wheat Gluten Bread
 
 What a lovely recipe and my absolute favourite :green_heart:. Nothing comes closer to the real bread than this recipe in my experience. It tastes great toasted, with eggs and can basically replace the traditional bread for a diabetic.
 
