@@ -1,4 +1,5 @@
 site_name: The Diary Of A Diabetic 
+site_description: A journal of a diabetic capturing various recipes that do not spike his blood glucose levels.
 repo_url: !ENV [REPO_URL, 'https://github.com/pubmania/a_diabetics_journal']
 edit_uri: !ENV [EDIT_URL,'edit/main/docs/']
 site_url: !ENV [SITE_URL,'']
