@@ -155,3 +155,5 @@ plugins:
   #    tags_file: Recipes/tags.md
   #- git-revision-date-localized:
   #    enable_creation_date: true
+  - social:
+      cards_dir: assets/images/social

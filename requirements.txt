@@ -27,3 +27,6 @@ Levenshtein==0.21.1
 python-Levenshtein==0.21.1
 openpyxl
 markdown-customblocks
+pillow
+cairosvg
+cairocffi
