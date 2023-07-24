@@ -320,6 +320,8 @@ def define_env(env):
                 # Check if ELSE exists in the step and if it does include the final else statement
                 if len(else_removed_l)>1:
                     out += f'\telse (no)\n\t\t:{insert_newlines(else_removed_l[1].strip().capitalize(),30)};\n'
+                else:
+                    out += f'\telse (no)\n\t\t\n'                    
                 out += f'\tendif\n'
             # Ignore empty line in steps
             elif step != '':
