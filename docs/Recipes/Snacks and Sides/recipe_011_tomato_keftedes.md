@@ -10,6 +10,9 @@ While the original recipe uses flour, I replaced it with the combination of whea
 
 Tastes great with [Tomato Mint Pepper Spinach Dip](../Dips/recipe_007_mint_spinach_dip.md), [Tzatziki Dip](../Dips/recipe_009_tzatziki_dip.md) and [Basil Mint Pepper Garlic Dip](../Dips/recipe_012_basil_mint_dip.md).
 
+!!! danger
+    As this recipe is based mainly on wheat gluten, it is not suitable for those with Gluten Intolerance. I am sure it's obvious but still.
+
 {{""" 
 >> Serving Size: 16
 >> Type: Vegetarian
