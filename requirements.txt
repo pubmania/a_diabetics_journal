@@ -4,7 +4,7 @@ mkdocs==1.4.3
 
 # WARNING:If you change this, make sure
 # the menu and footer are built and rendered correctly
-mkdocs-material>=9.1.15
+mkdocs-material>=9.1.21
 mkdocs-material-extensions>=1.0.3
 mkdocs-awesome-pages-plugin>=2.7.0
 mkdocs-exclude>=1.0.2
