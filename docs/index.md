@@ -19,6 +19,8 @@ I was diagnosed with Type 2 Diabetes in October'2010. Since then I followed all 
 
 There were few variations to above advice but it generally follows this theme and except for one all others are just plain wrong advice for a diabetic. It did not help in the slightest to reduce my blood glucose reading and so I was to follow this diet along with Metformin - it started with 500mg and went all the way to 2000mg and when that did not help, I was to take this medication alongside Empagliflozin first 10mg and then 25 mg and then there was statin and Linagliptin added to the mix.
 
+While following the diet as recommended by professionals and exercising religiously helped tone my body but all that along with the cocktail of medication and even being a complete teetotaler did not make an iota of difference to my blood glucose readings. They were always way too high hovering between 80 to 100 mmol/mol on quarterly HbA1c results.
+
 The approach that worked for me, as explained below, was complete antithesis of what I was told:
 
 !!! success "What works for me"
@@ -29,9 +31,6 @@ The approach that worked for me, as explained below, was complete antithesis of 
     * :white_check_mark: Include optimum protien in diet. 
     * :white_check_mark: Drink lots of fluids. 
     * :white_check_mark: Stay active especially on fasting days (Exercise / Walks).
-
-
-While following the diet as recommended by professionals and exercising religiously helped tone my body but all that along with the cocktail of medication and even being a complete teetotaler did not make an iota of difference to my blood glucose readings. They were always way too high hovering between 80 to 100 mmol/mol on quarterly HbA1c results.
 
 ## The Awakening
 Then in October'2020 after another high 86 mmol/mol HbA1c result, I was told that I will have to start taking insulin. This is not where I wanted to be in my early 40s and so in desperation I started doing my own reading on trusty old Google and came across the book named ["The diabetes code" written by Dr. Jason Fung](https://www.scribd.com/read/372564265/The-Diabetes-Code-Prevent-and-Reverse-Type-2-Diabetes-Naturally). 
