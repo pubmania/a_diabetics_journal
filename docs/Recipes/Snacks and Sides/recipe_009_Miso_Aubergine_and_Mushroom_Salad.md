@@ -13,7 +13,7 @@ title: Miso Aubergine and Mushroom Salad
 >> Type: Vegetarian
 >> Source: https://www.ocado.com/webshop/recipe/Miso-Aubergine-and-Mushroom-Salad-/232096
 >> Image: recipe_009_Miso_Aubergine_and_Mushroom_Salad.jpg
->> Image-Caption: Miso Aubergine and Mushroom Salad (image from source)
+>> Image-Caption: Miso Aubergine and Mushroom Salad (image from source recipe)
 Preheat the oven to 200°C.
 Using #knife{}, cut @cherry tomatoes{200%gms} into halves.
 Put the cut tomatoes in a sieve over a bowl, sprinkle with @Pink Himalayan Salt{1/2%tsp} and let it stand for ~{30%minutes}.

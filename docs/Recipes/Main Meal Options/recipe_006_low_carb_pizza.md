@@ -31,7 +31,7 @@ Add @Olive Oil{1%tbsp} and @sugar{1%tsp} in @water{300%ml} and mix well.
 Take a #bowl{} and add @vital wheat gluten{1%cup}.
 Add @wheat bran{1/4%cup}, @oat flour{1/4%cup}.
 Add @flax meal{1/4%cup}, @Almond Flour{1/2%cup}.
-Add @baking soda{1%tsp}, @salt{1%tsp}, @dried yeast{7%gms(1 sachet)}.
+Add @baking powder{1%tsp}, @salt{1%tsp}, @dried yeast{7%gms(1 sachet)}.
 Add liquid mix to dry mix and knead for 5 minutes.
 Once consolidated, place the dough on oiled #baking sheet{}.
 Flatten it with hand at first and with #roller pin{} later to bring it to about 14 inch diameter. 

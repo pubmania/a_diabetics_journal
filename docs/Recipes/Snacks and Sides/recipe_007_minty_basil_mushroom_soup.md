@@ -8,6 +8,9 @@ title: Minty Basil Mushroom Soup
 
 While this soup tastes great on its on, it also goes very well with [Wheat Gluten Bread](../Breads/recipe_2_wheat_gluten_bread.md) and [Garlic Bread](../Main%20Meal%20Options/recipe_006_low_carb_pizza.md#garlic-bread)
 
+!!! tip
+    I have since tried variations by adding 2 chopped spring onion along with tomato and gochujang paste (1.5 tbsp) separately and together and all variations tasted delicious. It will, ofcourse, increase the carb content of the dish.
+
 {{"""
 >> Serving Size: 1
 >> Cooking Time: 20 minutes (Prep Time - 5 minutes)
