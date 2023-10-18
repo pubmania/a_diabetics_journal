@@ -95,7 +95,7 @@ While these are easily available, I have provided links for the ones I use and f
 	??? warning "Ingredients"
 		Cocoa Butter, Raw Cacao Powder, Creamed Coconut, :small_orange_diamond: Erythritol, Tiger Nut, Inulin, Coconut Sugar, Orange Oil. Chocolate contains ; cocoa solids 96%
 
--	:green_heart: :small_orange_diamond: [Low Sugar Mint Chocolate Bar](https://kutt.it/orange-chocolate-bar)
+-	:green_heart: :small_orange_diamond: [Low Sugar Orange Chocolate Bar](https://kutt.it/orange-chocolate-bar)
 
 	---
 
