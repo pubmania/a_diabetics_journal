@@ -87,20 +87,6 @@ While these are easily available, I have provided links for the ones I use and f
 	??? Tip "Get Both Versions"
 		1. [Smooth](https://kutt.it/smooth_peanut_butter){target=_blank}
 		2. [Crunchy](https://kutt.it/crunchy_peanut_butter){target=_blank}
-
--	:green_heart: :small_orange_diamond: [Low Sugar Mint Chocolate Bar](https://kutt.it/mint-chocolate-bar)
-
-	---
-
-	??? warning "Ingredients"
-		Cocoa Butter, Raw Cacao Powder, Creamed Coconut, :small_orange_diamond: Erythritol, Tiger Nut, Inulin, Coconut Sugar, Orange Oil. Chocolate contains ; cocoa solids 96%
-
--	:green_heart: :small_orange_diamond: [Low Sugar Orange Chocolate Bar](https://kutt.it/orange-chocolate-bar)
-
-	---
-
-	??? warning "Ingredients"
-		Cocoa Butter, Raw Cacao Powder, Creamed Coconut, :small_orange_diamond: Erythritol, Tiger Nut, Inulin, Coconut Sugar, Orange Oil. Chocolate contains ; cocoa solids 96%
 	
 -   :orange_circle: [Confectioners Swerve](https://kutt.it/swerve){target=_blank}
 
@@ -136,13 +122,6 @@ While these are easily available, I have provided links for the ones I use and f
 	??? danger "Ingredients"
 		Tomatoes (200g Per 100g Tomato Ketchup), Spirit Vinegar, Lemon Juice From Concentrate, Potassium Chloride, Acid (Malic Acid), Citrus Fibre, :small_red_triangle: Spice And Herb Extracts (Contain Celery), :small_red_triangle: Sweetener (Sucralose)
 
--   :red_circle: [Keto Chocolate Bar](https://kutt.it/keto_choc_bar){target=_blank}
-
-	---
-
-	??? danger "Ingredients"
-		Milk chocolate with fibres and sweeteners 25,7% (cocoa butter, inulin, :small_red_triangle: oligofructose, cocoa mass, whole milk powder, skimmed milk powder, sweetener (erythritol, steviol glycosides), :small_red_triangle: emulsifier (soy lecithin), flavours), :small_red_triangle: caramel flavoured layer 21,4% (bulking agent (polydextrose), soy oil, milk protein, :small_red_triangle: stabiliser (xylitol), salt, flavours, :small_red_triangle: emulsifier (soy lecithin)), milk protein, :small_red_triangle: isomalto-oligosaccharide, peanuts 8,0%, :small_red_triangle: stabiliser (sorbitol syrup), humectant (glycerol), :small_red_triangle: hydrolysed wheat gluten, soy crisps (soy protein, tapioca starch, salt), flavours (contains milk), sea salt, :small_red_triangle: emulsifier (soy lecithin), :small_red_triangle: sweetener (steviol glycosides)
-
 </div>
 
 ## Cookwares
@@ -157,3 +136,4 @@ While I am sure, all kitchens will be equipped with most, if not all, of the fol
 6. Mixer / Grinder. The one we have and I can highly recommend is [this one](https://www.argos.co.uk/product/8394402){target=_blank}.
 7. Microwave Oven(ideally 800 W or above - mine is 900W)
 8. Cooking Oven
+9. Ninja Speedi (Nice to have). Its a new addition to my kitchen and I find it very useful.
