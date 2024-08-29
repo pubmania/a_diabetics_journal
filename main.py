@@ -332,7 +332,7 @@ def define_env(env):
                 else:
                     out += f'\telse (no)\n\t\t\n'
                 out += f'\tendif\n'
-                step_line = f"\n\t* {step.strip()}"
+                step_line = f"\n\t* [ ] {step.strip()}"
             # Ignore empty line in steps
             elif step != '':
                 if step.startswith('**') and step.endswith('**'):
@@ -343,7 +343,7 @@ def define_env(env):
                 else:
                     # If the step does not start with ** and ends with **, apply standard formatting
                     out += f'\t:{insert_newlines(p_step.replace("`","").strip(),50)};\n'
-                    step_line = f"\n\t* {step.strip()}"
+                    step_line = f"\n\t* [ ] {step.strip()}"
             steps_string += step_line
         out += f'\tend\n\t@enduml\n\t```\n\n</div>\n\n'
         out = f'{steps_string}\n\n{out}'
