@@ -73,6 +73,7 @@ Around end of Feb'21, I had my HbA1c test after following this for 3 months and 
 ## Update Notes
 
 **30-August-2024**: 
+
 It has now been nearly four years since I started following the above approach. I have tweaked and modified it here and there but kept the basic principle the same. I have, however, in last two years also eliminated anything that can be classified as UPF and made effort to use dairy products that are from organic produce from grass fed and free range farm animals. 
 
 I am still off medication and my blood glucose levels are well maintained and in healthy range.
@@ -87,4 +88,4 @@ I have found including the following steps on my eating day to be benficial:
 
 One observation from last few years is that my diet has reduced considerably and I am not able to eat as much as I used to. Part of it perhaps is down to fasting but mainly it is because I now eat whole foods which tend to make me feel satiated earlier and for longer than the addictive UPFs.
 
-I tend to eat a bit more carbs during my holidays but not huge amounts, just a tiny bit of indulgence - say have a slice of tiramissu here or a few slices of freshly baked pizza or some pasta there but that kind of behaviour is restricted to **no more than two weeks in a year**. If and when I do so, then after a week or two of my return from the break, I do follow longer fasting (48 to 60 hrs).
+**I tend to eat a bit more carbs during my holidays** but not huge amounts, just a tiny bit of indulgence - say have a slice of tiramissu here or a few slices of freshly baked pizza or some pasta there **but that kind of behaviour is restricted to no more than two weeks in a year**. If and when I do so, then after a week or two of my return from the break, I do follow longer fasting (48 to 60 hrs).
