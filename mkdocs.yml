@@ -103,7 +103,7 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
-      custom_checkbox: false
+      custom_checkbox: true
       clickable_checkbox: true
   - toc:
       permalink: true
