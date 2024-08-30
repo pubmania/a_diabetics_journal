@@ -25,9 +25,9 @@ def define_env(env):
         try:
             if obj_file is not None:
                 if file_type == 'csv':
-                    dataframe = pd.read_csv(obj_file, usecols=col_list, parse_dates = date_col_list).applymap(lambda s: s.upper() if type(s) == str else s).fillna('')
+                    dataframe = pd.read_csv(obj_file, usecols=col_list, parse_dates = date_col_list).map(lambda s: s.upper() if type(s) == str else s).fillna('')
                 else:
-                    dataframe = pd.read_excel(obj_file,sheet_name = str_sheetname, usecols=col_list, parse_dates = date_col_list).applymap(lambda s: s.upper() if type(s) == str else s).fillna('')
+                    dataframe = pd.read_excel(obj_file,sheet_name = str_sheetname, usecols=col_list, parse_dates = date_col_list).map(lambda s: s.upper() if type(s) == str else s).fillna('')
             else:
                 dataframe= file_name+" is Empty - Provide a file name first"
                 #print(dataframe)
