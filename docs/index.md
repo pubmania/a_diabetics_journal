@@ -50,7 +50,8 @@ After about 2 weeks of low carb diet, I started my Alternate day fasting and wit
 It will be worthwhile to mention that while I was doing all this, I also invested in [Freestyle Libre](https://www.freestylelibre.co.uk/libre/) and a transmitter called `miaomiao` which kind of converts the manual scan solution of Freestyle Libre into a full blown CGM sending data to my phone every 5 minutes. This was important as I was constantly monitoring the effects of each food group on my BG to eliminate any food that would cause a spike.
 
 !!! Tip 
-    *Now one does not need to invest in miaomiao transmitter because Freestyle Libre 2 can send data using bluetooth to a phone and so using an app called Diabox one can get data on phone every one minute. Tricky on iphone but pretty straightforward on Android*
+    ~~Now one does not need to invest in miaomiao transmitter because Freestyle Libre 2 can send data using bluetooth to a phone and so using an app called Diabox one can get data on phone every one minute. Tricky on iphone but pretty straightforward on Android~~ 
+    Latest Libre2 now sends data directly to official app every one minute via bluetooth without need to manually scan each time, so no transmitter or app needed.
 
 ## Conclusion
 
