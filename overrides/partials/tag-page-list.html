@@ -33,12 +33,24 @@
 {% endfor %}
 
 <style>
-    .md-typeset .tag summary::before {
-        height: 1rem;
-        width: 1rem;
-        /*margin-top: 0.25em;*/
-    }
+	.md-typeset .admonition.tag,
+	.md-typeset details.tag {
+	  border-color: maroon;
+	}
+	.md-typeset .tag > .admonition-title,
+	.md-typeset .tag > summary {
+	  background-color: rgb(255, 235, 214);
+	}
+	.md-typeset .tag > .admonition-title::before,
+	.md-typeset .tag > summary::before {
+	  background-color: maroon;
+	  height: 1rem;
+	  width: 1rem;
+	  -webkit-mask-image: var(--md-admonition-icon--tag);
+			  mask-image: var(--md-admonition-icon--tag);
+	}
 </style>
+
 <div class="tag-page-list">
   {% for item in tags %}
     {% set tag, ps = item %}
