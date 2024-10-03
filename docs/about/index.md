@@ -5,10 +5,28 @@ hide:
   - toc
 ---
 
-!!! note inline "Flow of Life"
+!!! site-note inline "Flow of Life"
     ```plantuml
     @startuml
-    !theme cerulean
+    !theme sketchy-outline	
+    !startsub activity
+        skinparam activity {
+          $primary_scheme()
+          BarColor #orangered
+          StartColor #orangered
+          EndColor #orangered
+                BorderColor #orangered
+                ArrowColor #orangered
+                ArrowThickness 1.25
+                ArrowFontColor #maroon
+                FontColor #maroon
+                
+                ''
+                DiamondBackgroundColor #darkgreen
+                DiamondLineColor #white
+                DiamondFontColor #white
+        }
+    !endsub
     while (Alive?)
         :Target specific area of life;
         :Decide a change to make;
