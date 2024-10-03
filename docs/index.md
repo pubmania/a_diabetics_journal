@@ -5,7 +5,7 @@ hide:
 
 ## Background
 
-!!! abstract "My understanding of Diabetes"
+!!! site-abstract "My understanding of Diabetes"
     The best way to view diabetes is to see it as an *"allergy"* to excessive carbs in the diet of a diabetic and the *"allergic reaction"* is **insulin resistance** which in turn results in increased blood sugar levels. Going low carb helps one avoid the "allergic reaction" thus bringing blood glucose in normal range.
 
 I was diagnosed with Type 2 Diabetes in October'2010. Since then I followed all the advice on diet from doctors and health nutritionalists which can mostly be summarised thus:
@@ -33,9 +33,9 @@ The approach that worked for me, as explained below, was complete antithesis of 
     * :white_check_mark: Stay active especially on fasting days (Exercise / Walks).
 
 ## The Awakening
-Then in October'2020 after another high 86 mmol/mol HbA1c result, I was told that I will have to start taking insulin. This is not where I wanted to be in my early 40s and so in desperation I started doing my own reading on trusty old Google and came across the book named ["The diabetes code" written by Dr. Jason Fung](https://www.scribd.com/read/372564265/The-Diabetes-Code-Prevent-and-Reverse-Type-2-Diabetes-Naturally). 
+Then in October'2020 after another high 86 mmol/mol HbA1c result, I was told that I will have to start taking insulin. This is not where I wanted to be in my early 40s and so, in desperation, I started doing my own reading on trusty old Google and came across the book named ["The diabetes code" written by Dr. Jason Fung](https://www.scribd.com/read/372564265/The-Diabetes-Code-Prevent-and-Reverse-Type-2-Diabetes-Naturally). 
 
-I am a scribd subscriber and the book is readily available there as part of my subscription and there was no barrier to entry and I started reading it. The book explains the concept of diabetes in a simple way and gives the approach of tackling it by means **intermittent fasting**. The concept was new to me but the more I read the more sense it made. Along with intermittent fasting, the book also talked about reducing the carb intake.
+I am a scribd subscriber and the book is readily available there as part of my subscription so there was no barrier to entry and I started reading it. The book explains the concept of diabetes in a simple way and gives the approach of tackling it by means **intermittent fasting**. The concept was new to me but the more I read the more sense it made. Along with intermittent fasting, the book also talked about reducing the carb intake.
 
 I decided that before I go for insulin, I would like to give this approach a try. So I talked with my wife and the diabetic team at my local surgery about what and how I wanted to proceed. We agreed to take a very careful approach around fasting and see how it goes one day at a time. 
 
@@ -49,7 +49,7 @@ After about 2 weeks of low carb diet, I started my Alternate day fasting and wit
 ## Continuous Glucose Monitoring
 It will be worthwhile to mention that while I was doing all this, I also invested in [Freestyle Libre](https://www.freestylelibre.co.uk/libre/) and a transmitter called `miaomiao` which kind of converts the manual scan solution of Freestyle Libre into a full blown CGM sending data to my phone every 5 minutes. This was important as I was constantly monitoring the effects of each food group on my BG to eliminate any food that would cause a spike.
 
-!!! Tip 
+!!! site-tip "Tip"
     ~~Now one does not need to invest in miaomiao transmitter because Freestyle Libre 2 can send data using bluetooth to a phone and so using an app called Diabox one can get data on phone every one minute. Tricky on iphone but pretty straightforward on Android~~ 
     Latest Libre2 now sends data directly to official app every one minute via bluetooth without need to manually scan each time, so no transmitter or app needed.
 
@@ -67,7 +67,7 @@ So the final appraoch that I followed, comprised of two main objectives:
 
 Around end of Feb'21, I had my HbA1c test after following this for 3 months and for the first time in 10 years my HbA1c was in normal range at 39 mmol/mol that too without any medication whatsoever. This diet with fasting not only allowed me to avoid insulin, but has also resulted in weight loss. I am now about 14 Kgs lighter than when I started.
 
-!!! info
+!!! site-info "Info"
     The fasting part of this process is something each individual will need to tailor to their needs based on how their body is responding but the aim of the [recipes on this site](./Recipes/) is merely to provide some useful vegetarian options that helped me stay low carb on the days I do eat. The nutritional part of concept is also explained succinctly on [this link](http://josekalsbeek.blogspot.com/2019/11/the-nutritional-thingy.html).
 
 ## Update Notes
