@@ -15,12 +15,7 @@ title: Paneer Crackers
 >> Image-Caption: Image of finished product
 Chop @Paneer{250%gms} into small pieces using #knife{}.
 Add it to a #mixer grinder{} jar 
-Then add following ingredients
-@Ground Black Pepper{to taste}
-@Red Chilli Flakes{to taste}
-@Mint Powder{to taste (optional)}
-@Salt{to taste}
-Pulse and Grind till Paneer turns into dough.
+Then add @Ground Black Pepper{to taste}, @Red Chilli Flakes{to taste}, @Mint Powder{to taste (optional)}, @Salt{to taste}, Pulse and Grind till Paneer turns into dough.
 Take out the mixture and add @Almond Flour{100%gms} into the mix.
 Add @Olive Oil{1%Tablespoon} and mix it with hand till it starts shaping as a smooth dough ball.
 Mix till there is a consistency to form a dough ball.

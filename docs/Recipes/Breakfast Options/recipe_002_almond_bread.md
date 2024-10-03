@@ -10,7 +10,7 @@ This is a modification of the [recipe from Joe Duff](https://kutt.it/almond_flou
 
 Eat it with poached eggs - easiest way is to use the microwave poaching dish or can even use normal hard boiled eggs. Make sure you eat atleast two eggs and the whole thing, no discarding the yellow part. It's important for keeping you feeling full. 
 
-!!! Tip
+!!! site-tip "Tip"
     1. Instead of using a deep pan like its shown in video, use a plate and spread the batter about same thickness as that of bread and place in microwave. Once done just cut the size you like and it saves time in slicing it like bread slices later. 
 
     2. I find the bread to be very filling and amount of bread prepared from the batter using same measurement as per the recipe actually goes for almost 2 to 3 days of my breakfast.

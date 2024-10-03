@@ -6,7 +6,7 @@ tags:
     - Breakfast
 ---
 
-??? info "Measurements to scale recipe"
+??? site-info "Measurements to scale recipe"
     This recipe will create 250 gms of Granola. However, one may wish to make larger quantity to store for later use and table below can help with that:
 
     | Qty -> | 100g | 250g | 500g | 1000g |
@@ -21,7 +21,7 @@ tags:
     | Coconut Oil | 4g | 10g | 20g | 40g |
     | Vanilla Extract | 1 tsp | 2.5 tsp | 5 tsp | 10 tsp |
 
-!!! tip
+!!! site-tip "Tip"
     While recipe calls for mixing granola with milk, it can be eaten with full fat greek yogurt too.
 
 {{"""

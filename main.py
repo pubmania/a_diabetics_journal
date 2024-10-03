@@ -268,15 +268,24 @@ def define_env(env):
     def puml(input_string: str):
         inp_str = ''
         style_str = """
-            <style>
-            activityDiagram {
-              diamond {
-                BackgroundColor #darkgreen
-                LineColor #white
-                FontColor white
-              }
-            }
-            </style>
+            !startsub activity
+                skinparam activity {
+                    $primary_scheme()
+                    BarColor #orangered
+                    StartColor #orangered
+                    EndColor #orangered
+                        BorderColor #orangered
+                        ArrowColor #orangered
+                        ArrowThickness 1.25
+                        ArrowFontColor #maroon
+                        FontColor #maroon
+                        
+                        ''
+                        DiamondBackgroundColor #darkgreen
+                        DiamondLineColor #white
+                        DiamondFontColor #white
+                }
+            !endsub
         """
         lines = get_unformatted_line(input_string)
         #Remove metadata of cooklang that starts with >> and store it in variable inp_str
@@ -286,7 +295,7 @@ def define_env(env):
         #steps = inp_str.split('\n')
         steps = inp_str.splitlines()
         steps_string = "<div class=\"grid cards\" markdown>\n\n\n-   ## Steps\n\n\t---"
-        out = "\n-   ## Process\n\n\t---\n\n\t```plantuml\n\t@startuml\n\t!theme aws-orange\n\t"+style_str+"\n\tstart\n"
+        out = "\n-   ## Process\n\n\t---\n\n\t```plantuml\n\t@startuml\n\t!theme sketchy-outline\n\t"+style_str+"\n\tstart\n"
         for step in steps:
             # Convert step into uppercase for uniform comparison
             p_step = remove_markdown_link_in_puml(step.replace("`","").upper())
@@ -338,7 +347,7 @@ def define_env(env):
                 if step.startswith('**') and step.endswith('**'):
                     # If the step starts with ** and ends with **, apply different formatting and remove **
                     step = step.replace("**","")
-                    out += f'\t#Black:**{insert_newlines(p_step.replace("`","").strip(),50)}**/\n'
+                    out += f'\t#Maroon:<color: white>**{insert_newlines(p_step.replace("`","").strip(),50)}**</color>/\n'
                     step_line = f"\n\n\t### {step}\n\n"
                 else:
                     # If the step does not start with ** and ends with **, apply standard formatting
@@ -512,7 +521,7 @@ def define_env(env):
                         
     @env.filter
     def parse_recipe(input_string):
-        cooklang_block = f'\n??? abstract "Recipe in [Cooklang](https://cooklang.org/)' + '{target=_blank' + '}"\n\t```\n\t' + input_string.replace("\n","\n\t") + '```'
+        cooklang_block = f'\n??? site-abstract "Recipe in [Cooklang](https://cooklang.org/)' + '{target=_blank' + '}"\n\t```\n\t' + input_string.replace("\n","\n\t") + '```'
         ingredients = {}
         cookwares = set()
         steps = []
@@ -679,7 +688,7 @@ def define_env(env):
             possible_match = get_matches(df_ingredients_not_found)
             
         # Add the result DataFrame as markdown 
-        netcarb_string = f'???+ Info "Calculated Net Carb Info (Total Net Carbs for entire dish: {grand_total})"\n\t' + result.to_markdown(index=False).replace("\n","\n\t")
+        netcarb_string = f'???+ site-info "Calculated Net Carb Info (Total Net Carbs for entire dish: {grand_total})"\n\t' + result.to_markdown(index=False).replace("\n","\n\t")
         if not_found != '':
             netcarb_string += '\n\n\t!!! warning "Caution"\n\t\t*The calculation is indicative and my lookup list'+\
             ' did not have net carb values for* **' +\

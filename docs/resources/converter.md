@@ -45,7 +45,7 @@ hide:
 </div>
 
 
-!!! info
+!!! site-info "Info"
     Following conversion formula[^1] is used: 
     [^1]: Some explanation is available on [NGSP Site](https://ngsp.org/ifcc.asp):
 

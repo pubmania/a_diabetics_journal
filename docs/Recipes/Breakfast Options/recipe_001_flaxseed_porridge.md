@@ -6,7 +6,7 @@ tags:
     - Continental
 ---
 
-!!! info 
+!!! site-info "Info"
     A very good source of fibre. Helps the stomach ease into digestion phase and allows for better gut health.
 
 !!! warning
