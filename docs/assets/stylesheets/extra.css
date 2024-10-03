@@ -31,6 +31,10 @@
 .md-nav__title {
     color: maroon;
 }
+/*single line code*/
+.md-typeset code, .md-typeset kbd, .md-typeset pre {
+    color: #29980e;
+}
 /* clipboard */
 .md-clipboard:not(.focus-visible) {
     color: greenyellow;
