@@ -9,7 +9,7 @@ title: Keto French Fries
 
 Tastes great with [Tomato Mint Pepper Spinach Dip](../Dips/recipe_007_mint_spinach_dip.md), [Tzatziki Dip](../Dips/recipe_009_tzatziki_dip.md) and [Basil Mint Pepper Garlic Dip](../Dips/recipe_012_basil_mint_dip.md).
 
-!!! Info
+!!! site-info "Info"
     This can be prepared using Celeriac or Swede. I have found that while celeriac does not raise my BG, Swede at times does. There are people for whom both work just fine. I would suggest try both and see the impact. Personally, I do like Swede better but as it does spike my BG at times, I try to avoid it.
 
 {{"""
