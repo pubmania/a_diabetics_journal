@@ -8,8 +8,8 @@ tags:
 
 A very quick one minute recipe from Joe Duff - [YouTube Link](https://youtu.be/K5LCmT-WfTs){target=_blank}.
 
-!!! Info 
-    The measurement used in this recipe, results in a cake that I can't eat fully and for our diets I think it can easily serve two hence the portion size of 2.
+!!! site-info "Info"
+    The measurement used in this recipe, results in a cake that I can't eat fully and for someone with diet similar to mine, I think it can easily serve two hence the portion size of 2.
 
 {{"""
 >> Serving Size: 2 portions
