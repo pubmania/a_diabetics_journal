@@ -5,7 +5,7 @@ tags:
     - Drinks
 ---
 
-!!! Tip
+!!! site-tip "Tip"
     The natural sweetness of Cinnamon makes it a terrific 
     drink and great healthy replacement for all popular 
     cold drinks and colas on market which are not good 
