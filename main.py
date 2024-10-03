@@ -521,7 +521,7 @@ def define_env(env):
                         
     @env.filter
     def parse_recipe(input_string):
-        cooklang_block = f'\n??? abstract "Recipe in [Cooklang](https://cooklang.org/)' + '{target=_blank' + '}"\n\t```\n\t' + input_string.replace("\n","\n\t") + '```'
+        cooklang_block = f'\n??? site-abstract "Recipe in [Cooklang](https://cooklang.org/)' + '{target=_blank' + '}"\n\t```\n\t' + input_string.replace("\n","\n\t") + '```'
         ingredients = {}
         cookwares = set()
         steps = []
@@ -688,7 +688,7 @@ def define_env(env):
             possible_match = get_matches(df_ingredients_not_found)
             
         # Add the result DataFrame as markdown 
-        netcarb_string = f'???+ Info "Calculated Net Carb Info (Total Net Carbs for entire dish: {grand_total})"\n\t' + result.to_markdown(index=False).replace("\n","\n\t")
+        netcarb_string = f'???+ site-info "Calculated Net Carb Info (Total Net Carbs for entire dish: {grand_total})"\n\t' + result.to_markdown(index=False).replace("\n","\n\t")
         if not_found != '':
             netcarb_string += '\n\n\t!!! warning "Caution"\n\t\t*The calculation is indicative and my lookup list'+\
             ' did not have net carb values for* **' +\
