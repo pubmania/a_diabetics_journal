@@ -11,7 +11,7 @@ title: Cheese Crackers
 >> Cooking Time: 30 minutes
 >> Category: Savoury
 >> Type: Vegetarian
-Take a #mixer grinder{} jar and add @Almond Flour{1%cup}, @Grated Extra Mature Cheddar Cheese{1%cup}, @Ground Black Pepper{to taste, @Salt{to taste}, @Italian Herbs{to taste}.
+Take a #mixer grinder{} jar and add @Almond Flour{1%cup}, @Grated Extra Mature Cheddar Cheese{1%cup}, @Ground Black Pepper{to taste}, @Salt{to taste}, @Italian Herbs{to taste}.
 Then pulse grind to mix well.
 Add water{1%teaspoon} and pulse it in mixer again.
 Check for consistency and add water{1%teaspoon} again
