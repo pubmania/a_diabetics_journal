@@ -19,6 +19,6 @@ Wash and dry @radishes{500%gms} in a #bowl{}.
 Add @Rock Salt{1/2%Tablespoon}, @Black Pepper{1/2%Tablespoon}.
 Add @Italian Herbs{1/2%Tablespoon (optional)}.
 Add @Olive Oil{2%Tablespoons} and mix well.
-Place in #Air Fryer{} at 190C for about ~(20-25%minutes).
+Place in #Air Fryer{} at 190C for about ~{20-25%minutes}.
 Serve hot.
 """ | parse_recipe()}}
