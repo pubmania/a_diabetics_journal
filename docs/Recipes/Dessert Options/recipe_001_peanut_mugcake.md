@@ -22,7 +22,7 @@ Add @Egg{1} and @Smooth Peanut Butter{3%Tablespoons} into the bowl.
 Mix until well combined and smooth
 Now coat a #small mug{} with @baking spray{}
 Move the batter to the #small mug{}
-#Microwave{} for 30 seconds to 1 minute
+#Microwave{} for ~{30-60%seconds}.
 """
 |
 parse_recipe()
