@@ -1,1 +1,5 @@
-# Blog
+---
+title: Blog
+hide:
+  - toc
+---
