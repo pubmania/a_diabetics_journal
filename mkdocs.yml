@@ -117,6 +117,10 @@ plugins:
   - search
   - awesome-pages
   - include-markdown
+  - blog:
+      enabled: true
+      blog_dir: blog
+      blog_toc: true  
   #- mermaid2
   - macros
   - table-reader:
