@@ -21,7 +21,7 @@ This recipe should result in about 6 rotis and each roti will have roughly *2.5 
 >> Type: Vegetarian
 Take  @Soya Flour{60%gms(4 Tablespoons)} and @wheat flour{10%gms(2 teaspoons)}. 
 Add @warm water{4-6%Tablespoons} to create the roti dough. 
-Leave it for about 30 minutes. 
+Leave it for about ~{30%minutes}. 
 Now make small balls of the dough.
 Flatten them using a #roller pin or tortilla press{}.
 Cook for ~{1%minute} or so on a flat pan. 
