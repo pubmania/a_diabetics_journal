@@ -14,6 +14,7 @@ This salad tastes great with [Low Carb Pasta](https://kutt.it/low_carb_pasta){ta
 >> Cooking Time: 15 minutes (Prep Time - 30 minutes)
 >> Category: Italian
 >> Type: Vegetarian
+
 Take @Extra Virgin Olive Oil{6%tablespoons} in a #big bowl{}.
 Add about @chopped basil{2-3%tablespoons}.
 Add @oregano{1%teaspoon}, @rosemary{1%teaspoon}, @red chilli flakes{1%teaspoon}, and @Pink Himalayan Salt{1%teaspoon}.
