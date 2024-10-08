@@ -32,13 +32,13 @@ Take a #bowl{} and add @vital wheat gluten{1%cup}.
 Add @wheat bran{1/4%cup}, @oat flour{1/4%cup}.
 Add @flax meal{1/4%cup}, @Almond Flour{1/2%cup}.
 Add @baking powder{1%tsp}, @salt{1%tsp}, @dried yeast{7%gms(1 sachet)}.
-Add liquid mix to dry mix and knead for 5 minutes.
+Add liquid mix to dry mix and knead for ~{5%minutes}.
 Once consolidated, place the dough on oiled #baking sheet{}.
 Flatten it with hand at first and with #roller pin{} later to bring it to about 14 inch diameter. 
 If you want your pizza to be round then using a #large round utensil{} as guide and #knife or pizza cutter{} trim uneven sides to get a circular shape else just use the #knife or pizza cutter{} to make a rectangular shape.
 Cover it with a slightly damp cloth and keep it aside to rise.
 Use the trimmed dough to make another ball of dough and flatten it first with hand and then with roller pin to a size of roughly 8 to 10 inch.
-Let the two items rise for a ~{40-60%minutes} though leaving for about 2 hrs gets better results.
+Let the two items rise for a ~{40-60%minutes} though leaving for about ~{2%hrs} gets better results.
 
 **Garlic Bread**
 

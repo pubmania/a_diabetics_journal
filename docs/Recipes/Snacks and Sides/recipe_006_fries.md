@@ -17,12 +17,20 @@ Tastes great with [Tomato Mint Pepper Spinach Dip](../Dips/recipe_007_mint_spina
 >> Cooking Time: 35 minutes (Prep Time - 10 minutes)
 >> Category: Continental
 >> Type: Vegetarian
+
 Cut @Swede or Celeriac{500%gms(1 Large)} into long fries sized pieces using #knife{}.
+
 Wash and dry the cut pieces and place them in #Air Fryer{} basket.
+
 Add @Extra Virgin Olive Oil{6%tablespoons}, @Pink Himalayan Salt{1%teaspoon}.
+
 Mix it well so the surface of Celeriac / Swede is all coated with the oil.
+
 Put it on air fry at 180 C for ~{25-30%minutes}.
+
 Keep shaking the air fryer basket every 10 minutes so the celeriac is crisp on all sides.
+
 Once done, sprinkle @black pepper{to taste}, @red chilli flakes{to taste}.
+
 Serve hot.
 """ | parse_recipe()}}

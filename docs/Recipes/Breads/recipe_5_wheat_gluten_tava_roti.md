@@ -19,7 +19,7 @@ While the traditional wheat flour roti is not an option with low carb / keto die
 >> Type: Vegetarian
 Take  @Soya Flour{1/2%cup} and @vital wheat gluten{2%tbsp}. 
 Add @water{1/4%cup} to create the roti dough. Add slowly and stop once the dough is right consistency.
-Cover the dough with damp cloth and leave it for about 1 to 2 hours. 
+Cover the dough with damp cloth and leave it for about ~{1-2%hours}. 
 Now make small balls of the dough.
 Flatten them using a #roller pin or tortilla press{}.
 Cook for ~{1%minute} or so on a #flat pan{}. 

@@ -18,13 +18,22 @@ While this soup tastes great on its on, it also goes very well with [Wheat Glute
 >> Type: Vegetarian
 >> Image: recipe_007_minty_basil_mushroom_soup.jpeg
 >> Image-Caption: Minty Basil Mushroom Soup
+
 Wash @brown chestnut mushrooms{250%gms} and @vine tomatoes{90%gms(4-5 small)} and place in a #pan{}.
+
 Peel @garlic{1%clove} and chop finely with #knife{} before adding to the #pan{}.
+
 Now add @water{2%cups} and bring it to boil.
+
 Once water is boiling hot, add @salted butter{40%gms}, @salt{to taste}, @freshly ground black pepper{to taste}.
+
 Once butter has melted in water, add @coconut cream{60%ml}, @fresh basil leaves{30%gms}, @fresh mint leaves{30%gms} and @italian seasoning{to taste}.
+
 Reduce the temperature of the #hob{} to medium heat. 
+
 Mix it all well with a #spatula{} and cover the pan with #lid{}.
+
 Let it stew for ~{10-15%minutes}.
+
 Mix it well and serve hot.
 """ | parse_recipe()}}

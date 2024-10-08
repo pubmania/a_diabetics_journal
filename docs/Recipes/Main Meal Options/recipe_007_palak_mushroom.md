@@ -21,6 +21,6 @@ Add fresh @baby spinach{300%gms} and cook for ~{5%minutes.}
 Now add @mushrooms{400%gms} and @Pink Himalayan Salt{to taste}.
 Cook for a further ~{3%minutes}.
 Add @garam masala{1%tsp} and @amchoor powder{1%tsp}.
-Continue cooking for another 3 to 4 minutes.
+Continue cooking for another ~{3-4%minutes}.
 Serve hot.
 """ | parse_recipe()}} 

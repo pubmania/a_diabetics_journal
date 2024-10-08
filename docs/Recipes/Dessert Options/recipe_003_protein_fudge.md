@@ -23,5 +23,5 @@ Once caremalised, add roasted pea protein, @dry dessicated coconut{1%tbsp}, @alm
 Add @unsalted butter{5%gms} and @vanilla extract{1%teaspoon} together.
 Keep stirring until it is all mixed and turns golden brown.
 Transfer to a #baking tray{} to set and sprinkle @cardamom{1%tsp(5 peeled crushed)} on top.
-Takes about 30 to 40 minutes to set though it turns out good if left overnight.
+Takes about ~{30 to 40%minutes} to set though it turns out good if left overnight.
 """ | parse_recipe()}}

@@ -33,11 +33,11 @@ Take a #bowl{} and add @vital wheat gluten{1%cup}.
 Add @wheat bran{1/4%cup}, @oat flour{1/4%cup}.
 Add @flax meal{1/4%cup}, @Almond Flour{1/2%cup}.
 Add @baking powder{1%tsp}, @salt{1%tsp}, @dried yeast{7%gms(1 sachet)}.
-Add liquid mix to dry mix and knead for 5 minutes.
+Add liquid mix to dry mix and knead for ~{5%minutes}.
 Once consolidated, chop into 8 rolls using a #knife{}. 
 Place the rolls on oiled #baking sheet{}.
-Leave them to rise for 40 minutes to an hour.
-Bake in #oven{} for 20 minutes at 180-190 C.
-Take out of oven and leave it out for 15 mimutes.
+Leave them to rise for ~{40%minutes} to ~{an%hour}.
+Bake in #oven{} for ~{20%minutes} at 180-190 C.
+Take out of oven and leave it out for ~{15%mimutes}.
 """ 
 | parse_recipe() }}

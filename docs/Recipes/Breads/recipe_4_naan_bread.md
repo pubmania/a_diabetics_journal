@@ -30,7 +30,7 @@ Once consolidated, chop into 8 rolls using a #knife{}.
 Flatten the rolls using #roller pin{}.
 Sprinkle @Onion Seeds{1/4%tsp} on top before the final go with the rolling pin.
 Leave them to rise for ~{2-4%hours}.
-Roast each flattened dough in #Air Fryer{} at 180C for about 2 to 2.5 minutes each side.
+Roast each flattened dough in #Air Fryer{} at 180C for about ~{2-2.5%minutes} each side.
 Apply @unsalted butter{5%gms} while hot.
 Serve with curry.
 """ 
