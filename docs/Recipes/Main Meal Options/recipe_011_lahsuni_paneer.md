@@ -36,7 +36,7 @@ Once the mixture cools down to room temperature, transfer it into a #mixer-grind
 
 **Prepare Paneer**
 Cut @paneer{250%gms} into small rectangular shape using #knife{}.
-Pu it in a #bowl{} and add @Pink Himalayan Salt{to taste}, @dry fenugreek leaves{1/2%tsp}, @red chilli powder{1/2%tsp}, @extra virgin olive oil{2%tbsp} and marinate for about ~(20%minutes).
+Put it in a #bowl{} and add @Pink Himalayan Salt{to taste}, @dry fenugreek leaves{1/2%tsp}, @red chilli powder{1/2%tsp}, @extra virgin olive oil{2%tbsp} and marinate for about ~{20%minutes}.
 Put the marinated paneer into #air fryer{} at 180 C for ~{6%minutes}.
 Fry further if needed to ensure paneer pieces are crisp.
 
