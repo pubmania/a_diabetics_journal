@@ -119,6 +119,13 @@ color: yellow;
 .md-typeset p {
     text-align: justify;
 }
+
+.md-typeset mark {
+	background: #d9ffe3;
+	border-radius: 10px;
+	padding: 2px 5px 2px 5px;
+}
+
 /* lists */
 .md-typeset :is(ol,ul) li:last-child {
     margin-bottom: 0.5em;
