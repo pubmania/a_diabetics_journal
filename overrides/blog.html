@@ -1,6 +1,10 @@
 {# template #}
 {% extends "main.html" %}
 
+{% block site_nav %}
+    {% include "partials/navigation.html" %}
+{% endblock %}
+
 {# content #}
 {% block content %}
     {% include "partials/post-list.html" %}
