@@ -120,7 +120,7 @@ plugins:
   - blog:
       enabled: true
       blog_dir: blog
-      blog_toc: true  
+      blog_toc: false  
   #- mermaid2
   - macros
   - table-reader:
