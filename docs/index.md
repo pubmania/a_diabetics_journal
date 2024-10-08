@@ -70,4 +70,4 @@ Around end of Feb'21, I had my HbA1c test after following this for 3 months and 
 !!! site-info "Info"
     The fasting part of this process is something each individual will need to tailor to their needs based on how their body is responding but the aim of the [recipes on this site](./Recipes/) is merely to provide some useful vegetarian options that helped me stay low carb on the days I do eat. The nutritional part of concept is also explained succinctly on [this link](http://josekalsbeek.blogspot.com/2019/11/the-nutritional-thingy.html).
 
-## [Update Notes](/blog)
+## [Update Notes](./blog/)
