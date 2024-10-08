@@ -37,11 +37,11 @@ Sauté well.
 Using a #knife{} cut @Paneer{250%gms} in small rectangular pieces.
 Add these pieces of paneer and toss it on medium heat for a while.
 Add @Salt{to taste} and cover it with the #lid{}. 
-Let it cook for ~{2-3 minutes}.
+Let it cook for ~{2-3%minutes}.
 Now add @Greek Yoghurt{1.25%cup} and cook it on medium heat until it thickens or until the water from the the yoghurt evaporates.
-Add @Water{1/2%cup}, cover it with the lid and cook for 2-4 minutes.
+Add @Water{1/2%cup}, cover it with the lid and cook for ~{2-4%minutes}.
 Now add green chutney from first section along with @Erythritol{1/2%tsp (optional)}, @Salt{to taste} and @Amchoor{1/4%tsp}. 
-Mix well and then finish it by adding Ghee{1%tbsp} and mixing well for another minute.
+Mix well and then finish it by adding @Ghee{1%tbsp} and mixing well for another minute.
 Transfer it into a #serving bowl{}.
 Garnish it with prepared powder from second section above and @coriander{sprig}.
 Serve Hot.
