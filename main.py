@@ -479,7 +479,105 @@ def define_env(env):
             mod += word + " "
             count += len(word) + 1
         return mod.strip()    
-
+#####################################################################################
+    ################### Get formatted steps ##########################
+    def fn_steps_string(input_string):
+        lines = input_string.splitlines()
+        steps_string_new = ""
+        step_count = 1
+        #Remove metadata of cooklang that starts with >> and store it in variable inp_step
+        for line in lines:
+            if line.strip() != "" and not line.startswith(">>"):
+                step = line.strip()
+                for ingredient in find_ingredients(step):
+                    parsed_ingredient = parse_ingredient(ingredient)
+                    ingredient_name = parsed_ingredient['name']
+                    ingredient_quantity = parsed_ingredient['quantity']
+                    ingredient_unit = parsed_ingredient['units']
+                    if ingredient_unit !='':
+                        step = step.replace(ingredient,f'==*{ingredient_quantity} {ingredient_unit}* **{ingredient_name}**==')
+                    else:
+                        step = step.replace(ingredient,f'==**{ingredient_name}**== ({ingredient_quantity})')
+                for cookware in find_cookware(step):
+                    parsed_cookware = parse_cookware(cookware)
+                    step = step.replace(cookware,f'{parsed_cookware}')
+                for timer in find_timers(step):
+                    parsed_timer = parse_timer(timer)['quantity'] + ' ' + parse_timer(timer)['units']
+                    step = step.replace(timer,f':material-timer-sand-full: {parsed_timer}')
+                if step != '':
+                    if step.startswith('**') and step.endswith('**'):
+                        step = f"\n\n\t### {step.replace('**','')}\n\n"
+                    else:
+                        step = f"\n\t* [ ] **{step_count}**: {step.strip()}"
+                        step_count+=1
+                steps_string_new += step
+        steps_string_new = f"{steps_string_new}\n"
+        return steps_string_new    
+    ################### Get formatted ingredient_string ##########################
+    def fn_ingredient_string(input_string):
+        lines = input_string.splitlines()
+        recipe_ingredients = {}
+        all_recipe_ingredients = []
+        step_count = 1
+        for line in lines:
+            if line.strip() != "" and not line.startswith(">>"):
+                step = line.strip()
+                for ingredient in find_ingredients(step):
+                    parsed_ingredient = parse_ingredient(ingredient)
+                    parsed_ingredient['step'] = step_count
+                    all_recipe_ingredients.append(parsed_ingredient)
+                if step != '':
+                    if step.startswith('**') and step.endswith('**'):
+                        pass
+                    else:
+                        step_count+=1
+        #print(all_recipe_ingredients)
+        recipe_ingredients = {}
+        
+        # Organize ingredients
+        for recipe_ingredient in all_recipe_ingredients:
+            ingredient_name = recipe_ingredient['name'].title()
+            ingredient_amount = recipe_ingredient['quantity']
+            ingredient_unit = recipe_ingredient['units']
+            ingredient_step = recipe_ingredient['step']
+            ingredient_key = ingredient_name
+            
+            if ingredient_key not in recipe_ingredients:
+                recipe_ingredients[ingredient_key] = {'with_units': [], 'without_units': set()}
+            
+            if ingredient_unit:
+                recipe_ingredients[ingredient_key]['with_units'].append((ingredient_amount, ingredient_unit, ingredient_step))
+            else:
+                recipe_ingredients[ingredient_key]['without_units'].add(ingredient_amount)
+        #print(recipe_ingredients)
+        ingredient_string = ''
+        ingredient_count = 1
+        for recipe_ingredient_key in recipe_ingredients.keys():
+            # Start the ingredient line
+            ingredient_string += f"{ingredient_count}. {recipe_ingredient_key}"
+            # Add unit-based entries
+            for ingredient_amount, ingredient_unit,ingredient_step in recipe_ingredients[recipe_ingredient_key]['with_units']:
+                ingredient_string += f"\n\t - {ingredient_amount} {ingredient_unit} in step {ingredient_step}"
+            
+            # Add non-unit entries, ensuring uniqueness
+            for non_unit_amount in recipe_ingredients[recipe_ingredient_key]['without_units']:
+                ingredient_string += f"\n\t - {non_unit_amount}"
+            ingredient_count+= 1
+            ingredient_string += "\n"
+        return ingredient_string
+    ################### Get formatted cookware_string ##########################
+    def fn_cookware_string(input_string):
+        cookware_string = ""
+        count = 1
+        parsed_cookwares = set()
+        for cookware in find_cookware(input_string):
+            parsed_cookware = parse_cookware(cookware).title()
+            parsed_cookwares.add(parsed_cookware)
+        for parsed_cookware in parsed_cookwares:
+            cookware_string += f"{count}. *{parsed_cookware}*\n"
+            count+=1
+        return cookware_string
+#####################################################################################
     # create a jinja2 filter
     @env.filter
     def generate_toc_full(directory):
@@ -527,37 +625,31 @@ def define_env(env):
         cookwares = set()
         steps = []
         cooking_data = {}
-        ################### Get Process String #################
+        ################### Get Process String ############################
         steps_dia_string = puml(input_string)
-        ################### Get formatted steps ##########################
-        lines = input_string.splitlines()
-        steps_string_new = "<div class=\"grid cards\" markdown>\n\n\n-   ## Steps\n\n\t---"
-        #Remove metadata of cooklang that starts with >> and store it in variable inp_step
+        ################### Get formatted steps ###########################
+        steps_string_new = f"<div class=\"grid cards\" markdown>\n\n\n-   ## Steps\n\n\t---{fn_steps_string(input_string)}\n"
+        ################### Get formatted ingredients #####################
+        ing_var_str = fn_ingredient_string(input_string).replace('\n','\n\t\t')
+        ingredient_string = f"<div class=\"grid cards\" markdown>\n\n\n-   ## Ingredients\n\n\t---\n\t\t{ing_var_str}"
+        ################### Get formatted Cookwares #######################
+        cook_var_str = fn_cookware_string(input_string).replace('\n','\n\t')
+        cookware_string = f"\n-   ## Cookwares\n\n\t---\n\t{cook_var_str}\n\n</div>\n\n"
+        ##################### Extract cooking data and steps ################
+        lines = get_unformatted_line(input_string)
+        
         for line in lines:
-            if line.strip() != "" and not line.startswith(">>"):
-                step = line.strip()
-                for ingredient in find_ingredients(step):
-                    parsed_ingredient = parse_ingredient(ingredient)
-                    ingredient_name = parsed_ingredient['name']
-                    ingredient_quantity = parsed_ingredient['quantity']
-                    ingredient_unit = parsed_ingredient['units']
-                    if ingredient_unit !='':
-                        step = step.replace(ingredient,f'==*{ingredient_quantity} {ingredient_unit}* **{ingredient_name}**==')
-                    else:
-                        step = step.replace(ingredient,f'==**{ingredient_name}**== ({ingredient_quantity})')
-                for cookware in find_cookware(step):
-                    parsed_cookware = parse_cookware(cookware)
-                    step = step.replace(cookware,f'{parsed_cookware}')
-                for timer in find_timers(step):
-                    parsed_timer = parse_timer(timer)['quantity'] + ' ' + parse_timer(timer)['units']
-                    step = step.replace(timer,f':material-timer-sand-full: {parsed_timer}')
-                if step != '':
-                    if step.startswith('**') and step.endswith('**'):
-                        step = f"\n\n\t### {step.replace('**','')}\n\n"
-                    else:
-                        step = f"\n\t* [ ] {step.strip()}"
-                steps_string_new += step
-        steps_string_new = f"{steps_string_new}\n"
+            if line.strip() != "" and line.startswith(">>"):
+                key, value = line.lstrip(">> ").strip().split(": ")
+                cooking_data[key.strip()] = value.strip()
+            elif line.strip() != "":
+                steps.append(line.strip())
+        if "Title" in cooking_data:
+            title = cooking_data["Title"]
+            del cooking_data["Title"]
+            cooking_data_string = f"## {title}\n\n"
+        else:
+            cooking_data_string = ""
         ################### Extract Ingredients ###########################
         matches = []
         for item in find_ingredients(input_string):
@@ -572,59 +664,6 @@ def define_env(env):
                 ingredients[ingredient_key].append((amount, unit))
             else:
                 ingredients[ingredient_key] = [(amount, unit)]
-
-        ##################### Extract cookwares ############################
-        cookware_matches = find_cookware(input_string)
-        for cookware_match in cookware_matches:
-            cookware_name = parse_cookware(cookware_match).title()
-            cookwares.add(cookware_name)
-        
-        ##################### Extract cooking data and steps ################
-        lines = get_unformatted_line(input_string)
-        
-        for line in lines:
-            if line.strip() != "" and line.startswith(">>"):
-                key, value = line.lstrip(">> ").strip().split(": ")
-                cooking_data[key.strip()] = value.strip()
-            elif line.strip() != "":
-                steps.append(line.strip())
-        ###################### Ingredient Block ########################
-        ingredient_string = ""
-        ingredient_string += "<div class=\"grid cards\" markdown>\n\n\n-   ## Ingredients\n\n\t---\n"
-        #ingredient_string += "\n## Ingredients\n\n\t---\n"
-        ingredient_count = 1
-        for ingredient_name in ingredients.keys():
-            #check if ingredient has been used more than once so it can be listed accordingly
-            if len(ingredients[ingredient_name]) > 1:
-                ingredient_line = f"\t\t{ingredient_count}. {ingredient_name}:"
-                ingredient_string += ingredient_line + "\n"
-                for amount, unit in ingredients[ingredient_name]:
-                    ingredient_line = f"\t\t\t- {amount} {unit}"
-                    ingredient_string += ingredient_line + "\n"
-            else:
-                # if ingredient is used only once, list as a single line with amount and units in same line
-                ingredient_line = ""
-                for amount, unit in ingredients[ingredient_name]:
-                    ingredient_line += f"\t\t{ingredient_count}. {ingredient_name}: {amount} {unit}"
-                ingredient_string += ingredient_line + "\n"
-            ingredient_count += 1
-        ###################### Ingredient Listing ########################    
-        if cookwares:
-            cookware_string = "\n-   ## Cookwares\n\n\t---\n"
-            cookware_count = 1
-            for cookware in cookwares:
-                cookware_line = f"\t{cookware_count}. *{cookware}*"
-                cookware_count += 1
-                cookware_string += cookware_line + "\n"
-        else:
-            cookware_string = ''
-        cookware_string += '\n\n</div>\n\n'
-        if "Title" in cooking_data:
-            title = cooking_data["Title"]
-            del cooking_data["Title"]
-            cooking_data_string = f"## {title}\n\n"
-        else:
-            cooking_data_string = ""
         ######################### NET CARB TABLE #################
         df_ingredient_db = pd.read_csv('ingredient_db.csv')
         df_unit_db = pd.read_csv('unit_db.csv')
