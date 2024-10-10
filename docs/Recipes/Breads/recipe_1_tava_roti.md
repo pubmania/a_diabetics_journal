@@ -24,7 +24,7 @@ Add @warm water{4-6%Tablespoons} to create the roti dough.
 Leave it for about ~{30%minutes}. 
 Now make small balls of the dough.
 Flatten them using a #roller pin or tortilla press{}.
-Cook for ~{1%minute} or so on a flat pan. 
+Cook using #flat pan{} on a #gas hob{} for ~{1%minute} or so. 
 Once cooked, add @ghee{1/2%Teaspoon} and keep aside for a minute.
 Then it's soft and ready to eat with some curry.
 """ | parse_recipe()}}
