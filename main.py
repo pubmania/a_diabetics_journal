@@ -70,7 +70,6 @@ def define_env(env):
         
         return df_in_options_inner
 
-
     def get_nccdb_nutrient_information(api_key, ingredients, nutrient_ids=[1008, 1005, 1079, 1003, 1004]):
         #print(f'get_nccdb_nutrient_information --- {ingredients}')
         url = "https://api.nal.usda.gov/fdc/v1/foods/search"
@@ -264,100 +263,69 @@ def define_env(env):
         transformed_text = re.sub(pattern, r'\1', input_text)
     
         return transformed_text   
-
-    def puml(input_string: str):
-        inp_str = ''
-        style_str = """
-            !startsub activity
-                skinparam activity {
-                    $primary_scheme()
-                    BarColor #orangered
-                    StartColor #orangered
-                    EndColor #orangered
-                        BorderColor #orangered
-                        ArrowColor #orangered
-                        ArrowThickness 1.25
-                        ArrowFontColor #maroon
-                        FontColor #maroon
-                        
-                        ''
-                        DiamondBackgroundColor #darkgreen
-                        DiamondLineColor #white
-                        DiamondFontColor #white
-                }
-            !endsub
+################## Return plantuml string for a given step #################
+    def puml(step: str):
         """
-        lines = get_unformatted_line(input_string)
-        #Remove metadata of cooklang that starts with >> and store it in variable inp_str
-        for line in lines:
-            if line.strip() != "" and not line.startswith(">>"):
-                inp_str += f'{line.strip()}\n'
-        #steps = inp_str.split('\n')
-        steps = inp_str.splitlines()
-        #steps_string = "<div class=\"grid cards\" markdown>\n\n\n-   ## Steps\n\n\t---"
-        out = "\n-   ## Process\n\n\t---\n\n\t```plantuml\n\t@startuml\n\t!theme sketchy-outline\n\t"+style_str+"\n\tstart\n"
-        for step in steps:
-            # Convert step into uppercase for uniform comparison
-            p_step = remove_markdown_link_in_puml(step.replace("==","").upper())
-            # Check if step starts with IF and contains a THEN 
-            # If so, it is a candidate for If Then Else syntax of plantuml
-            # If not treat it as normal step
-            if p_step.startswith('IF') and 'THEN' in p_step:
-                # Replace 'ELSE IF' with 'ELSEIF' so there is no clash with final ELSE statement
-                if 'ELSE IF' in p_step:
-                    p_step = p_step.replace('ELSE IF','ELSEIF')
-                # Create a variable to first remove just IF from the step
-                if_removed = ''.join(re.split(r"\bIF\b", p_step)).strip()
-                # Using above, remove 'ELSE'. This will be a list with two items
-                else_removed_l = re.split(r"\bELSE\b", if_removed)
-                # Now will If and Else removed, break the sentencefirst item from above list
-                # at ELSEIF and store in another list below
-                elif_removed_l = re.split(r"\bELSEIF\b", else_removed_l[0])
-                # For every item in above list, break it down at THEN and store in a new list
-                then_removed_l = []
-                for elif_removed in elif_removed_l:
-                    then_removed_l += re.split(r"\bTHEN\b", elif_removed)
-                # Initiate if loop parsing
-                i = 0
-                while i < len(then_removed_l): 
-                    if i==0:
-                        # The very first entry in then_removed_l is condition for if statement 
-                        # and second entry is then statement
-                        out += f'\tif ({insert_newlines(then_removed_l[i].strip(),20)}?) then (yes)\n\t\t:{insert_newlines(then_removed_l[i+1].strip().capitalize(),30)};\n'
-                        i = i+2
-                    elif i % 2 == 0:
-                        # Add elseif condition 
-                        #Logic is that variable then_removed_l has every even item as an elseif condition 
-                        # and every odd item as then statement
-                        out+= f'\t(no) elseif ({insert_newlines(then_removed_l[i].strip().capitalize(),20)}?) then (yes)\n'
-                        i = i+1
-                    else:
-                        #Every odd entry is a then statement so use it to create the then statement
-                        out+=f'\t\t:{insert_newlines(then_removed_l[i].strip().capitalize(),30)};\n'
-                        i = i + 1
-                # Check if ELSE exists in the step and if it does include the final else statement
-                if len(else_removed_l)>1:
-                    out += f'\telse (no)\n\t\t:{insert_newlines(else_removed_l[1].strip().capitalize(),30)};\n'
+        This function takes a step, checks for if conditions and 
+        reformats the step into a plantuml step.
+        """
+        out = ""
+
+        # Convert step into uppercase for uniform comparison
+        p_step = remove_markdown_link_in_puml(step.upper().strip())
+        # Check if step starts with IF and contains a THEN 
+        # If so, it is a candidate for If Then Else syntax of plantuml
+        # If not treat it as normal step
+        if p_step.startswith('IF') and 'THEN' in p_step:
+            # Replace 'ELSE IF' with 'ELSEIF' so there is no clash with final ELSE statement
+            if 'ELSE IF' in p_step:
+                p_step = p_step.replace('ELSE IF','ELSEIF')
+            # Create a variable to first remove just IF from the step
+            if_removed = ''.join(re.split(r"\bIF\b", p_step)).strip()
+            # Using above, remove 'ELSE'. This will be a list with two items
+            else_removed_l = re.split(r"\bELSE\b", if_removed)
+            # Now will If and Else removed, break the sentencefirst item from above list
+            # at ELSEIF and store in another list below
+            elif_removed_l = re.split(r"\bELSEIF\b", else_removed_l[0])
+            # For every item in above list, break it down at THEN and store in a new list
+            then_removed_l = []
+            for elif_removed in elif_removed_l:
+                then_removed_l += re.split(r"\bTHEN\b", elif_removed)
+            # Initiate if loop parsing
+            i = 0
+            while i < len(then_removed_l): 
+                if i==0:
+                    # The very first entry in then_removed_l is condition for if statement 
+                    # and second entry is then statement
+                    out += f'\tif ({insert_newlines(then_removed_l[i].strip(),20)}?) then (yes)\n\t\t:{insert_newlines(then_removed_l[i+1].strip().capitalize(),30)};\n'
+                    i = i+2
+                elif i % 2 == 0:
+                    # Add elseif condition 
+                    #Logic is that variable then_removed_l has every even item as an elseif condition 
+                    # and every odd item as then statement
+                    out+= f'\t(no) elseif ({insert_newlines(then_removed_l[i].strip().capitalize(),20)}?) then (yes)\n'
+                    i = i+1
                 else:
-                    out += f'\telse (no)\n\t\t\n'
-                out += f'\tendif\n'
-         #       step_line = f"\n\t* [ ] {step.strip()}"
-            # Ignore empty line in steps
-            elif step != '':
-                if step.startswith('**') and step.endswith('**'):
-                    # If the step starts with ** and ends with **, apply different formatting and remove **
-                    step = step.replace("**","")
-                    out += f'\t#Maroon:<color: white>{insert_newlines(p_step.replace("`","").strip(),50)}</color>/\n'
-          #          step_line = f"\n\n\t### {step}\n\n"
-                else:
-                    # If the step does not start with ** and ends with **, apply standard formatting
-                    out += f'\t:{insert_newlines(p_step.replace("`","").strip().capitalize(),50)};\n'
-           #         step_line = f"\n\t* [ ] {step.strip()}"
-            #steps_string += step_line
-        out += f'\tend\n\t@enduml\n\t```\n\n</div>\n\n'
+                    #Every odd entry is a then statement so use it to create the then statement
+                    out+=f'\t\t:{insert_newlines(then_removed_l[i].strip().capitalize(),30)};\n'
+                    i = i + 1
+            # Check if ELSE exists in the step and if it does include the final else statement
+            if len(else_removed_l)>1:
+                out += f'\telse (no)\n\t\t:{insert_newlines(else_removed_l[1].strip().capitalize(),30)};\n'
+            else:
+                out += f'\telse (no)\n\t\t\n'
+            out += f'\tendif\n'
+        elif step != '':
+            if step.startswith('**') and step.endswith('**'):
+                # If the step starts with ** and ends with **, apply different formatting and remove **
+                step = step.replace("**","")
+                out += f'\t#Maroon:<color: white>{insert_newlines(p_step.replace("`","").strip(),50)}</color>/\n'
+            else:
+                # If the step does not start with ** and ends with **, apply standard formatting
+                out += f'\t:{insert_newlines(p_step.replace("`","").strip().capitalize(),50)};\n'
         #out = f'{steps_string}\n\n{out}'
-        # Return final markdown for steps and plantuml
-        #return steps_string, out
+        # Return final markdown for plantuml step
+        
         return out
 
     def parse_cookware(item: str) -> dict[str, str]:
@@ -369,7 +337,6 @@ def define_env(env):
         item = item.replace("{}", "")
         return item[1:]
 
-
     def parse_quantity(item: str) -> list[str, str]:
         """Parse the quantity portion of an ingredient
         e.g. 2%kg
@@ -377,7 +344,6 @@ def define_env(env):
         if "%" not in item:
             return [item, ""]
         return item.split("%", maxsplit=1)
-
 
     def parse_ingredient(item: str) -> dict[str, str]:
         """Parse an ingredient string
@@ -400,7 +366,6 @@ def define_env(env):
             "quantity": val or "as needed",
             "units": units,
         }
-
 
     def parse_timer(item: str) -> dict[str, str]:
         """Parse timer string
@@ -457,11 +422,9 @@ def define_env(env):
         """Find cookware items in a recipe step"""
         return find_specials(step, "#")
 
-
     def find_ingredients(step: str) -> list[str]:
         """Find ingredients in a recipe step"""
         return find_specials(step, "@")
-
 
     def find_timers(step: str) -> list[str]:
         """Find timers in a recipe step"""
@@ -469,7 +432,9 @@ def define_env(env):
 
     def insert_newlines(input_string: str, chars_per_line: int):
         """Inserts newline in the input_string after specified number of characters from char_per_line"""
-        words = input_string.split()
+        #words = input_string.split()
+        # Use regex to find words and HTML elements
+        words = re.findall(r'<[^>]+>.*?</[^>]+>|[^<\s]+', input_string)
         mod = ""
         count = 0
         for word in words:
@@ -484,11 +449,19 @@ def define_env(env):
     def fn_steps_string(input_string):
         lines = input_string.splitlines()
         steps_string_new = ""
+        p_step_string = ""
         step_count = 1
+        p_step = ""
         #Remove metadata of cooklang that starts with >> and store it in variable inp_step
         for line in lines:
             if line.strip() != "" and not line.startswith(">>"):
                 step = line.strip()
+                for cookware in find_cookware(step):
+                    parsed_cookware = parse_cookware(cookware)
+                    step = step.replace(cookware,f"{parsed_cookware}")
+                for timer in find_timers(step):
+                    parsed_timer = parse_timer(timer)['quantity'] + ' ' + parse_timer(timer)['units']
+                    step = step.replace(timer,f':material-timer-sand-full: {parsed_timer}')
                 for ingredient in find_ingredients(step):
                     parsed_ingredient = parse_ingredient(ingredient)
                     ingredient_name = parsed_ingredient['name']
@@ -498,23 +471,27 @@ def define_env(env):
                         step = step.replace(ingredient,f'==*{ingredient_quantity} {ingredient_unit}* **{ingredient_name}**==')
                     else:
                         step = step.replace(ingredient,f'==**{ingredient_name}**== ({ingredient_quantity})')
-                for cookware in find_cookware(step):
-                    parsed_cookware = parse_cookware(cookware)
-                    step = step.replace(cookware,f'{parsed_cookware}')
-                for timer in find_timers(step):
-                    parsed_timer = parse_timer(timer)['quantity'] + ' ' + parse_timer(timer)['units']
-                    step = step.replace(timer,f':material-timer-sand-full: {parsed_timer}')
+                p_step = puml(step.replace(':material-timer-sand-full:','')\
+                              .replace('**==','</b>')\
+                              .replace('==**','<b>')\
+                              .replace('*==','</i>')
+                              .replace('==*','<i>')\
+                              .replace('* **','</i> <b>')
+                              )
                 if step != '':
                     if step.startswith('**') and step.endswith('**'):
                         step = f"\n\n\t### {step.replace('**','')}\n\n"
+                 #       p_step = f"{p_step}"
                     else:
                         step = f"\n\t* [ ] **{step_count}**: {step.strip()}"
                         step_count+=1
                 steps_string_new += step
+                p_step_string += p_step
+        p_step_string = f"{p_step_string}\n"
         steps_string_new = f"{steps_string_new}\n"
-        return steps_string_new    
+        return steps_string_new,p_step_string
     ################### Get formatted ingredient_string ##########################
-    def fn_ingredient_string(input_string):
+    def fn_ingredient_string(input_string: str):
         lines = input_string.splitlines()
         recipe_ingredients = {}
         all_recipe_ingredients = []
@@ -566,7 +543,7 @@ def define_env(env):
             ingredient_string += "\n"
         return ingredient_string
     ################### Get formatted cookware_string ##########################
-    def fn_cookware_string(input_string):
+    def fn_cookware_string(input_string: str):
         cookware_string = ""
         count = 1
         parsed_cookwares = set()
@@ -625,10 +602,31 @@ def define_env(env):
         cookwares = set()
         steps = []
         cooking_data = {}
-        ################### Get Process String ############################
-        steps_dia_string = puml(input_string)
-        ################### Get formatted steps ###########################
-        steps_string_new = f"<div class=\"grid cards\" markdown>\n\n\n-   ## Steps\n\n\t---{fn_steps_string(input_string)}\n"
+        ################### Get formatted steps and Process String###########################
+        steps_string_new, steps_dia_string = fn_steps_string(input_string)
+        ################### Add required formatting to steps and plantuml strings ###########
+        steps_string_new = f"<div class=\"grid cards\" markdown>\n\n\n-   ## Steps\n\n\t---{steps_string_new}\n"
+        style_str = """
+                !startsub activity
+                    skinparam activity {
+                        $primary_scheme()
+                        BarColor #orangered
+                        StartColor #orangered
+                        EndColor #orangered
+                            BorderColor #orangered
+                            ArrowColor #orangered
+                            ArrowThickness 1.25
+                            ArrowFontColor #maroon
+                            FontColor #maroon
+                            
+                            ''
+                            DiamondBackgroundColor #darkgreen
+                            DiamondLineColor #white
+                            DiamondFontColor #white
+                    }
+                !endsub
+        """
+        steps_dia_string = f"\n-   ## Process\n\n\t---\n\n\t```plantuml\n\t@startuml\n\t!theme sketchy-outline\n\t{style_str}\n\tstart\n{steps_dia_string}\tend\n\t@enduml\n\t```\n\n</div>\n\n"        
         ################### Get formatted ingredients #####################
         ing_var_str = fn_ingredient_string(input_string).replace('\n','\n\t\t')
         ingredient_string = f"<div class=\"grid cards\" markdown>\n\n\n-   ## Ingredients\n\n\t---\n\t\t{ing_var_str}"
