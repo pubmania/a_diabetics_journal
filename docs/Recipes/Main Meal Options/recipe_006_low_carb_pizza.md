@@ -18,7 +18,7 @@ The Garlic Bread tastes great with [Minty Basil Mushroom Soup](../Snacks%20and%2
     As this recipe is based mainly on wheat gluten, it is not suitable for those with Gluten Intolerance. I am sure it's obvious but still.
 
 ```cooklang
->> Serving Size:  6
+>> Serving Size: 6
 >> Cooking Time: 30 minutes (Prep Time - 90 minutes)
 >> Category: Italian
 >> Type: Vegetarian
