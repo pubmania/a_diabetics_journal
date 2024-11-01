@@ -20,7 +20,7 @@ I came across the original recipe on a diabetes forum. I have, however, made min
 !!! danger
     As this recipe is based mainly on wheat gluten, it is not suitable for those with Gluten Intolerance. I am sure it's obvious but still.
 
-{{ """
+```cooklang
 >> Serving Size: 8 rolls
 >> Cooking Time: 90 minutes
 >> Category: Continental
@@ -39,5 +39,4 @@ Place the rolls on oiled #baking sheet{}.
 Leave them to rise for ~{40%minutes} to ~{an%hour}.
 Bake in #oven{} for ~{20%minutes} at 180-190 C.
 Take out of oven and leave it out for ~{15%mimutes}.
-""" 
-| parse_recipe() }}
+```
