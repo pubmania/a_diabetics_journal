@@ -12,7 +12,7 @@ For this recipe one can use fresh okra or chopped frozen okra that is available 
 
 Tastes great with [Tava Roti](../Breads/recipe_1_tava_roti.md), [Tandoori Roti](../Breads/recipe_3_tandoori_roti.md) and [Naan Bread](../Breads/recipe_4_naan_bread.md) and also goes well with [No Egg Wheat Gluten Bread](../Breads/recipe_2_wheat_gluten_bread.md).
 
-{{"""
+```cooklang
 >> Serving Size: 3 portions
 >> Cooking Time: 20 minutes (Prep Time - 10 minutes)
 >> Category: Indian Curry
@@ -27,5 +27,4 @@ Now add @onion{75%gms(1 small chopped)} and saute it till it turns slightly brow
 Finally, add the chopped Okra into the #frying pan{}
 Cook until okra looses water and becomes crispy.
 Serve hot.
-"""
-| parse_recipe()}}
+```
