@@ -6,15 +6,14 @@ import os
 #                                                                                                  #
 ####################################################################################################
 
-def fn_metadata_string(input_string):
+def fn_metadata_string(input_string,image_path):
+    #print(image_path)
     meta_data = {}
     meta_data_string_title = ""
     meta_data_string = ""
     image_data_string = ""
     lines = input_string.splitlines()
-    # Define the path
-    image_path = "assets/images/" #Images are always saved in this static location.
-    
+
     for line in lines:
         if line.strip() != "" and line.startswith(">>"):
             key, value = line.lstrip(">> ").strip().split(": ")
@@ -26,11 +25,13 @@ def fn_metadata_string(input_string):
     else:
         meta_data_string = ""
     if "Image" in meta_data:
+        final_image_path = os.path.join(image_path,meta_data["Image"])
+        print(final_image_path)
         if "Image-Caption" in meta_data:
             #image_data_string += f"<figure markdown>![image]({image_path}"+meta_data["Image"]+"){: style=\"width: 920px;height: 430px;object-fit: contain;\"}<figcaption>" + meta_data["Image-Caption"] + "</figcaption></figure>"
             image_data_string += f"""
 <figure class = "card">
-<p><img alt="image" src="{image_path}{meta_data["Image"]}" style="width: 920px;height: 430px;object-fit: contain;"></p>
+<p><img alt="image" src="{final_image_path}" style="width: 920px;height: 430px;object-fit: contain;"></p>
 <figcaption>{meta_data["Image-Caption"]}</figcaption>
 </figure>
 """
@@ -40,7 +41,7 @@ def fn_metadata_string(input_string):
             #image_data_string += f"<figure markdown>![image]({image_path}"+meta_data["Image"]+"){: style=\"width: 920px;height: 430px;object-fit: contain;\"}</figure>"
             image_data_string += f"""
 <figure class = "card" >
-<p><img alt="image" src="{image_path}{meta_data["Image"]}" style="width: 920px;height: 430px;object-fit: contain;"></p>
+<p><img alt="image" src="{image_path}/{meta_data["Image"]}" style="width: 920px;height: 430px;object-fit: contain;"></p>
 </figure>
 """
             del meta_data["Image"]
