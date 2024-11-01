@@ -7,7 +7,7 @@ tags:
     - Breakfast
 ---
 
-{{ """
+```cooklang
 >> Serving Size: 2 portions
 >> Cooking Time: 30 minutes
 >> Category: Indian
@@ -42,5 +42,4 @@ Fill the above pan with @water{1/2%cup (Hot)}.
 Add @Erythritol{2%Teaspoons} and mix it to dissolve.
 Pour the sweet water mixture over the dhokla base. 
 Enjoy with `Coriander and Green Mint Dip (chutney)` and @sugarfree tomato ketchup{}.
-""" 
-| parse_recipe() }}
+```
