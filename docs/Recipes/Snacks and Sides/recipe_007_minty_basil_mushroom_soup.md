@@ -11,7 +11,7 @@ While this soup tastes great on its on, it also goes very well with [Wheat Glute
 !!! site-tip "Tip"
     I have since tried variations by adding 2 chopped spring onion along with tomato and gochujang paste (1.5 tbsp) separately and together and all variations tasted delicious. It will, ofcourse, increase the carb content of the dish.
 
-{{"""
+```cooklang
 >> Serving Size: 1
 >> Cooking Time: 20 minutes (Prep Time - 5 minutes)
 >> Category: Italian
@@ -36,4 +36,4 @@ Mix it all well with a #spatula{} and cover the pan with #lid{}.
 Let it stew for ~{10-15%minutes}.
 
 Mix it well and serve hot.
-""" | parse_recipe()}}
+```
