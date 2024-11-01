@@ -6,7 +6,7 @@ tags:
 title: Paneer Crackers
 ---
 
-{{"""
+```cooklang
 >> Serving Size: 6
 >> Cooking Time: 30 minutes
 >> Category: Savoury
@@ -26,4 +26,4 @@ Using a #knife or pizza cutter{}, create cuts for small squares - no need to sep
 Take out from microwave and let it cool.
 Once cool and dry, break along the lines of cuts.
 Add @extra seasoning{as needed} on top.
-""" | parse_recipe()}}
+```

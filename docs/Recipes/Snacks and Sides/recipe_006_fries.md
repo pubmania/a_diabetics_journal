@@ -12,7 +12,7 @@ Tastes great with [Tomato Mint Pepper Spinach Dip](../Dips/recipe_007_mint_spina
 !!! site-info "Info"
     This can be prepared using Celeriac or Swede. I have found that while celeriac does not raise my BG, Swede at times does. There are people for whom both work just fine. I would suggest try both and see the impact. Personally, I do like Swede better but as it does spike my BG at times, I try to avoid it.
 
-{{"""
+```cooklang
 >> Serving Size: 2 portions
 >> Cooking Time: 35 minutes (Prep Time - 10 minutes)
 >> Category: Continental
@@ -33,4 +33,4 @@ Keep shaking the air fryer basket every 10 minutes so the celeriac is crisp on a
 Once done, sprinkle @black pepper{to taste}, @red chilli flakes{to taste}.
 
 Serve hot.
-""" | parse_recipe()}}
+```

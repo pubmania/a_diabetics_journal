@@ -11,7 +11,7 @@ tags:
 !!! danger
     As this recipe is based mainly on wheat gluten, it is not suitable for those with Gluten Intolerance. I am sure it's obvious but still.
 
-{{ """
+```cooklang
 >> Serving Size: 10 pieces
 >> Cooking Time: 90 minutes
 >> Category: Indian
@@ -28,5 +28,4 @@ Leave them to rise for ~{40%minutes} to ~{an%hour}.
 Roast each flattened dough in #Air Fryer{} at 180C for about ~{2 to 2.5%minutes} each side.
 Apply @unsalted butter{5%gms} while hot.
 Serve with curry.
-""" 
-| parse_recipe() }}
+```

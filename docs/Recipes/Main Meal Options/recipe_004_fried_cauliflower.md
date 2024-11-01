@@ -12,7 +12,7 @@ For this recipe one can use fresh cauliflower or pre-cut cauliflower that is ava
 
 Tastes great with [Tava Roti](../Breads/recipe_1_tava_roti.md), [Tandoori Roti](../Breads/recipe_3_tandoori_roti.md) and [Naan Bread](../Breads/recipe_4_naan_bread.md) and also goes well with [No Egg Wheat Gluten Bread](../Breads/recipe_2_wheat_gluten_bread.md).
 
-{{"""
+```cooklang
 >> Serving Size: 3 portions
 >> Cooking Time: 20 minutes (Prep Time - 10 minutes)
 >> Category: Indian Curry
@@ -32,5 +32,4 @@ Put it on high heat and add @red chilli powder{2.5%teaspoons}
 Give it ~{20%seconds} before taking the #small frying pan{} off from heat immediately.
 Garnish the cooked cauliflower with content from #small frying pan{} and freshly chopped @corriander leaves{25%gms(1 small bunch)}
 Serve hot.
-"""
-| parse_recipe()}}
+```

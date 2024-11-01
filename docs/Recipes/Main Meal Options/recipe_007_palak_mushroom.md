@@ -7,7 +7,7 @@ tags:
         - Dinner
 ---
 
-{{"""
+```cooklang
 >> Serving Size: 4
 >> Cooking Time:  15 minutes (Prep Time - 15 minutes)
 >> Category: Indian
@@ -23,4 +23,4 @@ Cook for a further ~{3%minutes}.
 Add @garam masala{1%tsp} and @amchoor powder{1%tsp}.
 Continue cooking for another ~{3-4%minutes}.
 Serve hot.
-""" | parse_recipe()}} 
+```

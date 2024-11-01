@@ -11,7 +11,7 @@ tags:
 
 Tastes great with [Tava Roti](../Breads/recipe_1_tava_roti.md), [Tandoori Roti](../Breads/recipe_3_tandoori_roti.md) and [Naan Bread](../Breads/recipe_4_naan_bread.md) and also goes well with [No Egg Wheat Gluten Bread](../Breads/recipe_2_wheat_gluten_bread.md).
 
-{{"""
+```cooklang
 >> Serving Size: 4 portions
 >> Cooking Time: 30 minutes (Prep time - 15 minutes)
 >> Category: North Indian Curry
@@ -50,4 +50,4 @@ In a #small pan{}, heat @extra virgin olive oil{2%tbsp}.
 Add @garlic{3%cloves (sliced)} in the #small pan{} and fry until golden brown in color.
 Add this into the friend paneer and gravy mix and mix well.
 Garnish with @fresh mint leaves{sprig} and serve hot.
-""" | parse_recipe() }}
+```

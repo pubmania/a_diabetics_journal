@@ -11,7 +11,7 @@ While the original recipe calls for use of Coconut sugar, I make mine without it
 !!! warning "Beware"
     While overall net carbs are comparable to say Wheat Gluten Bread, it is not as filling and can result in overeating, especially because it is very delicious. Try and keep it to a max of 2 or 3 slices and only after main course so the risk of overeating is minimised.
 
-{{"""
+```cooklang
 >> Source: https://detoxinista.com/vegan-almond-flour-banana-bread/
 >> Type: Vegetarian
 >> Serving Size: 16 slices
@@ -29,4 +29,4 @@ Now pour the batter into the lined #pan{}.
 Smooth the top with a #spatula{} then bake at 175C for about ~{45%minutes}
 Once done, the top of the loaf will rise and crack and will feel firm to touch. 
 Allow the loaf to cool completely before slicing.
-""" |parse_recipe()}}
+```

@@ -6,7 +6,7 @@ tags:
     - Greek
 --- 
 
-{{"""
+```cooklang
 >> Serving Size: 16
 >> Type: Vegetarian
 >> Cooking Time: 15 minutes
@@ -17,4 +17,4 @@ Chop @fresh dill{1%tbsp} using #knife{} and add to the #bowl{}.
 Add @Pink Himalayan Salt{to taste} and @freshly ground black pepper{to taste}.
 Add @Greek Yoghurt{1%cup} in the #bowl{} and mix it well using #spatula{}.
 Finally add drizzle @extra virgin olive oil{1%tbsp} and mix lightly.
-""" | parse_recipe()}}
+```

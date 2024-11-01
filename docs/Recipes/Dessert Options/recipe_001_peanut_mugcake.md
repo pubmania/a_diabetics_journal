@@ -11,7 +11,7 @@ A very quick one minute recipe from Joe Duff - [YouTube Link](https://youtu.be/K
 !!! site-info "Info"
     The measurement used in this recipe, results in a cake that I can't eat fully and for someone with diet similar to mine, I think it can easily serve two hence the portion size of 2.
 
-{{"""
+```cooklang
 >> Serving Size: 2 portions
 >> Cooking Time: 3 minutes
 >> Category: Dessert
@@ -23,7 +23,4 @@ Mix until well combined and smooth
 Now coat a #small mug{} with @baking spray{}
 Move the batter to the #small mug{}
 #Microwave{} for ~{30-60%seconds}.
-"""
-|
-parse_recipe()
-}}
+```

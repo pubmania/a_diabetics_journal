@@ -6,7 +6,7 @@ tags:
     - Indian
 ---
 
-{{"""
+```cooklang
 >> Serving Size: 2
 >> Cooking Time: 10 minutes
 >> Category: Drinks
@@ -19,5 +19,4 @@ Once the milk and cream has boiled, add the powdered nuts, @Green Cardamom Powde
 Finally add @erythritol{2%tbsp}.
 Let it boil for ~{4-5%minutes} and keep stirring with a #spatula{} in between to make sure milk does not get burnt.
 The thickened drink can be served hot in winter or chilled with ice in summer.
-"""
-| parse_recipe()}}
+```

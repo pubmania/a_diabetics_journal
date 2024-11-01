@@ -10,7 +10,7 @@ tags:
 
 Tastes great with [Tava Roti](../Breads/recipe_1_tava_roti.md), [Tandoori Roti](../Breads/recipe_3_tandoori_roti.md) and [Naan Bread](../Breads/recipe_4_naan_bread.md) and also goes well with [No Egg Wheat Gluten Bread](../Breads/recipe_2_wheat_gluten_bread.md).
 
-{{"""
+```cooklang
 >> Serving Size: 4 portions
 >> Cooking Time: 30 minutes
 >> Category: Indian Curry
@@ -35,4 +35,4 @@ For the tempering, in a #small frying pan{} add @ghee{1%tablespoon}
 Put it on high heat and add @red chilli powder{2.5%teaspoons}
 Give it ~{20%seconds} before taking the #small frying pan{} off from heat immediately.
 Add it on top while serving.
-""" | parse_recipe() }}
+```

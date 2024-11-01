@@ -13,8 +13,7 @@ Tastes great with [Tomato Mint Pepper Spinach Dip](../Dips/recipe_007_mint_spina
     [Soya chunks](https://kutt.it/soya_chunks) on label show about 23g carbs and 52g protien. However, for me this item has never caused any spike in the BG readings but do take readings and monitor before you include this in your diet plan.
 
 
-{{
-"""
+```cooklang
 >> Serving Size: 4 portions
 >> Cooking Time: 45 minutes
 >> Category: Indian
@@ -61,5 +60,4 @@ Coat both sides of cutlets with @avocado oil{2%Tablespoons}.
 Put in #Air fryer{} at 190C for roughly ~{15%minutes}.
 
 Enjoy with `Coriander and Green Mint Dip (chutney)` and @sugarfree tomato ketchup{}.
-
-""" | parse_recipe()}}
+```

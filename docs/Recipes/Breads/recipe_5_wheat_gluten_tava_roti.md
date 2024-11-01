@@ -11,8 +11,7 @@ While the traditional wheat flour roti is not an option with low carb / keto die
 !!! danger
     As this recipe is based mainly on wheat gluten, it is not suitable for those with Gluten Intolerance. I am sure it's obvious but still.
 
-{{
-"""
+```cooklang
 >> Serving Size: 6 pieces
 >> Cooking Time: 10 minutes (Prep Time - 2.5 hours)
 >> Category: Indian
@@ -25,4 +24,4 @@ Flatten them using a #roller pin or tortilla press{}.
 Cook for ~{1%minute} or so on a #flat pan{}. 
 Once cooked, add @ghee{1/2%Teaspoon} and keep aside for a minute.
 Serve hot with curry.
-""" | parse_recipe()}}
+```

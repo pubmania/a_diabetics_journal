@@ -12,7 +12,7 @@ tags:
 
 Tastes great with [Tomato Keftedes](../Snacks%20and%20Sides/recipe_011_tomato_keftedes.md), [Keto French Fries](../Snacks%20and%20Sides/recipe_006_fries.md), [Protien Rich Cutlets](../Snacks%20and%20Sides/recipe_003_protein_cutlets.md) and [Cheesy Bites](../Snacks%20and%20Sides/recipe_010_cheesy_bites.md).
 
-{{"""
+```cooklang
 >> Serving Size: 16 portions
 >> Cooking Time: 5 minutes (Prep Time - 5 minutes)
 >> Category: Dips
@@ -28,4 +28,4 @@ Finally add @Pink Himalayan Salt{to taste}.
 Grind using #mixer grinder{}.
 If it's too spicy then add a little bit of @erythritol{as needed}.
 Serve it with snack dishes.
-""" | parse_recipe()}}
+```

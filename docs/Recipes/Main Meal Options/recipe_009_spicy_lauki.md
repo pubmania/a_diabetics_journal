@@ -10,7 +10,7 @@ tags:
 
 Tastes great with [Tava Roti](../Breads/recipe_1_tava_roti.md), [Tandoori Roti](../Breads/recipe_3_tandoori_roti.md) and [Naan Bread](../Breads/recipe_4_naan_bread.md) and also goes well with [No Egg Wheat Gluten Bread](../Breads/recipe_2_wheat_gluten_bread.md).
 
-{{"""
+```cooklang
 >> Serving Size: 4 portions
 >> Cooking Time: 25 minutes (Prep time - 10 minutes)
 >> Category: North Indian Curry
@@ -27,4 +27,4 @@ Sprinkle @Garam Masala{1/2%teaspoon} and mix well.
 Cook for another ~{2%minutes}.
 Garnish with @fresh coriander leaves{10%gms (finely chopped)}.
 Serve hot.
-""" | parse_recipe()}}
+```
