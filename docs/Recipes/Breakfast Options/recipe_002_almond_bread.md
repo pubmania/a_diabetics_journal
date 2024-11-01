@@ -15,7 +15,7 @@ Eat it with poached eggs - easiest way is to use the microwave poaching dish or 
 
     2. I find the bread to be very filling and amount of bread prepared from the batter using same measurement as per the recipe actually goes for almost 2 to 3 days of my breakfast.
 
-{{ """
+```cooklang
 >> Serving Size: 3 portions (3 Slices)
 >> Cooking Time: 5 minutes
 >> Category: Continental
@@ -36,5 +36,4 @@ Add ~{15%seconds} of cook-time as needed until the top is firm.
 Peel and mash @Avocado{150%gms(medium sized)}.
 Add @onion{150%gms(medium sized chopped)}, some @garlic{3%cloves(grated)}, @tomato{10%gms(1-2 chopped)} and @Green chillies{10%gms(2 medium chopped)}. 
 Add a dash of @lemon{2.5%tbsp(1 freshly squeezed)}, @salt{to taste} and @black pepper{to taste}
-""" 
-| parse_recipe() }}
+```
