@@ -9,7 +9,7 @@ tags:
 
 This goes well with [Tava Roti](../Breads/recipe_1_tava_roti.md) as well as [Wheat Gluten Bread](../Breads/recipe_2_wheat_gluten_bread.md).
 
-{{ """
+```cooklang
 >> Serving Size: 2 portions
 >> Cooking Time: 20 minutes
 >> Category: Indian
@@ -25,5 +25,4 @@ Add the coarsely mashed tofu and keep stirring.
 Let it cook for ~{5-8%minutes}.
 Add @Pink Himalayan Salt{to taste} and @pepper{to taste}.
 Serve hot.
-""" 
-| parse_recipe() }}
+```
