@@ -7,7 +7,7 @@ tags:
     - Indian
 ---  
 
-{{"""
+```cooklang
 >> Serving Size: 4 portions
 >> Cooking Time: 10 minutes (Prep Time - 5 minutes)
 >> Category: Indian Chutney
@@ -21,4 +21,4 @@ Finally add @Pink Himalayan Salt{to taste}.
 Grind on #mixer grinder{}.
 If it's too spicy then add a little bit of @erythritol{as needed}.
 Serve it with snack dishes.
-""" | parse_recipe()}}
+```
