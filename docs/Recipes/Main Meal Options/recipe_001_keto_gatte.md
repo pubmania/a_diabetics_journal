@@ -17,7 +17,7 @@ Tastes great with [Tava Roti](../Breads/recipe_1_tava_roti.md), [Tandoori Roti](
 !!! danger
     As this recipe uses wheat gluten, it is not suitable for those with Gluten Intolerance. I am sure it's obvious but still.
 
-{{"""
+```cooklang
 >> Serving Size: 3 portions
 >> Cooking Time: 30 minutes
 >> Category: Indian Curry
@@ -56,5 +56,4 @@ Then add `Gatte` and let it cook for ~{2-3%minutes}.
 Then add @Dried Fenugreek leaves{1%tbsp}
 Let it cook for another ~{5-8%minutes} on low heat.
 Serve hot.
-"""
-| parse_recipe()}}
+```
