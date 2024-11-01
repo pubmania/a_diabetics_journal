@@ -54,21 +54,22 @@ theme:
 #      The site uses cookies to recognise visits and preferences.
 
 extra_css:
-  - assets/stylesheets/main.css
-  - assets/stylesheets/view-bigimg.css
+  #- assets/stylesheets/main.css
+  #- assets/stylesheets/view-bigimg.css
   - assets/stylesheets/extra.css
   #- assets/stylesheets/footer.css
+  - assets/stylesheets/nutrition_label.css
  
 extra_javascript:
-  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
-  - assets/javascripts/tables.js
+  #- https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  #- assets/javascripts/tables.js
   #- assets/javascripts/mermaid.min.js
-  - assets/javascripts/mathjax.js # must be before mathjax
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - https://cdn.jsdelivr.net/npm/mermaid@10.2.4/dist/mermaid.min.js
-  - assets/javascripts/view-bigimg.js
-  - assets/javascripts/extra.js
+  #- assets/javascripts/mathjax.js # must be before mathjax
+  #- https://polyfill.io/v3/polyfill.min.js?features=es6
+  #- https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  #- https://cdn.jsdelivr.net/npm/mermaid@10.2.4/dist/mermaid.min.js
+  #- assets/javascripts/view-bigimg.js
+  #- assets/javascripts/extra.js
 
 # Extension information
 markdown_extensions:
@@ -122,16 +123,17 @@ plugins:
       blog_dir: blog
       blog_toc: false  
   #- mermaid2
+  - glightbox
   - macros
   - table-reader:
       data_path: "docs/assets/tables"
-  - encryptcontent:
-      title_prefix: '🔐'
-      summary: 'Restricted Access'
-      search_index: 'encrypted'
-      password_button: True
-      password_button_text: 'Unlock'
-      hljs: False
+  #- encryptcontent:
+  #    title_prefix: '🔐'
+  #    summary: 'Restricted Access'
+  #    search_index: 'encrypted'
+  #    password_button: True
+  #    password_button_text: 'Unlock'
+  #    hljs: False
   - exclude:
       glob:
         - "*.gz"
@@ -162,3 +164,6 @@ plugins:
   #    enable_creation_date: true
   - social:
       cards_dir: assets/images/social
+# MkDocs Hooks
+hooks:
+  - hooks.py
