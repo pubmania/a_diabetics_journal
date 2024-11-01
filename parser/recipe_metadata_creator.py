@@ -13,14 +13,7 @@ def fn_metadata_string(input_string):
     image_data_string = ""
     lines = input_string.splitlines()
     # Define the path
-    image_path = ""
-    # Check if ""../../assets/images" exists
-    if os.path.exists("../../assets/images"):
-        # Use ../../assets/images
-        image_path = "../../assets/images/"
-    else:
-        # Use = ../assets/images
-        image_path = "../assets/images/"
+    image_path = "/assets/images/" #Images are always saved in this static location.
     
     for line in lines:
         if line.strip() != "" and line.startswith(">>"):
