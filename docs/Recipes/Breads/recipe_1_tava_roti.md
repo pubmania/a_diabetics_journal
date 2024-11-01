@@ -13,8 +13,7 @@ This recipe should result in about 6 rotis and each roti will have roughly *2.5 
 !!! site-tip "Tip"
     *Variations to the dry mix by adding spices, oil etc like done to prepare traditional Indian paranthas is possible and does result in good tasting dish although result was slightly crispier than the traditional ones. Still they will do justice to the dish as replacement food, just dont expect exactly the same taste as the real thing. Taste of roti atleast for me is very close to real stuff.*
 
-{{
-"""
+```cooklang
 >> Serving Size: 6 pieces
 >> Cooking Time: 45 minutes
 >> Category: Indian
@@ -27,4 +26,4 @@ Flatten them using a #roller pin or tortilla press{}.
 Cook using #flat pan{} on a #gas hob{} for ~{1%minute} or so. 
 Once cooked, add @ghee{1/2%Teaspoon} and keep aside for a minute.
 Then it's soft and ready to eat with some curry.
-""" | parse_recipe()}}
+```
