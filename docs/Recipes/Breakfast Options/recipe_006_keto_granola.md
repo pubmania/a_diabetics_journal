@@ -24,7 +24,7 @@ tags:
 !!! site-tip "Tip"
     While recipe calls for mixing granola with milk, it can be eaten with full fat greek yogurt too.
 
-{{"""
+```cooklang
 >> Serving Size: 4
 >> Type: Vegetarian
 >> Category: Continental
@@ -38,4 +38,4 @@ Add @coconut oil{2%tsp} and mix well using a #spatula{}.
 Now add @erythritol{26%gms} and mix again.
 Finally add @vanilla extract{2.5%tsp} and mix well.
 Transfer into a #small bowl{} and mix with @milk{1%cup}.
-""" | parse_recipe() }}
+```
