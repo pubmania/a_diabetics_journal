@@ -12,7 +12,7 @@ Tastes great with [Cheese Cracker](../Snacks%20and%20Sides/recipe_001_cheese_cra
     1. The recipe results in about `20 tablespoons` of dip. 
     2. 1 portion is considered as about `2 tablespoons` hence the serving size of `10 portions`.
 
-{{"""
+```cooklang
 >> Serving Size: 10 portions
 >> Cooking Time: 15 minutes (Prep Time - 5 minutes)
 >> Category: Italian
@@ -28,4 +28,4 @@ After grinding for ~{15-20%seconds}, add @Extra Virgin Olive Oil{30%ml}.
 Grind again till a `paste` like consistency is reached.
 Now pour the `paste` into a #clean glass jar{}. 
 Cover the paste with @extra virgin olive oil{15%ml} and seal the jar tightly.
-""" | parse_recipe()}}
+```
