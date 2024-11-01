@@ -23,8 +23,12 @@ jobs:
       - name: Set up environment
         env:
           NCCDB_API_KEY: ${{ secrets.NCCDB_API_KEY }}
+          NUTRITIONIX_APP_ID: ${{ secrets.NUTRITIONIX_APP_ID }}
+          NUTRITIONIX_APP_KEY: ${{ secrets.NUTRITIONIX_APP_KEY }}
         run: |
           echo "NCCDB_API_KEY=$NCCDB_API_KEY" >> $GITHUB_ENV
+          echo "NUTRITIONIX_APP_ID=$NUTRITIONIX_APP_ID" >> $GITHUB_ENV
+          echo "NUTRITIONIX_APP_KEY=$NUTRITIONIX_APP_KEY" >> $GITHUB_ENV
       - run: pip install -r requirements.txt
       - run: mkdocs gh-deploy --force
         env:
