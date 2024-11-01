@@ -10,7 +10,7 @@ tags:
 
 Tastes great with [Tava Roti](../Breads/recipe_1_tava_roti.md), [Tandoori Roti](../Breads/recipe_3_tandoori_roti.md) and [Naan Bread](../Breads/recipe_4_naan_bread.md) and also goes well with [No Egg Wheat Gluten Bread](../Breads/recipe_2_wheat_gluten_bread.md).
 
-{{"""
+```cooklang
 >> Serving Size: 3 portions
 >> Cooking Time: 45 minutes
 >> Category: Indian Curry
@@ -32,6 +32,5 @@ Once the mixture is turning brownish, add the mashed aubergine and mix well.
 Start cooking over high flame while stirring till the mashed aubergine starts turning a bit brownish
 Adjust @seasoning{} and Garnish with @Fresh coriander{30%gms(1 small bunch, chopped)}.
 Serve hot.
-"""
-| parse_recipe()}}
+```
 
