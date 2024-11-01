@@ -6,8 +6,7 @@ tags:
     - Indian
 ---
 
-{{
-"""
+```cooklang
 >> Serving Size: 2 portions
 >> Cooking Time: 30 minutes
 >> Category: Dessert
@@ -23,5 +22,4 @@ Roast @Cashew nuts{8%gms(5 pieces)}, @Almond nuts{6%gms(5 pieces)} and @Pistachi
 Make a coarse powder of the roasted nuts.
 Turn off the #hob{} and garnish with coarsely powdered mixture of roasted nuts.
 Serve hot.
-"""
-| parse_recipe()}}
+```
