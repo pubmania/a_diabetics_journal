@@ -10,8 +10,8 @@ from parser.recipe_metadata_creator import fn_metadata_string
 #                                                                                                  #
 ####################################################################################################
 
-def fn_parse_recipe(recipe_string):
-    recipe_title, cooking_data_string = fn_metadata_string(recipe_string)
+def fn_parse_recipe(recipe_string,image_path):
+    recipe_title, cooking_data_string = fn_metadata_string(recipe_string,image_path)
     #ingredient_string = fn_ingredient_string(recipe_string).replace('\n','\n\t\t')
     #ingredient_string, nutrition_info = fn_ingredient_string(recipe_string)
     ingredient_string, nutrition_info, nutrient_labels = fn_ingredient_string(recipe_string)
