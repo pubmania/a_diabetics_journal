@@ -8,7 +8,7 @@ tags:
     - Breakfast
 ---
 
-{{"""
+```cooklang
 >> Serving Size: 4
 >> Type: Vegetarian
 >> Category: Indian
@@ -31,4 +31,4 @@ Remove the lid and switch off the #hob{}.
 Now add @fresh coriander{2%tbsp (chopped)} and @fresh mint leaves{2%tbsp (chopped)}.
 Finally add @green chilli{10%gms(1 finely chopped)} and mix it using #spatula{}.
 Serve hot.
-""" | parse_recipe() }}
+```
