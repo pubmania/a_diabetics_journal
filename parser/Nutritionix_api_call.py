@@ -87,8 +87,6 @@ def get_nutritionix_data(ingredients_str):
     api_url = "https://trackapi.nutritionix.com/v2/natural/nutrients"
     app_id = os.environ.get("NUTRITIONIX_APP_ID")
     app_key = os.environ.get("NUTRITIONIX_APP_KEY")
-    #app_id = "df4d6682"  # Replace with your actual app ID
-    #app_key = "7868330a6a998a8c019f83382c8aac36"  # Replace with your actual app key
 
     if not ingredients_str:
         print("Empty ingredient string")
