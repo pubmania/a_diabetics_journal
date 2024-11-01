@@ -60,7 +60,7 @@ extra_css:
   #- assets/stylesheets/footer.css
   - assets/stylesheets/nutrition_label.css
  
-extra_javascript:
+#extra_javascript:
   #- https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
   #- assets/javascripts/tables.js
   #- assets/javascripts/mermaid.min.js
