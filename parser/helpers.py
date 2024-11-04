@@ -69,12 +69,15 @@ def parse_ingredient(item: str) -> dict[str, str]:
     }
 
 def parse_quantity(item: str) -> list[str, str]:
-        """Parse the quantity portion of an ingredient
-        e.g. 2%kg
-        """
-        if "%" not in item:
+    """Parse the quantity portion of an ingredient
+    e.g. 2%kg
+    """
+    if "%" not in item:
+        if " " not in item: #in case the ingredient is just specified as a number with no unit
+            return [item, "number"]
+        else:
             return [item, ""]
-        return item.split("%", maxsplit=1)
+    return item.split("%", maxsplit=1)
     
 def find_cookware(step: str) -> list[str]:
     """Find ingredients in a recipe step"""
