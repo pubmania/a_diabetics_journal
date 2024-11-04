@@ -20,7 +20,7 @@ Add @Ghee{3%tbsp} in a large #frying pan{}.
 Once it’s hot, add @Black Cardamom{2}, @Green cardamom{1}, @Cumin seeds{1/2%tsp} and mix well.
 Separate the soaked soya chunks from the milk and add them to the #frying pan{}.
 Now add @Pink Himalayan Salt{to taste} and sauté well. 
-Add ginger@Ginger{1%tbsp chopped}, @Coriander powder{1/2%tbsp}.
+Add @Ginger{1%tbsp(chopped)}, @Coriander powder{1/2%tbsp}.
 Sauté for ~{1-2%minutes}. 
 Add @milk{2%cup} to the milk in which soya chunks were soaked.
 Mix @Cream{2%tbsp} to the milk. 
