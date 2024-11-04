@@ -645,3 +645,8 @@ html .md-typeset :is(.admonition-title,summary):last-child {
         display: none;
     }
 }
+
+/* numbered list instead of alphabet list in cookware and on recipe listings */
+.md-typeset ol ol,.md-typeset ul ol {
+    list-style-type: auto;
+}
