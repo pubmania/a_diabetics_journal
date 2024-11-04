@@ -585,7 +585,7 @@ def define_env(env):
             sorted_subdirs = sorted(subdirs, key=lambda x: len(os.listdir(os.path.join(directory, x))), reverse=True)
             for dir_name in sorted_subdirs:
                 subdir = os.path.join(directory, dir_name)
-                output += f'\n{indent}1. [**{dir_name}**](./{dir_name})\n\n    ---\n\n'  # Add the directory to the TOC with indentation
+                output += f'\n{indent}1. [**{dir_name}**](./{dir_name}/index.md)\n\n    ---\n\n'  # Add the directory to the TOC with indentation
                 output += generate_toc_files(subdir, indent + '    ', include_dir_name_flag=True)
 
             return output
