@@ -29,8 +29,7 @@ Add the @oregano{to taste}, @salt{to taste}, @freshly ground black pepper{to tas
 Mix the contents of #bowl{} with a #spatula{}
 Take @feta cheese{100%gms} and mash it using a #fork{} and add it to the above mix. 
 Add @vital wheat gluten{1/4%cup}, @almond flour{1/4%cup} and @baking powder{1%tsp}.
-Using #spatula{} keep mixing the contents of the bowl until the ingredients are combined and the mixture is firm enough to make the balls. Add a little more @vital wheat 
-gluten{if needed}. 
+Using #spatula{} keep mixing the contents of the bowl until the ingredients are combined and the mixture is firm enough to make the balls. Add a little more @vital wheat gluten{if needed}. 
 Put in the fridge for ~{30%minutes}.
 Now apply @extra virgin olive oil{1/2%tsp} on palms and make 16 balls from the dough.
 Flatten the balls into cutlet shape.
