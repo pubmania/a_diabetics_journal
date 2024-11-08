@@ -125,5 +125,5 @@ def get_nutritionix_data(ingredients_str):
             print(f"An error occurred during DataFrame creation: {e}")
             return df
     except requests.exceptions.RequestException as e:
-        print(f"Error during API request: {e}")
+        print(f"Error during API request: {e} while trying to get the ingredient {ingredients_str}")
         return None
