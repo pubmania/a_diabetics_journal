@@ -650,3 +650,73 @@ html .md-typeset :is(.admonition-title,summary):last-child {
 .md-typeset ol ol,.md-typeset ul ol {
     list-style-type: auto;
 }
+
+/*For recipe template*/
+.parent {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 8px;
+}
+
+.div1 {
+    grid-column: span 5 / span 5;
+    grid-row: span 1 / span 1;
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center; /* Center items vertically */      
+}
+
+.div2 {
+    grid-row: span 1 / span 1;
+    grid-column-start: 6;
+    display: flex; 
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center; /* Center items vertically */
+}
+
+.div3 {
+    grid-column: span 4 / span 4;
+    grid-row: span 1 / span 1;
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center; /* Center items vertically */      
+}
+
+.div4 {
+    grid-row: span 1 / span 1;
+    grid-column-start: 5;
+    grid-column: span 2 / span 2;   
+}
+
+.circle {
+    width: 125px;
+    height: 125px;
+    border: solid;
+    border-width: thin;
+    border-radius: 50%;
+    border-color: maroon;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    margin: 15px;
+}
+
+.rounded-box {
+    width: 125px;
+    height: 125px;
+    border: solid;
+    border-width: thin;
+    border-radius: 25%;
+    border-color: maroon;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    margin: 15px;
+}
