@@ -3,22 +3,23 @@ from parser.plantuml_steps_creator import puml
 
 ####################################################################################################
 #                                                                                                  #
-#                              Function to get formatted steps                                     #
+#                  Function to get formatted steps and plantuml steps in list                      #
 #                                                                                                  #
 ####################################################################################################
 
-def fn_steps_string(input_string):
+def fn_steps_list(input_string):
     lines = input_string.splitlines()
-    steps_string_new = ""
-    p_step_string = ""
+    steps_list = []
+    p_step_list = []
     step_count = 1
     p_step = ""
-    #Remove metadata of cooklang that starts with >> and store it in variable inp_step
+    parsed_cookwares = set()
     for line in lines:
         if line.strip() != "" and not line.startswith(">>"):
             step = line.strip()
             for cookware in find_cookware(step):
                 parsed_cookware = parse_cookware(cookware)
+                parsed_cookwares.add(parsed_cookware.title())
                 step = step.replace(cookware,f"{parsed_cookware}")
             for timer in find_timers(step):
                 parsed_timer = parse_timer(timer)['quantity'] + ' ' + parse_timer(timer)['units']
@@ -29,25 +30,26 @@ def fn_steps_string(input_string):
                 ingredient_quantity = parsed_ingredient['quantity']
                 ingredient_unit = parsed_ingredient['units']
                 if ingredient_unit !='':
-                    step = step.replace(ingredient,f'==*{ingredient_quantity} {ingredient_unit}* **{ingredient_name}**==')
+                    if ingredient_unit !='Number':
+                        step = step.replace(ingredient,f'<mark><em>{ingredient_quantity} {ingredient_unit}</em> <strong> {ingredient_name}</strong></mark>')
+                    else:
+                        step = step.replace(ingredient,f'<mark><em>{ingredient_quantity}</em> <strong> {ingredient_name}</strong></mark>')
                 else:
-                    step = step.replace(ingredient,f'==**{ingredient_name}**== ({ingredient_quantity})')
+                    step = step.replace(ingredient,f'<mark><strong>{ingredient_name}</strong></mark> ({ingredient_quantity})')
             p_step = puml(step.replace(':material-timer-sand-full:','')\
-                          .replace('**==','</b>')\
-                          .replace('==**','<b>')\
-                          .replace('*==','</i>')
-                          .replace('==*','<i>')\
-                          .replace('* **','</i> <b>')
+                          .replace('<mark>','')\
+                          .replace('</mark>','')\
+                          .replace('<strong>','<b>')\
+                          .replace('</strong>','</b>')\
+                          .replace('<em>','<i>')\
+                          .replace('</em>','</i>')
                           )
             if step != '':
                 if step.startswith('**') and step.endswith('**'):
-                    step = f"\n\n\t### {step.replace('**','')}\n\n"
-             #       p_step = f"{p_step}"
+                    step = f"<strong>{step.replace('**','')}</strong>"
                 else:
-                    step = f"\n\t* [ ] **{step_count}**: {step.strip()}"
+                    step = f"<strong>{step_count}</strong>: {step.strip()}"
                     step_count+=1
-            steps_string_new += step
-            p_step_string += p_step
-    p_step_string = f"{p_step_string}\n"
-    steps_string_new = f"{steps_string_new}\n"
-    return steps_string_new,p_step_string
+            steps_list.append(step)
+            p_step_list.append(p_step)
+    return steps_list,p_step_list,parsed_cookwares

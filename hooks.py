@@ -1,12 +1,14 @@
 import os
-import re
-import markdown
-from parser.parse_recipe import fn_extract_cooklang_blocks, fn_parse_recipe
+from jinja2 import Environment, FileSystemLoader
+from parser.ingredients_string_creator import fn_recipe_ingredients
+from parser.nutrition_labels_creator import fn_total_df_weight
+from parser.parse_recipe import fn_extract_cooklang_blocks
+from parser.steps_creator import fn_steps_list
 
 def on_page_markdown(markdown, page, **kwargs):
     current_page_path = page.file.src_path
     current_dir = os.path.dirname(current_page_path)
-     # Define the base image path
+    # Define the base image path
     base_image_path = 'assets/images/'
     # Check if the current directory is within the Recipes directory
     recipes_dir = os.path.abspath('Recipes')  # Get the absolute path of the Recipes directory
@@ -20,13 +22,39 @@ def on_page_markdown(markdown, page, **kwargs):
         # Default to the base image path if not in Recipes
         relative_path_for_image = base_image_path
 
-    print(relative_path_for_image)
+    #print(relative_path_for_image)
 
     cooklang_content = fn_extract_cooklang_blocks(markdown)
     if cooklang_content:
+        # Create Jinja2 environment, specifying overrides folder as search path
+        env = Environment(loader=FileSystemLoader(['parser', '.'])) 
+        template = env.get_template('recipe_template.html')
         for content in cooklang_content:
-            processed_output = fn_parse_recipe(content.strip(),relative_path_for_image)
-            #replace codeblock in markdown with processd_output in the content
-            markdown = markdown.replace(f"```cooklang\n{content}\n```",processed_output)
-        #print(f"------------------\n{md_content}\n-------------------")
+            # Extract data from your functions
+            meta_data = {} 
+            lines = content.splitlines()
+            for line in lines:
+                if line.strip() != "" and line.startswith(">>"):
+                    key, value = line.lstrip(">> ").strip().split(": ")
+                    meta_data[key.strip()] = value.strip()
+
+            steps_list,p_steps_list,cookware = fn_steps_list(content.strip())
+            total_weight_dict, missing_ingredients_string, serving_size = fn_total_df_weight(content.strip())
+            recipe_ingredients, nutrition_info_addendum = fn_recipe_ingredients(content.strip())
+            
+            rendered_html = template.render(
+				image_path=relative_path_for_image,
+                recipe_ingredients=recipe_ingredients,
+                metadata=meta_data,
+                cookware=cookware,
+                steps=steps_list,
+                process=p_steps_list,
+                total_weight_df = total_weight_dict,
+                serving_size=serving_size,
+				missing_ingredients_string=missing_ingredients_string,
+                cooklang_block=content,
+                nutrition_info_addendum=nutrition_info_addendum,
+                page=page
+            )
+            markdown = markdown.replace(f"```cooklang\n{content}\n```", rendered_html)
     return markdown

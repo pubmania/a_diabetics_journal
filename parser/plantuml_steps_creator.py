@@ -2,7 +2,7 @@ import re
 
 ####################################################################################################
 #                                                                                                  #
-#                  Newlines in the input_string after specified number of characters               #
+#             Newlines in the input_string after specified number of characters-(KEEP)             #
 #                                                                                                  #
 ####################################################################################################
 
@@ -22,7 +22,7 @@ def insert_newlines(input_string: str, chars_per_line: int):
 
 ####################################################################################################
 #                                                                                                  #
-#                         Function to return Plantuml compliant String                             #
+#                         Function to return Plantuml compliant String-(KEEP)                      #
 #                                                                                                  #
 ####################################################################################################
 

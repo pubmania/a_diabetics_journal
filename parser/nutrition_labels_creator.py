@@ -1,5 +1,5 @@
 import pandas as pd
-from parser.helpers import replace_amount, replace_unit
+from parser.helpers import find_ingredients, parse_ingredient, replace_amount, replace_unit
 from parser.Nutritionix_api_call import get_nutritionix_data
 
 ####################################################################################################
@@ -31,173 +31,56 @@ def calculate_nutrient_summary_per_weight(
 
 ####################################################################################################
 #                                                                                                  #
-#                          Function to create nutrient labels string                               #
-#                                                                                                  #
+#                          Function to create total nutrient weight dict                           #
+#                                          (KEEP)                                                  #
 ####################################################################################################
-def get_label_string(total_weight_df,missing_ingredients_string,serving_size):
-    label_string = ""
-    for i in range(len(total_weight_df)):
-        if i == 1:
-            amount_per = 'Amount Per 100gms'
-        elif i == 2:
-            amount_per = f'Amount Per Serving (Total Servings: {serving_size})'
-        elif i == 3:
-            amount_per = f'Amount in 2 Servings (Total Servings: {serving_size})'
-        else:
-            amount_per = f"Amount In Whole Recipe ({total_weight_df['recipe_weight_in_gms'][i]}gms)"
-        #print(amount_per)
-    
-        label_string += f"""
-<div class="grid card">
-<div id="nutrition_label"><div itemscope="" class="nf" role="region" aria-label="nutrition label" style=" width: 300px;">
-<div class="nf-title" tabindex="0">Nutrition Facts</div>
-<div class="nf-line">
-<div class="nf-serving">
-<div class="nf-amount-per-serving" align="right" tabindex="0"><b>{amount_per}</b></div>
-</div><!-- end of class="nf-serving" -->
-
-</div><!-- end of class="nf-line" -->
-
-<div class="nf-bar2"></div>
-<div class="nf-netcarbs" tabindex="0">
-<span class="">Net Carbs</span>
-<span class="nf-pr" itemprop="net_carbs">{total_weight_df['net_carb'][i]} g</span>
-</div>
-<div class="nf-bar1"></div>
-<div class="nf-calories" tabindex="0">
-<span class="">Calories</span>
-<span class="nf-pr" itemprop="calories">{total_weight_df['Calories'][i]} Kcal</span>
-</div>
-<div class="nf-bar1"></div>
-<div class="nf-line nf-text-right">
-<span class="nf-highlight nf-percent-dv">% Daily Value*</span>
-</div>
-<div class="nf-line" tabindex="0">
-<span class="nf-highlight">Total Fat</span>
-<span class="" itemprop="fatContent">{total_weight_df['Total_Fat'][i]}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
-<span class="nf-highlight nf-pr">{total_weight_df['Total_Fat_drv_%'][i]}% <span class="sr-only">Daily Value</span></span>
-</div>
-<div class="nf-line nf-indent" tabindex="0">
-<span class="">Saturated Fat</span>
-<span class="" itemprop="saturatedFatContent">{total_weight_df['Saturated_Fat'][i]}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
-<span class="nf-highlight nf-pr">{total_weight_df['Saturated_Fat_drv_%'][i]}% <span class="sr-only">Daily Value</span></span>
-</div>
-<div class="nf-line nf-indent" tabindex="0">
-<span class=""><em>Trans</em> Fat</span>
-<span class="" itemprop="transFatContent">{total_weight_df['Trans_Fat'][i]}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
-</div>
-<div class="nf-line nf-indent" tabindex="0">
-<span class="">Polyunsaturated Fat</span>
-<span class="" itemprop="">{total_weight_df['Polyunsaturated_Fat'][i]}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
-</div>
-<div class="nf-line nf-indent" tabindex="0">
-<span class="">Monounsaturated Fat</span>
-<span class="" itemprop="">{total_weight_df['Monounsaturated_Fat'][i]}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
-</div>
-<div class="nf-line" tabindex="0">
-<span class="nf-highlight">Cholesterol</span>
-<span class="" itemprop="cholesterolContent">{total_weight_df['Cholesterol'][i]}<span aria-hidden="true">mg</span><span class="sr-only"> milligrams</span></span>
-<span class="nf-highlight nf-pr">{total_weight_df['Cholesterol_drv_%'][i]}% <span class="sr-only">Daily Value</span></span>
-</div>
-<div class="nf-line" tabindex="0">
-<span class="nf-highlight">Sodium</span>
-<span class="" itemprop="sodiumContent">{total_weight_df['Sodium'][i]}<span aria-hidden="true">mg</span><span class="sr-only"> milligrams</span></span>
-<span class="nf-highlight nf-pr">{total_weight_df['Sodium_drv_%'][i]}% <span class="sr-only">Daily Value</span></span>
-</div>
-<div class="nf-line" tabindex="0">
-<span class="nf-highlight">Total Carbohydrates</span>
-<span class="" itemprop="carbohydrateContent">{total_weight_df['Carbohydrate'][i]}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
-<span class="nf-highlight nf-pr">{total_weight_df['Carbohydrate_drv_%'][i]}% <span class="sr-only">Daily Value</span></span>
-</div>
-<div class="nf-line nf-indent" tabindex="0">
-<span class="">Dietary Fiber</span>
-<span class="" itemprop="fiberContent">{total_weight_df['Dietary_fiber'][i]}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
-<span class="nf-highlight nf-pr">{total_weight_df['Dietary_fiber_drv_%'][i]}% <span class="sr-only">Daily Value</span></span>
-</div>
-<div class="nf-line nf-indent" tabindex="0">
-<span class="">Sugars</span>
-<span class="" itemprop="sugarContent">{total_weight_df['Sugars'][i]}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
-</div>
-<div class="nf-line" tabindex="0">
-<span class="nf-highlight">Protein</span>
-<span class="" itemprop="proteinContent">{total_weight_df['Protein'][i]}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
-</div>
-<div class="nf-bar2"></div>
-<div class="nf-vitamins">
-<div class="nf-vitamins">
-<div class="" tabindex="0">
-<span class="">Vitamin D</span>
-<span class="" itemprop="vitaminDContent">{total_weight_df['Vitamin_D_(D2_+_D3)'][i]}<span aria-hidden="true">mcg</span><span class="sr-only"> micrograms</span></span>
-<span class="nf-highlight nf-pr">{total_weight_df['Vitamin_D_(D2_+_D3)_drv_%'][i]}% <span class="sr-only">Daily Value</span></span>
-</div>
-<div class="nf-line" tabindex="0">
-<span class="">Calcium</span>
-<span class="" itemprop="calciumContent">{total_weight_df['Calcium'][i]}<span aria-hidden="true">mg</span><span class="sr-only"> milligrams</span></span>
-<span class="nf-highlight nf-pr">{total_weight_df['Calcium_drv_%'][i]}% <span class="sr-only">Daily Value</span></span>
-</div>
-<div class="nf-line" tabindex="0">
-<span class="">Iron</span>
-<span class="" itemprop="ironContent">{total_weight_df['Iron'][i]}<span aria-hidden="true">mg</span><span class="sr-only"> milligrams</span></span>
-<span class="nf-highlight nf-pr">{total_weight_df['Iron_drv_%'][i]}% <span class="sr-only">Daily Value</span></span>
-</div>
-<div class="nf-line" tabindex="0">
-<span class="">Potassium</span>
-<span class="" itemprop="potassiumContent">{total_weight_df['Potassium_K'][i]}<span aria-hidden="true">mg</span><span class="sr-only"> milligrams</span></span>
-<span class="nf-highlight nf-pr">{total_weight_df['Potassium_K_drv_%'][i]}% <span class="sr-only">Daily Value</span></span>
-</div>
-<div class="nf-line" tabindex="0">
-<span class="">Zinc</span>
-<span class="" itemprop="zincContent">{total_weight_df['Zinc'][i]}<span aria-hidden="true">mg</span><span class="sr-only"> milligrams</span></span>
-<span class="nf-highlight nf-pr">{total_weight_df['Zinc_drv_%'][i]}% <span class="sr-only">Daily Value</span></span>
-</div>
-</div>
-</div>
-<div class="nf-bar2"></div>
-<div class="" tabindex="0">
-<span class="nf-highlight">Caffeine</span>
-<span class="" itemprop="caffeineContent">{total_weight_df['Caffeine'][i]}mg</span>
-</div>
-<div class="nf-bar1"></div>
-<div class="nf-vitamins">
-<div class="nf-footnote">
-<span tabindex="0">The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2000 calories a day is used for general nutrition advice.</span>
-</div>
-<div class="naTooltip">Data not available</div>
-</div><!-- closing class="nf" -->
-</div></div>
-</div>
-"""
-    
-    if missing_ingredients_string != "":
-        final_label_string = f'<div class = "grid card">{label_string}</div>\n\n!!! warning "Missing Ingredients"\n\t{missing_ingredients_string}'
-    else:
-        final_label_string = f'<div class = "grid card">{label_string}</div>'
-
-    return final_label_string
-
-####################################################################################################
-#                                                                                                  #
-#                          Function to get formatted Nutrition Label                               #
-#                                                                                                  #
-####################################################################################################
-
-def fn_nutrient_label_string(df_recipe_ingredients, serving_size):
+def fn_total_df_weight(input_string) -> tuple[dict, str, int]:
+#def fn_total_df_weight(input_string):
+    lines = input_string.splitlines()
+    all_recipe_ingredients = []
+    step_count = 1
+    serving_size = 1
+    for line in lines:
+        if line.strip() != "" and not line.startswith(">>"):
+            step = line.strip()
+            for ingredient in find_ingredients(step):
+                parsed_ingredient = parse_ingredient(ingredient)
+                parsed_ingredient['step'] = step_count
+                all_recipe_ingredients.append(parsed_ingredient)
+            if step != '':
+                if step.startswith('**') and step.endswith('**'):
+                    pass
+                else:
+                    step_count+=1
+        elif line.startswith(">> Serving"):
+            serving_size_str =  line.lstrip(">> ").strip().split(": ")[1].split(" ")[0]
+            # Convert to integer
+            try:
+                serving_size = int(serving_size_str)  # Convert the string to an integer
+            except ValueError:
+                serving_size = 1  # Set to 1 if conversion fails
+#            print(f"Serving Size: {serving_size}")
     # Read ingredient and unit csv files
     df_ingredient_db = pd.read_csv('ingredient_nutrient_db.csv')
     df_units_db = pd.read_csv('unit_db.csv')
     # Create a lookup dictionary from df_units_db
     unit_lookup_dict = df_units_db.set_index('Unit')['eq_gms'].to_dict()    
+    df_recipe_ingredients = pd.DataFrame(all_recipe_ingredients)
     ##### Code to create nutrition label
     df_recipe_ingredients['cleaned_quantity'] = pd.to_numeric(df_recipe_ingredients['quantity'].apply(replace_amount), errors='coerce')
     df_recipe_ingredients['cleaned_unit'] = df_recipe_ingredients['units'].apply(replace_unit)
     df_recipe_ingredients['quantity_in_gms'] = df_recipe_ingredients['cleaned_quantity'] * df_recipe_ingredients['cleaned_unit'].map(unit_lookup_dict).fillna(0)
     df_recipe_ingredients = df_recipe_ingredients.map(lambda x: x.upper() if isinstance(x, str) else x)
+    #print("*******************df_recipe_ingredients***********")
+    #print(df_recipe_ingredients)
 
     # Perform the left merge with ingredient database
     merged_df = df_recipe_ingredients.merge(df_ingredient_db, left_on='name', right_on='input_str', how='left')
 
     # Filter to get found entries
     found_entries = merged_df[merged_df['input_str'].notna()]
+    #print("*******************found_entries***********")
+    #print(found_entries)
     #Set nutrient columns
     nutrient_columns = ['net_carb', 'Calories', 'Total_Fat', 'Saturated_Fat', 'Carbohydrate', 'Sugars', 'Protein',
                     'Dietary_fiber', 'Monounsaturated_Fat', 'Polyunsaturated_Fat',
@@ -266,11 +149,13 @@ def fn_nutrient_label_string(df_recipe_ingredients, serving_size):
     total_weight_df = total_weight_df[new_order].round(2)
     # Deal with Not found entries
     not_found_entries = merged_df[merged_df['input_str'].isna()]
+    #print("*******************not_found_entries***********")
+    #print(not_found_entries)
     if isinstance(not_found_entries,pd.DataFrame):
         # Create the string
         #not_found_string = '\n'.join(not_found_entries['name'] + ' - ' + not_found_entries['quantity_in_gms'].astype(str) + ' gms')
         not_found_string_search = '\n'.join(not_found_entries['name'] + ' - 100 gms')
-        #print(not_found_string)
+        #print(not_found_string_search)
         not_found_df = get_nutritionix_data(not_found_string_search)
         if isinstance(not_found_df,pd.DataFrame):
             table_string = not_found_df.to_markdown(index=False).replace('\n','\n\t')
@@ -279,5 +164,5 @@ def fn_nutrient_label_string(df_recipe_ingredients, serving_size):
             #print(missing_ingredients_string)
         else:
             missing_ingredients_string = ""
-    nutrient_labels = f"## Nutrition Label\n\n{get_label_string(total_weight_df,missing_ingredients_string,serving_size)}"
-    return nutrient_labels
+    #nutrient_labels = f"## Nutrition Label\n\n{get_label_string(total_weight_df,missing_ingredients_string,serving_size)}"
+    return total_weight_df.to_dict(), missing_ingredients_string, serving_size
