@@ -720,3 +720,17 @@ html .md-typeset :is(.admonition-title,summary):last-child {
     font-size: 15px;
     margin: 15px;
 }
+
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+    .parent {
+        grid-template-columns: 1fr; /* Change to a single column layout */
+        grid-template-rows: auto; /* Allow rows to adjust based on content */
+    }
+
+    .div1, .div2, .div3, .div4 { /* Group all divs */
+        grid-column: span 1; /* Span 1 column */
+        grid-row: auto; /* Allow row to adjust based on content */
+    }
+}
