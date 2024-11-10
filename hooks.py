@@ -39,11 +39,11 @@ def on_page_markdown(markdown, page, **kwargs):
                     meta_data[key.strip()] = value.strip()
 
             steps_list,p_steps_list,cookware = fn_steps_list(content.strip())
-            total_weight_dict, missing_ingredients_string, serving_size = fn_total_df_weight(content.strip())
+            total_weight_dict, missing_ingredients_string, serving_size,net_carbs_table_found_ingredients = fn_total_df_weight(content.strip())
             recipe_ingredients, nutrition_info_addendum = fn_recipe_ingredients(content.strip())
             
             rendered_html = template.render(
-				image_path=relative_path_for_image,
+		image_path=relative_path_for_image,
                 recipe_ingredients=recipe_ingredients,
                 metadata=meta_data,
                 cookware=cookware,
@@ -51,9 +51,10 @@ def on_page_markdown(markdown, page, **kwargs):
                 process=p_steps_list,
                 total_weight_df = total_weight_dict,
                 serving_size=serving_size,
-				missing_ingredients_string=missing_ingredients_string,
+		missing_ingredients_string=missing_ingredients_string,
                 cooklang_block=content,
                 nutrition_info_addendum=nutrition_info_addendum,
+		net_carbs_table_found_ingredients=net_carbs_table_found_ingredients,
                 page=page
             )
             markdown = markdown.replace(f"```cooklang\n{content}\n```", rendered_html)
