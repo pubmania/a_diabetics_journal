@@ -14,7 +14,8 @@ Tastes great with [Tomato Mint Pepper Spinach Dip](../Dips/recipe_007_mint_spina
 
 ```cooklang
 >> Serving Size: 2 portions
->> Cooking Time: 35 minutes (Prep Time - 10 minutes)
+>> Cooking Time: 35 minutes
+>> Prep Time: 10 minutes
 >> Category: Continental
 >> Type: Vegetarian
 
