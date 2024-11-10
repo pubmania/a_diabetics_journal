@@ -120,7 +120,7 @@ color: yellow;
     text-align: justify;
 }
 
-.md-typeset mark {
+.md-typeset cookmark {
 	background: #d9ffe3;
 	border-radius: 10px;
 	padding: 2px 5px 2px 5px;
@@ -733,4 +733,44 @@ html .md-typeset :is(.admonition-title,summary):last-child {
         grid-column: span 1; /* Span 1 column */
         grid-row: auto; /* Allow row to adjust based on content */
     }
+}
+
+/* For nutrition info as slides*/
+.custom--wrapper {
+    display: flex;
+    align-items: center; /* Center align arrows vertically */
+    position: relative; /* Position relative for absolute positioning of arrows */
+}
+.custom--container {
+    display: flex;
+    overflow-x: hidden; /* Hide overflow to show only one slide */
+    width: 309px; /* Set a fixed width for the custom- */
+    position: relative; /* Position relative for absolute positioning of slides */
+    align-items: center;
+}
+.custom-slide {
+    min-width: 307px; /* Set a minimum width for each slide */
+    padding: 5px;
+    background: #f3f0ec;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 213, 145, 0.2);
+}
+/* Arrow styles */
+.arrow {
+    cursor: pointer; /* Change cursor to pointer */
+    font-size: 2em; /* Increase font size for visibility */
+    padding: 10px; /* Add padding around arrows */
+    user-select: none; /* Prevent text selection */
+    opacity: 0.7; /* Slightly transparent */
+    color: maroon;
+}
+.left-arrow {
+    margin-right: 10px; /* Space between left arrow and custom- */
+}
+.right-arrow {
+    margin-left: 10px; /* Space between right arrow and custom- */
+}
+/* Optional: Hide scrollbar for a cleaner look */
+.custom--container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
 }
