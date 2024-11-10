@@ -9,7 +9,8 @@ tags:
 
 ```cooklang
 >> Serving Size: 4
->> Cooking Time:  15 minutes (Prep Time - 15 minutes)
+>> Cooking Time:  15 minutes
+>> Prep Time: 15 minutes
 >> Category: Indian
 >> Type: Vegetarian
 
