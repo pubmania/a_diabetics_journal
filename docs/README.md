@@ -1,12 +1,20 @@
 # About
-This repo is created using Material for mkdocs theme and the main addition is the macro defined in `main.py` in root of this repo, specifically the function called `parse_recipe`.
+This repo is created using Material for mkdocs theme and the main addition is the directory called `parser`. It has several functions that are called at the time of build through the python function defined in `hooks.py`.
 
-This function parses a recipe written in [Cooklang](https://cooklang.org/) and generates markdown from it to then display the recipes in a consistent manner.
+The functions together parse a recipe written in [Cooklang](https://cooklang.org/) so long as it is presented between codeblock as shown below:
+
+<pre>```cooklang
+Recipe in cooklang here...
+```</pre>
+
+The string is parsed through the functions for ingredients, cookware, steps, nutritional information etc that are then passed as dictionaroes and strings to the jinja2 template called `recipe_template.html` in the same directory. This template places the information in in a consistent manner to then be displayed with various sections on the website.
 
 # Driver
-One of the main driver in the way I present recipe on screen is my frustration with how recipes in general are presented across the web where one has to keep jumping between `Ingredients` and `Steps`. I think one of the reason it is done that way is because author has to make a choice between presenting all ingredients at one place or just in the steps. Using cooklang with this macro takes that problem away because author (me in this case) just has to write steps and ingredients in one place and then macro written in python does it's bit and extracts ingredients from recipe and presents in one place and not only that if an ingredient is used twice it provides quantities twice so when am cooking I know for my prep using ingredient list I can keep both measures ready and can use those while following the steps.
+One of the main driver in the way I present recipe on screen is my frustration with how recipes in general are presented across the web where one has to keep jumping between `Ingredients` and `Steps`. I think one of the reason it is done that way is because author has to make a choice between presenting all ingredients at one place or just in the steps. 
 
-Now as an added bonus and just because I like using plantuml, I have included in macro the plantuml generator. It is not very fancy and basically just presents steps in boxes and arrows. Although, I have included the logic which allows parsing a basic if then else statement during steps. For example the step `If it's too spicy then add a little bit of @erythritol{as needed}.` is parsed for plantuml to present the if loop by breaking this statement to:
+Using cooklang with this parser takes that problem away because author (me in this case) just has to write steps and ingredients in one place and then hook written in python does it's bit and extracts ingredients from recipe and presents in one place and not only that if an ingredient is used twice it provides quantities twice so when am cooking, I know for my prep using ingredient list I can keep both measures ready and can use those while following the steps.
+
+Now as an added bonus and just because I like using plantuml, I have included a plantuml generator - `/parser/plantuml_steps_creator.py`. It is not very fancy and basically just presents steps in boxes and arrows. Although, I have included the logic which allows parsing a basic if then else statement during steps. For example the step `If it's too spicy then add a little bit of @erythritol{as needed}.` is parsed for plantuml to present the if loop by breaking this statement to:
 
 ```
 if (It's too spicy?) then (yes)
@@ -17,26 +25,20 @@ endif
 
 # Usage:
 
-One can simply fork the repo and remove existing recipe and modify configuration by following standard guidance on Material for mkdocs. Only minor addition would be to copy the `custom css` from path `docs\assets\stylesheets\main.css`. The main topic to understand is the usage of the Macro which is pretty straightforward. Anywhere in you markdown file you could call it like so:
+One can simply fork the repo and remove existing recipe and modify configuration by following standard guidance on Material for mkdocs. Only minor addition would be to copy the `custom css` from path `docs\assets\stylesheets\extra.css`. The main topic to understand is the usage of the hook and associated function in parser which is pretty straightforward. Anywhere in your markdown file it can be invoked like so:
 
-```
-{{"""<your recipe in cooklang notation>""" | parse_recipe()}}
-```
+<pre>```cooklang
+Recipe in cooklang here...
+```</pre>
 
 It can be seen in action on any of the `.md` files in any of the directories located at `docs/Recipes/` on this repo.
 
-# Explanation of code behind the `Macros Filter`
-
-First important thing is that for the macro to work, we must ensure [`mkdocs-macros-plugin`](https://mkdocs-macros-plugin.readthedocs.io/en/latest/) has been installed and activated.
-
-Plugin can be installed by `pip install mkdocs-macros-plugin`. Then it should be enabled under plugins on `mkdocs.yml`. Check the `mkdocs.yml` in this repo for a working example.
-
-Now, with that out of the way, one can start creating filters to use by first creating a `main.py` file in the root directory which is what I did. In that file is located the function `parse_recipe`.
+# Explanation of code behind the `Hook`
 
 > __Note__
-> I have added more functions after this readme was created and it's best to look at the [net_carb_calc_worksheet.ipynb](../net_carb_calc_worksheet.ipynb) to get an understanding of all the functions.
+> The code was recently refactored significantly to change look and feel as well as include more nutrient information and to utilise the Nutrionix API at build time for new ingredients for which information is not on my csv file.
 
-Let's break down various functions within this function and what they do and how they do it.
+Let's break down various functions in the helpers.py first:
 
 Details about each function and how it works are as explained below:
 
@@ -91,14 +93,4 @@ Details about each function and how it works are as explained below:
     - It is also able to do basic parsing for `if then else`, `if then elseif then else` type statements so long as the step starts with the word If and has the word then in it.
     - Look at the function code on [Jupyter File](../Cooklang%20Parser.ipynb) as it is documented to explain the flow.
 
-11. `parse_recipe(input_string)`:
-    - This is the main function that processes the input recipe string, extracts the ingredients, cookware, timers, and steps, and returns a formatted string representing the processed recipe.
-    - It splits the input string into lines and uses the insert_newlines function to limit the number of characters per line.
-    - The function iterates over each line and checks if it contains cookware, ingredients, or timers by calling the corresponding find functions.
-    - It then constructs a formatted string by combining the extracted information and returns the final processed recipe string.
-
-These functions work together to parse the input recipe string, extract relevant information, and format it into a more structured representation. 
-
-## Example
-
-It's easier to look at the example from the Jupyter Notbook so I have included one in the repo named [net_carb_calc_worksheet.ipynb](../net_carb_calc_worksheet.ipynb) rather than to make this a longer `ReadMe` than it already is.
+I will be updating the documentation and will also include a new Jupyter file that allows better understanding of the flow but for now looking at various functions in parser directory will have to do.
