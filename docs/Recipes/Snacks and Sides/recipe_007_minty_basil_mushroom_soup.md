@@ -13,7 +13,8 @@ While this soup tastes great on its on, it also goes very well with [Wheat Glute
 
 ```cooklang
 >> Serving Size: 1
->> Cooking Time: 20 minutes (Prep Time - 5 minutes)
+>> Cooking Time: 20 minutes
+>> Prep Time: 5 minutes
 >> Category: Italian
 >> Type: Vegetarian
 >> Image: recipe_007_minty_basil_mushroom_soup.jpeg
