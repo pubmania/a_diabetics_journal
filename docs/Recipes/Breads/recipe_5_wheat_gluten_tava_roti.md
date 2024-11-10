@@ -13,7 +13,8 @@ While the traditional wheat flour roti is not an option with low carb / keto die
 
 ```cooklang
 >> Serving Size: 6 pieces
->> Cooking Time: 10 minutes (Prep Time - 2.5 hours)
+>> Cooking Time: 10 minutes
+>> Prep Time: 2.5 hours
 >> Category: Indian
 >> Type: Vegetarian
 Take  @Soya Flour{1/2%cup} and @vital wheat gluten{2%tbsp}. 
