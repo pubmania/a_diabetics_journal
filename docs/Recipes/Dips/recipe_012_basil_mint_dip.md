@@ -14,7 +14,8 @@ Tastes great with [Tomato Keftedes](../Snacks%20and%20Sides/recipe_011_tomato_ke
 
 ```cooklang
 >> Serving Size: 16 portions
->> Cooking Time: 5 minutes (Prep Time - 5 minutes)
+>> Cooking Time: 5 minutes
+>> Prep Time: 5 minutes
 >> Category: Dips
 >> Type: Vegetarian
 >> Image: recipe_012_basil_mint_dip.jpeg
