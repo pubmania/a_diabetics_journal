@@ -7,7 +7,8 @@ title: Fried Courgette
 
 ```cooklang
 >> Serving Size: 2
->> Cooking Time: 15 minutes (Prep Time - 5 Minutes)
+>> Cooking Time: 15 minutes
+>> Prep Time: 5 Minutes
 >> Category: Savoury
 >> Type: Vegetarian
 
