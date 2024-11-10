@@ -28,7 +28,8 @@ tags:
 >> Serving Size: 4
 >> Type: Vegetarian
 >> Category: Continental
->> Cooking Time: 10 minutes (Prep Time - 5 minutes)
+>> Cooking Time: 10 minutes
+>> Prep Time: 5 minutes
 >> Image: recipe_006_keto_granola.jpeg
 >> Image-Caption: Keto Granola.
 
