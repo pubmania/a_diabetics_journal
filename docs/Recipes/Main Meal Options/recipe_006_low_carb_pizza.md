@@ -19,7 +19,8 @@ The Garlic Bread tastes great with [Minty Basil Mushroom Soup](../Snacks%20and%2
 
 ```cooklang
 >> Serving Size: 6
->> Cooking Time: 30 minutes (Prep Time - 90 minutes)
+>> Cooking Time: 30 minutes
+>> Prep Time: 90 minutes
 >> Category: Italian
 >> Type: Vegetarian
 >> Image: recipe_9_low_carb_pizza.jpg
