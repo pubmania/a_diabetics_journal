@@ -14,7 +14,8 @@ Tastes great with [Tava Roti](../Breads/recipe_1_tava_roti.md), [Tandoori Roti](
 
 ```cooklang
 >> Serving Size: 3 portions
->> Cooking Time: 20 minutes (Prep Time - 10 minutes)
+>> Cooking Time: 20 minutes
+>> Prep Time: 10 minutes
 >> Category: Indian Curry
 >> Type: Vegetarian
 If using fresh @cauliflower{500%gms}, cut into small florets using #knife{}
