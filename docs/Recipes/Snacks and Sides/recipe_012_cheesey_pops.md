@@ -13,7 +13,8 @@ The one downside is, the huge prep time. Also it did not taste as good as when h
 
 ```cooklang
 >> Serving Size: 4
->> Cooking Time: 20 minutes (Prep Time - 12 Hours)
+>> Cooking Time: 20 minutes
+>> Prep Time: 12 Hours
 >> Category: Savoury
 >> Type: Vegetarian
 >> Image: recipe_012_cheesey_pops_combined.jpeg
