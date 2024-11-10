@@ -164,5 +164,15 @@ def fn_total_df_weight(input_string) -> tuple[dict, str, int]:
             #print(missing_ingredients_string)
         else:
             missing_ingredients_string = ""
+    # Renaming columns
+    found_entries.rename(columns={
+        'name': 'Ingredient',
+        'quantity': 'Quantity',
+        'quantity_in_gms': 'Qty in gms',
+        'source': 'Source',
+        'cleaned_unit': 'Unit',
+        'net_carb': 'Net Carbs (gms)'
+    }, inplace=True)
+    net_carbs_table_found_ingredients = found_entries[['Ingredient', 'Quantity', 'Unit', 'Qty in gms', 'Source', 'Net Carbs (gms)']].round(2).to_markdown(index=False)
     #nutrient_labels = f"## Nutrition Label\n\n{get_label_string(total_weight_df,missing_ingredients_string,serving_size)}"
-    return total_weight_df.to_dict(), missing_ingredients_string, serving_size
+    return total_weight_df.to_dict(), missing_ingredients_string, serving_size, net_carbs_table_found_ingredients
