@@ -13,7 +13,8 @@ Tastes great with [Tava Roti](../Breads/recipe_1_tava_roti.md), [Tandoori Roti](
 
 ```cooklang
 >> Serving Size: 4 portions
->> Cooking Time: 25 minutes (Prep time - 15 minutes)
+>> Cooking Time: 25 minutes
+>> Prep Time: 15 minutes
 >> Category: North Indian Curry
 >> Type: Vegetarian
 
