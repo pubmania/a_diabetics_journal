@@ -8,7 +8,8 @@ title: Miso Aubergine and Mushroom Salad
 
 ```cooklang
 >> Serving Size: 4 portion
->> Cooking Time: 25 minutes (Prep Time - 45 minutes)
+>> Cooking Time: 25 minutes
+>> Prep Time: 45 minutes
 >> Category: Japanese
 >> Type: Vegetarian
 >> Source: https://www.ocado.com/webshop/recipe/Miso-Aubergine-and-Mushroom-Salad-/232096
