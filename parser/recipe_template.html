@@ -1,55 +1,86 @@
 <script type="application/ld+json">
-{
-	"@context": "https://schema.org",
-	"@type": "Recipe",
-	"name": "{{ metadata.Title }}",
-	"image": "{{ image_path }}/{{ metadata.Image }}",
-	"description": "{{ metadata['Image-Caption'] }}",
-	"author": {
-	"@type": "Person",
-	{%- if metadata.Source %}
-	"name": "{{ metadata.Source }}"
-	{%- else %}
-	"name": "{{ page.url }}"
-	{%- endif %}
-	},
-	"recipeCategory": "{{ metadata.Type }}",
-	"recipeCuisine": "{{ metadata.Category }}",
-	"keywords": "{{ metadata.Keywords }}",
-	"recipeYield": "{{ metadata['Serving Size'] }}",
-	"prepTime": "PT{{ metadata['Prep Time'] }}M",
-	"cookTime": "PT{{ metadata['Cooking Time'] }}M",
-	"totalTime": "PT{{ metadata['Total Time'] }}M",
-	"ingredients": [
-	{%- for recipe_ingredient_key in recipe_ingredients.keys() %}
-		{%- set ingredient_data = recipe_ingredients[recipe_ingredient_key] %}
-		{%- for ingredient_amount, ingredient_unit, ingredient_step in ingredient_data.with_units %}
-			"{{ ingredient_amount }} {{ ingredient_unit }} {{ recipe_ingredient_key }}"{%- if not loop.last %},{%- endif %}
+	{
+		"@context": "https://schema.org",
+		"@type": "Recipe",
+		"name": "{{ metadata.Title }}",
+		"image": "{{ image_path }}/{{ metadata.Image }}",
+		"description": "{{ metadata['Image-Caption'] }}",
+		"author": {
+		"@type": "Person",
+		{%- if metadata.Source %}
+		"name": "{{ metadata.Source }}"
+		{%- else %}
+		"name": "{{ page.url }}"
+		{%- endif %}
+		},
+		"recipeCategory": "{{ metadata.Type }}",
+		"recipeCuisine": "{{ metadata.Category }}",
+		"keywords": "{{ metadata.Keywords }}",
+		"recipeYield": "{{ metadata['Serving Size'] }}",
+		"prepTime": "PT{{ metadata['Prep Time'] }}M",
+		"cookTime": "PT{{ metadata['Cooking Time'] }}M",
+		"totalTime": "PT{{ metadata['Total Time'] }}M",
+		"ingredients": [
+		{%- for recipe_ingredient_key in recipe_ingredients.keys() %}
+			{%- set ingredient_data = recipe_ingredients[recipe_ingredient_key] %}
+			{%- for ingredient_amount, ingredient_unit, ingredient_step in ingredient_data.with_units %}
+				"{{ ingredient_amount }} {{ ingredient_unit }} {{ recipe_ingredient_key }}"{%- if not loop.last %},{%- endif %}
+			{%- endfor %}
+			{%- for non_unit_amount in ingredient_data.without_units %}
+				"{{ non_unit_amount }} {{ recipe_ingredient_key }}"{%- if not loop.last %},{%- endif %}
+			{%- endfor %}
 		{%- endfor %}
-		{%- for non_unit_amount in ingredient_data.without_units %}
-			"{{ non_unit_amount }} {{ recipe_ingredient_key }}"{%- if not loop.last %},{%- endif %}
+		]
+		"recipeInstructions": [
+		{%- for step in steps %}
+			"{{ step }}"{%- if not loop.last %},{%- endif %}
 		{%- endfor %}
-	{%- endfor %}
-	]
-	"recipeInstructions": [
-	{%- for step in steps %}
-		"{{ step }}"{%- if not loop.last %},{%- endif %}
-	{%- endfor %}
-	],
-	"nutrition": {
-	"@type": "NutritionInformation",
-	"calories": "{{ total_weight_df['Calories'][1] }}",
-	"fatContent": "{{ total_weight_df['Total_Fat'][1] }}",
-	"saturatedFatContent": "{{ total_weight_df['Saturated_Fat'][1] }}",
-	"carbohydrateContent": "{{ total_weight_df['Carbohydrate'][1] }}",
-	"fiberContent": "{{ total_weight_df['Dietary_fiber'][1] }}",
-	"sugarContent": "{{ total_weight_df['Sugars'][1] }}",
-	"proteinContent": "{{ total_weight_df['Protein'][1] }}",
-	"sodiumContent": "{{ total_weight_df['Sodium'][1] }}"
+		],
+		"nutrition": {
+		"@type": "NutritionInformation",
+		"calories": "{{ total_weight_df['Calories'][1] }}",
+		"fatContent": "{{ total_weight_df['Total_Fat'][1] }}",
+		"saturatedFatContent": "{{ total_weight_df['Saturated_Fat'][1] }}",
+		"carbohydrateContent": "{{ total_weight_df['Carbohydrate'][1] }}",
+		"fiberContent": "{{ total_weight_df['Dietary_fiber'][1] }}",
+		"sugarContent": "{{ total_weight_df['Sugars'][1] }}",
+		"proteinContent": "{{ total_weight_df['Protein'][1] }}",
+		"sodiumContent": "{{ total_weight_df['Sodium'][1] }}"
+		}
 	}
-}
+	</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+	const customContainer = document.querySelector('.custom--container'); // Fixed variable name
+	const slides = document.querySelectorAll('.custom-slide');
+	const leftArrow = document.querySelector('.left-arrow');
+	const rightArrow = document.querySelector('.right-arrow');
+	let currentIndex = 0; // Track the current slide index
+	// Function to update the scroll position
+	function updateScroll() {
+		const slideWidth = slides[currentIndex].offsetWidth; // Get the width of the current slide
+		customContainer.scrollTo({
+			left: slideWidth * currentIndex, // Scroll to the current slide
+			behavior: 'smooth' // Smooth scrolling
+		});
+	}
+	// Event listener for the left arrow
+	leftArrow.addEventListener('click', function() {
+		if (currentIndex > 0) {
+			currentIndex--; // Decrease index
+			updateScroll(); // Update scroll position
+		}
+	});
+	// Event listener for the right arrow
+	rightArrow.addEventListener('click', function() {
+		if (currentIndex < slides.length - 1) {
+			currentIndex++; // Increase index
+			updateScroll(); // Update scroll position
+		}
+	});
+});
 </script>
-	
+
 {%- if metadata.Title %}
 ## {{ metadata.Title }}
 {%- set header_var = '### ' %}
@@ -62,15 +93,16 @@
 {%- if metadata.Image %}
 <div class="parent">
 	<div class="div1">
-		<div class="grid" markdown="">
+		<div class="grid">
 		<figure class="card">
 		<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="{{ image_path }}/{{ metadata.Image }}"><img alt="image" src="{{ image_path }}/{{ metadata.Image }}" style="width: 920px;height: 430px;object-fit: contain;"></a></p>
 		<figcaption>{{ metadata['Image-Caption'] }}</figcaption>
 		</figure>
 		</div>
 	</div>
+
 	<div class="div2">
-		<div align="center" class="grid">
+		<div align-items="center" class="grid">
 			<div style="justify-content: center;display: flex;">
 			<div class="circle">
 			<p style="text-align: center;">    
@@ -156,7 +188,7 @@
 <br><strong style="color:#4CAF50">{{ total_weight_df['net_carb'][2] }} <em>Net Carbs per Serving</em></strong>
 </p>
 </div></div></div>
-<div align="center" class="grid">
+<div align-items="center" class="grid">
 	{%- if metadata['Prep Time'] %}
 	<p class="card">
 	<em>Prep Time</em>:
@@ -229,7 +261,7 @@
 	{%- endif %}
 	{%- endfor %}
 	{%- for non_unit_amount in ingredient_data.without_units %}
-	<td align="center" colspan="2">{{ non_unit_amount }}</td>
+	<td align-item="center" colspan="2">{{ non_unit_amount }}</td>
 	</tr>
 	{%- if tr_count < total_entries %}
 	{%- set tr_count = tr_count + 1 %}
@@ -258,7 +290,6 @@
 </div>
 	
 <div class="grid cards" markdown>
-
 
 -   {{ header_var }}Steps
 
@@ -310,148 +341,168 @@
 
 </div>
 
-{%- if metadata.Title %}
-### Nutrition Label
-{%- else %}
-## Nutrition Label
-{%- endif %}    
+{{ header_var }}Nutrition Info
+
 {%- if missing_ingredients_string %}
 ??? warning "Missing Ingredients"
-	{{ missing_ingredients_string }}
+    {{ missing_ingredients_string }}
 {%- endif %}
-<div class="grid card">
-{%- for i in range(total_weight_df['recipe_weight_in_gms'] | length) %}
-	{%- if i == 1 %}
-		{%- set amount_per = 'Amount Per 100gms' %}
-	{%- elif i == 2 %}
-		{%- set amount_per = 'Amount Per Serving (Total Servings: {})'.format(serving_size) %}
-		{%- elif i == 3 %}
-		{%- set amount_per = 'Amount in 2 Servings (Total Servings: {})'.format(serving_size) %}
-	{%- else %}
-		{%- set value_rec = total_weight_df['recipe_weight_in_gms'][i] %}
-		{%- set amount_per = 'Amount In Whole Recipe ({} gms)'.format(value_rec) %}
-	{%- endif %}
-	<div class="grid card">
-	<div id="nutrition_label"><div itemscope="" class="nf" role="region" aria-label="nutrition label" style=" width: 300px;">
-	<div class="nf-title" tabindex="0">Nutrition Facts</div>
-	<div class="nf-line">
-	<div class="nf-serving">
-	<div class="nf-amount-per-serving" align="right" tabindex="0"><b>{{ amount_per }}</b></div>
-	</div><!-- end of class="nf-serving" -->
 
-	</div><!-- end of class="nf-line" -->
+#{{ header_var }}Nutrition Labels
 
-	<div class="nf-bar2"></div>
-	<div class="nf-netcarbs" tabindex="0">
-	<span class="">Net Carbs</span>
-	<span class="nf-pr" itemprop="net_carbs">{{ total_weight_df['net_carb'][i] }} g</span>
-	</div>
-	<div class="nf-bar1"></div>
-	<div class="nf-calories" tabindex="0">
-	<span class="">Calories</span>
-	<span class="nf-pr" itemprop="calories">{{ total_weight_df['Calories'][i] }} Kcal</span>
-	</div>
-	<div class="nf-bar1"></div>
-	<div class="nf-line nf-text-right">
-	<span class="nf-highlight nf-percent-dv">% Daily Value*</span>
-	</div>
-	<div class="nf-line" tabindex="0">
-	<span class="nf-highlight">Total Fat</span>
-	<span class="" itemprop="fatContent">{{ total_weight_df['Total_Fat'][i] }}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
-	<span class="nf-highlight nf-pr">{{ total_weight_df['Total_Fat_drv_%'][i] }}% <span class="sr-only">Daily Value</span></span>
-	</div>
-	<div class="nf-line nf-indent" tabindex="0">
-	<span class="">Saturated Fat</span>
-	<span class="" itemprop="saturatedFatContent">{{ total_weight_df['Saturated_Fat'][i] }}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
-	<span class="nf-highlight nf-pr">{{ total_weight_df['Saturated_Fat_drv_%'][i] }}% <span class="sr-only">Daily Value</span></span>
-	</div>
-	<div class="nf-line nf-indent" tabindex="0">
-	<span class=""><em>Trans</em> Fat</span>
-	<span class="" itemprop="transFatContent">{{ total_weight_df['Trans_Fat'][i] }}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
-	</div>
-	<div class="nf-line nf-indent" tabindex="0">
-	<span class="">Polyunsaturated Fat</span>
-	<span class="" itemprop="">{{ total_weight_df['Polyunsaturated_Fat'][i] }}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
-	</div>
-	<div class="nf-line nf-indent" tabindex="0">
-	<span class="">Monounsaturated Fat</span>
-	<span class="" itemprop="">{{ total_weight_df['Monounsaturated_Fat'][i] }}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
-	</div>
-	<div class="nf-line" tabindex="0">
-	<span class="nf-highlight">Cholesterol</span>
-	<span class="" itemprop="cholesterolContent">{{ total_weight_df['Cholesterol'][i] }}<span aria-hidden="true">mg</span><span class="sr-only"> milligrams</span></span>
-	<span class="nf-highlight nf-pr">{{ total_weight_df['Cholesterol_drv_%'][i] }}% <span class="sr-only">Daily Value</span></span>
-	</div>
-	<div class="nf-line" tabindex="0">
-	<span class="nf-highlight">Sodium</span>
-	<span class="" itemprop="sodiumContent">{{ total_weight_df['Sodium'][i] }}<span aria-hidden="true">mg</span><span class="sr-only"> milligrams</span></span>
-	<span class="nf-highlight nf-pr">{{ total_weight_df['Sodium_drv_%'][i] }}% <span class="sr-only">Daily Value</span></span>
-	</div>
-	<div class="nf-line" tabindex="0">
-	<span class="nf-highlight">Total Carbohydrates</span>
-	<span class="" itemprop="carbohydrateContent">{{ total_weight_df['Carbohydrate'][i] }}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
-	<span class="nf-highlight nf-pr">{{ total_weight_df['Carbohydrate_drv_%'][i] }}% <span class="sr-only">Daily Value</span></span>
-	</div>
-	<div class="nf-line nf-indent" tabindex="0">
-	<span class="">Dietary Fiber</span>
-	<span class="" itemprop="fiberContent">{{ total_weight_df['Dietary_fiber'][i] }}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
-	<span class="nf-highlight nf-pr">{{ total_weight_df['Dietary_fiber_drv_%'][i] }}% <span class="sr-only">Daily Value</span></span>
-	</div>
-	<div class="nf-line nf-indent" tabindex="0">
-	<span class="">Sugars</span>
-	<span class="" itemprop="sugarContent">{{ total_weight_df['Sugars'][i] }}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
-	</div>
-	<div class="nf-line" tabindex="0">
-	<span class="nf-highlight">Protein</span>
-	<span class="" itemprop="proteinContent">{{ total_weight_df['Protein'][i] }}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
-	</div>
-	<div class="nf-bar2"></div>
-	<div class="nf-vitamins">
-	<div class="nf-vitamins">
-	<div class="" tabindex="0">
-	<span class="">Vitamin D</span>
-	<span class="" itemprop="vitaminDContent">{{ total_weight_df['Vitamin_D_(D2_+_D3)'][i] }}<span aria-hidden="true">mcg</span><span class="sr-only"> micrograms</span></span>
-	<span class="nf-highlight nf-pr">{{ total_weight_df['Vitamin_D_(D2_+_D3)_drv_%'][i] }}% <span class="sr-only">Daily Value</span></span>
-	</div>
-	<div class="nf-line" tabindex="0">
-	<span class="">Calcium</span>
-	<span class="" itemprop="calciumContent">{{ total_weight_df['Calcium'][i] }}<span aria-hidden="true">mg</span><span class="sr-only"> milligrams</span></span>
-	<span class="nf-highlight nf-pr">{{ total_weight_df['Calcium_drv_%'][i] }}% <span class="sr-only">Daily Value</span></span>
-	</div>
-	<div class="nf-line" tabindex="0">
-	<span class="">Iron</span>
-	<span class="" itemprop="ironContent">{{ total_weight_df['Iron'][i] }}<span aria-hidden="true">mg</span><span class="sr-only"> milligrams</span></span>
-	<span class="nf-highlight nf-pr">{{ total_weight_df['Iron_drv_%'][i] }}% <span class="sr-only">Daily Value</span></span>
-	</div>
-	<div class="nf-line" tabindex="0">
-	<span class="">Potassium</span>
-	<span class="" itemprop="potassiumContent">{{ total_weight_df['Potassium_K'][i] }}<span aria-hidden="true">mg</span><span class="sr-only"> milligrams</span></span>
-	<span class="nf-highlight nf-pr">{{ total_weight_df['Potassium_K_drv_%'][i] }}% <span class="sr-only">Daily Value</span></span>
-	</div>
-	<div class="nf-line" tabindex="0">
-	<span class="">Zinc</span>
-	<span class="" itemprop="zincContent">{{ total_weight_df['Zinc'][i] }}<span aria-hidden="true">mg</span><span class="sr-only"> milligrams</span></span>
-	<span class="nf-highlight nf-pr">{{ total_weight_df['Zinc_drv_%'][i] }}% <span class="sr-only">Daily Value</span></span>
-	</div>
-	</div>
-	</div>
-	<div class="nf-bar2"></div>
-	<div class="" tabindex="0">
-	<span class="nf-highlight">Caffeine</span>
-	<span class="" itemprop="caffeineContent">{{ total_weight_df['Caffeine'][i] }}mg</span>
-	</div>
-	<div class="nf-bar1"></div>
-	<div class="nf-vitamins">
-	<div class="nf-footnote">
-	<span tabindex="0">The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2000 calories a day is used for general nutrition advice.</span>
-	</div>
-	<div class="naTooltip">Data not available</div>
-	</div><!-- closing class="nf" -->
-	</div></div>
-	</div>
-{%- endfor %}
+Scroll to see nutrition facts for different servings and weights for this recipe.
+
+<div class="grid" style="justify-items: center; align-items: center;">
+
+    <div class="custom--wrapper">
+        <div class="arrow left-arrow">&#9664;</div> <!-- Left Arrow -->
+            <div class="custom--container">
+                {%- for i in range(total_weight_df['recipe_weight_in_gms'] | length) %}
+                <div class="custom-slide">
+                    <div id="nutrition_label">
+                        <div itemscope="" class="nf" role="region" aria-label="nutrition label" style="width: 300px;">
+                            <div class="nf-title" tabindex="0">Nutrition Facts</div>
+                            <div class="nf-line">
+                                <div class="nf-serving">
+                                    <div class="nf-amount-per-serving" align="right" tabindex="0"><b>
+                                        {%- if i == 1 %}
+                                            Amount Per 100gms
+                                        {%- elif i == 2 %}
+                                            Amount Per Serving (Total Servings: {{ serving_size }})
+                                        {%- elif i == 3 %}
+                                            Amount in 2 Servings (Total Servings: {{ serving_size }})
+                                        {%- else %}
+                                            Amount In Whole Recipe ({{ total_weight_df['recipe_weight_in_gms'][i] }} gms)
+                                        {%- endif %}
+                                    </b></div>
+                                </div><!-- end of class="nf-serving" -->
+                            </div><!-- end of class="nf-line" -->
+                            <!-- Add the rest of your nutrition facts here -->
+                            <div class="nf-bar2"></div>
+                            <div class="nf-netcarbs" tabindex="0">
+                                <span class="">Net Carbs</span>
+                                <span class="nf-pr" itemprop="net_carbs">{{ total_weight_df['net_carb'][i] }} g</span>
+                            </div>
+                            <div class="nf-bar1"></div>
+                            <div class="nf-calories" tabindex="0">
+                                <span class="">Calories</span>
+                                <span class="nf-pr" itemprop="calories">{{ total_weight_df['Calories'][i] }} Kcal</span>
+                            </div>
+                            <!-- Continue adding the rest of the nutrition information as in your original code -->
+                            <div class="nf-bar1"></div>
+                            <div class="nf-line nf-text-right">
+                                <span class="nf-highlight nf-percent-dv">% Daily Value*</span>
+                            </div>
+                            <div class="nf-line" tabindex="0">
+                                <span class="nf-highlight">Total Fat</span>
+                                <span class="" itemprop="fatContent">{{ total_weight_df['Total_Fat'][i] }}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
+                                <span class="nf-highlight nf-pr">{{ total_weight_df['Total_Fat_drv_%'][i] }}% <span class="sr-only">Daily Value</span></span>
+                            </div>
+                            <div class="nf-line nf-indent" tabindex="0">
+                                <span class="">Saturated Fat</span>
+                                <span class="" itemprop="saturatedFatContent">{{ total_weight_df['Saturated_Fat'][i] }}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
+                                <span class="nf-highlight nf-pr">{{ total_weight_df['Saturated_Fat_drv_%'][i] }}% <span class="sr-only">Daily Value</span></span>
+                            </div>
+                            <div class="nf-line nf-indent" tabindex="0">
+                                <span class=""><em>Trans</em> Fat</span>
+                                <span class="" itemprop="transFatContent">{{ total_weight_df['Trans_Fat'][i] }}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
+                            </div>
+                            <div class="nf-line nf-indent" tabindex="0">
+                            <span class="">Polyunsaturated Fat</span>
+                            <span class="" itemprop="">{{ total_weight_df['Polyunsaturated_Fat'][i] }}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
+                            </div>
+                            <div class="nf-line nf-indent" tabindex="0">
+                            <span class="">Monounsaturated Fat</span>
+                            <span class="" itemprop="">{{ total_weight_df['Monounsaturated_Fat'][i] }}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
+                            </div>
+                            <div class="nf-line" tabindex="0">
+                                <span class="nf-highlight">Cholesterol</span>
+                                <span class="" itemprop="cholesterolContent">{{ total_weight_df['Cholesterol'][i] }}<span aria-hidden="true">mg</span><span class="sr-only"> milligrams</span></span>
+                                <span class="nf-highlight nf-pr">{{ total_weight_df['Cholesterol_drv_%'][i] }}% <span class="sr-only">Daily Value</span></span>
+                            </div>
+                            <div class="nf-line" tabindex="0">
+                                <span class="nf-highlight">Sodium</span>
+                                <span class="" itemprop="sodiumContent">{{ total_weight_df['Sodium'][i] }}<span aria-hidden="true">mg</span><span class="sr-only"> milligrams</span></span>
+                                <span class="nf-highlight nf-pr">{{ total_weight_df['Sodium_drv_%'][i] }}% <span class="sr-only">Daily Value</span></span>
+                            </div>
+                            <div class="nf-line" tabindex="0">
+                                <span class="nf-highlight">Total Carbohydrates</span>
+                                <span class="" itemprop="carbohydrateContent">{{ total_weight_df['Carbohydrate'][i] }}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
+                                <span class="nf-highlight nf-pr">{{ total_weight_df['Carbohydrate_drv_%'][i] }}% <span class="sr-only">Daily Value</span></span>
+                            </div>
+                            <div class="nf-line nf-indent" tabindex="0">
+                                <span class="">Dietary Fiber</span>
+                                <span class="" itemprop="fiberContent">{{ total_weight_df['Dietary_fiber'][i] }}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
+                                <span class="nf-highlight nf-pr">{{ total_weight_df['Dietary_fiber_drv_%'][i] }}% <span class="sr-only">Daily Value</span></span>
+                            </div>
+                            <div class="nf-line nf-indent" tabindex="0">
+                                <span class="">Sugars</span>
+                                <span class="" itemprop="sugarContent">{{ total_weight_df['Sugars'][i] }}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
+                            </div>
+                            <div class="nf-line" tabindex="0">
+                                <span class="nf-highlight">Protein</span>
+                                <span class="" itemprop="proteinContent">{{ total_weight_df['Protein'][i] }}<span aria-hidden="true">g</span><span class="sr-only"> grams</span></span>
+                            </div>
+                            <div class="nf-bar2"></div>
+                            <div class="nf-vitamins">
+                                <div class="nf-vitamins">
+                                    <div class="" tabindex="0">
+                                        <span class="">Vitamin D</span>
+                                        <span class="" itemprop="vitaminDContent">{{ total_weight_df['Vitamin_D_(D2_+_D3)'][i] }}<span aria-hidden="true">mcg</span><span class="sr-only"> micrograms</span></span>
+                                        <span class="nf-highlight nf-pr">{{ total_weight_df['Vitamin_D_(D2_+_D3)_drv_%'][i] }}% <span class="sr-only">Daily Value</span></span>
+                                    </div>
+                                    <div class="nf-line" tabindex="0">
+                                        <span class="">Calcium</span>
+                                        <span class="" itemprop="calciumContent">{{ total_weight_df['Calcium'][i] }}<span aria-hidden="true">mg</span><span class="sr-only"> milligrams</span></span>
+                                        <span class="nf-highlight nf-pr">{{ total_weight_df['Calcium_drv_%'][i] }}% <span class="sr-only">Daily Value</span></span>
+                                    </div>
+                                    <div class="nf-line" tabindex="0">
+                                        <span class="">Iron</span>
+                                        <span class="" itemprop="ironContent">{{ total_weight_df['Iron'][i] }}<span aria-hidden="true">mg</span><span class="sr-only"> milligrams</span></span>
+                                        <span class="nf-highlight nf-pr">{{ total_weight_df['Iron_drv_%'][i] }}% <span class="sr-only">Daily Value</span></span>
+                                    </div>
+                                    <div class="nf-line" tabindex="0">
+                                        <span class="">Potassium</span>
+                                        <span class="" itemprop="potassiumContent">{{ total_weight_df['Potassium_K'][i] }}<span aria-hidden="true">mg</span><span class="sr-only"> milligrams</span></span>
+                                        <span class="nf-highlight nf-pr">{{ total_weight_df['Potassium_K_drv_%'][i] }}% <span class="sr-only">Daily Value</span></span>
+                                    </div>
+                                    <div class="nf-line" tabindex="0">
+                                        <span class="">Zinc</span>
+                                        <span class="" itemprop="zincContent">{{ total_weight_df['Zinc'][i] }}<span aria-hidden="true">mg</span><span class="sr-only"> milligrams</span></span>
+                                        <span class="nf-highlight nf-pr">{{ total_weight_df['Zinc_drv_%'][i] }}% <span class="sr-only">Daily Value</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nf-bar2"></div>
+                            <div class="" tabindex="0">
+                                <span class="nf-highlight">Caffeine</span>
+                                <span class="" itemprop="caffeineContent">{{ total_weight_df['Caffeine'][i] }}mg</span>
+                            </div>
+                            <div class="nf-bar1"></div>
+                            <div class="nf-vitamins">
+                        <div class="nf-footnote">
+                            <span tabindex="0">The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2000 calories a day is used for general nutrition advice.</span>
+                        </div>
+                        <div class="naTooltip">Data not available</div>
+                            </div>
+                        </div><!-- closing class="nf" -->
+                    </div>
+                </div>
+                {%- endfor %}
+            </div>
+        <div class="arrow right-arrow">&#9654;</div> <!-- Right Arrow -->
+    </div>
+
 </div>
 
+<div class="grid cards" markdown>
+
+- #{{ header_var }}Net Carbs in each Ingredient
+
+    ---
+
+    {{ net_carbs_table_found_ingredients }}
+</div>
 
 {{ header_var }}Cooklang
 

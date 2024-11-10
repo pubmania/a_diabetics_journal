@@ -31,14 +31,14 @@ def fn_steps_list(input_string):
                 ingredient_unit = parsed_ingredient['units']
                 if ingredient_unit !='':
                     if ingredient_unit !='Number':
-                        step = step.replace(ingredient,f'<mark><em>{ingredient_quantity} {ingredient_unit}</em> <strong> {ingredient_name}</strong></mark>')
+                        step = step.replace(ingredient,f'<cookmark><em>{ingredient_quantity} {ingredient_unit}</em> <strong> {ingredient_name}</strong></cookmark>')
                     else:
-                        step = step.replace(ingredient,f'<mark><em>{ingredient_quantity}</em> <strong> {ingredient_name}</strong></mark>')
+                        step = step.replace(ingredient,f'<cookmark><em>{ingredient_quantity}</em> <strong> {ingredient_name}</strong></cookmark>')
                 else:
-                    step = step.replace(ingredient,f'<mark><strong>{ingredient_name}</strong></mark> ({ingredient_quantity})')
+                    step = step.replace(ingredient,f'<cookmark><strong>{ingredient_name}</strong></cookmark> ({ingredient_quantity})')
             p_step = puml(step.replace(':material-timer-sand-full:','')\
-                          .replace('<mark>','')\
-                          .replace('</mark>','')\
+                          .replace('<cookmark>','')\
+                          .replace('</cookmark>','')\
                           .replace('<strong>','<b>')\
                           .replace('</strong>','</b>')\
                           .replace('<em>','<i>')\
