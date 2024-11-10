@@ -15,7 +15,8 @@ While the original recipe calls for use of Coconut sugar, I make mine without it
 >> Source: https://detoxinista.com/vegan-almond-flour-banana-bread/
 >> Type: Vegetarian
 >> Serving Size: 16 slices
->> Cooking Time: 45 minutes (Prep Time - 15 minutes)
+>> Cooking Time: 45 minutes
+>> Prep Time: 15 minutes
 >> Category: Dessert
 Preheat the #oven{} to 175C and line a #loaf pan{} with #parchment paper{}. 
 In a #large bowl{}, use a #fork{} to mash the @bananas{300%gms(3, very ripe)}.

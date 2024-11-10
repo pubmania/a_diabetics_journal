@@ -12,7 +12,8 @@ First-off it is not one of my experiements but that of my lovely daughter. She w
 ```cooklang
 >> Serving Size: 16 cookies
 >> Type: Vegetarian
->> Cooking Time: 30 minutes (Prep Time - 15 minutes)
+>> Cooking Time: 30 minutes
+>> Prep Time: 15 minutes
 >> Category: Dessert
 >> Image: recipe_005_chocolate_cookies.jpeg
 >> Image-Caption: Chocolate Cookies

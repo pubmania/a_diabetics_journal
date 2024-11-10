@@ -14,7 +14,8 @@ Tastes great with [Cheese Cracker](../Snacks%20and%20Sides/recipe_001_cheese_cra
 
 ```cooklang
 >> Serving Size: 10 portions
->> Cooking Time: 15 minutes (Prep Time - 5 minutes)
+>> Cooking Time: 15 minutes
+>> Prep Time: 5 minutes
 >> Category: Italian
 >> Type: Vegetarian
 >> Source: https://www.lchf.de/pesto-alla-genovese

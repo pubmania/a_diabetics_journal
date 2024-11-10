@@ -9,7 +9,8 @@ tags:
 
 ```cooklang
 >> Serving Size: 4 portions
->> Cooking Time: 10 minutes (Prep Time - 5 minutes)
+>> Cooking Time: 10 minutes
+>> Prep Time: 5 minutes
 >> Category: Indian Chutney
 >> Type: Vegetarian
 Take #smallest mixer jar{}.

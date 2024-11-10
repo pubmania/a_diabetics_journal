@@ -11,7 +11,8 @@ This salad tastes great with [Low Carb Pasta](https://kutt.it/low_carb_pasta){ta
 
 ```cooklang
 >> Serving Size: 3 portion
->> Cooking Time: 15 minutes (Prep Time - 30 minutes)
+>> Cooking Time: 15 minutes
+>> Prep Time: 30 minutes
 >> Category: Italian
 >> Type: Vegetarian
 

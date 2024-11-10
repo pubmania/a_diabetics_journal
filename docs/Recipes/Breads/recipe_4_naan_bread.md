@@ -13,7 +13,8 @@ tags:
 
 ```cooklang
 >> Serving Size: 8 pieces
->> Cooking Time: 40 minutes (Prep Time - 5 Hours)
+>> Cooking Time: 40 minutes
+>> Prep Time: 5 Hours
 >> Category: Indian
 >> Type: Vegetarian
 >> Image: tandoori-naan.jpg
