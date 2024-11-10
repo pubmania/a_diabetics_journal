@@ -12,7 +12,8 @@ tags:
 >> Serving Size: 4
 >> Type: Vegetarian
 >> Category: Indian
->> Cooking Time: 20 minutes (Prep Time - 15 minutes)
+>> Cooking Time: 20 minutes
+>> Prep Time: 15 minutes
 >> Source: https://ranveerbrar.com/recipes/masala-tomato-upma/
 In a #deep pan{} heat @ghee{2%tbsp} and add @almond flour{1%cup} and lightly roast it until dry on medium heat.
 Transfer into a #bowl{} and keep aside.
