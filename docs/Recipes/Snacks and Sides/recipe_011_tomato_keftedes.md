@@ -16,7 +16,8 @@ Tastes great with [Tomato Mint Pepper Spinach Dip](../Dips/recipe_007_mint_spina
 ```cooklang
 >> Serving Size: 16
 >> Type: Vegetarian
->> Cooking Time: 15 minutes (Prep Time - 60 minutes)
+>> Cooking Time: 15 minutes
+>> Prep Time: 60 minutes
 >> Category: Greek
 >> Image: recipe_011_tomato_keftedes.jpeg
 >> Image-Caption: Tomato Keftedes - tastes best with Tzatziki Dip.
