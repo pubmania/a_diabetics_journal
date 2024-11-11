@@ -57,7 +57,7 @@ def create_nutrient_dataframe(df, ing_str):
 
         new_df = pd.DataFrame({
             'input_str': input_strs,
-            'source': 'Nutritionix',
+            'source': '[Nutritionix](https://www.nutritionix.com)',
             'food_name': food_names,
             'net_carb': net_carbs,
             'serving_unit': 'gms',
