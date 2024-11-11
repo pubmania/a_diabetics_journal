@@ -57,7 +57,7 @@ def create_nutrient_dataframe(df, ing_str):
 
         new_df = pd.DataFrame({
             'input_str': input_strs,
-            'source': 'Nutritionix',
+            'source': '[Nutritionix](https://www.nutritionix.com)',
             'food_name': food_names,
             'net_carb': net_carbs,
             'serving_unit': 'gms',
@@ -107,7 +107,7 @@ def get_nutritionix_data(ingredients_str):
         nutrition_data = response.json()
 
         if "foods" not in nutrition_data:
-            print("Unexpected response format from Nutritionix API")
+            #print("Unexpected response format from Nutritionix API")
             return None
         
         df = pd.json_normalize(nutrition_data.get('foods', []))
