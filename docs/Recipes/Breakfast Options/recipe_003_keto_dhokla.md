@@ -16,7 +16,7 @@ tags:
 **Coriander and Green Mint Dip (chutney)**
 Wash @Fresh Corriander leaves{30%gms(1 bunch)}, @Fresh Mint{30%gms(1 bunch)}, @Green Chilli{15%gms(3 medium)}.
 Put these in a #mixer grinder{}.
-Add @Garlic{1%Clove} and squeeze full @Lemon{2.5%tbsp(1 freshly squeezed)}.
+Add @Garlic{1%Clove} and squeeze full @fresh lemon juice{2.5%tbsp(1 freshly squeezed)}.
 Grind it to a smooth `paste` consistency.
 Add @Salt{to taste}.
 Serve as dip with Dhokla Base.
