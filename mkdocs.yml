@@ -60,7 +60,7 @@ extra_css:
   #- assets/stylesheets/footer.css
   - assets/stylesheets/nutrition_label.css
  
-#extra_javascript:
+extra_javascript:
   #- https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
   #- assets/javascripts/tables.js
   #- assets/javascripts/mermaid.min.js
@@ -69,7 +69,7 @@ extra_css:
   #- https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   #- https://cdn.jsdelivr.net/npm/mermaid@10.2.4/dist/mermaid.min.js
   #- assets/javascripts/view-bigimg.js
-  #- assets/javascripts/extra.js
+  - assets/javascripts/extra.js
 
 # Extension information
 markdown_extensions:
