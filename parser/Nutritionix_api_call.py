@@ -107,7 +107,7 @@ def get_nutritionix_data(ingredients_str):
         nutrition_data = response.json()
 
         if "foods" not in nutrition_data:
-            print("Unexpected response format from Nutritionix API")
+            #print("Unexpected response format from Nutritionix API")
             return None
         
         df = pd.json_normalize(nutrition_data.get('foods', []))
