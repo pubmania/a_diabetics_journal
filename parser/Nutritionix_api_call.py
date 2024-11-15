@@ -90,7 +90,7 @@ def get_nutritionix_data(ingredients_str):
     app_key = os.environ.get("NUTRITIONIX_APP_KEY")
 
     if not ingredients_str:
-        print("Empty ingredient string")
+        #print("Empty ingredient string")
         return None
 
     payload = {"query": ingredients_str}
