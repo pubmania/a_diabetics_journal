@@ -20,7 +20,7 @@ Tastes great with [Tomato Mint Pepper Spinach Dip](../Dips/recipe_007_mint_spina
 >> Type: Vegetarian
 
 Cut @Celeriac{500%gms(1 Large)} into long fries sized pieces using #knife{}.
--- Once can also use Swede instead of Celeriac, although Swede has slighly higher carbs.
+-- One can also use Swede instead of Celeriac, although Swede has slighly higher carbs.
 
 Wash and dry the cut pieces and place them in #Air Fryer{} basket.
 
