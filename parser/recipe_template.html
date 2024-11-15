@@ -269,6 +269,20 @@
 	#{{ header_var }}{{ modified_step }}
 
 
+{%- elif step.startswith('<note>') %}
+{%- set modified_step = step | replace("<note>", "") | replace("</note>", "") %}
+	!!!site-note "Note"
+		{{ modified_step }}
+
+
+{%- elif step.startswith('<multiline>') and step.endswith('</multiline>') %}
+{%- set modified_step = step | replace("<multiline>", "") | replace("</multiline>", "") %}
+	!!!site-note "Note"
+        {%- for line in modified_step.split('\n') %}
+		<p>{{ line | trim }}</p>
+        {%- endfor %}
+
+
 {%- else %}
 	* [ ] {{ step }}
 	
@@ -283,22 +297,29 @@
 	@startuml
 	!theme sketchy-outline
 	!startsub activity
-	skinparam activity {
-	$primary_scheme()
-	BarColor #orangered
-	StartColor #orangered
-	EndColor #orangered
-		BorderColor #orangered
-		ArrowColor #orangered
-		ArrowThickness 1.25
-		ArrowFontColor #maroon
-		FontColor #maroon
-		
-		''
-		DiamondBackgroundColor #darkgreen
-		DiamondLineColor #white
-		DiamondFontColor #white
-	}
+		skinparam activity {
+	    		$primary_scheme()
+	    		BarColor #orangered
+    			StartColor #orangered
+    			EndColor #orangered
+    			BorderColor #orangered
+    			ArrowColor #orangered
+    			ArrowThickness 1.25
+    			ArrowFontColor #maroon
+    			FontColor #maroon
+    			''
+    			DiamondBackgroundColor #darkgreen
+    			DiamondLineColor #white
+    			DiamondFontColor #white
+		}
+	!endsub
+	!startsub note
+		skinparam note {
+    			BorderThickness 1.25
+    			BackgroundColor #ffe4b5
+    			BorderColor #orangered
+    			FontColor #maroon
+		}
 	!endsub
 	start
 	{%- for p_step in process %}

@@ -19,13 +19,14 @@ Tastes great with [Tomato Mint Pepper Spinach Dip](../Dips/recipe_007_mint_spina
 >> Category: Continental
 >> Type: Vegetarian
 
-Cut @Swede or Celeriac{500%gms(1 Large)} into long fries sized pieces using #knife{}.
+Cut @Celeriac{500%gms(1 Large)} into long fries sized pieces using #knife{}.
+-- One can also use Swede instead of Celeriac, although Swede has slighly higher carbs.
 
 Wash and dry the cut pieces and place them in #Air Fryer{} basket.
 
 Add @Extra Virgin Olive Oil{6%tablespoons}, @Pink Himalayan Salt{1%teaspoon}.
 
-Mix it well so the surface of Celeriac / Swede is all coated with the oil.
+Mix it well so the surface of Celeriac is all coated with the oil.
 
 Put it on air fry at 180 C for ~{25-30%minutes}.
 

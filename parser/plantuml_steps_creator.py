@@ -83,6 +83,16 @@ def puml(step: str):
             # If the step starts with ** and ends with **, apply different formatting and remove **
             step = step.replace("**","")
             out += f'\t#Maroon:<color: white>{insert_newlines(p_step.replace("`","").strip(),50)}</color>/\n'
+        elif step.startswith('--'):
+            # If step starts with -- then its a single line comment
+            out += f'\t{insert_newlines(p_step.replace("`","").strip().capitalize(),50)}'
+        elif step.startswith('[-'):
+            # If step starts with [- then it is a string of multiline comments with newline in it
+            # break each new line and then break it further based on number of characters.
+            p_steps_split = p_step.splitlines()
+            for p_step_split in p_steps_split:
+                out += f'\n\t{insert_newlines(p_step_split.replace("`","").strip().capitalize(),50)}'
+            out = f"{out}\n"
         else:
             # If the step does not start with ** and ends with **, apply standard formatting
             out += f'\t:{insert_newlines(p_step.replace("`","").strip().capitalize(),50)};\n'
