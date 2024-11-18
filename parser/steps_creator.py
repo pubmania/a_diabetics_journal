@@ -19,6 +19,7 @@ def fn_steps_list(input_str):
     for line in lines:
         if line.strip() != "" and not line.startswith(">>"):
             step = line.strip()
+            p_step = line.strip()
             for cookware in find_cookware(step):
                 parsed_cookware = parse_cookware(cookware)
                 parsed_cookwares.add(parsed_cookware.title())
