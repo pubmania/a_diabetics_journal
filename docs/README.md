@@ -93,4 +93,4 @@ Details about each function and how it works are as explained below:
     - It is also able to do basic parsing for `if then else`, `if then elseif then else` type statements so long as the step starts with the word If and has the word then in it.
     - Look at the function code on [Jupyter File](../Cooklang%20Parser.ipynb) as it is documented to explain the flow.
 
-I will be updating the documentation and will also include a new Jupyter file that allows better understanding of the flow but for now looking at various functions in parser directory will have to do.
+I will be updating the documentation but the [new Jupyter file]{https://github.com/pubmania/a_diabetics_journal/blob/main/Cooklang%20on%20material%20for%20mkdocs.ipynb} is already uploaded and I think it allows better understanding of the flow.
