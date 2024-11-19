@@ -71,6 +71,6 @@ def fn_steps_list(input_str):
                             steps_list.append(f"{step_note}</note>")
                         else:
                             p_steps_list.append(f"{puml(p_step).replace(':', f':<b>Step {step_count}</b>: ', 1)}")
-                            steps_list.append(f"<strong>Step {step_count}</strong>: {step}")
+                            steps_list.append(f"<strong id='Step{step_count}'>Step {step_count}</strong>: {step}")
                             step_count+= 1
     return steps_list, p_steps_list, parsed_cookwares
