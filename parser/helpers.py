@@ -73,7 +73,7 @@ def parse_quantity(item: str) -> list[str, str]:
     e.g. 2%kg
     """
     if "%" not in item:
-        if " " not in item: #in case the ingredient is just specified as a number with no unit
+        if " " not in item  and item != "": #in case the ingredient is just specified as a number with no unit
             return [item, "number"]
         else:
             return [item, ""]
