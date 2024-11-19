@@ -21,8 +21,8 @@
             <div class="md-sidebar__inner">
                 {% include "partials/toc.html" %}
 
-                {# hide tags on home page #}
-                {% if not page.is_homepage %} 
+                {# hide tags on home page and blog pages #}
+                {% if not page.is_homepage and 'blog/' not in page.url %}  
                     {% if page.meta and page.meta.hide %}
                         {% set hidden = "hidden" if "tags" in page.meta.hide %}
                     {% endif %}
