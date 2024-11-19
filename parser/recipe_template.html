@@ -222,7 +222,7 @@
 	{%- set tr_count = 1 %}
 	{%- for ingredient_amount, ingredient_unit, ingredient_step in ingredient_data.with_units %}
 	<td>{{ ingredient_amount }} {{ ingredient_unit }}</td>
-	<td>Step {{ ingredient_step }}</td>
+	<td><a href="#Step{{ ingredient_step }}">Step {{ ingredient_step }}</a></td>
 	</tr>
 	{%- if tr_count < total_entries %}
 	{%- set tr_count = tr_count + 1 %}
