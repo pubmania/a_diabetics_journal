@@ -60,7 +60,7 @@ Details about each function and how it works are as explained below:
    - The function then returns a dictionary with the ingredient name, the parsed quantity (or "as needed" if no quantity is specified), and the units.
 
 4. `parse_timer(item: str) -> dict[str, str]`:
-   - This function parses a timer string. The input is a string starting with the '~' character, such as <pre>"~eggs{3%minutes}"</pre> or <pre>"~{25%minutes}"</pre>.
+   - This function parses a timer string. The input is a string starting with the '~' character, such as `~eggs{3%minutes}` or `~{25%minutes}`.
    - It checks if the item starts with '~'. If not, it raises a `ValueError` with the message "Timer should start with ~".
    - The function splits the item at '{' and calls the `parse_quantity` function to parse the quantity portion.
    - It returns a dictionary with the timer name, the parsed quantity, and the units.
