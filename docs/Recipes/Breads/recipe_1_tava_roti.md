@@ -8,7 +8,7 @@ tags:
 
 While the traditional wheat flour roti is not an option with low carb / keto diet it is possible to get closer to the taste using Soya flour. There are a number of recipes on youtube and internet using Pysllium husk and for me it ruins the taste. The following recipe works great though for my taste pallets.
 
-This recipe should result in about 6 rotis and each roti will have roughly *2.5 gms Net Carbs*.
+This recipe should result in about 6 rotis.
 
 !!! site-tip "Tip"
     *Variations to the dry mix by adding spices, oil etc like done to prepare traditional Indian paranthas is possible and does result in good tasting dish although result was slightly crispier than the traditional ones. Still they will do justice to the dish as replacement food, just dont expect exactly the same taste as the real thing. Taste of roti atleast for me is very close to real stuff.*
