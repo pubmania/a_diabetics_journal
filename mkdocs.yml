@@ -121,7 +121,8 @@ plugins:
   - blog:
       enabled: true
       blog_dir: blog
-      blog_toc: false  
+      blog_toc: false
+      pagination_if_single_page: true
   #- mermaid2
   - glightbox
   - macros
