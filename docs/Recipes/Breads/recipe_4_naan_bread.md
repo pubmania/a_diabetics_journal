@@ -8,8 +8,6 @@ tags:
     - Indian
 ---
 
-!!! danger
-    As this recipe is based mainly on wheat gluten, it is not suitable for those with Gluten Intolerance. I am sure it's obvious but still.
 
 ```cooklang
 >> Serving Size: 8 pieces
