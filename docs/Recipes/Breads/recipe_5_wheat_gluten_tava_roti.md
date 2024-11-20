@@ -8,8 +8,6 @@ tags:
 
 While the traditional wheat flour roti is not an option with low carb / keto diet it is possible to get closer to the taste using Soya flour. The [Tava Roti](recipe_1_tava_roti.md) recipe is fine but feels a bit brittle. This recipe is great though as I felt it was almost like the real deal.
 
-!!! danger
-    As this recipe is based mainly on wheat gluten, it is not suitable for those with Gluten Intolerance. I am sure it's obvious but still.
 
 ```cooklang
 >> Serving Size: 6 pieces
