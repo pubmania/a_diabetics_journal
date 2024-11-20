@@ -12,9 +12,12 @@
       {% if pagination %}
         {% block top_pagination %}
         <style>
-        .md-pagination__current {
-            color: white;
-            background-color: maroon;
+          .md-pagination>* {
+            border-radius: 2em;
+            }
+          .md-pagination__current {
+              color: white;
+              background-color: maroon;
             }
         </style>
           {% include "partials/pagination.html" %}
