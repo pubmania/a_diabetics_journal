@@ -28,7 +28,7 @@ def on_page_markdown(markdown, page, **kwargs):
     if cooklang_content:
         # Create Jinja2 environment, specifying overrides folder as search path
         env = Environment(loader=FileSystemLoader(['parser', '.'])) 
-        template = env.get_template('recipe_template.html')
+        template = env.get_template('./template/recipe_template.html')
         for content in cooklang_content:
             # Extract data from your functions
             meta_data = {} 
