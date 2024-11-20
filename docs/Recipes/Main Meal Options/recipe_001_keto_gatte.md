@@ -14,8 +14,6 @@ The original recipe and video is on [this link](https://kutt.it/keto_gatte){targ
 
 Tastes great with [Tava Roti](../Breads/recipe_1_tava_roti.md), [Tandoori Roti](../Breads/recipe_3_tandoori_roti.md) and [Naan Bread](../Breads/recipe_4_naan_bread.md) and also goes well with [No Egg Wheat Gluten Bread](../Breads/recipe_2_wheat_gluten_bread.md).
 
-!!! danger
-    As this recipe uses wheat gluten, it is not suitable for those with Gluten Intolerance. I am sure it's obvious but still.
 
 ```cooklang
 >> Serving Size: 3 portions

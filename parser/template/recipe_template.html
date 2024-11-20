@@ -57,6 +57,11 @@
 {%- set header_var = '## ' %}
 {%- endif %}
 
+{% if contains_gluten %}
+!!! danger
+    This recipe is based on wheat gluten so it is not suitable for those with Gluten Intolerance. I am sure it's obvious but still.
+{% endif %}
+
 {{ header_var }}Key Stats
 
 {%- if metadata.Image %}

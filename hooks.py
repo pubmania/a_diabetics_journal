@@ -41,10 +41,14 @@ def on_page_markdown(markdown, page, **kwargs):
             steps_list,p_steps_list,cookware = fn_steps_list(content.strip())
             total_weight_dict, missing_ingredients_string, serving_size,net_carbs_table_found_ingredients = fn_total_df_weight(content.strip())
             recipe_ingredients, nutrition_info_addendum = fn_recipe_ingredients(content.strip())
+	    
+	    # Check if any ingredient contains "gluten"
+            contains_gluten = any('wheat gluten' in ingredient.lower() for ingredient in recipe_ingredients.keys())
             
             rendered_html = template.render(
 		image_path=relative_path_for_image,
                 recipe_ingredients=recipe_ingredients,
+		contains_gluten=contains_gluten,
                 metadata=meta_data,
                 cookware=cookware,
                 steps=steps_list,
