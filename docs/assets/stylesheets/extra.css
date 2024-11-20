@@ -193,56 +193,8 @@ color: yellow;
 .md-typeset .highlight.log .md-clipboard.md-icon {
     display: none;
 }
-/* admonitions 
-.md-typeset :is(.admonition, details) {
-    border: none !important;
-    background-color: aliceblue !important;
-    box-shadow: none;
-    font-size: unset;
-    margin: 1em 0;
-    padding: 0.5em 1em;
-}
-.md-typeset :is(.admonition-title, summary) {
-    border: none;
-    background-color: unset !important;
-    margin: 0.25em 0;
-    padding: 0;
-}
-.md-typeset :is(.admonition-title, summary):before {
-    left: 0;
-    top: 0;
-    height: 1.2rem;
-    width: 1.2rem;
-}
-.md-typeset :is(.admonition-title, summary):after {
-    right: 0;
-    top: 0;
-}
-.md-typeset :is(.admonition, details) > *:not(.admonition-title, summary) {
-    padding-left: 1.8rem;
-}
-[dir=ltr] .md-typeset :is(.admonition-title,summary) {
-    padding-left: 2.6rem;
-}
 
-.md-typeset details {
-    margin-bottom: 0.5em !important;
-}
-.md-typeset details:not([open]) {
-    padding-bottom: 0.5em;
-}
-.md-typeset details:not([open]) summary {
-    font-weight: normal;
-}
-html .md-typeset :is(.admonition,details)>:last-child,
-html .md-typeset :is(.admonition-title,summary):last-child {
-    margin-bottom: 0.25em;
-}
-.md-typeset .tag > :is(.admonition-title, summary)::before {
-  background-color: teal;
-  -webkit-mask-image: var(--md-admonition-icon--tag);
-          mask-image: var(--md-admonition-icon--tag);
-}*/
+/*site admonitions*/
 .md-typeset .admonition.site-note,
 .md-typeset details.site-note {
   border-color: maroon;
