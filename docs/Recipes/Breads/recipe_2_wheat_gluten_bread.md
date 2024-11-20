@@ -17,8 +17,6 @@ I came across the original recipe on a diabetes forum. I have, however, made min
     2. Instead of making rolls, you can bake it in bread pan to get 16 slices.
     3. For easy cutting using a pizza cutter, the dough can be rolled flat. Although in this case bake time should be reduced to 10 or 15 minutes.
 
-!!! danger
-    As this recipe is based mainly on wheat gluten, it is not suitable for those with Gluten Intolerance. I am sure it's obvious but still.
 
 ```cooklang
 >> Serving Size: 8 rolls
