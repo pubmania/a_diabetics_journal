@@ -61,8 +61,8 @@ def fn_total_df_weight(input_string) -> tuple[dict, str, int]:
                 serving_size = 1  # Set to 1 if conversion fails
 #            print(f"Serving Size: {serving_size}")
     # Read ingredient and unit csv files
-    df_ingredient_db = pd.read_csv('ingredient_nutrient_db.csv')
-    df_units_db = pd.read_csv('unit_db.csv')
+    df_ingredient_db = pd.read_csv('./parser/db/ingredient_nutrient_db.csv')
+    df_units_db = pd.read_csv('./parser/db/unit_db.csv')
     # Create a lookup dictionary from df_units_db
     unit_lookup_dict = df_units_db.set_index('Unit')['eq_gms'].to_dict()    
     df_recipe_ingredients = pd.DataFrame(all_recipe_ingredients)
