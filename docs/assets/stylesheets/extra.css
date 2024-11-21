@@ -13,6 +13,7 @@
     --md-accent-fg-color--transparent: rgba(255,110,66,.1);
     --md-accent-bg-color: #fff;
     --md-accent-bg-color--light: hsla(0,0%,100%,.7);
+    --md-default-fg-color--lightest: rgb(255, 235, 214);	
 }
 /* logo */
 .md-logo {
@@ -81,8 +82,15 @@ color: yellow;
     padding-bottom: 0;
 }
 /* tags */
-.md-tag {
-    font-weight: unset;
+
+.md-tag::before {
+    content: "#";
+    color: orangered;
+    position: relative;
+}
+
+.md-tag:hover::before {
+    color: white; /* Change the color to white on hover */
 }
 /* paragraph */
 .md-typeset {
