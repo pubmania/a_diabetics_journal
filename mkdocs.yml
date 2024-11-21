@@ -126,8 +126,8 @@ plugins:
   #- mermaid2
   - glightbox
   - macros
-  - table-reader:
-      data_path: "docs/assets/tables"
+  #- table-reader:
+  #    data_path: "docs/assets/tables"
   #- encryptcontent:
   #    title_prefix: '🔐'
   #    summary: 'Restricted Access'
@@ -159,8 +159,8 @@ plugins:
   #      - Recipes/Main Meal Options/index.md
   #      - Recipes/Snacks and Sides/index.md
   #      - Musings/
-  #- tags:
-  #    tags_file: Recipes/tags.md
+  - tags:
+      tags_file: tags/index.md
   #- git-revision-date-localized:
   #    enable_creation_date: true
   - social:

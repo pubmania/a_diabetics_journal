@@ -1,0 +1,23 @@
+{# page info #}
+{% set page_title = '' %}
+{% if page and page.meta and page.meta.title %}
+    {% set page_title = page.meta.title %}
+{% elif page and page.title and not page.is_homepage %}
+    {% set page_title = page.title %}
+{% endif %}
+
+{% if page and page.meta and page.meta.tags %}
+    {% set page_tags = page.meta.tags %}
+{% endif %}
+
+{% extends "base.html" %}
+
+{# title #}
+{% block htmltitle %}
+    <title>{{ page_title }} - {{ config.site_name }}</title>
+{% endblock %}
+
+{# navigation #}
+{% block site_nav %}
+    {% include "partials/navigation.html" %}
+{% endblock %}
