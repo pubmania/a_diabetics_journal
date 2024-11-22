@@ -40,9 +40,9 @@
 	font-size: 90%;
 	margin-bottom: 1.1em;
 	padding: .68em;
-	color: #333;
+	color: var(--md-nf-line-color);
 	font-family: Arial, Helvetica, sans-serif;
-	border: 2px solid #000;
+	border: 2px solid var(--md-nf-line-color);
 	line-height: normal;
 }
 .nutritionLabel .title {
@@ -76,11 +76,11 @@
 	font-size: .9em;
 }
 .nutritionLabel .line {
-	border-top: 1px solid #333;
+	border-top: 1px solid var(--md-nf-line-color);
 	padding: 1px 0
 }
 .nutritionLabel .line.last {
-	border-bottom: 1px solid #333;
+	border-bottom: 1px solid var(--md-nf-line-color);
 }
 .nutritionLabel .line.indent {
 	margin-left: 15px;
@@ -95,14 +95,14 @@
 	height: 11px;
 	line-height:0;
 	font-size:1px;
-	background: #333;
+	background: var(--md-nf-line-color);
 	margin-top: 3px;
 }
 .nutritionLabel .bar2 {
 	height: 6px;
 	line-height:0;
 	font-size:1px;
-	background: #333;
+	background: var(--md-nf-line-color);
 }
 
 .nutritionLabel .dvCalorieDiet {
@@ -153,7 +153,7 @@
 .naTooltip{
 	position: absolute;
 	display: none;
-	border: 1px solid black;
+	border: 1px solid var(--md-nf-line-color);
 	padding: 2px;
 	text-align: center;
 	height: 18px;
@@ -285,7 +285,7 @@
 ***********************************START OF THE 2018 LABEL RELATED STYLES******************************************
 ******************************************************************************************************************/
 .nf {
-	border: 1px solid #000;
+	border: 1px solid var(--md-nf-line-color);
 	padding: 6px;
 	box-sizing: border-box;
 	font-family: Arial, Helvetica, sans-serif;
@@ -294,7 +294,7 @@
 }
 
 .nf-line {
-	border-top: 1px solid #000;
+	border-top: 1px solid var(--md-nf-line-color);
 	padding-top: 1px;
 	padding-bottom: 1px;
 	font-size: .94em;
@@ -312,7 +312,7 @@
 /* Start: Custom css added to display net carb value in green*/
 .nf-netcarbs {
 	font-family: 'Archivo Black', sans-serif;
-	color: green;
+	color: var(--md-net-carb-font-color);
 	font-size: 2em;
 	line-height: 1em;
 }
@@ -358,7 +358,7 @@
 .nf-vitamin-column {
 	font-size: .94em;
 	padding: 1px 0;
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid var(--md-nf-line-color);
 }
 
 .nf-vitamin-column-last {
@@ -401,7 +401,8 @@
 
 .nf-bar1,
 .nf-bar2 {
-	background-color: #000;
+	margin-top: 1px;
+	background-color: var(--md-nf-line-color);
 	clear: both;
 }
 
@@ -456,13 +457,13 @@
 .nf-arrow-up {
 	margin-bottom: 3px;
 	border-width: 0 5px 6px 5px;
-	border-color: transparent transparent #333333 transparent;
+	border-color: transparent transparent var(--md-nf-line-color) transparent;
 }
 
 .nf-arrow-down {
 	margin-bottom: -2px;
 	border-width: 6px 5px 0 5px;
-	border-color: #333333 transparent transparent transparent;
+	border-color: var(--md-nf-line-color) transparent transparent transparent;
 }
 
 .nf-unitQuantityBox,
@@ -568,7 +569,7 @@ Added January 31, 2022
 *************************************START OF THE UK LABEL RELATED STYLES******************************************
 ******************************************************************************************************************/
 .uk_nf {
-	border: 1px solid #000;
+	border: 1px solid var(--md-nf-line-color);
 	padding: 6px;
 	box-sizing: border-box;
 	font-family: Arial, Helvetica, sans-serif;
@@ -580,7 +581,7 @@ Added January 31, 2022
 .uk_nf table {
 	width: 100%;
 	border-collapse: collapse;
-	border-top: 4px solid #000;
+	border-top: 4px solid var(--md-nf-line-color);
 }
 
 .uk_nf.uk .uk_nf-title {
@@ -603,7 +604,7 @@ Added January 31, 2022
 }
 .uk_nf table tr th,
 .uk_nf table tbody tr td {
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid var(--md-nf-line-color);
 	padding-top: 4px;
 	padding-bottom: 4px;
 }
@@ -626,12 +627,12 @@ Added January 31, 2022
 .uk_nf-arrow-up {
 	margin-bottom: 3px;
 	border-width: 0 5px 6px 5px;
-	border-color: transparent transparent #333 transparent;
+	border-color: transparent transparent var(--md-nf-line-color) transparent;
 }
 .uk_nf-arrow-down {
 		margin-bottom: -2px;
 		border-width: 6px 5px 0 5px;
-		border-color: #333 transparent transparent transparent;
+		border-color: var(--md-nf-line-color) transparent transparent transparent;
 }
 
 .referenceIntake {

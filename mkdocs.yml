@@ -12,22 +12,21 @@ theme:
     logo: fontawesome/solid/utensils
   favicon: favicon.png  
   palette:
-     
-    # Palette toggle for light mode
+      # Palette toggle for light mode
     - scheme: default
-  #    toggle:
-  #      icon: material/brightness-7 
-  #      name: Switch to dark mode
-      primary: white
+      primary: orange
       accent: deep orange
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
 
     # Palette toggle for dark mode
-  #  - scheme: slate
-   #   toggle:
-    #    icon: material/brightness-4
-    #    name: Switch to light mode
-    #  primary: black
-    #  accent: deep orange
+    - scheme: slate
+      primary: orange
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   
   features:
     - content.code.annotate
@@ -54,11 +53,9 @@ theme:
 #      The site uses cookies to recognise visits and preferences.
 
 extra_css:
-  #- assets/stylesheets/main.css
-  #- assets/stylesheets/view-bigimg.css
   - assets/stylesheets/extra.css
-  #- assets/stylesheets/footer.css
   - assets/stylesheets/nutrition_label.css
+  - assets/stylesheets/recipe_template.css
  
 extra_javascript:
   #- https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
