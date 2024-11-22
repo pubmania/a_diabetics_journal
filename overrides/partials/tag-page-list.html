@@ -54,7 +54,7 @@
 <div class="tag-page-list">
   {% for item in tags %}
     {% set tag, ps = item %}
-    <details class="tag" id={{ tag | lower}}>
+    <details class="site-tag" id={{ tag | lower}}>
       <summary>
         {{- tag }} ({{- ps|count -}})
         <a class="headerlink" href="#{{ tag | lower }}">⚓︎</a>
