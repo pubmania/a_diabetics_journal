@@ -17,7 +17,7 @@ I was diagnosed with Type 2 Diabetes in October'2010. Since then I followed all 
     * :x: Eat fruits but try eating those with low glycemic index. 
     * :white_check_mark: Live an active lifestyle - exercise often, lose weight.
 
-There were few variations to above advice but it generally follows this theme and except for one all others are just plain wrong advice for a diabetic. It did not help in the slightest to reduce my blood glucose reading and so I was to follow this diet along with Metformin - it started with 500mg and went all the way to 2000mg and when that did not help, I was to take this medication alongside Empagliflozin first 10mg and then 25 mg and then there was statin and Linagliptin added to the mix.
+There were few variations to above but it generally follows this theme and except for one all others advices are just plain wrong for a diabetic. It did not help in the slightest to reduce my blood glucose reading and so I was to follow this diet along with Metformin - it started with 500mg and went all the way to 2000mg and when that did not help, I was to take this medication alongside Empagliflozin first 10mg and then 25 mg and then there was statin and Linagliptin added to the mix.
 
 While following the diet as recommended by professionals and exercising religiously helped tone my body but all that along with the cocktail of medication and even being a complete teetotaler did not make an iota of difference to my blood glucose readings. They were always way too high hovering between 80 to 100 mmol/mol on quarterly HbA1c results.
 
