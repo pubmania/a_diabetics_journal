@@ -76,11 +76,18 @@
     .parent {
         grid-template-columns: 1fr; /* Change to a single column layout */
         grid-template-rows: auto; /* Allow rows to adjust based on content */
+        max-width: 100%; /* Ensure it does not exceed the viewport width */
+        width: 100%; /* Take full width available */
+        padding: 0; /* Adjust padding if necessary */
     }
 
     .div1, .div2, .div3, .div4 { /* Group all divs */
         grid-column: span 1; /* Span 1 column */
         grid-row: auto; /* Allow row to adjust based on content */
+        flex: 1 1 auto; /* Allow items to grow and shrink */
+        min-width: 0; /* Prevents flex items from overflowing their container */
+        margin: 0; /* Remove margins */
+        padding: 8px; /* Add padding if needed */
     }
 }
 
