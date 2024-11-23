@@ -18,6 +18,8 @@ I came across the original recipe on a diabetes forum. I have, however, made min
     3. For easy cutting using a pizza cutter, the dough can be rolled flat. Although in this case bake time should be reduced to 10 or 15 minutes.
 
 
+The link to the source of this recipe now does not work and takes to some strange site so I have removed it. the recipe on the site was called `Gabi's World-Famous Bread`.
+
 ```cooklang
 >> Serving Size: 8 rolls
 >> Cooking Time: 90 minutes
@@ -25,7 +27,7 @@ I came across the original recipe on a diabetes forum. I have, however, made min
 >> Type: Vegetarian
 >> Image: wheat-gluten-no-egg-bread.jpg
 >> Image-Caption: Finished product after adding onion, olives in the mix.
->> Source: http://www.lowcarbluxury.com/recipes/recipe-bread21.html
+
 Add @Olive Oil{1%tbsp} and @sugar{1%tsp} in @water{300%ml} and mix well.
 Take a #bowl{} and add @vital wheat gluten{1%cup}.
 Add @wheat bran{1/4%cup}, @oat flour{1/4%cup}.
