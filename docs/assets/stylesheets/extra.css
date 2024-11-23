@@ -259,6 +259,10 @@
 }
 
 /******************************table header********************************************/
+.md-typeset table:not([class]) {
+    width: 100%; /* Make the table take the full width of the container */
+    table-layout: auto; /* Allow the table to adjust its layout based on content */
+}
 
 .md-typeset table:not([class]) th {
     background-color: var(--md-table-header-bg-color);
