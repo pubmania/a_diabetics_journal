@@ -15,11 +15,12 @@ hide:
           BarColor #orangered
           StartColor #orangered
           EndColor #orangered
-                BorderColor #orangered
-                ArrowColor #orangered
-                ArrowThickness 1.25
-                ArrowFontColor #maroon
-                FontColor #maroon
+          BorderColor #orangered
+          BackgroundColor #white
+          ArrowColor #orangered
+          ArrowThickness 1.25
+          ArrowFontColor #maroon
+          FontColor #maroon
                 
                 ''
                 DiamondBackgroundColor #darkgreen
