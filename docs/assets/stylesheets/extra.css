@@ -267,4 +267,8 @@
 .md-typeset table:not([class]) th {
     background-color: var(--md-table-header-bg-color);
     color: var(--md-table-header-font-color);
-}
+    font-weight: 700;
+    padding: .9375em 1.25em;
+    vertical-align: top;
+    min-width: 0;
+}}
