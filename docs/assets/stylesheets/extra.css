@@ -302,3 +302,8 @@
     vertical-align: top;
     min-width: 0;
 }}
+/******************************mobile navigation************************************************/
+.md-nav--primary .md-nav__title {
+    background-color: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+}
