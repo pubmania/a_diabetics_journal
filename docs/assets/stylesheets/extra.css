@@ -326,3 +326,11 @@
     background-color: var(--md-primary-fg-color);
     color: var(--md-primary-bg-color);
 }
+/******************************Blog pagination style override************************************************/
+.md-pagination>* {
+    border-radius: 2em;
+}
+.md-pagination__current {
+    color: var(--md-pagination-font-color);
+    background-color: var(--md-pagination-bg-color);
+}
