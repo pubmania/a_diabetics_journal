@@ -29,14 +29,6 @@
     </div>
     </div>
     {% if page.previous_page or page.next_page %}
-    <style>
-        .md-header__nav {
-            float: right;
-        }
-        .md-header__nav__inner:not([hidden]) {
-            display: flex;
-        }
-    </style>
     <div class="md-header__nav">
       {% set hidden = "hidden" if "footer" in page.meta.hide %}
       <nav class="md-header__nav__inner"{{ hidden }}>
