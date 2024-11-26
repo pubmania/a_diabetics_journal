@@ -287,7 +287,14 @@
 .md-typeset .md-tag[href]:focus:before,.md-typeset .md-tag[href]:hover:before {
     background-color: var(--md-accent-bg-color)
 }
-
+/*******************Tag Cloud and tag cloud content style*****************************/
+.tag-cloud {
+    margin-top:0;
+    margin-bottom: 0.5em;
+}
+.tag-cloud-content {
+    padding: 0 0.6rem;
+}
 /******************************table header********************************************/
 .md-typeset table:not([class]) {
     width: 100%; /* Make the table take the full width of the container */
