@@ -1,16 +1,36 @@
 /* global variables */
 :root {
-    --md-hr-color: maroon;    
+    --md-hr-color: #ef7109;    
     --md-tag-fg-color--lightest: #fff4e5;
     --md-tag-fg-color--lighter: maroon;
-    --md-table-header-bg-color: maroon;
-    --md-table-header-font-color: white;
+    --md-table-header-bg-color: #fff4e5;
+    --md-table-header-font-color: maroon;
+    --md-typeset-a-color: green;
+    --md-pagination-bg-color: #ef7109;
+    --md-pagination-font-color: white;
     --md-custom-slider-bg-color: #f3f0ec;
     --md-nf-line-color: black;
     --md-net-carb-font-color: green;
     --md-cookmark: #d9ffe3;
     --md-admonition-icon--tip: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.45 4.73L5.82 21 12 17.27z"></path></svg>');
-    --md-admonition-icon--tag: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5z"></path></svg>')
+    --md-admonition-icon--tag: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5z"></path></svg>');
+    /*for tag cloud*/
+    --md-color-blue: #3a86ff;
+    --md-color-purple: #8338ec;
+    --md-color-pinkred: #ff006e;
+    --md-color-orange: #fb5607;
+    --md-color-yellow: #ffbe0b;
+    --md-color-green: #69aa0d;
+    --md-color-lightgreen: #397e03;
+    --md-color-red: #f30731;
+    --md-color-navy: #24149d;
+    --md-color-skyblue: #05aaf7;
+    --md-color-lightyellow: #ffc971;
+    --md-color-lightpurple: #392f5a;
+}
+
+[data-md-color-primary=orange]:not([data-md-color-scheme=slate]) {
+    --md-typeset-a-color: maroon;
 }
 
 [data-md-color-scheme=slate] {
@@ -19,10 +39,25 @@
     --md-tag-fg-color--lighter: #fff4e5;
     --md-table-header-bg-color: #ffa724;
     --md-table-header-font-color: black;
+    --md-pagination-bg-color: #ffa724;
+    --md-pagination-font-color: black;
     --md-custom-slider-bg-color: black;    
     --md-nf-line-color: white;
     --md-net-carb-font-color: #08e508;
     --md-cookmark: green;
+    /*for tag cloud*/
+    --md-color-blue: #6da3fa;
+    --md-color-purple: #a76ef8;
+    --md-color-pinkred: #ff006e;
+    --md-color-orange: #fb5607;
+    --md-color-yellow: #ffbe0b;
+    --md-color-green: #04f620;
+    --md-color-lightgreen: #90be6d;
+    --md-color-red: #f30731;
+    --md-color-navy: #b5acf9;
+    --md-color-skyblue: #8ecae6;
+    --md-color-lightyellow: #ffc971;
+    --md-color-lightpurple: #e76ef7;
 }
 
 /* search input */
@@ -257,7 +292,14 @@
 .md-typeset .md-tag[href]:focus:before,.md-typeset .md-tag[href]:hover:before {
     background-color: var(--md-accent-bg-color)
 }
-
+/*******************Tag Cloud and tag cloud content style*****************************/
+.tag-cloud {
+    margin-top:0;
+    margin-bottom: 0.5em;
+}
+.tag-cloud-content {
+    padding: 0 0.6rem;
+}
 /******************************table header********************************************/
 .md-typeset table:not([class]) {
     width: 100%; /* Make the table take the full width of the container */
@@ -272,3 +314,23 @@
     vertical-align: top;
     min-width: 0;
 }}
+/******************header display on mobile for previous and next page***************************/
+.md-header__nav {
+    float: right;
+}
+.md-header__nav__inner:not([hidden]) {
+    display: flex;
+}
+/******************************mobile navigation************************************************/
+.md-nav--primary .md-nav__title {
+    background-color: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+}
+/******************************Blog pagination style override************************************************/
+.md-pagination>* {
+    border-radius: 2em;
+}
+.md-pagination__current {
+    color: var(--md-pagination-font-color);
+    background-color: var(--md-pagination-bg-color);
+}
