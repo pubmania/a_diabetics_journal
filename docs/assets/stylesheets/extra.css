@@ -5,6 +5,8 @@
     --md-tag-fg-color--lighter: maroon;
     --md-table-header-bg-color: maroon;
     --md-table-header-font-color: white;
+    --md-pagination-bg-color: maroon;
+    --md-pagination-font-color: white;	
     --md-custom-slider-bg-color: #f3f0ec;
     --md-nf-line-color: black;
     --md-net-carb-font-color: green;
@@ -32,6 +34,8 @@
     --md-tag-fg-color--lighter: #fff4e5;
     --md-table-header-bg-color: #ffa724;
     --md-table-header-font-color: black;
+    --md-pagination-bg-color: #ffa724;
+    --md-pagination-font-color: black;	
     --md-custom-slider-bg-color: black;    
     --md-nf-line-color: white;
     --md-net-carb-font-color: #08e508;
