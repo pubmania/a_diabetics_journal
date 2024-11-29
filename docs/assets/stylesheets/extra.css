@@ -322,9 +322,17 @@
     display: flex;
 }
 /******************************mobile navigation************************************************/
-.md-nav--primary .md-nav__title {
-    background-color: var(--md-primary-fg-color);
-    color: var(--md-primary-bg-color);
+@media screen and (max-width:76.234375em) {
+    .md-nav--primary .md-nav__title {
+      background-color:var(--md-primary-fg-color);
+      color:var(--md-primary-bg-color);
+      cursor:pointer;
+      height:5.6rem;
+      line-height:2.4rem;
+      padding:3rem .8rem .2rem;
+      position:relative;
+      white-space:nowrap
+    }
 }
 /******************************Blog pagination style override************************************************/
 .md-pagination>* {
