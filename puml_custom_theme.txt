@@ -1,0 +1,33 @@
+!theme sketchy-outline	
+!startsub activity
+    skinparam activity {
+        $primary_scheme()
+        BarColor #orangered
+        StartColor #orangered
+        EndColor #orangered
+        BorderColor #FF9900
+        ArrowColor #orangered
+        ArrowThickness 1.25
+        ArrowFontColor #orangered
+        FontColor #orangered
+        ''
+        DiamondBackgroundColor #darkgreen
+        DiamondLineColor #white
+        DiamondFontColor #white
+    }
+!endsub
+!startsub note
+    skinparam note {
+        BorderThickness 1.25
+        BackgroundColor #ffe4b5
+        BorderColor #orangered
+        FontColor #maroon
+    }
+!endsub
+!startsub partition
+    skinparam partition {
+        BorderThickness 1.25
+        BorderColor #FF9900
+        FontColor #orangered
+    }
+!endsub
