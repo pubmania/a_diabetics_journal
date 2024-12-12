@@ -300,33 +300,7 @@
 
 	```plantuml
 	@startuml
-	!theme sketchy-outline
-	!startsub activity
-		skinparam activity {
-	    		$primary_scheme()
-	    		BarColor #orangered
-    			StartColor #orangered
-    			EndColor #orangered
-    			BorderColor #orangered
-			BackgroundColor #white
-    			ArrowColor #orangered
-    			ArrowThickness 1.25
-    			ArrowFontColor #maroon
-    			FontColor #maroon
-    			''
-    			DiamondBackgroundColor #darkgreen
-    			DiamondLineColor #white
-    			DiamondFontColor #white
-		}
-	!endsub
-	!startsub note
-		skinparam note {
-    			BorderThickness 1.25
-    			BackgroundColor #ffe4b5
-    			BorderColor #orangered
-    			FontColor #maroon
-		}
-	!endsub
+	--8<-- "puml_custom_theme.txt"
 	start
 	{%- for p_step in process %}
 	{{ p_step }}
