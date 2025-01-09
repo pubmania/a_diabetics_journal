@@ -39,7 +39,7 @@ hide:
                 amountToTransfer = amountTransferred - (plannedMonthlyPayment * totalTimeRequired);
                 let finalPaymentAmountWithFee = plannedMonthlyPayment * totalTimeRequired;
                 breakdownString += `<li> Amount to balance transfer in <strong>Year ${counter}</strong> with fee included: <strong>£${finalPaymentAmountWithFee.toFixed(2)}</strong></li>`;
-                let finalPaymentAmount = finalPaymentAmountWithFee * 0.65;
+                let finalPaymentAmount = finalPaymentAmountWithFee * 0.965;
                 breakdownString += `<li> Amount to finish by one time payment in <strong>Year ${counter}</strong>: <strong>£${finalPaymentAmount.toFixed(2)}</strong></li>`;
             }
         }
