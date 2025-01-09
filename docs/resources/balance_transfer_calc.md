@@ -20,6 +20,7 @@ hide:
         // Initialise Variables
         let totalTimeToPay = 0;
         let feePaid = 0;
+        let currFeePaid = 0;
         const initialAmountToTransfer = amountToTransfer;
         let counter = 0;
         let breakdownString = "";
@@ -27,29 +28,30 @@ hide:
         while (amountToTransfer > plannedMonthlyPayment) {
             counter += 1;
             let amountTransferred = amountToTransfer * (1 + balanceTransferFee / 100);
+            currFeePaid = amountToTransfer * (balanceTransferFee / 100);
             let totalTimeRequired = amountTransferred / plannedMonthlyPayment;
 
             if (totalTimeRequired > balanceTransferDuration) {
-                breakdownString += `<li> Amount to balance transfer in <strong>Year ${counter}</strong> with fee included: <strong>£${amountTransferred.toFixed(2)}</strong></li>`;
+                breakdownString += `<li> Amount to balance transfer in <strong>Year ${counter}</strong> <em>with £${currFeePaid.toFixed(2)} of fee included</em>: <strong>£${amountTransferred.toFixed(2)}</strong></li>`;
                 feePaid += amountToTransfer * (balanceTransferFee / 100);
                 amountToTransfer = amountTransferred - (plannedMonthlyPayment * balanceTransferDuration);
                 totalTimeToPay += 12;
             } else {
                 totalTimeToPay += totalTimeRequired;
+                feePaid += amountToTransfer * (balanceTransferFee / 100);
+                currFeePaid = amountToTransfer * (balanceTransferFee / 100);
                 amountToTransfer = amountTransferred - (plannedMonthlyPayment * totalTimeRequired);
                 let finalPaymentAmountWithFee = plannedMonthlyPayment * totalTimeRequired;
-                breakdownString += `<li> Amount to balance transfer in <strong>Year ${counter}</strong> with fee included: <strong>£${finalPaymentAmountWithFee.toFixed(2)}</strong></li>`;
-                let finalPaymentAmount = finalPaymentAmountWithFee * 0.965;
+                breakdownString += `<li> Amount to balance transfer in <strong>Year ${counter}</strong> <em>with £${currFeePaid.toFixed(2)} of fee included</em>: <strong>£${finalPaymentAmountWithFee.toFixed(2)}</strong></li>`;
+                let finalPaymentAmount = finalPaymentAmountWithFee * (1-balanceTransferFee / 100);
                 breakdownString += `<li> Amount to finish by one time payment in <strong>Year ${counter}</strong>: <strong>£${finalPaymentAmount.toFixed(2)}</strong></li>`;
             }
         }
 
         // Display results
         const result = `
-            To pay off <strong>£${initialAmountToTransfer}</strong> using monthly payments of <strong>£${plannedMonthlyPayment}</strong> with a <strong>${balanceTransferDuration} months</strong> balance transfer renewed until the whole amount is paid off and each renewal has a balance transfer fee of <strong>${balanceTransferFee} %</strong>, one will pay a total fee of <strong>£${feePaid.toFixed(2)}</strong> and will need to make the monthly payment for <strong>${Math.round(totalTimeToPay)} months</strong>. 
-            
-            Balance transfer will need to be renewed at least <strong>${Math.round(totalTimeToPay / balanceTransferDuration)} times</strong>.<br><br>
-            
+            To pay off <strong>£${initialAmountToTransfer}</strong> using monthly payments of <strong>£${plannedMonthlyPayment}</strong> with a <strong>${balanceTransferDuration} months</strong> balance transfer renewed until the whole amount is paid off and each renewal has a balance transfer fee of <strong>${balanceTransferFee} %</strong>, one will pay a <strong>total fee of £${feePaid.toFixed(2)}</strong> and will need to make the monthly payment for <strong>${Math.round(totalTimeToPay)} months</strong>. 
+            <br><br>
             <strong>Breakdown</strong>:<br><br>
             ${breakdownString}
         `;
