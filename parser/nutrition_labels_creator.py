@@ -1,6 +1,6 @@
 import pandas as pd
 from parser.helpers import find_ingredients, parse_ingredient, replace_amount, replace_unit
-from parser.Nutritionix_api_call import get_nutritionix_data
+from parser.Edamam_api_call import get_edamam_data
 
 ####################################################################################################
 #                                                                                                  #
@@ -156,11 +156,11 @@ def fn_total_df_weight(input_string) -> tuple[dict, str, int]:
         #not_found_string = '\n'.join(not_found_entries['name'] + ' - ' + not_found_entries['quantity_in_gms'].astype(str) + ' gms')
         not_found_string_search = '\n'.join(not_found_entries['name'] + ' - 100 gms')
         #print(not_found_string_search)
-        not_found_df = get_nutritionix_data(not_found_string_search)
+        not_found_df = get_edamam_data(not_found_string_search)
         if isinstance(not_found_df,pd.DataFrame):
             table_string = not_found_df.to_markdown(index=False).replace('\n','\n\t')
             copy_block_string = not_found_df.to_csv(index=False, header=False,sep=',').replace('\n','\n\t\t')
-            missing_ingredients_string = f"Following ingredient was not found on database. It's values from Nutirionix database are as shown in the table below.\n\n\t{table_string}\n\n\tIf these are correct, these can be added to ingredient database simply by copying the code block and pasting in the csv file.\n\n\t??? warning \"Copy for ingredient db\"\n\t\t```\n\t\t{copy_block_string}```"
+            missing_ingredients_string = f"Following ingredient was not found on database. It's values from Edamam database are as shown in the table below.\n\n\t{table_string}\n\n\tIf these are correct, these can be added to ingredient database simply by copying the code block and pasting in the csv file.\n\n\t??? warning \"Copy for ingredient db\"\n\t\t```\n\t\t{copy_block_string}```"
             #print(missing_ingredients_string)
         else:
             missing_ingredients_string = ""

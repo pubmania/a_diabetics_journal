@@ -31,7 +31,7 @@ Season with a generous pinch of @salt{to taste}.
 
 **Add the tomatoes**
 
-Stir in @tomatoes{794%gms(1 can canned chopped)} and bring to a simmer over medium heat.
+Stir in @tomatoes{500%gms(1 can canned chopped)} and bring to a simmer over medium heat.
 Lower the heat to medium-low, cover the skillet partially and simmer gently until the tomatoes have darkened in color and thickened, about ~{15%minutes}.
 Uncover and cook another ~{5%minutes} until the sauce is nicely thickened.
 Add fresh @oregano{to taste}, @thyme{to taste}, and @rosemary{to taste} - preferably fresh leaves and mix using a #spatula{}.

@@ -80,8 +80,11 @@ def fn_recipe_ingredients(input_string):
     ###### additional info
     ingredient_string = ingredient_string.replace('\n','\n\t\t')
     label_string = ingredient_string.replace('\n\t\t','%0A').replace(' ','%20').replace('/','%2F')
-    #nutrition_label_link = f'Get the nutrition label and other nutrition details for entire recipe on [this link](https://www.nutritionix.com/natural-demo?line_delimited&use_raw_foods&q={label_string}&s={serving_size})' + '{target=_blank}. If something is not right, copy the ingredients from below and paste in the box, adjust as needed.'
-    nutrition_label_link = f'(https://www.nutritionix.com/natural-demo?line_delimited&use_raw_foods&q={label_string}&s={serving_size})' + '{target=_blank}'
-    nutrition_info_addendum = f'\n\n??? site-info "[Nutritionix Link]{nutrition_label_link}"\n\tCopy the ingredients from below and adjust as needed.\n\t??? site-tip "Copy Ingredients"\n\t\t```\n\t\t{ingredient_string}```\n'
+    # Legacy Nutritionix link (discontinued):
+    # nutrition_label_link = f'(https://www.nutritionix.com/natural-demo?line_delimited&use_raw_foods&q={label_string}&s={serving_size})' + '{target=_blank}'
+    
+    # Use Edamam's interactive Nutrition Analysis API demo page
+    nutrition_label_link = f'(https://developer.edamam.com/edamam-nutrition-api-demo)' + '{target=_blank}'
+    nutrition_info_addendum = f'\n\n??? site-info "[Edamam Link]{nutrition_label_link}"\n\tCopy the ingredients from below and paste them into the Edamam demo box to verify.\n\t??? site-tip "Copy Ingredients"\n\t\t```\n\t\t{ingredient_string}```\n'
 
     return recipe_ingredients, nutrition_info_addendum
