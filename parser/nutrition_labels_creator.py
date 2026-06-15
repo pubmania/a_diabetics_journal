@@ -2,6 +2,11 @@ import pandas as pd
 from parser.helpers import find_ingredients, parse_ingredient, replace_amount, replace_unit
 from parser.Edamam_api_call import get_edamam_data
 
+# Global database caches to optimize hot reload and page compilation speeds
+df_ingredient_db = pd.read_csv('./parser/db/ingredient_nutrient_db.csv')
+df_units_db = pd.read_csv('./parser/db/unit_db.csv')
+unit_lookup_dict = df_units_db.set_index('Unit')['eq_gms'].to_dict()
+
 ####################################################################################################
 #                                                                                                  #
 #                      Function to create nutrient summary dataframe                               #
@@ -60,11 +65,7 @@ def fn_total_df_weight(input_string) -> tuple[dict, str, int]:
             except ValueError:
                 serving_size = 1  # Set to 1 if conversion fails
 #            print(f"Serving Size: {serving_size}")
-    # Read ingredient and unit csv files
-    df_ingredient_db = pd.read_csv('./parser/db/ingredient_nutrient_db.csv')
-    df_units_db = pd.read_csv('./parser/db/unit_db.csv')
-    # Create a lookup dictionary from df_units_db
-    unit_lookup_dict = df_units_db.set_index('Unit')['eq_gms'].to_dict()    
+    # Refer to globally loaded databases and create data frame
     df_recipe_ingredients = pd.DataFrame(all_recipe_ingredients)
     ##### Code to create nutrition label
     df_recipe_ingredients['cleaned_quantity'] = pd.to_numeric(df_recipe_ingredients['quantity'].apply(replace_amount), errors='coerce')

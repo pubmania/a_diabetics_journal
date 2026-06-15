@@ -1,18 +1,31 @@
 import os
 import requests
+import json
 import pandas as pd
+from concurrent.futures import ThreadPoolExecutor
+
+CACHE_PATH = './parser/db/edamam_cache.json'
 
 def get_edamam_data(ingredients_str):
     """
-    Queries Edamam's GET /api/nutrition-data endpoint for a list of ingredients,
-    standardizes the response into a per-100g nutrient profile, and returns 
-    a pandas DataFrame matching the schema of the local database.
+    Queries Edamam's GET /api/nutrition-data endpoint for a list of ingredients.
+    Optimized to use a local JSON cache file to reduce build time/API limit usage, 
+    and concurrent threads (ThreadPoolExecutor) to run queries in parallel.
     """
     app_id = os.environ.get("EDAMAM_APP_ID")
     app_key = os.environ.get("EDAMAM_API_KEY")
 
     if not ingredients_str:
         return None
+
+    # Load cache if it exists, otherwise initialize an empty dictionary
+    cache = {}
+    if os.path.exists(CACHE_PATH):
+        try:
+            with open(CACHE_PATH, 'r', encoding='utf-8') as f:
+                cache = json.load(f)
+        except Exception as e:
+            print(f"Error reading Edamam cache file: {e}")
 
     # Mappings from local DB columns to Edamam response keys and standard DRVs/units
     nutrient_mappings = {
@@ -41,13 +54,13 @@ def get_edamam_data(ingredients_str):
     }
 
     rows = []
-    url = "https://api.edamam.com/api/nutrition-data"
-
+    queries_to_fetch = []
+    
+    # Process inputs and separate cached items from fresh lookups
     for line in ingredients_str.splitlines():
         if not line.strip():
             continue
 
-        # Convert "Ingredient - 100 gms" format to "100 grams Ingredient" for Edamam's natural language parser
         parts = line.split(' - ')
         if len(parts) == 2:
             query = f"{parts[1]} {parts[0]}".replace("gms", "grams")
@@ -56,24 +69,55 @@ def get_edamam_data(ingredients_str):
             query = line.replace("gms", "grams")
             input_str = line.split(' -')[0].upper()
 
+        # Check in local cache (using input_str as unique key)
+        if input_str in cache:
+            cached_row = cache[input_str]
+            if cached_row:  # Not cached as None (failure)
+                rows.append(cached_row)
+        else:
+            queries_to_fetch.append((input_str, query))
+
+    # Helper function to query a single ingredient
+    def fetch_data(item):
+        input_str, query = item
+        url = "https://api.edamam.com/api/nutrition-data"
         params = {
             "app_id": app_id,
             "app_key": app_key,
             "ingr": query
         }
-
         try:
             response = requests.get(url, params=params)
             response.raise_for_status()
-            data = response.json()
+            return input_str, query, response.json()
+        except Exception as e:
+            print(f"Error querying Edamam for '{query}': {e}")
+            return input_str, query, None
+
+    # Query missing items in parallel
+    if queries_to_fetch:
+        with ThreadPoolExecutor(max_workers=5) as executor:
+            results = list(executor.map(fetch_data, queries_to_fetch))
+
+        cache_updated = False
+        for input_str, query, data in results:
+            if not data:
+                # Cache failures as None to avoid repeated API requests
+                cache[input_str] = None
+                cache_updated = True
+                continue
 
             ingredients = data.get("ingredients", [])
             if not ingredients or "parsed" not in ingredients[0]:
+                cache[input_str] = None
+                cache_updated = True
                 continue
 
             parsed = ingredients[0]["parsed"][0]
             weight = parsed.get("weight", 0)
             if weight == 0:
+                cache[input_str] = None
+                cache_updated = True
                 continue
 
             nutrients = parsed.get("nutrients", {})
@@ -98,18 +142,25 @@ def get_edamam_data(ingredients_str):
                 unit = mapping['unit']
 
                 raw_value = nutrients.get(edamam_key, {}).get("quantity", 0) if edamam_key in nutrients else 0
-                # Normalize values to a per-100g basis
                 normalized_val = round((raw_value / weight) * 100, 2)
 
                 row[col_name] = normalized_val
                 row[col_name + '_drv'] = drv
                 row[col_name + '_unit'] = unit
 
+            # Save parsed row to local cache and add to output list
+            cache[input_str] = row
             rows.append(row)
+            cache_updated = True
 
-        except Exception as e:
-            print(f"Error querying Edamam for '{query}': {e}")
-            continue
+        # Write updated cache back to disk if new items were fetched
+        if cache_updated:
+            try:
+                os.makedirs(os.path.dirname(CACHE_PATH), exist_ok=True)
+                with open(CACHE_PATH, 'w', encoding='utf-8') as f:
+                    json.dump(cache, f, indent=4, ensure_ascii=False)
+            except Exception as e:
+                print(f"Error saving Edamam cache file: {e}")
 
     if rows:
         return pd.DataFrame(rows)
