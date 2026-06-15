@@ -62,12 +62,13 @@ So the final appraoch that I followed, comprised of two main objectives:
 	* On fasting days, atleast initially I would feel a bit lethargic but I aimed to walk atleast 1.5 miles (45 minutes) even if it was within the house itself. This became easier as my body got fat adapted and now am able to operate as normal and carry out extended workouts too.
 
 2. **On non-Fasting day eat a low carb diet with an aim to not exceed the carbs intake by more than 80 gms.**
-	* On the day I ate, I broke my fast after 36 or more hours with roughly 40g of extra mature cheddar cheese and then for the three meals during the rest of the day, I followed a combination of dishes [in Recipes section of this site](./Recipes/).
+	* On the day I ate, I broke my fast after 36 or more hours with roughly 40g of extra mature cheddar cheese and then for the three meals during the rest of the day, I followed a combination of dishes [in Recipes section of this site](Recipes/index.md).
 	* I also tried to keep my non-fasting window between 7 to 12 hours. So if I broke fast at 08:00 AM, I would try to finish eating last meal of the day by 8.00 PM at the very latest.
 
 Around end of Feb'21, I had my HbA1c test after following this for 3 months and for the first time in 10 years my HbA1c was in normal range at 39 mmol/mol that too without any medication whatsoever. This diet with fasting not only allowed me to avoid insulin, but has also resulted in weight loss. I am now about 14 Kgs lighter than when I started.
 
 !!! site-info "Info"
-    The fasting part of this process is something each individual will need to tailor to their needs based on how their body is responding but the aim of the [recipes on this site](./Recipes/) is merely to provide some useful vegetarian options that helped me stay low carb on the days I do eat. The nutritional part of concept is also explained succinctly on [this link](http://josekalsbeek.blogspot.com/2019/11/the-nutritional-thingy.html).
+    The fasting part of this process is something each individual will need to tailor to their needs based on how their body is responding but the aim of the [recipes on this site](Recipes/index.md) is merely to provide some useful vegetarian options that helped me stay low carb on the days I do eat. The nutritional part of concept is also explained succinctly on [this link](http://josekalsbeek.blogspot.com/2019/11/the-nutritional-thingy.html).
 
-## [Update Notes](./blog/category/updates.html)
+## [Update Notes](/blog/category/updates.html)
+
